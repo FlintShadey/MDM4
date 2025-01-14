@@ -1,4 +1,3 @@
-<!-- filepath: /Users/flint/Library/Mobile Documents/com~apple~CloudDocs/Developer Cloud/MDM4/MDM4/src/App.vue -->
 <template>
   <v-app>
     <v-main>
@@ -6,32 +5,13 @@
         <!-- Main Layout -->
         <v-row>
           <!-- Left Drawer -->
-          <v-navigation-drawer app color="#912737" class="rounded" width="200">
-            <v-list>
-              <v-list-item>
-                <v-list-item-title>Quick Access Buttons</v-list-item-title>
-              </v-list-item>
-              <v-list-item>
-                <v-btn color="yellow">HOME / Refresh</v-btn>
-              </v-list-item>
-              <v-list-item>
-                <v-btn color="#63b0cf" @click="openDialog('/option1')"
-                  >MDM</v-btn
-                >
-              </v-list-item>
-              <v-list-item>
-                <v-btn color="#63b0cf" @click="openDialog('/option2')"
-                  >Diagnosis Codes</v-btn
-                >
-              </v-list-item>
-            </v-list>
-          </v-navigation-drawer>
+          <LeftNavBar />
 
           <!-- Main Content -->
           <v-container>
             <v-row>
               <v-col>
-                <img src="@/assets/ImageHeadInjury.png" alt="Head Injury" />
+                <img src="./assets/ImageHeadInjury.png" alt="Head Injury" />
               </v-col>
               <v-col>
                 <v-btn
@@ -60,6 +40,15 @@
                   Concussion
                 </v-btn>
               </v-col>
+              <v-col>
+                <v-btn
+                  color="primary"
+                  size="small"
+                  @click="openDialog('/non-accidental')"
+                >
+                  Non-Accidental Injury
+                </v-btn>
+              </v-col>
             </v-row>
             <hr />
           </v-container>
@@ -69,7 +58,6 @@
       <!-- Dialog for Router View -->
       <v-dialog v-model="showRouterView" max-width="1000px">
         <v-card color="#2d5f73">
-          <!-- <v-card-title class="headline">Details</v-card-title> -->
           <v-card-text>
             <router-view />
           </v-card-text>
@@ -83,38 +71,24 @@
       </v-dialog>
 
       <!-- Right Drawer -->
-      <v-navigation-drawer
-        permanent
-        app
-        color="#3281a8"
-        class="rounded"
-        location="right"
-        width="450"
-        image="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
-      >
-        <v-list>
-          <v-list-item>
-            <v-list-item-title>Calculations</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title>Likely MDM</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title>Observation</v-list-item-title>
-          </v-list-item>
-          <v-list-item>CB Randomizer</v-list-item>
-        </v-list>
-      </v-navigation-drawer>
+      <RightNavBar />
     </v-main>
   </v-app>
 </template>
 
 <script>
+import LeftNavBar from "./components/LeftNavBar.vue";
+import RightNavBar from "./components/RightNavBar.vue";
+
 export default {
   data() {
     return {
       showRouterView: false, // Controls the visibility of the dialog
     };
+  },
+  components: {
+    LeftNavBar,
+    RightNavBar,
   },
   methods: {
     openDialog(route) {
@@ -128,7 +102,12 @@ export default {
   },
   watch: {
     $route(to) {
-      const dialogRoutes = ["/headinjury", "/headinjury-no-ct", "/concussion"];
+      const dialogRoutes = [
+        "/headinjury",
+        "/headinjury-no-ct",
+        "/concussion",
+        "/NonAccidental",
+      ];
       if (dialogRoutes.includes(to.path)) {
         this.showRouterView = true;
       } else {
@@ -143,7 +122,3 @@ export default {
   },
 };
 </script>
-
-<style>
-/* Add custom styles here if needed */
-</style>
