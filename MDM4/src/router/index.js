@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from "vue-router";
+// filepath: /Users/flint/Library/Mobile Documents/com~apple~CloudDocs/Developer Cloud/MDM4/MDM4/src/router/index.js
+import { createRouter, createWebHashHistory } from "vue-router";
 
 // Import components for each route
 import HeadInjury from "../views/HeadInjury.vue";
@@ -10,17 +11,16 @@ const routes = [
   { path: "/headinjury", component: HeadInjury },
   { path: "/headinjury-no-ct", component: HeadInjuryNoCT },
   { path: "/concussion", component: Concussion },
-  // Remove the explicit NotFound route if using the wildcard route
-  // { path: "/NotFound", component: () => import("../views/NotFound.vue") },
+  // Catch-all route for 404 Not Found
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
-    component: () => import("../views/NotFound.vue"),
+    component: NotFound,
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(), // Switched to Hash Mode
   routes,
 });
 

@@ -31,7 +31,7 @@
           <v-container>
             <v-row>
               <v-col>
-                <img src="./assets/ImageHeadInjury.png" alt="Head Injury" />
+                <img src="@/assets/ImageHeadInjury.png" alt="Head Injury" />
               </v-col>
               <v-col>
                 <v-btn
