@@ -1,5 +1,11 @@
 <template>
-  <v-navigation-drawer app color="#912737" class="rounded" width="200">
+  <v-navigation-drawer
+    app
+    color="#912737"
+    class="rounded"
+    width="200"
+    :image="backgroundImage"
+  >
     <v-list>
       <v-list-item>
         <v-list-item-title>Quick Access Buttons</v-list-item-title>
@@ -7,7 +13,7 @@
       <v-list-item
         v-for="button in buttons"
         :key="button.label"
-        >
+      >
         <v-btn :color="button.color" @click="navigate(button.route)">
           {{ button.label }}
         </v-btn>
@@ -25,8 +31,8 @@ export default {
         { label: "HOME / Refresh", color: "yellow", route: "/" },
         { label: "MDM", color: "#63b0cf", route: "/mdm" },
         { label: "Diagnosis Codes", color: "#63b0cf", route: "/diagnosis-codes" },
-        // Add more buttons here as needed
       ],
+      backgroundImage: new URL('@/assets/RedNavBarBackground.png', import.meta.url).href,
     };
   },
   methods: {

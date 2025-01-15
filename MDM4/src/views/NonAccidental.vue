@@ -3,8 +3,8 @@
   <v-container>
     <v-row>
       <v-col>
-        <h1>New View</h1>
-        <p>This is the new view you added.</p>
+        <h1>Non-Accidental Injury</h1>
+        <p>This is the Non-Accidental Injury view.</p>
       </v-col>
     </v-row>
   </v-container>
@@ -17,5 +17,5 @@ export default {
 </script>
 
 <style scoped>
-/* Add any styles specific to NewView here */
+/* Add any styles specific to NonAccidental view here */
 </style>

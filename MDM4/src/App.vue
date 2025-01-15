@@ -9,7 +9,8 @@
 
           <!-- Main Content -->
           <v-container>
-            <v-row>
+            <!-- <hr> -->
+            <v-row class="small-vertical">
               <v-col>
                 <img src="./assets/ImageHeadInjury.png" alt="Head Injury" />
               </v-col>
@@ -17,6 +18,7 @@
                 <v-btn
                   color="primary"
                   size="small"
+                  rounded="xl"
                   @click="openDialog('/headinjury')"
                 >
                   Head Injury
@@ -26,6 +28,7 @@
                 <v-btn
                   color="primary"
                   size="small"
+                  rounded="xl"
                   @click="openDialog('/headinjury-no-ct')"
                 >
                   Head Injury No CT
@@ -35,6 +38,7 @@
                 <v-btn
                   color="primary"
                   size="small"
+                  rounded="xl"
                   @click="openDialog('/concussion')"
                 >
                   Concussion
@@ -44,14 +48,61 @@
                 <v-btn
                   color="primary"
                   size="small"
-                  @click="openDialog('/non-accidental')"
+                  rounded="xl"
+                  @click="openDialog('/nonaccidental')"
                 >
                   Non-Accidental Injury
                 </v-btn>
               </v-col>
             </v-row>
-            <hr />
           </v-container>
+        </v-row>
+        <hr />
+
+        <v-row class="small-vertical">
+          <v-col>
+            <img src="./assets/eye.png" alt="eye" />
+          </v-col>
+          <v-col>
+            <v-btn
+              color="primary"
+              size="small"
+              rounded="xl"
+              @click="openDialog('/sty')"
+            >
+              Sty
+            </v-btn>
+          </v-col>
+          <v-col>
+            <v-btn
+              color="primary"
+              size="small"
+              rounded="xl"
+              @click="openDialog('/conjunctivitis')"
+            >
+              conjunctivitis
+            </v-btn>
+          </v-col>
+          <v-col>
+            <v-btn
+              color="primary"
+              size="small"
+              rounded="xl"
+              @click="openDialog('/eyefb')"
+            >
+              eye FB
+            </v-btn>
+          </v-col>
+          <v-col>
+            <v-btn
+              color="primary"
+              size="small"
+              rounded="xl"
+              @click="openDialog('/abrasion')"
+            >
+              abrasion
+            </v-btn>
+          </v-col>
         </v-row>
       </v-container>
 
@@ -106,7 +157,11 @@ export default {
         "/headinjury",
         "/headinjury-no-ct",
         "/concussion",
-        "/NonAccidental",
+        "/nonaccidental",
+        "/sty",
+        "/conjunctivitis",
+        "/eyefb",
+        "/abrasion",
       ];
       if (dialogRoutes.includes(to.path)) {
         this.showRouterView = true;
@@ -122,3 +177,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.small-vertical {
+  margin-top: -8px;
+  margin-bottom: -8px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+</style>
