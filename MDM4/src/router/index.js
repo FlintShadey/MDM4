@@ -9,6 +9,7 @@ import Sty from "../views/Sty.vue";
 import Conjunctivitis from "../views/Conjunctivitis.vue";
 import EyeFB from "../views/EyeFB.vue";
 import Abrasion from "../views/Abrasion.vue";
+import CornealZoster from "../views/CornealZoster.vue";
 import NotFound from "../views/NotFound.vue"; // Ensure this path is correct
 
 const routes = [
@@ -28,6 +29,7 @@ const routes = [
   },
   { path: "/eyefb", name: "EyeFB", component: EyeFB },
   { path: "/abrasion", name: "Abrasion", component: Abrasion },
+  { path: "/cornealzoster", name: "CornealZoster", component: CornealZoster },
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",

@@ -103,6 +103,16 @@
               abrasion
             </v-btn>
           </v-col>
+          <v-col>
+            <v-btn
+              color="primary"
+              size="small"
+              rounded="xl"
+              @click="openDialog('/cornealzoster')"
+            >
+              corneal zoster
+            </v-btn>
+          </v-col>
         </v-row>
       </v-container>
 
@@ -162,6 +172,7 @@ export default {
         "/conjunctivitis",
         "/eyefb",
         "/abrasion",
+        "/cornealzoster",
       ];
       if (dialogRoutes.includes(to.path)) {
         this.showRouterView = true;
