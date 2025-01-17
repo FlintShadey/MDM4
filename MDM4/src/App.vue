@@ -51,7 +51,17 @@
                   rounded="xl"
                   @click="openDialog('/nonaccidental')"
                 >
-                  Non-Accidental Injury
+                  Non-Accidental
+                </v-btn>
+              </v-col>
+              <v-col>
+                <v-btn
+                  color=white
+                  size="small"
+                  
+                  @click="openDialog('/pediheadinjuryalgorithm')"
+                >
+                  Pedi Algorithm
                 </v-btn>
               </v-col>
             </v-row>
@@ -168,11 +178,13 @@ export default {
         "/headinjury-no-ct",
         "/concussion",
         "/nonaccidental",
+        "/pediheadinjuryalgorithm",
         "/sty",
         "/conjunctivitis",
         "/eyefb",
         "/abrasion",
         "/cornealzoster",
+        "/pediheadinjuryalgorithm",
       ];
       if (dialogRoutes.includes(to.path)) {
         this.showRouterView = true;

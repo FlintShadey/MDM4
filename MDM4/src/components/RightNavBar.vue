@@ -5,7 +5,7 @@
     color="#3281a8"
     class="rounded"
     location="right"
-    width="450"
+    width="250"
     image="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
   >
     <v-list>
@@ -20,6 +20,9 @@
       </v-list-item>
       <v-list-item>
         <v-list-item-title>CB Randomizer</v-list-item-title>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-title>image / light that shows internet status</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>

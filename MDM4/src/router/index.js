@@ -5,11 +5,13 @@ import HeadInjury from "../views/HeadInjury.vue";
 import HeadInjuryNoCT from "../views/HeadInjuryNoCT.vue";
 import Concussion from "../views/Concussion.vue";
 import NonAccidental from "../views/NonAccidental.vue";
+import PediHeadInjuryAlgorithm from "../views/PediHeadInjuryAlgorithm.vue";
 import Sty from "../views/Sty.vue";
 import Conjunctivitis from "../views/Conjunctivitis.vue";
 import EyeFB from "../views/EyeFB.vue";
 import Abrasion from "../views/Abrasion.vue";
 import CornealZoster from "../views/CornealZoster.vue";
+
 import NotFound from "../views/NotFound.vue"; // Ensure this path is correct
 
 const routes = [
@@ -20,7 +22,8 @@ const routes = [
     component: HeadInjuryNoCT,
   },
   { path: "/concussion", name: "Concussion", component: Concussion },
-  { path: "/nonaccidental", name: "NonAccidental", component: NonAccidental }, // Named route
+  { path: "/nonaccidental", name: "NonAccidental", component: NonAccidental },
+  { path: "/pediheadinjuryalgorithm", name: "PediHeadInjuryAlgorithm", component: PediHeadInjuryAlgorithm },
   { path: "/sty", name: "Sty", component: Sty }, // Named route
   {
     path: "/conjunctivitis",

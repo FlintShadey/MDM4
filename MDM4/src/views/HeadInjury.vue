@@ -5,7 +5,7 @@
     <div class="text-center">
       <v-btn @click="copyToClipboard" color="yellow">Copy</v-btn>
     </div>
-    <div class="text-right">
+    <div class="text-end">
       <v-btn color="#b85fb2" class="text-right" @click="setPediatricValue">
         Pediatric
       </v-btn>
@@ -13,9 +13,17 @@
 
     <!-- Example of adding paragraphs with spacing -->
     <div>
-      <v-btn @click="secondValue += 'headache, '">headache</v-btn>
-      <v-btn @click="secondValue += 'contusion, '">contusion</v-btn>
-      <v-btn @click="secondValue += 'scalp abrasion, '">scalp abrasion</v-btn>
+      <v-btn @click="secondValue += 'superficial injury of scalp; '"
+        >scalp injury</v-btn
+      >
+      <v-btn @click="secondValue += 'headache; '">headache</v-btn>
+      <v-btn @click="secondValue += 'acute pain due to trauma; '"
+        >trauma pain</v-btn
+      >
+      <v-btn @click="secondValue += 'contusion of scalp, intial; '"
+        >scalp contusion</v-btn
+      >
+      <v-btn @click="secondValue += 'nausea; '">nausea</v-btn>
     </div>
 
     <div>
