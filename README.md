@@ -9,7 +9,8 @@ if it cant find vite:  npm install
 
 if the laptop gives a zsh error (mac uses zsh by default) it is becuase Node.js is not installed, it is best to just do the big .dmg installation
 
-add a resposive ?image? that shows the internet connection
+if it wont commit and the branches diverge One-time, just for this pull: git pull --no-rebase origin main 
 
 
-head injury dx buttons: UNSPECIFIED SUPERFICIAL INJURY OF SCALP, INITIAL ENCOUNTER - [S00.00XA], HEADACHE, UNSPECIFIED - [R51.9], ACUTE PAIN DUE TO TRAUMA - [G89.11], CONTUSION OF SCALP, INITIAL ENCOUNTER - [S00.03XA], NAUSEA - [R11.0]
+
+

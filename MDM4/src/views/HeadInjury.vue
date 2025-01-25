@@ -35,6 +35,21 @@
     <div>
       <v-btn @click="openPecarn" color="yellow">PECARN</v-btn>
     </div>
+
+    <!-- Snackbar for Notifications -->
+    <v-snackbar
+      v-model="snackbar"
+      :color="snackbarColor"
+      timeout="3000"
+      style="left: 50%; transform: translateX(-50%)"
+      variant="tonal"
+    >
+      {{ snackbarText }}
+
+      <template v-slot:actions>
+        <v-btn color="white" text @click="snackbar = false"> Close </v-btn>
+      </template>
+    </v-snackbar>
   </v-container>
 </template>
 <script>
@@ -47,32 +62,35 @@ export default {
       secondValue: "",
       pediatricvalue:
         "Patient presents with a pediatric head injury.\n\nA skull fracture might present with severe localized pain, swelling, or bruising, but it is often associated with significant trauma or symptoms like visible deformity or neurological deficits, which are not reported here.\n\nIntracranial Hemorrhage could cause more severe symptoms like loss of consciousness, vomiting, or lethargy, none of which are present in this case.\n\nBecause of mechanism, history, and physical exam findings, there is a low probability of serious injury to include intracranial bleed or skull fracture, or high risk of decompensation.\n\nThe patient is not altered, and has no loss of consciousness.\n\nPECARN rules demonstrate an exceptionally low risk of serious intracranial injury and obtaining further imaging is likely to be of little or no benefit, with unnecessary radiation.\n\nBased on the clinical presentation, the patient is safe for outpatient management. Follow-up with the pediatrician is advised if symptoms worsen or fail to improve.",
+      snackbar: false, // Controls the visibility of the snackbar
+      snackbarText: "", // The message displayed in the snackbar
+      snackbarColor: "success", // Color of the snackbar ('success' or 'error')
     };
   },
   methods: {
     copyToClipboard() {
       navigator.clipboard.writeText(this.value).then(
         () => {
-          // Optional: Notify the user of successful copy
-          this.$toast.success("Text copied to clipboard!");
+          // Show success snackbar
+          this.showSnackbar("Text copied to clipboard!", "success");
         },
         (err) => {
-          // Optional: Handle the error
+          // Show error snackbar
           console.error("Failed to copy text: ", err);
-          this.$toast.error("Failed to copy text.");
+          this.showSnackbar("Failed to copy text.", "error");
         }
       );
     },
     copyToClipboardSecond() {
       navigator.clipboard.writeText(this.secondValue).then(
         () => {
-          // Optional: Notify the user of successful copy
-          this.$toast.success("Text copied to clipboard!");
+          // Show success snackbar
+          this.showSnackbar("Second text copied to clipboard!", "success");
         },
         (err) => {
-          // Optional: Handle the error
-          console.error("Failed to copy text: ", err);
-          this.$toast.error("Failed to copy text.");
+          // Show error snackbar
+          console.error("Failed to copy second text: ", err);
+          this.showSnackbar("Failed to copy second text.", "error");
         }
       );
     },
@@ -85,6 +103,23 @@ export default {
         "_blank"
       );
     },
+    /**
+     * Utility method to show the snackbar with a specific message and color.
+     * @param {String} message - The message to display.
+     * @param {String} color - The color of the snackbar ('success' or 'error').
+     */
+    showSnackbar(message, color) {
+      this.snackbarText = message;
+      this.snackbarColor = color;
+      this.snackbar = true;
+    },
   },
 };
 </script>
+
+<style scoped>
+
+.v-snackbar {
+  max-width: 600px;
+}
+</style>

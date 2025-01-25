@@ -1,6 +1,7 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
 // Import components for each route
+import HomeView from "../views/HomeView.vue";
 import HeadInjury from "../views/HeadInjury.vue";
 import HeadInjuryNoCT from "../views/HeadInjuryNoCT.vue";
 import Concussion from "../views/Concussion.vue";
@@ -12,9 +13,10 @@ import EyeFB from "../views/EyeFB.vue";
 import Abrasion from "../views/Abrasion.vue";
 import CornealZoster from "../views/CornealZoster.vue";
 
-import NotFound from "../views/NotFound.vue"; // Ensure this path is correct
+import NotFound from "../views/NotFound.vue"; 
 
 const routes = [
+  { path: "/", name: "Home", component: HomeView },
   { path: "/headinjury", name: "HeadInjury", component: HeadInjury },
   {
     path: "/headinjury-no-ct",
@@ -23,8 +25,12 @@ const routes = [
   },
   { path: "/concussion", name: "Concussion", component: Concussion },
   { path: "/nonaccidental", name: "NonAccidental", component: NonAccidental },
-  { path: "/pediheadinjuryalgorithm", name: "PediHeadInjuryAlgorithm", component: PediHeadInjuryAlgorithm },
-  { path: "/sty", name: "Sty", component: Sty }, // Named route
+  {
+    path: "/pediheadinjuryalgorithm",
+    name: "PediHeadInjuryAlgorithm",
+    component: PediHeadInjuryAlgorithm,
+  },
+  { path: "/sty", name: "Sty", component: Sty }, 
   {
     path: "/conjunctivitis",
     name: "Conjunctivitis",
@@ -40,7 +46,7 @@ const routes = [
   },
 ];
 const router = createRouter({
-  history: createWebHashHistory(), // Switched to Hash Mode
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
 
