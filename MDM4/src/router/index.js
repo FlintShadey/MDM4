@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 // Import components for each route
 import HomeView from "../views/HomeView.vue";
@@ -13,7 +13,7 @@ import EyeFB from "../views/EyeFB.vue";
 import Abrasion from "../views/Abrasion.vue";
 import CornealZoster from "../views/CornealZoster.vue";
 
-import NotFound from "../views/NotFound.vue"; 
+import NotFound from "../views/NotFound.vue";
 
 const routes = [
   { path: "/", name: "Home", component: HomeView },
@@ -30,7 +30,7 @@ const routes = [
     name: "PediHeadInjuryAlgorithm",
     component: PediHeadInjuryAlgorithm,
   },
-  { path: "/sty", name: "Sty", component: Sty }, 
+  { path: "/sty", name: "Sty", component: Sty },
   {
     path: "/conjunctivitis",
     name: "Conjunctivitis",
@@ -45,8 +45,9 @@ const routes = [
     component: NotFound,
   },
 ];
+
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes,
 });
 
