@@ -155,7 +155,7 @@
       <img
         class="mt-3"
         height="32px"
-        src="/MDM4/src/assets/faceInjury.png"
+        src="../assets/faceInjury.png"
         alt="faceInjury"
       />
       <v-col>
@@ -194,7 +194,7 @@
       <img
         class="mt-3"
         height="32px"
-        src="/MDM4/src/assets/neckUpperBack.png"
+        src="../assets/neckUpperBack.png"
         alt="Neck & Upper Back"
       />
       <v-col>
@@ -248,7 +248,7 @@
       <img
         class="mt-3"
         height="32px"
-        src="/MDM4/src/assets/shoulder.png"
+        src="../assets/shoulder.png"
         alt="Shoulder"
       />
       <v-col>
@@ -330,7 +330,7 @@
     </v-row>
     <hr />
     <v-row>
-      <img class="mt-3" src="/MDM4/src/assets/arm.png" alt="arm" />
+      <img class="mt-3" src="../assets/arm.png" alt="arm" />
       <v-col>
         <v-btn
           color="warning"
@@ -387,7 +387,7 @@
       <img
         class="mt-3"
         height=" 32px"
-        src="/MDM4/src/assets/ChestWall.png"
+        src="../assets/ChestWall.png"
         alt="chestwall"
       />
       <v-col>
@@ -403,7 +403,7 @@
     </v-row>
     <hr />
     <v-row>
-      <img class="mt-3" height="32px" src="/MDM4/src/assets/back.png" alt="" />
+      <img class="mt-3" height="32px" src="../assets/back.png" alt="" />
       <v-col>
         <v-btn
           color="primary"
@@ -450,7 +450,7 @@
       <img
         class="mt-3"
         height="32px"
-        src="/MDM4/src/assets/hand.png"
+        src="../assets/hand.png"
         alt="hand"
       />
       <v-col>
@@ -546,7 +546,7 @@
     </v-row>
     <hr />
     <v-row>
-      <img class="mt-3" height="32px" src="/MDM4/src/assets/hip.png" alt="" />
+      <img class="mt-3" height="32px" src="../assets/hip.png" alt="" />
       <v-col>
         <v-btn
           color="primary"
@@ -583,7 +583,7 @@
     <v-row>
       <img  class ="mt-3"
           height="32px"
-      src="/MDM4/src/assets/knee.png" alt="">
+      src="../assets/knee.png" alt="">
       <v-col>
         <v-btn
           color="primary"
@@ -637,7 +637,7 @@
     </v-row>
     <hr>
 <v-row>
-  <img class="mt-3" height="32px" src="/MDM4/src/assets/ankle.png" alt="" />
+  <img class="mt-3" height="32px" src="../assets/ankle.png" alt="" />
   <v-col>
     <v-btn
       color="primary"
@@ -683,7 +683,7 @@
 </v-row>
 <hr>
   <v-row>
-    <img class="mt-3" height="32px" src="/MDM4/src/assets/foot.png" alt="" />
+    <img class="mt-3" height="32px" src="../assets/foot.png" alt="" />
     <v-col>
       <v-btn
         color="primary"
