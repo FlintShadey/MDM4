@@ -8,7 +8,9 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue">
+        post brace check
+      </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -16,37 +18,87 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
       >
-        pain Left
+        Trauma Pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += ' FALL, initial encounter; '"
       >
-        pain Right
+        fall
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += 'Pain in left ankle; '"
       >
-        FB Left
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in right ankle; '"
+      >
+        pain right
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="
+          secondaryValue +=
+            'Acute closed fracture of left _______, initial encounter; '
+        "
       >
-        FB Right
+        fracture of left ___
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            'Acute closed fracture of right _______, initial encounter; '
+        "
+      >
+        fracture of right ___
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'headache;'"
+        @click="secondaryValue += 'Lateral Malleolus; '"
       >
-        headache
+        lateral malleolus
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Medial Malleolus; '"
+      >
+        medial malleolus
+      </v-btn>
+
+        <v-btn
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += 'Bimalleolar; '"
+
+        >
+            bimalleolar
+        </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Displaced; '"
+      >
+        displaced
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'NON displaced; '"
+      >
+        non displaced
       </v-btn>
     </div>
 
@@ -63,9 +115,12 @@
 
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
-      <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
-      </v-btn>
+      <v-btn @click="openExternalLink" color="yellow"> ankle fractures </v-btn>
+      <v-dialog v-model="dialog" max-width="70%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +139,23 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "AnkleFX",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue:
+        "The patient presents with an ankle injury.\n\nAnkle sprain was considered, however, this seems to be more severe than just stretching of the ligaments.\n\nAchilles tendon injury can occur near the ankle and presents with pain at the back of the ankle, but this injury seems to involve more than just the posterior ankle.\n\nGout might also affect the ankle, causing sudden, severe pain and swelling. However, if the pain is localized to the ankle and occurred following trauma, gout is less likely.\n\nBased on the clinical examination and the presence of severe pain, swelling, and potential bruising or deformity after an injury, an ankle fracture is considered the most likely diagnosis.\n\nThe patient is considered safe for outpatient management with the RICE protocol to reduce swelling and pain. I have recommended that the patient follow up with an orthopedic surgeon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
       alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+        "After applying the brace, I checked the patient's neurovascular status. The patient displayed normal sensory and motor functions, along with detectable pulses and appropriate capillary refill. There was no need to adjust the brace as it wasn't exerting pressure on any nerve or blood vessel. The patient received guidance on when to seek further medical care.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +200,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      //   window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "/MDM4/src/assets/anklefx.png";
+      this.dialog = true;
     },
 
     /**

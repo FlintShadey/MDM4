@@ -8,45 +8,83 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue">
+        POst Brace check
+      </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
+
     <div class="mt-5">
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
       >
-        pain Left
+        Trauma Pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'Pain in the left foot; '"
       >
-        pain Right
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in the right foot; '"
+      >
+        pain right
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += ' Fracture of calcaneus; '"
       >
-        FB Left
+        calcaneus
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += ' Fracture of talus; '"
       >
-        FB Right
+        talus
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'headache;'"
+        @click="
+          secondaryValue +=
+            ' Fracture of other and unspecified tarsal bone(s); '
+        "
       >
-        headache
+        tarsal bone
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            ' Fracture of metatarsal bone; '
+        "
+      >
+        metatarsal
+      </v-btn>
+     
+                  <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ', left, initial encouter; '"
+      >
+         left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ', right, initial encouter; '"
+      >
+         right
       </v-btn>
     </div>
 
@@ -63,9 +101,12 @@
 
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
-      <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
-      </v-btn>
+      <v-btn @click="openExternalLink" color="yellow"> foot bones </v-btn>
+      <v-dialog v-model="dialog" max-width="45%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +125,23 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "FootFX",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue:
+        "The patient presents with a foot injury.\n\nA sprain could cause pain and swelling, but it usually involves the ligaments and tends to be less severe than a fracture.\n\nTendonitis could cause localized pain, but it typically develops gradually over time and is not commonly linked to acute injury, making it less likely in this case.\n\nA foot fracture results from trauma, and the patient’s symptoms and mechanism of injury are consistent with this diagnosis.\n\nBased on the clinical presentation, a foot fracture is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised with podiatry or orthopedics soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
       alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+        "After applying the brace, I checked the patient's neurovascular status. The patient displayed normal sensory and motor functions, along with detectable pulses and appropriate capillary refill. There was no need to adjust the brace as it wasn't exerting pressure on any nerve or blood vessel. The patient received guidance on when to seek further medical care.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +186,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      //   window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "/MDM4/src/assets/footbones.png";
+      this.dialog = true;
     },
 
     /**

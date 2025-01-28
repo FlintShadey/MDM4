@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -16,37 +16,52 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
       >
-        pain Left
+        Trauma Pain
+      </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in left leg; '"
+      >
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in right leg '"
+      >
+        pain right
+        </v-btn>
+                
+        <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'radiculopathy lumbar region; '"
+      >
+        radiculopathy
+      </v-btn>
+                  <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' muscle spasm of back; '"
+      >
+         muscle spasm
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'SPRAIN OF LIGAMENTS OF LUMBAR SPINE, INITIAL ENCOUNTER ; '"
       >
-        pain Right
+          lumbar strain
       </v-btn>
-      <v-btn
-        color="#72728a"
+            <v-btn
+        color="#f542ef"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += 'DORSALGIA, UNSPECIFIED - [M54.9], LOW BACK PAIN - [M54.5], LOW BACK PAIN, UNSPECIFIED - [M54.50], OTHER LOW BACK PAIN - [M54.59], SPRAIN OF LIGAMENTS OF LUMBAR SPINE, INITIAL ENCOUNTER - [S33.5XXA] '"
       >
-        FB Left
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
-      >
-        FB Right
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'headache;'"
-      >
-        headache
+          back pain everything
       </v-btn>
     </div>
 
@@ -64,8 +79,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        Open External Link + Show Modal
       </v-btn>
+      <v-dialog v-model="dialog" max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +104,21 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "Sciatica",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue: "The patient presents with back pain radiating to the leg.\n\nLumbar disc herniation can cause nerve compression, leading to pain radiating down the leg. The absence of significant weakness, bowel or bladder dysfunction, or other red flag symptoms makes this less likely.\n\nLumbar strain typically causes localized back pain without radiation to the legs. The presence of radiating pain suggests nerve involvement, so this is more complicated.\n\nSpinal stenosis can lead to leg pain due to narrowing of the spinal canal, but the acute onset makes me think this is sciatica.\n\nBased on the clinical presentation of back pain radiating to the leg, with no signs of more serious pathology, sciatica is considered the most likely diagnosis.\n\nThe patient is considered safe for outpatient management and is encouraged to follow up with their primary care physician soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +163,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialog = true;
     },
 
     /**

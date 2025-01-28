@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -16,37 +16,49 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'Pain in the left foot; '"
       >
-        pain Left
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in the right foot; '"
+      >
+        pain right
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += ' Idiopathic gout, left ankle and foot; '"
       >
-        pain Right
+        gout left
       </v-btn>
       <v-btn
-        color="#72728a"
+        color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += ' Idiopathic gout, right ankle and foot; '"
       >
-        FB Left
+        gout right
+      </v-btn>
+
+        <v-btn
+            color="#665251"
+            class="ma-2"
+            @click="secondaryValue += 'Idiopathic gout, multiple sites; '"
+
+        >
+          multiple sites gout
+        </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += ', left; '">
+        left
       </v-btn>
       <v-btn
-        color="#72728a"
+        color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += ', right; '"
       >
-        FB Right
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'headache;'"
-      >
-        headache
+        right
       </v-btn>
     </div>
 
@@ -64,8 +76,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        foot bones
       </v-btn>
+      <v-dialog v-model="dialog" max-width="48%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +101,22 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "Gout",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue:
+        "The patient presents with a painful joint.\n\nThe patient does not currently demonstrate complications of injury, such as compartment syndrome, arterial, or nerve injury.\n\nCurrently, there is no evidence of fracture or dislocation, as the patient did not experience excessive force-based injury.\n\nThere is no evidence of septic arthritis, as the patient does not have fever, chills, or a frozen joint.\n\nAutoimmune arthropathy is unlikely because the patient does not have systemic symptoms, and there is no symmetrical involvement or joint deformities.\n\nThe patient does not have gonococcal arthropathy because the patient does not exhibit any genitourinary symptoms.\n\nThe patient is given rest and elevation instructions, strict return precautions, and instructions to follow up with their primary physician within 3 days for further evaluation.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -141,8 +160,10 @@ export default {
     /**
      * Opens a new browser tab to an external URL.
      */
-    openExternalLink() {
-      window.open("https://example.com", "_blank");
+   openExternalLink() {
+      //   window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "/MDM4/src/assets/footbones.png";
+      this.dialog = true;
     },
 
     /**

@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -16,37 +16,72 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
       >
-        pain Left
+        Trauma Pain
+      </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in the left _____; '"
+      >
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in the right _____; '"
+      >
+        pain right
+      </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+      >
+        Add Diagnosis #1
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'Sample text Diagnosis #2; '"
       >
-        pain Right
+        Add Diagnosis #2
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += 'Sample text Diagnosis #3; '"
       >
-        FB Left
+        Add Diagnosis #3
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += 'Sample text Diagnosis #4; '"
       >
-        FB Right
+        Add Diagnosis #4
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'headache;'"
+        @click="secondaryValue += 'Sample text Diagnosis #5; '"
       >
-        headache
+        Add Diagnosis #5
+      </v-btn>
+                  <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ', left; '"
+      >
+         left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ', right; '"
+      >
+         right
       </v-btn>
     </div>
 
@@ -64,8 +99,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        Open External Link + Show Modal
       </v-btn>
+      <v-dialog v-model="dialog" max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +124,21 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "GenericTemplate",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue: "This is the default MDM text. Modify as needed.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +183,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialog = true;
     },
 
     /**

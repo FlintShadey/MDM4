@@ -27,14 +27,38 @@ export default {
     LeftNavBar,
     RightNavBar
   },
+  data() {
+    return {
+      timeoutId: null
+    };
+  },
   methods: {
-    notify() {
-      this.$toast.success('Hello Toast!')
+    resetInactivityTimer() {
+      if (this.timeoutId) {
+        clearTimeout(this.timeoutId);
+      }
+      this.timeoutId = setTimeout(() => {
+        this.$router.push('/');
+      }, 990000);
+      // change back to 180000
+    },
+    setupInactivityListener() {
+      const events = ['mousemove', 'keydown', 'click', 'scroll'];
+      events.forEach((event) => {
+        window.addEventListener(event, this.resetInactivityTimer);
+      });
     }
+  },
+  mounted() {
+    this.setupInactivityListener();
+    this.resetInactivityTimer();
+  },
+  beforeUnmount() {
+    const events = ['mousemove', 'keydown', 'click', 'scroll'];
+    events.forEach((event) => {
+      window.removeEventListener(event, this.resetInactivityTimer);
+    });
+    clearTimeout(this.timeoutId);
   }
-}
+};
 </script>
-
-<style scoped>
-/* Add or keep any global styles if needed */
-</style>

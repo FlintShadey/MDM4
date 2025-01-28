@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -16,37 +16,71 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'Acute pain due to trauma; '"
       >
-        pain Left
+        trauma pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'Strain of muscle and tendon of back wall of thorax; '"
       >
-        pain Right
+        thorax sprain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += 'Fracture of thoracic vertebra, closed intial encounter; '"
       >
-        FB Left
+        thoracic vertebra fracture
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += 'Superficial injury of back wall of thorax; '"
       >
-        FB Right
+        superficial injury
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'headache;'"
+        @click="secondaryValue += 'Pain in thoracic spine; '"
       >
-        headache
+        thoracic pain
+      </v-btn>
+              <v-btn
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += ' Radiculopathy, Thoracic Region; '">
+            Thoracic Radiculopathy
+        </v-btn>
+        <v-btn
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += ' Dorsalgia; '">
+            dorsalgia
+
+        </v-btn>
+              <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Neck Spasm; '"
+      >
+        Other muscle spasm
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Myalgia; '"
+      >
+        Myalgia
+      </v-btn>
+           <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'headache; '"
+      >
+       headache
       </v-btn>
     </div>
 
@@ -64,8 +98,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        Open External Link + Show Modal
       </v-btn>
+      <v-dialog v-model="dialog" max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +123,21 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "upperbackinjury",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue: "The patient presents with an upper back injury.\n\nInitial considerations include a thoracic spine fracture, which may lead to spinal instability or nerve compression, but the patient has no neurological deficits.\n\nAlso considered is a rib fracture with potential complications such as lung injury or internal bleeding. There could be a scapular fracture, which could lead to weakness and loss of range of motion in the shoulder.\n\nA traumatic pneumothorax is also a possibility, potentially leading to compromised lung function.\n\nThe patient may have a sprain or ligament injury of the back, which can cause discomfort and limited mobility.\n\nCurrently, the patient seems safe for outpatient management and is instructed to follow up with the primary care physician in the next few days.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+      alternateValue: "The patient presents with an upper back injury.\n\nInitial considerations include a thoracic spine fracture, which may lead to spinal instability or nerve compression, but the patient has no neurological deficits.\n\nAlso considered is a rib fracture with potential complications such as lung injury or internal bleeding. There could be a scapular fracture, which could lead to weakness and loss of range of motion in the shoulder.\n\nA traumatic pneumothorax is also a possibility, potentially leading to compromised lung function.\n\nThe patient may have a sprain or ligament injury of the back, which can cause discomfort and limited mobility.\n\nCurrently, the patient seems safe for outpatient management and the guardian is instructed to follow up with the pediatrician in the next few days.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +182,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialog = true;
     },
 
     /**

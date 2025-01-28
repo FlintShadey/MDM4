@@ -8,48 +8,54 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
-    <div class="mt-5">
+      <div class="mt-5">
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'Cervicalgia; '"
       >
-        pain Left
+        Cervicalgia
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'Sprain of Ligaments of Cervical Spine ; '"
       >
-        pain Right
+        cervical sprain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += 'headache; '"
       >
-        FB Left
+       headache
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += 'Neck Spasm; '"
       >
-        FB Right
+        Other muscle spasm
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'headache;'"
+        @click="secondaryValue += 'Myalgia; '"
       >
-        headache
+        Myalgia
       </v-btn>
-    </div>
-
+  
+        <v-btn
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += 'Radiculopathy, Cervical Region; '"
+        >   Cervical Radiculopathy 
+        </v-btn>
+        </div>
     <!-- SECONDARY TEXTAREA -->
     <div class="mt-5">
       <v-textarea v-model="secondaryValue" auto-grow outlined></v-textarea>
@@ -64,8 +70,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        Open External Link + Show Modal
       </v-btn>
+      <v-dialog v-model="dialog" max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +95,21 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "GenericTemplate",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue: "The patient presents to the emergency room with pain in the upper back in the trapezius distribution.\n\nCurrently, there is no sign of cervical spondylosis, thoracic outlet syndrome, or shoulder pathology.\n\nThis presentation is not consistent with acute coronary syndrome.\n\nThe onset was not severe and sudden in nature, and there are no meningeal signs, so I do not believe there is evidence of a subarachnoid hemorrhage.\n\nThe patient is encouraged to follow up with the primary care physician.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+      alternateValue: "Pediatric MDM text",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +154,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialog = true;
     },
 
     /**

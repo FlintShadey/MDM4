@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> sling </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -16,68 +16,92 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ' superficial injury of scalp; '"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
       >
-        scalp injury
+        Trauma Pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ' headache; '"
+        @click="secondaryValue += 'Pain in shoulder left; '"
       >
-        headache
+        pain left
       </v-btn>
       <v-btn
-        color="#72728a"
+        color="#665251"
         class="ma-2"
-        @click="secondaryValue += ' acute pain due to trauma; '"
+        @click="secondaryValue += 'Pain in shoulder right; '"
       >
-        trauma pain
+        pain right
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ' contusion of scalp, intial; '"
+        @click="secondaryValue += 'Contusion of Shoulder '"
       >
-        scalp contusion
+        Contusion
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ' nausea; '"
+        @click="secondaryValue += ' Sprain of Shoulder Joint (Glenohumeral); '"
       >
-        nausea
+        sprain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ' vomiting; '"
+        @click="secondaryValue += ' Muscle Spasm; '"
       >
-        vomiting
+        Muscle Spasm
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="
-          secondaryValue +=
-            ' Concussion without loss of consciousness, initial encounter; '
-        "
-        >Concusion no LOC
+        @click="secondaryValue += 'Myalgia; '"
+      >
+        Myalgia
       </v-btn>
+
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="
-          secondaryValue +=
-            ' Concussion with loss of consciousness of 30 minutes or less, initial encounter;'
-        "
-        >COncusion + LOC
+        @click="secondaryValue += ' fracture of the upper end of the  humerus, during the initial encounter for a closed fracture '"
+      >
+       Humerus Fracture  
+      </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' closed fracture of the shaft of the humerus; '"
+      >
+        shaft FX
+      </v-btn>
+
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' initial encounter; '"
+      >
+        initial encounter
+      </v-btn>
+
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += ', left; '">
+        left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ', right; '"
+      >
+        right
       </v-btn>
     </div>
 
     <!-- SECONDARY TEXTAREA -->
     <div class="mt-5">
-      <v-textarea v-model="secondaryValue" auto-grow outlined></v-textarea>
+      <v-textarea v-model="secondaryValue" auto-grow outlined label="Remember Laterality: "></v-textarea>
 
       <div class="text-center">
         <v-btn @click="copyToClipboardSecond" color="yellow">
@@ -89,8 +113,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        Open External Link + Show Modal
       </v-btn>
+      <v-dialog v-model="dialog" max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -109,21 +138,23 @@
 
 <script>
 export default {
-  name: "concussion",
+  name: "ProximalHumerusFX",
   data() {
     return {
       // Main text (primary text area)
       primaryValue:
-        "The patient presents with a head injury.\n\nSkull Fracture could cause severe localized pain, swelling, or neurological deficits, none of which are present.\n\nIntracranial Hemorrhage might present with severe headache, vomiting, or altered mental status, which are not present here.\n\nContusion could cause localized pain and swelling, but more severe or persistent neurological symptoms are usually noted if there is significant brain injury.\n\nConcussion is a mild traumatic brain injury that typically presents with headache or dizziness but without significant structural damage. The patient's symptoms align well with this diagnosis.\n\nBased on the clinical presentation, concussion is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+        "The patient presents with a shoulder injury.\n\nShoulder dislocation could cause significant pain and limited mobility, but it typically presents with a visible deformity or the humeral head out of place, which is not present.\n\nA rotator cuff tear might cause shoulder pain and weakness, particularly with overhead activities, but it usually does not involve marked bony tenderness or a fracture mechanism.\n\nAcromioclavicular joint separation could cause pain at the top of the shoulder, often with a visible bump or tenderness over the AC joint, which is not the case here.\n\nA proximal humerus fracture often presents with pain, swelling, and difficulty moving the arm around the shoulder. The patient’s symptoms align well with this diagnosis.\n\nThe patient does not currently demonstrate complications of fracture, such as compartment syndrome, arterial or nerve injury. The patient is neurovascularly intact distal to the injury.\n\nBased on the clinical presentation, a proximal humerus fracture is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
       alternateValue:
-        "The patient presents with a head injury.\n\nSkull Fracture could cause severe localized pain, swelling, or neurological deficits, none of which are present.\n\nIntracranial Hemorrhage might present with severe headache, vomiting, or altered mental status, which are not present here.\n\nContusion could cause localized pain and swelling, but more severe or persistent neurological symptoms are usually noted if there is significant brain injury.\n\nConcussion is a mild traumatic brain injury that typically presents with headache or dizziness, but without significant structural damage. The patient's symptoms align well with this diagnosis.\n\nBased on the clinical presentation, concussion is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Guardian is advised to return or seek follow up if symptoms worsen or fail to improve.",
+        "After applying the sling, I checked the patient's neurovascular status. The patient displayed normal sensory and motor functions, along with detectable pulses and appropriate capillary refill. There was no need to adjust the sling as it wasn't exerting pressure on any nerve or blood vessel. The patient received guidance on  when to seek further medical care.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -168,7 +199,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialog = true;
     },
 
     /**
@@ -188,7 +221,6 @@ export default {
 <style scoped>
 /* Customize your component styles here */
 .v-snackbar {
-  max-width: 100px;
-   text-align: center;
+  max-width: 400px;
 }
 </style>

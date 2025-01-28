@@ -8,45 +8,88 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue">
+        POst Brace check
+      </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
+
     <div class="mt-5">
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
       >
-        pain Left
+        Trauma Pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'Pain in the left foot; '"
       >
-        pain Right
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in the right foot; '"
+      >
+        pain right
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += ' sprain of left foot, initial encounter; '"
       >
-        FB Left
+        sprain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ' sprain of right foot, initial encounter; '"
+      >
+        sprain right
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="
+          secondaryValue +=
+            ' sprain of tarsal ligament of left foot, initial encounter; '
+        "
       >
-        FB Right
+        sprain tarsal left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            ' sprain of tarsal ligament of right foot, initial encounter; '
+        "
+      >
+        sprain tarsal right
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'headache;'"
+        @click="
+          secondaryValue +=
+            ' Sprain of metatarsophalangeal joint of left foot, initial encounter; '
+        "
       >
-        headache
+        sprain toe left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            ' Sprain of metatarsophalangeal joint of right foot, initial encounter; '
+        "
+      >
+        sprain toe right
       </v-btn>
     </div>
 
@@ -63,9 +106,12 @@
 
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
-      <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
-      </v-btn>
+      <v-btn @click="openExternalLink" color="yellow"> foot bones </v-btn>
+      <v-dialog v-model="dialog" max-width="45%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +130,23 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "FootSprain",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue:
+        "The patient presents with a foot injury.\n\nFracture could cause significant pain and swelling, but it is often associated with deformity, which is not present here.\n\nTendon injury might cause pain and localized tenderness, but there is no functional impairment.\n\nFoot sprain presents with pain, swelling, and difficulty bearing weight after an injury. The patient's symptoms align well with this diagnosis.\n\nBased on the clinical presentation, foot sprain is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
       alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+        "After applying the brace, I checked the patient's neurovascular status. The patient displayed normal sensory and motor functions, along with detectable pulses and appropriate capillary refill. There was no need to adjust the brace as it wasn't exerting pressure on any nerve or blood vessel. The patient received guidance on when to seek further medical care.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +191,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      //   window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "/MDM4/src/assets/footbones.png";
+      this.dialog = true;
     },
 
     /**

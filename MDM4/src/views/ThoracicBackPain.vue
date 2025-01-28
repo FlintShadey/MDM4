@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -16,37 +16,52 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
       >
-        pain Left
+        Trauma Pain
+      </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'thoracic back pain ; '"
+      >
+        thoracic back pain
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Vertebrogenic back pain; '"
+      >
+        vertebrogenic
+      </v-btn>
+  
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'injury of thoracic back, initial encounter; '"
+      >
+        Injury
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'radiculopathy thoracic region; '"
       >
-        pain Right
+        radiculopathy
       </v-btn>
-      <v-btn
+                  <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += ', left; '"
       >
-        FB Left
+         left
       </v-btn>
       <v-btn
-        color="#72728a"
+        color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += ', right; '"
       >
-        FB Right
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'headache;'"
-      >
-        headache
+         right
       </v-btn>
     </div>
 
@@ -64,8 +79,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        Open External Link + Show Modal
       </v-btn>
+      <v-dialog v-model="dialog" max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +104,21 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "ThoracicBackPain",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue: "The patient presents with upper back pain.\n\nThe possibility of a thoracic aortic dissection is deemed unlikely. This is because there was no sudden, severe pain in the chest or a tearing or ripping sensation in the upper back.\n\nSimilarly, a pulmonary embolism seems improbable, as the patient did not experience any sudden sharp, stabbing pain in the chest or upper back. The patient also did not have shortness of breath, a rapid heart rate, or bloody sputum.\n\nI don't think this is a heart attack because there was no chest pain, discomfort, nausea, sweating, shortness of breath, or palpitations.\n\nThis is not an esophageal rupture because there was no severe vomiting, and there is no evidence of subcutaneous emphysema in the neck or back.\n\nI don't think this is osteomyelitis or an epidural abscess because the patient hasn't reported a fever, there is no localized tenderness over the spine, and there are no evident neurological deficits.\n\nThis seems to be musculoskeletal in origin.\n\nThe patient is safe for outpatient management and is encouraged to follow up with their PCP soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +163,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialog = true;
     },
 
     /**

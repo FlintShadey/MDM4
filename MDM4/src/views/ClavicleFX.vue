@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> sling </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -16,43 +16,92 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
       >
-        pain Left
+        Trauma Pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'Pain in shoulder left; '"
       >
-        pain Right
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in shoulder right; '"
+      >
+        pain right
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += 'Contusion of Shoulder '"
       >
-        FB Left
+        Contusion
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += ' Sprain of Shoulder Joint (Glenohumeral); '"
       >
-        FB Right
+        sprain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'headache;'"
+        @click="secondaryValue += ' Muscle Spasm; '"
       >
-        headache
+        Muscle Spasm
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Myalgia; '"
+      >
+        Myalgia
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Fracture of the clavicle ; '"
+      >
+       clavicle Fracture  
+      </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Fracture of multiple parts of the clavicle; '"
+      >
+        multiple FX
+      </v-btn>
+
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' initial encounter; '"
+      >
+        initial encounter
+      </v-btn>
+
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += ', left; '">
+        left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ', right; '"
+      >
+        right
       </v-btn>
     </div>
 
     <!-- SECONDARY TEXTAREA -->
     <div class="mt-5">
-      <v-textarea v-model="secondaryValue" auto-grow outlined></v-textarea>
+      <v-textarea v-model="secondaryValue" auto-grow outlined label="Remember Laterality: "></v-textarea>
 
       <div class="text-center">
         <v-btn @click="copyToClipboardSecond" color="yellow">
@@ -64,8 +113,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        Open External Link + Show Modal
       </v-btn>
+      <v-dialog v-model="dialog" max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +138,23 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "ClavicleFX",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue:
+        "The patient presents with shoulder and clavicle pain.\n\nInitial considerations include shoulder dislocation, which could involve ligament or nerve damage and long-term instability of the shoulder joint. However, the patient does not have a visible deformity.\n\nThe patient could have a rotator cuff tear, which could result in chronic pain and difficulty performing daily activities.\n\nI am also concerned about shoulder impingement syndrome, which could cause chronic pain, reduced shoulder mobility, and potential progression to rotator cuff tears.\n\nAnother consideration would be adhesive capsulitis, which involves significant loss of shoulder mobility, chronic pain, and functional impairment.\n\nThis presentation seems to be a fractured clavicle, as the patient has localized pain, swelling, deformity, and tenderness over the clavicle.\n\nThe patient is safe for outpatient management with instructions to follow up with orthopedics in the next few days.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
       alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+        "After applying the sling, I checked the patient's neurovascular status. The patient displayed normal sensory and motor functions, along with detectable pulses and appropriate capillary refill. There was no need to adjust the sling as it wasn't exerting pressure on any nerve or blood vessel. The patient received guidance on  when to seek further medical care.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +199,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialog = true;
     },
 
     /**

@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <!-- PRIMARY TEXTAREA -->
-    <v-textarea v-model="primaryValue" auto-grow outlined></v-textarea>
+    <v-textarea v-model="primaryValue" auto-grow outlined ></v-textarea>
 
     <div class="text-center">
       <v-btn @click="copyToClipboard" color="yellow"> Copy MDM </v-btn>
@@ -13,71 +13,111 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-      <v-btn
+ 
+            <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ' superficial injury of scalp; '"
+        @click="secondaryValue += 'arthralgia in _____ left; '"
       >
-        scalp injury
+        pain left
       </v-btn>
       <v-btn
-        color="#72728a"
+        color="#665251"
         class="ma-2"
-        @click="secondaryValue += ' headache; '"
+        @click="secondaryValue += 'arthralgia in _____ right; '"
       >
-        headache
+        pain right
       </v-btn>
-      <v-btn
+            <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ' acute pain due to trauma; '"
+        @click="secondaryValue += ' Joint Effusion; '"
       >
-        trauma pain
+        joint swelling
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ' contusion of scalp, intial; '"
+        @click="secondaryValue += ' Joint Stiffness; '"
       >
-        scalp contusion
+        Joint Stiffness
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ' nausea; '"
+        @click="secondaryValue += 'Myalgia; '"
       >
-        nausea
+        Myalgia
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ' vomiting; '"
+        @click="secondaryValue += ' Obesity; '"
       >
-        vomiting
+        Obesity
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="
-          secondaryValue +=
-            ' Concussion without loss of consciousness, initial encounter; '
-        "
-        >Concusion no LOC
+        @click="secondaryValue += 'Fibromyalgia; '"
+      >
+        Fibromyalgia
       </v-btn>
-      <v-btn
+            <v-btn
         color="#72728a"
         class="ma-2"
-        @click="
-          secondaryValue +=
-            ' Concussion with loss of consciousness of 30 minutes or less, initial encounter;'
-        "
-        >COncusion + LOC
+        @click="secondaryValue += ' Primary generalized osteoarthritis; '"
+      >
+        osteoarthritis
+      </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Secondary multiple arthritis; '"
+      >
+        Secondary multiple 
+      </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Polyosteoarthritis, unspecified; '"
+      >
+        Polyosteoarthritis
+      </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Osteoarthritis of the hip; '"
+      >
+        hip
+      </v-btn>
+           
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Inflammatory polyarthropathy, inflammatory arthritis of multiple joints; '"
+      >
+        inflammatory
+      </v-btn>
+                  <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ', left; '"
+      >
+         left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ', right; '"
+      >
+         right
       </v-btn>
     </div>
 
     <!-- SECONDARY TEXTAREA -->
     <div class="mt-5">
-      <v-textarea v-model="secondaryValue" auto-grow outlined></v-textarea>
+      <v-textarea v-model="secondaryValue" auto-grow outlined label="Remember Laterality: "></v-textarea>
 
       <div class="text-center">
         <v-btn @click="copyToClipboardSecond" color="yellow">
@@ -89,8 +129,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        child hip septic arthritis 
       </v-btn>
+      <v-dialog v-model="dialog" max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -109,21 +154,21 @@
 
 <script>
 export default {
-  name: "concussion",
+  name: "arthritus",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue:
-        "The patient presents with a head injury.\n\nSkull Fracture could cause severe localized pain, swelling, or neurological deficits, none of which are present.\n\nIntracranial Hemorrhage might present with severe headache, vomiting, or altered mental status, which are not present here.\n\nContusion could cause localized pain and swelling, but more severe or persistent neurological symptoms are usually noted if there is significant brain injury.\n\nConcussion is a mild traumatic brain injury that typically presents with headache or dizziness but without significant structural damage. The patient's symptoms align well with this diagnosis.\n\nBased on the clinical presentation, concussion is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "The patient presents with joint pain.\n\nThe patient has no history of an autoimmune disease that has caused the immune system to attack the joints, resulting in inflammation, pain, and joint damage, such as rheumatoid arthritis.\n\nThe patient does not have a history of psoriasis, nor visible evidence of psoriasis on the skin, so I do not believe that this is psoriatic arthritis.\n\nThe patient does not have a history of gout or sudden, severe pain and swelling, so this is unlikely to be gouty arthritis.\n\nThere is no fever, chills, malaise, or fatigue, and the joint is not locked up to suggest septic arthritis.\n\nBased on the history and course, it seems to suggest a degenerative joint process that has occurred over time, such as osteoarthritis.\n\nI will treat the patient symptomatically. We will encourage the patient to rest the joint and follow up with the primary care physician.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        "The patient presents with a head injury.\n\nSkull Fracture could cause severe localized pain, swelling, or neurological deficits, none of which are present.\n\nIntracranial Hemorrhage might present with severe headache, vomiting, or altered mental status, which are not present here.\n\nContusion could cause localized pain and swelling, but more severe or persistent neurological symptoms are usually noted if there is significant brain injury.\n\nConcussion is a mild traumatic brain injury that typically presents with headache or dizziness, but without significant structural damage. The patient's symptoms align well with this diagnosis.\n\nBased on the clinical presentation, concussion is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Guardian is advised to return or seek follow up if symptoms worsen or fail to improve.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -168,7 +213,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      window.open("https://www.mdcalc.com/calc/1817/kocher-criteria-septic-arthritis", "_blank");
+      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialog = true;
     },
 
     /**
@@ -188,7 +235,6 @@ export default {
 <style scoped>
 /* Customize your component styles here */
 .v-snackbar {
-  max-width: 100px;
-   text-align: center;
+  max-width: 400px;
 }
 </style>

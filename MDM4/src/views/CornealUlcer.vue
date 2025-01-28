@@ -8,47 +8,67 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
-    <div class="mt-5">
+<div class="mt-5">
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
-      >
-        pain Left
+        @click="secondaryValue += 'Corneal ulcer, left eye; '">
+        Corneal ulcer Left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Corneal ulcer, right eye; '">
+        Corneal ulcer Right
+
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += ' Headache;  '"
       >
-        pain Right
+        headache    
+    </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Left eye pain; '"
+      >
+        Left eye pain
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ' Right eye pain; '"
+      >
+        Right eye pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += ' Photophobia; '"
       >
-        FB Left
+        Photophobia
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += ' Visual Disturbances;  '"
       >
-        FB Right
+        Blurry
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'headache;'"
-      >
-        headache
+        @click="secondaryValue += ' Epiphora; '">
+        Tearing
       </v-btn>
     </div>
+
 
     <!-- SECONDARY TEXTAREA -->
     <div class="mt-5">
@@ -84,16 +104,16 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "GenericTemplate",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue: "Patient presents with eye pain and redness.\n\n______ There is a small amount of fluorescein uptake on physical exam.\n\nConjunctivitis can cause eye redness and discomfort but is usually associated with discharge and itching rather than sharp pain.\n\nUveitis involves inflammation of the middle layer of the eye and can present with eye pain and redness. However, there are no other symptoms like decreased vision or floaters.\n\nForeign body in the eye can cause similar symptoms to a corneal ulcer if the object remains in the eye, causing ongoing irritation. The lack of visible foreign particles rules this out.\n\nCorneal ulcer is considered the most likely diagnosis.\n\nThe patient is considered safe for outpatient management but will be referred to an ophthalmologist for confirmation of the diagnosis and to ensure no foreign bodies are retained. Patients will be advised to avoid rubbing the eye and to monitor for signs of worsening symptoms, such as increased pain or vision changes, which require immediate re-evaluation.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
       alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+        "Pediatric MDM text",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

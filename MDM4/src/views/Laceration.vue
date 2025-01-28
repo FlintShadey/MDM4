@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> no repair </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -16,37 +16,52 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
       >
-        pain Left
+        Trauma Pain
       </v-btn>
-      <v-btn
+            <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'Pain in _____ left; '"
       >
-        pain Right
+        pain left
       </v-btn>
       <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in ______ right; '"
+      >
+        pain right
+      </v-btn>
+               <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += 'Laceration without a foreign object on the left ______ during the initial encounter ; '"
       >
-        FB Left
+        Laceration left
+      </v-btn>
+            <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Laceration without a foreign object on the right ______ during the initial encounter ; '"
+      >
+        Laceration right
+      </v-btn>
+      
+                  <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ', left; '"
+      >
+         left
       </v-btn>
       <v-btn
-        color="#72728a"
+        color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += ', right; '"
       >
-        FB Right
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'headache;'"
-      >
-        headache
+         right
       </v-btn>
     </div>
 
@@ -64,8 +79,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        Open External Link + Show Modal
       </v-btn>
+      <v-dialog v-model="dialog" max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +104,21 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "Laceration",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue: "Patient had a laceration that was cleaned in the ED after copious irrigation. After exploration of the wound, there was no evidence of a retained foreign body.\n\nThere is no evidence of nerve damage.\n\nThere is no evidence of vascular or arterial insufficiency\n\nNo evidence of underlying fracture.\n\nPatient's tetanus immunization status is addressed.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+      alternateValue: "The patient has a laceration that is small and superficial.\n\nThere is no evidence of a retained foreign body or underlying fracture.\n\nNo closure is necessary at this time, as unnecessary repair would result in increased risks without added benefit.\n\nThe wound should heal with good function and cosmesis without a futile repair.\n\nThe patient agrees with this assessment.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +163,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialog = true;
     },
 
     /**

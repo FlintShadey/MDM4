@@ -16,6 +16,9 @@
         <v-list-item-title>Likely MDM</v-list-item-title>
       </v-list-item>
       <v-list-item>
+        <v-list-item-title>Conscious Sedcation</v-list-item-title></v-list-item>
+
+      <v-list-item>
         <v-list-item-title>Observation</v-list-item-title>
       </v-list-item>
       <v-list-item>

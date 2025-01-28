@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -16,39 +16,67 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'Cervicalgia; '"
       >
-        pain Left
+        Cervicalgia
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'Sprain of Ligaments of Cervical Spine ; '"
       >
-        pain Right
+        cervical sprain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += 'headache; '"
       >
-        FB Left
+       headache
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += 'Neck Spasm; '"
       >
-        FB Right
+        Other muscle spasm
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'headache;'"
+        @click="secondaryValue += 'Myalgia; '"
       >
-        headache
+        Myalgia
       </v-btn>
-    </div>
+  
+        <v-btn
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += 'Radiculopathy, Cervical Region; '"
+        >   Cervical Radiculopathy 
+        </v-btn>
+        <v-btn
+        
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += 'Pain in Thoracic Spine; '">
+            Thoracic  Pain
+        </v-btn>
+        <v-btn
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += ' Radiculopathy, Thoracic Region; '">
+            Thoracic Radiculopathy
+        </v-btn>
+        <v-btn
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += ' Dorsalgia; '">
+            dorsalgia
+
+        </v-btn>
+        </div>
+
 
     <!-- SECONDARY TEXTAREA -->
     <div class="mt-5">
@@ -64,8 +92,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        Open External Link + Show Modal
       </v-btn>
+      <v-dialog v-model="dialog" max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,20 +117,21 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "upperback",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue: "The patient came in complaining of upper back pain.\n\nAt present, there are no indications of a thoracic aortic aneurysm rupture, as the patient does not have symptoms such as left chest pain, severe chest discomfort, hypotension, shock, or hematemesis.\n\nThe pain is not associated with any cardiovascular or respiratory symptoms, and the patient has not mentioned any recent trauma or injury.\n\nWhile thoracic aortic aneurysm rupture was considered, the patient does not show the typical signs of a TAA rupture. Given the localized soreness and the lack of other alarming symptoms, musculoskeletal pain seems to be the most probable diagnosis.\n\nMy assessment is that the pain is musculoskeletal in origin.\n\nThe patient is safe for outpatient management.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+      alternateValue: "Pediatric MDM text",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
+      dialog: false,
+      dialogImgUrl: "",
     };
   },
   methods: {
@@ -142,7 +176,9 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialog = true;
     },
 
     /**

@@ -13,17 +13,23 @@
 
     <!-- Example of adding paragraphs with spacing -->
     <div>
-      <v-btn @click="secondValue += 'superficial injury of scalp; '"
+      <v-btn color="#72728a" @click="secondValue += 'superficial injury of scalp; '"
         >scalp injury</v-btn
       >
-      <v-btn @click="secondValue += 'headache; '">headache</v-btn>
-      <v-btn @click="secondValue += 'acute pain due to trauma; '"
+      <v-btn color="#72728a" @click="secondValue += 'headache; '">headache</v-btn>
+      <v-btn color="#72728a" @click="secondValue += 'acute pain due to trauma; '"
         >trauma pain</v-btn
       >
-      <v-btn @click="secondValue += 'contusion of scalp, intial; '"
+      <v-btn color="#72728a" @click="secondValue += 'contusion of scalp, intial; '"
         >scalp contusion</v-btn
       >
-      <v-btn @click="secondValue += 'nausea; '">nausea</v-btn>
+      <v-btn color="#72728a" @click="secondValue += 'nausea; '">nausea</v-btn>
+      <v-btn
+        color="#42bcf5"
+        @click="secondValue += 'UNSPECIFIED SUPERFICIAL INJURY OF SCALP, INITIAL ENCOUNTER - [S00.00XA], HEADACHE, UNSPECIFIED - [R51.9], ACUTE PAIN DUE TO TRAUMA - [G89.11], CONTUSION OF SCALP, INITIAL ENCOUNTER - [S00.03XA], NAUSEA - [R11.0]'"
+      >
+        head bruise everything
+      </v-btn>
     </div>
 
     <div>

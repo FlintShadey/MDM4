@@ -9,18 +9,16 @@
         &gt; 2 years old
       </v-btn>
     </v-row>
-    <iframe
-      v-if="selectedLink === 'link1'"
-      src="https://californiaacep.org/resource/resmgr/images/membership_marketing/pecarn1.jpg"
-      width="100%"
-      height="800"
-    ></iframe>
-    <iframe
-      v-else
-      src="https://californiaacep.org/resource/resmgr/files/images/pecarn_over_2.jpg"
-      width="100%"
-      height="800"
-    ></iframe>
+<iframe
+  v-if="selectedLink === 'link1'"
+  src="https://californiaacep.org/resource/resmgr/images/membership_marketing/pecarn1.jpg"
+  style="width: 100vw; height: 100vh; border: none; margin: 0; padding: 0;"
+></iframe>
+<iframe
+  v-else
+  src="https://californiaacep.org/resource/resmgr/files/images/pecarn_over_2.jpg"
+  style="width: 100vw; height: 100vh; border: none; margin: 0; padding: 0;"
+></iframe>
   </div>
 </template>
 

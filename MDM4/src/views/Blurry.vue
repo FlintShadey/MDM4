@@ -7,46 +7,42 @@
       <v-btn @click="copyToClipboard" color="yellow"> Copy MDM </v-btn>
     </div>
 
-    <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> unsuccessful </v-btn>
-    </div>
-
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Left; '"
+        @click="secondaryValue += 'Visual Disturbance;  '"
       >
-        pain Left
+        Blurry
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'acute eye pain Right; '"
+        @click="secondaryValue += 'Sample text Diagnosis #2; '"
       >
-        pain Right
+        Add Diagnosis #2
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, left eye ; '"
+        @click="secondaryValue += 'Sample text Diagnosis #3; '"
       >
-        FB Left
+        Add Diagnosis #3
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Foreign body in cornea, right eye ; '"
+        @click="secondaryValue += 'Sample text Diagnosis #4; '"
       >
-        FB Right
+        Add Diagnosis #4
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'headache;'"
+        @click="secondaryValue += 'Sample text Diagnosis #5; '"
       >
-        headache
+        Add Diagnosis #5
       </v-btn>
     </div>
 
@@ -64,8 +60,13 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link
+        Vison Change flow Chart
       </v-btn>
+      <v-dialog v-model="dialog"  max-width="80%">
+        <v-card>
+          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <!-- SNACKBAR (Close button removed) -->
@@ -84,16 +85,18 @@
 
 <script>
 export default {
-  name: "EyeFB",
+  name: "Blurry",
   data() {
     return {
+      dialog: false,
+      dialogImgUrl: "",
       // Main text (primary text area)
-      primaryValue: "******* A foreign body was noted and isolated using magnification. Under topical anesthesia with tetracaine, the foreign body was removed.\n\nThe patient tolerated the procedure well. There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2-3 days.",
+      primaryValue:
+        "The patient presents with blurry vision.\n\nThe patient does not have signs or symptoms of a cerebral vascular accident. There is no change in mental status, loss of balance, or loss of strength or sensation.\n\nThese symptoms are not from retinal detachment, as there have been no flashes of light, no eye floaters, and no peripheral decrease in vision.\n\nThe symptoms are not caused by a brain tumor, as there have been no persistent headaches, confusion, memory loss, or loss of balance.\n\nI considered closed-angle glaucoma; however, there is no headache, severe eye pain, nausea, vomiting, or halo around lights.\n\nI do not believe this to be wet macular degeneration because there is no loss of vision, no dark or blind spots in the central vision, no wavy vision, and no difficulty with facial recognition.\n\nThis does not appear to be diabetic retinopathy because there is no double vision, floaters, or dark spots in the field of vision.\n\nThere is no cell and flare on exam to indicate uveitis.\n\nThere is no history to suggest keratitis.\n\nThe timing does not indicate cataract changes.\n\nThe patient is safe for outpatient management and is instructed to follow up with ophthalmology in the next few days.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        " I attempted to remove the FB but was unsuccessful \n\n There was a negative Seidel sign, no significant photophobia, and the pupil is responding normally.\n\nThe patients presentation shows a very low risk for ulcer, globe rupture, HSV keratitis, endophthalmitis, retinal detachment, or angle-closure glaucoma.\n\nThere are no dendrites on exam, thus ruling out herpetic conjunctivitis. Additionally, there is no involvement of the tip of the nose.\n\nI will write a prescription for ophthalmic antibiotics, and the patient is instructed to follow up with ophthalmology in the next 2 days.",
+      alternateValue: "Pediatric MDM text",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
@@ -142,19 +145,20 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://example.com", "_blank");
+      this.dialogImgUrl = "/MDM4/src/assets/visionLoss.png";
+      this.dialog = true;
     },
+  },
 
-    /**
-     * Utility to display the snackbar with a specific message and color.
-     * @param {String} message - The snackbar text to display.
-     * @param {String} color - The color of the snackbar ('success' or 'error').
-     */
-    showSnackbar(message, color) {
-      this.snackbarText = message;
-      this.snackbarColor = color;
-      this.snackbar = true;
-    },
+  /**
+   * Utility to display the snackbar with a specific message and color.
+   * @param {String} message - The snackbar text to display.
+   * @param {String} color - The color of the snackbar ('success' or 'error').
+   */
+  showSnackbar(message, color) {
+    this.snackbarText = message;
+    this.snackbarColor = color;
+    this.snackbar = true;
   },
 };
 </script>
