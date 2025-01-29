@@ -13,90 +13,33 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Herpesviral vesicular dermatitis of lip; '"
       >
-        pain left
+        Herpesviral vesicular dermatitis of lip
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Herpesviral gingivostomatitis ; '"
       >
-        pain right
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
-      >
-        Add Diagnosis #1
+        Herpesviral gingivostomatitis
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'facial pain; '"
       >
-        Add Diagnosis #2
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
-      >
-        Add Diagnosis #3
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
+        facial pain
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += ', right; '"
+        @click="secondaryValue += 'Diseases of lips; '"
       >
-         right
+        lip pain
       </v-btn>
     </div>
 
@@ -139,11 +82,12 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "ColdSore",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue:
+        "The patient presents with a lip sore.\n\nSome possible differential diagnoses for sores on the lips include:\n\nThis does not appear to be a bacterial skin infection around the mouth and nose, so it does not appear to be impetigo.\n\nIt is not involving cracks at the corners of the mouth, so I do not believe it to be a fungal infection such as angular cheilitis.\n\nThe patient does not have a history of applying an irritating substance, such as certain cosmetics or lip balms, so this is unlikely to be contact dermatitis.\n\nThere is no swelling on the lips, so this is probably not an allergic reaction.\n\nThis does not have the characteristics of squamous cell carcinoma or melanoma.\n\nCurrently, this appears to be herpes labialis. The patient is advised to follow up with their PCP soon if symptoms persist.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration

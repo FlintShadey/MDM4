@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric OM </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -17,72 +17,51 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Pain in the left ear; '"
       >
         pain left
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Pain in the right ear; '"
       >
         pain right
       </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += 'Otitis media, unspecified, left ear '"
       >
-        Add Diagnosis #1
+        Left OM
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Otitis media, unspecified, right ear; '"
+      >
+        Right OM
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'Otitis media, unspecified, bilateral; '"
       >
-        Add Diagnosis #2
+        bilateral om
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="secondaryValue += 'Acute serous otitis media, left ear'"
       >
-        Add Diagnosis #3
+       serous left
       </v-btn>
       <v-btn
-        color="#72728a"
+        color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
+        @click="secondaryValue += 'Acute serous otitis media, right ear;  '"
       >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
+        serous right
       </v-btn>
                   <v-btn
         color="#72728a"
@@ -98,6 +77,26 @@
       >
          right
       </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ', with spontaneous rupture of eardrum; '"
+        >
+         rupture
+
+      </v-btn>
+      <v-btn
+        color="#42cbf5"
+        class="ma-2"
+        @click="secondaryValue += 'ACUTE SUPPURATIVE OTITIS MEDIA WITHOUT SPONTANEOUS RUPTURE OF EAR DRUM, left EAR - [H66.002], OTALGIA, LEFT EAR - [H92.02], OTITIS MEDIA, UNSPECIFIED, LEFT EAR - [H66.92]'">
+ALL OM Left
+      </v-btn>
+        <v-btn
+            color="#dd42f5"
+            class="ma-2"
+            @click="secondaryValue += 'ACUTE SUPPURATIVE OTITIS MEDIA WITHOUT SPONTANEOUS RUPTURE OF EAR DRUM, right EAR - [H66.001], OTALGIA, RIGHT EAR - [H92.01], OTITIS MEDIA, UNSPECIFIED, RIGHT EAR - [H66.91]'">
+            ALL OM Right
+        </v-btn>
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -139,15 +138,15 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "OtitisMedia",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue: "The patient presents with ear pain and pressure.\n\nThere is no pain, tenderness, redness, or swelling behind the ear, so I do not believe mastoiditis is present.\n\nAdditionally, there is no otorrhea or granulation tissue in the ear canal, indicating that Malignant Otitis Externa does not seem to be the case.\n\nExamination of the ear canal reveals no foreign objects, thus there is no retained foreign body present.\n\nThe exam and history are most consistent with Acute Otitis Media.\n\nThe patient is not toxic or ill-appearing, and there is no systemic sepsis.\n\nThe patient is advised to take the prescribed medicines and follow up with their physician soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "The patient presents with ear pain.\n\nAcute otitis media is common in children. The presence of a red tympanic membrane on examination supports this diagnosis.\n\nOtitis externa involves inflammation of the ear canal, often after swimming, leading to pain, especially when the outer ear is touched or pulled. Currently, this is not the case.\n\nMastoiditis involves the infection of the mastoid bone behind the ear, leading to pain, swelling, redness over the mastoid, and fever. Thankfully, the patient does not have these physical findings.\n\nCurrently, there is no foreign body identified.\n\nTympanic membrane perforation may result from trauma or infection, presenting with ear pain and possible hearing loss; however, I do not see a perforation.\n\nDental problems, such as teething or an abscessed tooth, can refer pain to the ear, but this does not seem to be the case.\n\nCurrently, this appears to be acute otitis media.\n\nThe patient is considered safe for outpatient management.\n\nFollow-up with a primary care pediatrician is recommended if symptoms persist or worsen.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

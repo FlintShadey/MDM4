@@ -13,90 +13,40 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Essential (primary) hypertension; '"
       >
-        pain left
+        Essential
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Hypertensive urgency; '"
       >
-        pain right
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
-      >
-        Add Diagnosis #1
+        urgency
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'headache; '"
       >
-        Add Diagnosis #2
+        headache
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="secondaryValue += 'dizziness; '"
       >
-        Add Diagnosis #3
+        dizziness
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
+        @click="secondaryValue += 'Visual Disturbance; '"
       >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
+        blurred vision
       </v-btn>
     </div>
 
@@ -139,11 +89,12 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "Hypertension",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue:
+        "The patient presents with elevated hypertension.\n\nCurrently, the differential diagnosis includes Cushing's syndrome, essential hypertension, renovascular hypertension, or pheochromocytoma.\n\nAlthough the patient's blood pressure is elevated, there is no acute concern for intracranial or end-organ damage.\n\nThere are no neurologic symptoms, such as agitation, delirium, stupor, seizures, or visual disturbances, and no focal neurologic symptoms that could be due to an ischemic or hemorrhagic stroke.\n\nThere are no signs that may indicate increased intracranial pressure.\n\nThere is no chest or back pain, which could be due to myocardial ischemia or aortic dissection.\n\nThere is no dyspnea, which could suggest pulmonary edema.\n\nThe patient is safe for discharge and will do well with outpatient management and follow-up with their primary care physician.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration

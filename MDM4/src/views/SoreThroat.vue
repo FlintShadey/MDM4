@@ -17,51 +17,30 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Streptococcal pharyngitis; '"
       >
-        pain left
+        Streptococcal
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Acute pharyngitis; '"
       >
-        pain right
+       pharyngitis
       </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += 'Pain in the throat; '"
       >
-        Add Diagnosis #1
+       pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
       >
-        Add Diagnosis #2
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
-      >
-        Add Diagnosis #3
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
+        tonsillitis
       </v-btn>
           <v-btn
         color="#72728a"
@@ -83,20 +62,6 @@
         @click="secondaryValue += 'Lymphadenopathy; '"
       >
         Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
       </v-btn>
     </div>
 
@@ -139,15 +104,15 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "SoreThroat",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, viral pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

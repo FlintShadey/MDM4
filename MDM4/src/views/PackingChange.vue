@@ -13,91 +13,42 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += ' Encounter for change or removal of nonsurgical wound dressing;  '"
       >
-        pain left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
-      >
-        pain right
+        nonsurgical wound dressing
       </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += 'Encounter for change or removal of surgical wound dressing; '"
       >
-        Add Diagnosis #1
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
-      >
-        Add Diagnosis #2
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
-      >
-        Add Diagnosis #3
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
+        surgical wound dressing
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += ', right; '"
+        @click="secondaryValue += 'Encounter for removal of sutures; '"
       >
-         right
+         suture removal
       </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Disruption of wound, unspecified, initial encounter; '"
+      >
+        Disruption of wound
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Encounter for surgical aftercare following surgery on the skin and subcutaneous tissue; '"
+      >
+        aftercare of skin surgery
+      </v-btn>
+     
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -139,11 +90,11 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "PackingChange",
   data() {
     return {
-      // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      // Main text (primary text area
+      primaryValue: "The patient presents for a packing change.\n\nI removed the prior packing of the abscess and replaced it with sterile packing.\n\nThe patient tolerated the procedure well without complications.\n\nThe patient is stable for discharge.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration

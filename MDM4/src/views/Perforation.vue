@@ -13,90 +13,70 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Pain in the left ear; '"
       >
         pain left
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Pain in the right ear; '"
       >
         pain right
       </v-btn>
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="
+          secondaryValue +=
+            'Central perforation of tympanic membrane, left ear;  '
+        "
       >
-        Add Diagnosis #1
+        Left perforation
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            'Central perforation of tympanic membrane, right ear;  '
+        "
+      >
+        Right OM
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="
+          secondaryValue +=
+            'Central perforation of tympanic membrane, bilateral '
+        "
       >
-        Add Diagnosis #2
+        bilateral perforation
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="
+          secondaryValue +=
+            'Acute suppurative otitis media with spontaneous rupture of ear drum'
+        "
       >
-        Add Diagnosis #3
+        AOM with perf
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
+
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += ', left; '">
+        left
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
         @click="secondaryValue += ', right; '"
       >
-         right
+        right
       </v-btn>
     </div>
 
@@ -139,15 +119,17 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "Perforation",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue:
+        "The patient presents with bleeding from the ear.\n\nOtitis media is usually accompanied by severe ear pain, fever, and drainage of pus. The acute onset of bleeding suggests perforation.\n\nEar canal trauma from foreign objects is a possibility, but there is no history of this.\n\nBasilar skull fracture is a severe injury that can cause bleeding from the ear. The absence of head trauma or these associated symptoms makes a skull fracture less likely.\n\nTympanic membrane perforation symptoms include ear pain, hearing loss, tinnitus, and bleeding from the ear. The presence of blood suggests a possible tear or rupture in the eardrum. I believe this is the likely diagnosis.\n\nThe patient is safe for discharge, with instructions to not submerge in water.\n\nThe patient is considered safe for outpatient management and will be referred to an otolaryngologist for further evaluation.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue:
+        "The patient presents with bleeding from the ear.\n\nOtitis media is usually accompanied by severe ear pain, fever, and drainage of pus. The acute onset of bleeding suggests perforation.\n\nEar canal trauma from foreign objects is a possibility, but there is no history of this.\n\nBasilar skull fracture is a severe injury that can cause bleeding from the ear. The absence of head trauma or these associated symptoms makes a skull fracture less likely.\n\nTympanic membrane perforation symptoms include ear pain, hearing loss, tinnitus, and bleeding from the ear. The presence of blood suggests a possible tear or rupture in the eardrum. I believe this is the likely diagnosis.\n\nThe patient is safe for discharge, with instructions to not submerge in water.\n\nThe patient is considered safe for outpatient management.\n\nFollow-up with a primary care pediatrician is recommended if symptoms persist or worsen.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

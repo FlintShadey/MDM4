@@ -17,53 +17,25 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += ' Infectious mononucleosis, unspecified without complication; '"
       >
-        pain left
+       MOno
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Infectious mononucleosis, unspecified with other complication; '"
       >
-        pain right
+        mono with complication
       </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += 'Pain in throat; '"
       >
-        Add Diagnosis #1
+        pain in throat
       </v-btn>
       <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
-      >
-        Add Diagnosis #2
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
-      >
-        Add Diagnosis #3
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
         color="#72728a"
         class="ma-2"
         @click="secondaryValue += 'fever; '"
@@ -84,20 +56,7 @@
       >
         Lymphadenopathy
       </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
-      </v-btn>
+     
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -143,7 +102,7 @@ export default {
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue: "The patient presents with lymph node swelling.\n\nLymphoma could cause persistent, painless lymph node swelling, but systemic symptoms like night sweats, weight loss, and fatigue would raise concern for this, none of which are reported here.\n\nCytomegalovirus infection can also present similarly to mononucleosis with lymph node swelling, but it is usually milder, and the history of recent exposure or other classical symptoms of mono point more towards infectious mononucleosis.\n\nMononucleosis presents with swollen lymph nodes, fatigue, sore throat, and sometimes fever. The patient's lymph node swelling and fatigue align well with this diagnosis.\n\nBased on the clinical presentation, I believe this is likely mononucleosis.\n\nThe patient is safe for outpatient management, with avoidance of contact sports advised due to the potential for splenic enlargement. Follow-up is advised if symptoms persist or worsen.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration

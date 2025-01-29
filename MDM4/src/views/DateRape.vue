@@ -13,91 +13,35 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Adult sexual abuse, suspected, initial encounter  '"
       >
-        pain left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
-      >
-        pain right
+        adult suspected
       </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += 'Adult sexual abuse, confirmed, initial encounter '"
       >
-        Add Diagnosis #1
+        adult confirmed
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'Child sexual abuse, suspected, initial encounter; '"
       >
-        Add Diagnosis #2
+        child suspected
       </v-btn>
-      <v-btn
+            <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="secondaryValue += 'Child sexual abuse, confirmed, initial encounter; '"
       >
-        Add Diagnosis #3
+        child confirmed
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
-      </v-btn>
+      
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -139,11 +83,11 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "DateRape",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue: "Patient is not acutely ill appearing, she is currently mentating well.\n\nI considered possible drug intoxication.\n\nPatient does not have a seizure disorder and there were no post-ictal signs, so this diagnosis is unlikely.\n\nThere was no loss of consciousness or waking up from the floor, so I do not think that there was a syncopal event.\n\nPatient’s clothing and underwear are unchanged, so I do not believe that she was sexually assaulted.\n\nVital signs are normal and the patient is safe for outpatient management.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration

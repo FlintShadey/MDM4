@@ -8,95 +8,51 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Diagnosis HELLP </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
-      >
-        pain left
-      </v-btn>
       <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
-      >
-        pain right
-      </v-btn>
-            <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += ' Headache; '"
       >
-        Add Diagnosis #1
+        Headache
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'Headache with orthostatic component,; '"
       >
-        Add Diagnosis #2
+        orthostatic Headache
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="
+          secondaryValue +=
+            'Pre-existing secondary hypertension complicating pregnancy, first trimester; '
+        "
       >
-        Add Diagnosis #3
+        hypertension
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
+        @click="secondaryValue += 'Other visual disturbances; '"
       >
-        Add Diagnosis #4
+        visual disturbances
+      </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Nausea; '">
+        Nausea
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
+        @click="secondaryValue += 'Edema, unspecified; '"
       >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
+        edema
       </v-btn>
     </div>
 
@@ -114,9 +70,9 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link + Show Modal
+        pregnant HTN meds
       </v-btn>
-      <v-dialog v-model="dialog" max-width="80%">
+      <v-dialog v-model="dialog" max-width="66%">
         <v-card>
           <v-img :src="dialogImgUrl" height="800px" contain></v-img>
         </v-card>
@@ -138,16 +94,19 @@
 </template>
 
 <script>
+import PregnantHTN from "@/assets/PregnantHTN.png";
 export default {
-  name: "GenericTemplate",
+  name: "NotPreEclampsia",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue:
+        "Currently, there is no evidence of preeclampsia, including no elevated systolic blood pressure greater than 140 mmHg or diastolic blood pressure greater than 90 mmHg.\n\nThe patient has no evidence of petechiae, no abnormal lung sounds suggestive of pulmonary edema, and no visual disturbances, including blurred vision or flashing lights.\n\nThe patient has no signs of epigastric pain or right upper quadrant tenderness, and there is no evidence of fetal distress.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue:
+        "Diagnostic criteria for HELLP syndrome\n\nHemolysis\nAbnormal peripheral smear\nTotal bilirubin > 1.2 mg/dl\n\nElevated liver enzymes\nLactate dehydrogenase >600 U/l\nAspartate aminotransaminase/alanine\nAminotransferase >70 U/l\nLow platelets\nPlatelets < 100×10°/\n\nAssociated findings with HELLP syndrome include: elevated liver enzymes, low platelet count, hemolysis (broken red blood cells), right upper quadrant abdominal pain, nausea, vomiting, headache, visual disturbances, swelling in the hands and face, high blood pressure, proteinuria (protein in the urine), and jaundice,",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
@@ -198,8 +157,8 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://www.google.com", "_blank");
-      this.dialogImgUrl = "@/assets/visionLoss.png";
+      //   window.open("https://www.google.com", "_blank");
+      this.dialogImgUrl = PregnantHTN; // Use the imported image
       this.dialog = true;
     },
 

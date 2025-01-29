@@ -13,7 +13,13 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
+      >
+        Trauma Pain
+      </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
@@ -31,72 +37,51 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += 'muscle spasm; '"
       >
-        Add Diagnosis #1
+        muscle spasm
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'myalgia; '"
       >
-        Add Diagnosis #2
+        myalgia
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="secondaryValue += 'Driver injured in collision with unspecified motor vehicles in traffic accident, initial encounter; '"
       >
-        Add Diagnosis #3
+        driver
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
+        @click="secondaryValue += 'Passenger injured in collision with unspecified motor vehicles in traffic accident, initial encounter; '"
       >
-        Add Diagnosis #4
+        Passenger
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
+        @click="secondaryValue += 'Person injured in collision between car and two- or three-wheeled motor vehicle (traffic); '"
       >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
+        motorcycle
       </v-btn>
                   <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ', left; '"
+        @click="secondaryValue += ', traffic, initial encounter; '"
       >
-         left
+         traffic
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += ', right; '"
+        @click="secondaryValue += ', nontraffic, initial encounter; '"
       >
-         right
+         nontraffic
       </v-btn>
     </div>
 
@@ -114,7 +99,7 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link + Show Modal
+      glasgow coma scale
       </v-btn>
       <v-dialog v-model="dialog" max-width="80%">
         <v-card>
@@ -139,11 +124,11 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "MVC",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue: "The patient presents following a motor vehicle collision.\n\nThe patient's presentation did not exhibit signs of intracranial hemorrhage, such as altered mental status, focal neurological deficits, or a significant headache.\n\nThere were no clinical signs or imaging findings suggestive of a skull fracture, such as visible head wounds, cerebrospinal fluid leakage, or depressed skull fragments.\n\nThe patient's neurological examination did not reveal any evidence of spinal fractures or acute syndromes.\n\nThe absence of hypoxia, tachypnea, or physical examination findings, such as decreased breath sounds, indicated that a pneumothorax was not present.\n\nPulmonary contusion and cardiac contusion seem unlikely as the patient did not exhibit clinical signs like chest pain, shortness of breath, or abnormal cardiac rhythms associated with these conditions.\n\nThe patient's symptoms and physical examination did not suggest aortic or vertebral dissection, such as severe tearing chest pain or neurological deficits.\n\nThe absence of signs like abdominal tenderness, guarding, or rigidity indicated the absence of hollow organ injury.\n\nMy clinical evaluation did not reveal findings consistent with this condition, such as peritoneal signs or significant abdominal pain.\n\nExamination did not show evidence of extremity fractures.\n\nThe patient is currently safe for discharge.\n\nI discussed return instructions, particularly regarding the monitoring of worsening injury symptoms. A follow-up appointment with their primary care provider within 2-3 days was recommended.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
@@ -198,7 +183,7 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://www.google.com", "_blank");
+      window.open("https://www.mdcalc.com/calc/64/glasgow-coma-scale-score-gcs", "_blank");
       this.dialogImgUrl = "@/assets/visionLoss.png";
       this.dialog = true;
     },

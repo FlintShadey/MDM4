@@ -71,6 +71,37 @@ import FootFX from "../views/FootFX.vue";
 import Gout from "../views/Gout.vue";
 import FootParesthesia from "../views/FootParesthesia.vue";
 import ToeFX from "../views/ToeFX.vue";
+import MVC from "../views/MVC.vue";
+import MajorTrauma from "../views/MajorTrauma.vue";
+import Fall from "../views/Fall.vue";
+import DateRape from "../views/DateRape.vue";
+import PackingRemoved from "../views/PackingRemoved.vue";
+import PostSurgicalWound from "../views/PostSurgicalWound.vue";
+import PackingChange from "../views/PackingChange.vue";
+import Burn from "../views/Burn.vue";
+import InhalationInjury from "../views/InhalationInjury.vue";
+import AnimalBite from "../views/AnimalBite.vue";
+import InsectBite from "../views/InsectBite.vue";
+import Headache from "../views/Headache.vue";
+import Migraine from "../views/Migraine.vue";
+import NotPreEclampsia from "../views/NotPreEclampsia.vue";
+import Hypertension from "../views/Hypertension.vue";
+import EarFB from "../views/EarFB.vue";
+import OtitisMedia from "../views/OtitisMedia.vue";
+import OtitisExterna from "../views/OtitisExterna.vue";
+import CerumenImpaction from "../views/CerumenImpaction.vue";
+import Perforation from "../views/Perforation.vue";
+import NoseFB from "../views/NoseFB.vue";
+import Epistaxis from "../views/Epistaxis.vue";
+import SoreThroat from "../views/SoreThroat.vue";
+import Toothache from "../views/Toothache.vue";
+import PharyngealScratch from "../views/PharyngealScratch.vue";
+import PharyngealCellulitis from "../views/PharyngealCellulitis.vue";
+import PreseptalCellulitis from "../views/PreseptalCellulitis.vue";
+import ColdSore from "../views/ColdSore.vue";
+import Mono from "../views/Mono.vue";
+import TMJ from "../views/TMJ.vue";
+
 import NotFound from "../views/NotFound.vue";
 
 const routes = [
@@ -155,7 +186,7 @@ const routes = [
   { path: "/fingerfx", name: "FingerFX", component: FingerFX },
   { path: "/boxerfx", name: "BoxerFX", component: BoxerFX },
   { path: "/nailavulsion", name: "NailAvulsion", component: NailAvulsion },
-  { path : "/trephination", name: "Trephination", component: Trephination },
+  { path: "/trephination", name: "Trephination", component: Trephination },
   { path: "/sciatica", name: "Sciatica", component: Sciatica },
   { path: "/hipsprain", name: "HipSprain", component: HipSprain },
   { path: "/kneesprain", name: "KneeSprain", component: KneeSprain },
@@ -171,12 +202,42 @@ const routes = [
   { path: "/footpuncture", name: "FootPuncture", component: FootPuncture },
   { path: "/fbnoremoval", name: "FBNoRemoval", component: FBNoRemoval },
   { path: "/fbremoval", name: "FBRemoval", component: FBRemoval },
-  { path: "/footpain", name: "FootPain", component: FootPain }, 
+  { path: "/footpain", name: "FootPain", component: FootPain },
   { path: "/footsprain", name: "FootSprain", component: FootSprain },
   { path: "/footfx", name: "FootFX", component: FootFX },
   { path: "/gout", name: "Gout", component: Gout },
   { path: "/footparesthesia", name: "FootParesthesia", component: FootParesthesia },
   { path: "/toefx", name: "ToeFX", component: ToeFX },
+  { path: "/mvc", name: "MVC", component: MVC },
+  { path: "/majortrauma", name: "MajorTrauma", component: MajorTrauma },
+  { path: "/fall", name: "Fall", component: Fall },
+  { path: "/daterape", name: "DateRape", component: DateRape },
+  { path: "/packingremoved", name: "PackingRemoved", component: PackingRemoved },
+  { path: "/postsurgicalwound", name: "PostSurgicalWound", component: PostSurgicalWound },
+  { path: "/packingchange", name: "PackingChange", component: PackingChange },
+  { path: "/burn", name: "Burn", component: Burn },
+  { path: "/inhalationinjury", name: "InhalationInjury", component: InhalationInjury },
+  { path: "/animalbite", name: "AnimalBite", component: AnimalBite },
+  { path: "/insectbite", name: "InsectBite", component: InsectBite },
+  { path: "/headache", name: "Headache", component: Headache },
+  { path: "/migraine", name: "Migraine", component: Migraine },
+  { path: "/notpreeclampsia", name: "NotPreEclampsia", component: NotPreEclampsia },
+  { path: "/hypertension", name: "Hypertension", component: Hypertension },
+  { path: "/earfb", name: "EarFB", component: EarFB },
+  { path: "/otitismedia", name: "OtitisMedia", component: OtitisMedia },
+  { path: "/otitisexterna", name: "OtitisExterna", component: OtitisExterna },
+  { path: "/cerumenimpaction", name: "CerumenImpaction", component: CerumenImpaction },
+  { path: "/perforation", name: "Perforation", component: Perforation },
+  { path: "/nosefb", name: "NoseFB", component: NoseFB },
+  { path: "/epistaxis", name: "Epistaxis", component: Epistaxis },
+  { path: "/sorethroat", name: "SoreThroat", component: SoreThroat },
+  { path: "/toothache", name: "Toothache", component: Toothache },
+  { path: "/pharyngealscratch", name: "PharyngealScratch", component: PharyngealScratch },
+  { path: "/pharyngealcellulitis", name: "PharyngealCellulitis", component: PharyngealCellulitis },
+  { path: "/preseptalcellulitis", name: "PreseptalCellulitis", component: PreseptalCellulitis },
+  { path: "/coldsore", name: "ColdSore", component: ColdSore },
+  { path: "/mono", name: "Mono", component: Mono },
+  { path: "/tmj", name: "TMJ", component: TMJ },
 
 
 

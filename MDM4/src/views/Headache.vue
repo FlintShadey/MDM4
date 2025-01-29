@@ -8,96 +8,49 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> cocktail </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
 
+ 
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += ' Headache; '"
       >
-        pain left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
-      >
-        pain right
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
-      >
-        Add Diagnosis #1
+         Headache
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'Headache with orthostatic component,; '"
       >
-        Add Diagnosis #2
+        orthostatic Headache
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="secondaryValue += 'Tension-type headache; '"
       >
-        Add Diagnosis #3
+        Tension-type 
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
+        @click="secondaryValue += 'Cluster headache syndrome; '"
       >
-        Add Diagnosis #4
+        cluster
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
+        @click="secondaryValue += 'Nausea; '"
       >
-        Add Diagnosis #5
+        Nausea
       </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
-      </v-btn>
+                
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -139,15 +92,15 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "Headache",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue: "The patient presents with a headache.\n\nInitial concern would be for a cerebral vascular event, such as a stroke or aneurysm, which can lead to severe neurological deficits or even death. However, the patient does not show focal neurological deficits, altered consciousness, or other signs suggestive of a stroke or aneurysm.\n\nAlso in the differential diagnosis would be meningitis, which could cause severe complications like brain damage or sepsis. However, the patient does not exhibit neck stiffness, fever, or other classic signs of meningitis.\n\nAdditionally, cluster headache must be considered due to its severe, unilateral pain often around the eye, but the lack of accompanying symptoms such as eye redness, tearing, or nasal congestion makes this diagnosis less likely.\n\nThe risk of a major neurological event appears to be low.\n\nCurrently there's no evidence of giant cell arteritis. There's no stiffness of the neck or shoulders. There is no tenderness of the temporal artery. The temporal artery is without thickening or nodularity. There are no visual disturbances, no jaw claudication, no fever, no malaise or fatigue. \n\nCurrently, the patient is safe and at minimal risk of serious conditions such as cerebral hemorrhage, meningitis, or brain tumors as a cause for this presentation.\n\nThe patient is safe for outpatient management and is advised to follow up with their primary care physician or neurology for further evaluation and management.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "Patient was given an IV, with intravenous fluids, benadryl, toradol, and Reglan, and allowed to rest in a ER room, after some time there was a reduction in the symptoms of the headache.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

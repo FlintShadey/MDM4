@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Cerumen removal procedure note </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -17,89 +17,39 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Pain in the left ear; '"
       >
         pain left
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Pain in the right ear; '"
       >
         pain right
       </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += 'Impacted cerumen, left ear; '"
       >
-        Add Diagnosis #1
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
-      >
-        Add Diagnosis #2
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
-      >
-        Add Diagnosis #3
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
+        Left cerumen
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += ', right; '"
+        @click="secondaryValue += 'Impacted cerumen, right ear; '"
       >
-         right
+        Right cerumen
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Impacted cerumen, bilateral; '"
+      >
+        cerumen bilateral
       </v-btn>
     </div>
-
     <!-- SECONDARY TEXTAREA -->
     <div class="mt-5">
       <v-textarea v-model="secondaryValue" auto-grow outlined></v-textarea>
@@ -139,15 +89,15 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "CerumenImpaction",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue: "The patient presents with hearing loss and ear fullness.\n\nThis patient could have otitis media, which could lead to the spreading of the infection to the mastoid bone, however the eardrum is not visible.\n\nIt is also possible that the patient could have otitis externa, which can lead to inflammation of the cartilage of the outer ear, such as perichondritis, potentially resulting in deformity or damage to the cartilage.\n\nIt is also possible that the patient has Meniere's disease, which could account for the hearing loss and fullness.\n\nBarotrauma can result in ear pain, hearing loss, and a feeling of fullness in the ears; however, the patient does not have a history of this.\n\nCurrently, physical exam suggests that this is cerumen impaction, which could lead to conductive hearing loss and ear drum injury.\n\nThe patient is safe for discharge.\n\nThe patient is educated about ear hygiene and advised to follow up with ENT if the problems persist.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "Performed by: J. Flint Smith, MD\n\nProcedure: Removal of Ear Cerumen Impaction\n\n Indications: Patient presents with ear fullness and hearing loss.\nOtoscopic examination reveals complete occlusion of the ear canal with cerumen.\n\nExamination: Thoroughly examined the ear canal with an otoscope.\nIrrigation: Gently irrigated the ear canal with normal saline.\n\nCerumen Removal: Cerumen impaction removed successfully with irrigation and a curette, under direct visualization.\n\nPost-procedure: Ear canal inspected for any residual debris.\n\nFindings: Cerumen impaction successfully removed.\nThere is some mild erythema of the ear canal, with no signs of infection.\n\nComplications: None.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

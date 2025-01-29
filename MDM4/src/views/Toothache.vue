@@ -13,55 +13,47 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += ' Dental caries, unspecified; '"
       >
-        pain left
+        caries
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Dental root caries; '"
       >
-        pain right
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
-      >
-        Add Diagnosis #1
+        Root caries
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'Pain in the Jaw; '"
       >
-        Add Diagnosis #2
+        Jaw pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="secondaryValue += 'Acute headache; '"
       >
-        Add Diagnosis #3
+        headache
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
+        @click="secondaryValue += 'Pain in the face; '"
       >
-        Add Diagnosis #4
+        face pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
+        @click="secondaryValue += 'Periapical abscess without sinus: ; '"
       >
-        Add Diagnosis #5
+        abscess
       </v-btn>
           <v-btn
         color="#72728a"
@@ -83,20 +75,6 @@
         @click="secondaryValue += 'Lymphadenopathy; '"
       >
         Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
       </v-btn>
     </div>
 
@@ -139,11 +117,12 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "Toothache",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue:
+        "The patient came in with dental pain accompanied by facial swelling.\n\nUpon examination, there's no evidence of tooth fracture, avulsion, or bleeding from the socket.\n\nConditions like retropharyngeal abscess, peritonsillar abscess, Ludwig's angina, or periapical abscess are not present. The patient doesn't appear septic or unwell.\n\nThis doesn't align with Ludwig's angina as there's no tenderness, brawny edema, or crepitus. The patient doesn't have symptoms like fever, chills, malaise, mouth pain, stiff neck, drooling, or difficulty swallowing. The patient isn't leaning forward and doesn't have a muffled voice. There's no trismus, difficulty breathing, stridor, or cyanosis. The floor of the oral cavity isn't raised and isn't tender when touched.\n\nThe patient is not immunocompromised, so they should do well with outpatient management.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration

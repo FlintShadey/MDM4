@@ -13,7 +13,13 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'acute pain due to trauma;  '"
+      >
+        Trauma Pain
+      </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
@@ -31,70 +37,43 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += 'Bitten by dog, initial encounter; '"
       >
-        Add Diagnosis #1
+        dog
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'Bitten by cat, initial encounter; '"
       >
-        Add Diagnosis #2
+        cat
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="secondaryValue += 'Bitten by other mammals, initial encounter; '"
       >
-        Add Diagnosis #3
+        Mammals
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
+        @click="secondaryValue += 'Open bite of the hand, initial encounter; '"
       >
-        Add Diagnosis #4
+        Hand
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
+
                   <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ', left; '"
+        @click="secondaryValue += 'Open Bite on the left _____, initial encounter; '"
       >
          left
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += ', right; '"
+        @click="secondaryValue += 'Open Bite on the right _____, initial encounter; '"
       >
          right
       </v-btn>
@@ -139,11 +118,11 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "AnimalBite",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue: "The patient presents with a bite wound.\n\nCurrently, there does not seem to be a retained foreign body, nerve injury, vascular injury, tendon injury, or bone injury.\n\nTetanus status has been addressed.\n\nI will write a prescription for antibiotics.\n\nThe patient is encouraged to follow up with the health department for concerns about rabies.\n\nThe patient is advised to keep the wound clean and dry and has been given instructions to mitigate the risk of infection.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration

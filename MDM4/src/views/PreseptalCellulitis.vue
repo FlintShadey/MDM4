@@ -13,57 +13,44 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Pain in the left face; '"
       >
         pain left
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Pain in the right face; '"
       >
         pain right
       </v-btn>
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="
+          secondaryValue += 'Periorbital cellulitis; preseptal cellulitis; '
+        "
       >
-        Add Diagnosis #1
+        Periorbital cellulitis
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'Cellulitis of eyelid; '"
       >
-        Add Diagnosis #2
+        Cellulitis of eyelid
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="secondaryValue += 'Cellulitis of face; '"
       >
-        Add Diagnosis #3
+        Cellulitis of face
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
+    <v-btn
         color="#72728a"
         class="ma-2"
         @click="secondaryValue += 'fever; '"
@@ -84,19 +71,15 @@
       >
         Lymphadenopathy
       </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += ', left; '">
+        left
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
         @click="secondaryValue += ', right; '"
       >
-         right
+        right
       </v-btn>
     </div>
 
@@ -139,11 +122,12 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "PreseptalCellulitis",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue:
+        "The patient presents with facial inflammation.\n\nOrbital cellulitis typically involves infection posterior to the orbital septum, often presenting with pain on eye movement, proptosis, impaired ocular motility, or visual changes. These findings are not present.\n\nContact dermatitis might cause localized redness or itching but generally lacks signs of deeper infection such as marked swelling or tenderness indicative of cellulitis, which does not match this scenario.\n\nAllergic reaction could lead to facial swelling or redness, but it often includes itching, hives, or recent allergen exposure, which are not reported here.\n\nPreseptal cellulitis presents with eyelid swelling, redness, and tenderness, but without the orbital signs seen in orbital cellulitis. The patient’s symptoms align well with this diagnosis.\n\nBased on the clinical presentation, preseptal cellulitis is considered the most likely diagnosis.\n\nThe patient is safe for discharge and outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration

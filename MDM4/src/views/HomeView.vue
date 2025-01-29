@@ -447,12 +447,7 @@
     </v-row>
     <hr />
     <v-row>
-      <img
-        class="mt-3"
-        height="32px"
-        src="../assets/hand.png"
-        alt="hand"
-      />
+      <img class="mt-3" height="32px" src="../assets/hand.png" alt="hand" />
       <v-col>
         <v-btn
           color="primary"
@@ -577,13 +572,10 @@
           hip sprain
         </v-btn>
       </v-col>
-  
     </v-row>
     <hr />
     <v-row>
-      <img  class ="mt-3"
-          height="32px"
-      src="../assets/knee.png" alt="">
+      <img class="mt-3" height="32px" src="../assets/knee.png" alt="" />
       <v-col>
         <v-btn
           color="primary"
@@ -635,157 +627,482 @@
         </v-btn>
       </v-col>
     </v-row>
+    <hr />
+    <v-row>
+      <img class="mt-3" height="32px" src="../assets/ankle.png" alt="" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/anklesprain')"
+        >
+          Ankle Sprain
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/achillestendonitis')"
+        >
+          achilles Tendonitis
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/anklefx')"
+        >
+          ankle fx
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="warning"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/conscioussedation')"
+        >
+          conscious sedation
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img class="mt-3" height="32px" src="../assets/foot.png" alt="" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/footpuncture')"
+        >
+          foot puncture
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="warning"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/fbnoremoval')"
+        >
+          FB NO removal
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="warning"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/fbremoval')"
+        >
+          FB + removal
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/footpain')"
+        >
+          foot pain
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/footsprain')"
+        >
+          foot sprain
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/footfx')"
+        >
+          foot fx
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/gout')"
+        >
+          gout
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/footparesthesia')"
+        >
+          foot paresthesia
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/paronychia')"
+        >
+          paronychia
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/toefx')"
+        >
+          toe fx
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img class="mt-3" height="32px" src="../assets/car.png" alt="mvc" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/MVC')"
+        >
+          motor vehicle collision
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/majortrauma')"
+        >
+          Major Trauma
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/fall')"
+        >
+          fall
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/daterape')"
+        >
+          Date rape
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="warning"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/packingremoved')"
+        >
+          Packing removed
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="warning"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/postsurgicalwound')"
+        >
+          Post surgical wound
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="warning"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/packingchange')"
+        >
+          packing change
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img src="../assets/fire.png" alt="fire" height="32px" class="mt-3" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/burn')"
+        >
+          burn
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/inhalationinjury')"
+        >
+          inhalation injury
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img src="../assets/bite.png" alt="bite" height="32px" class="mt-3" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/animalbite')"
+        >
+          animal bite
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/insectbite')"
+        >
+          insect bite
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr style="border-top: 5px solid white" />
+    <v-row>
+      <img src="../assets/head.png" alt="head" height="32px" class="mt-3" />
+
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/headache')"
+        >
+          Headache
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/migraine')"
+        >
+          Migraine
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/notpreEclampsia')"
+        >
+          Not Pre-eclampsia
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/hypertension')"
+        >
+          hypertension
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img src="../assets/ear.png" alt="ear" height="32px" class="mt-3" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/earfb')"
+        >
+          Ear FB
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/otitismedia')"
+        >
+          Otitis Media
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/otitisexterna')"
+        >
+          Otitis Externa
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/cerumenimpaction')"
+        >
+          cerumen impaction
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/perforation')"
+        >
+          perforation
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img src="../assets/nose.png" alt="nose" height="32px" class="mt-3" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/nosefb')"
+        >
+          Nose FB
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/epistaxis')"
+        >
+          Epistaxis
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img src="../assets/mouth.png" alt="mouth" height="32px" class="mt-3" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/sorethroat')"
+        >
+          Sore Throat
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/toothache')"
+        >
+          Toothache
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/pharyngealscratch')"
+        >
+          Pharyngeal Scratch
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/pharyngealcellulitis')"
+        >
+          Pharyngeal Cellulitis
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/preseptalcellulitis')">
+          Preseptal Cellulitis
+        </v-btn>
+
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/coldsore')"  >
+
+          Cold Sore
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/mono')">
+          mono
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/tmj')">
+          tmj
+        </v-btn>
+      </v-col>
+    </v-row>
     <hr>
-<v-row>
-  <img class="mt-3" height="32px" src="../assets/ankle.png" alt="" />
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/anklesprain')"
-    >
-      Ankle Sprain
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/achillestendonitis')"
-    >
-      achilles Tendonitis
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/anklefx')"
-    >
-      ankle fx
-    </v-btn>
-
-  </v-col>
-  <v-col>
-    <v-btn
-      color="warning"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/conscioussedation')"
-    >
-      conscious sedation
-    </v-btn>
-  </v-col>
-
-</v-row>
-<hr>
-  <v-row>
-    <img class="mt-3" height="32px" src="../assets/foot.png" alt="" />
-    <v-col>
-      <v-btn
-        color="primary"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/footpuncture')"
-      >
-        foot puncture
-      </v-btn>
-
-    </v-col>
-    <v-col>
-      <v-btn
-        color="warning"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/fbnoremoval')"
-      >
-        FB NO removal
-      </v-btn>
-    </v-col>
-        <v-col>
-      <v-btn
-        color="warning"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/fbremoval')"
-      >
-        FB + removal
-      </v-btn>
-    </v-col>
-    <v-col>
-      <v-btn
-        color="primary"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/footpain')"
-      >
-        foot pain
-      </v-btn>
-    </v-col>
-    <v-col>
-      <v-btn
-        color="primary"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/footsprain')"
-      >
-        foot sprain
-      </v-btn>
-    </v-col>
-    <v-col>
-      <v-btn
-        color="primary"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/footfx')"
-      >
-        foot fx
-      </v-btn>
-    </v-col>
-    <v-col>
-      <v-btn
-        color="primary"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/gout')"
-      >
-        gout
-      </v-btn>
-    </v-col>
-    <v-col>
-      <v-btn
-        color="primary"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/footparesthesia')"
-      >
-        foot paresthesia
-      </v-btn>
-    </v-col>
-    <v-col>
-      <v-btn
-        color="primary"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/paronychia')"
-      >
-        paronychia
-      </v-btn>
-    </v-col>
-    <v-col>
-      <v-btn
-        color="primary"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/toefx')"
-      >
-        toe fx
-      </v-btn>
-    </v-col>
-  </v-row>
   </v-container>
 </template>
 
@@ -865,7 +1182,36 @@ export default {
         "/gout",
         "/footparesthesia",
         "/toefx",
-        
+        "/mvc",
+        "/majortrauma",
+        "/fall",
+        "/daterape",
+        "/packingremoved",
+        "/postsurgicalwound",
+        "/packingchange",
+        "/burn",
+        "/inhalationinjury",
+        "/animalbite",
+        "/insectbite",
+        "/headache",
+        "/migraine",
+        "/notpreEclampsia",
+        "/hypertension",
+        "/earfb",
+        "/otitismedia",
+        "/otitisexterna",
+        "/cerumenimpaction",
+        "/perforation",
+        "/nosefb",
+        "/epistaxis",
+        "/sorethroat",
+        "/toothache",
+        "/pharyngealscratch",
+        "/pharyngealcellulitis",
+        "/preseptalcellulitis",
+        "/coldsore",
+        "/mono",
+        "/tmj",
       ],
     };
   },

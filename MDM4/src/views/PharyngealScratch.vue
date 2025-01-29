@@ -17,51 +17,30 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Abrasion of throat '"
       >
-        pain left
+       Abrasion of throat
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Acute pharyngitis; '"
       >
-        pain right
+       pharyngitis
       </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += 'Pain in the throat; '"
       >
-        Add Diagnosis #1
+       pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'Foreign body in pharynx; '"
       >
-        Add Diagnosis #2
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
-      >
-        Add Diagnosis #3
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
+        Foreign body in pharynx
       </v-btn>
           <v-btn
         color="#72728a"
@@ -83,20 +62,6 @@
         @click="secondaryValue += 'Lymphadenopathy; '"
       >
         Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
       </v-btn>
     </div>
 
@@ -139,11 +104,12 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+    name: "PharyngealScratch",
+
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue: "The patient presents with throat pain.\n\nStrep throat could cause throat pain, but it is typically associated with fever, swollen tonsils, and tender cervical lymph nodes, which are not present.\n\nTonsillitis may cause sore throat, but it is often accompanied by visible swelling, exudate, or significantly inflamed tonsils, which is not the case here.\n\nViral pharyngitis can result in a sore throat, but it usually includes cough, nasal congestion, or other signs of a viral infection, which I don't believe is the case here.\n\nPharyngeal scratch may occur from mild trauma, dryness, or irritation. It presents with localized throat pain and minimal additional symptoms, aligning with this patient’s presentation.\n\nBased on the clinical presentation, pharyngeal scratch is considered the most likely diagnosis.\n\nThe patient is safe for discharge and outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration

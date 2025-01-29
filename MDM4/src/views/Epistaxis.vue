@@ -8,95 +8,30 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue">
+       Epistaxis Procedure note
+      </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Epistaxis, initial encounter '"
       >
-        pain left
+        Epistaxis
+      </v-btn>
+      
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += ', left nare; '">
+        left 
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += ', right nare; '"
       >
-        pain right
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
-      >
-        Add Diagnosis #1
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
-      >
-        Add Diagnosis #2
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
-      >
-        Add Diagnosis #3
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
+        right
       </v-btn>
     </div>
 
@@ -139,15 +74,17 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "Epistaxis",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue:
+        "The patient presents with a nosebleed.\n\nDry air exposure is one of the most common causes of nosebleeds, and this could be the cause in this case.\n\nNasal trauma, such as picking the nose or a direct impact to the nose, can easily cause bleeding, but the patient denies this.\n\nHypertension can exacerbate nosebleeds; however, the patient's current blood pressure is not excessive.\n\nBlood thinners or anticoagulation therapy can increase the risk of bleeding, including from minor nasal irritation, but the patient is not on blood-thinning medication.\n\nBased on the clinical examination and considering common causes of nosebleeds, along with the patient's history and environmental factors, dry air exposure and nasal trauma are the most likely causes.\n\nThere are no risk factors for bleeding disorders, and the patient is hemodynamically stable. No evidence of anemia.\n\nThe patient is generally safe for discharge and outpatient management. The patient is encouraged to follow up with ENT soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue:
+        "Performed by: J. Flint Smith, MD\n\nProcedure: Management of Epistaxis\n\nIndications:\nPatient presents with active nosebleed.\n\nExamination:\nNasal mucosa inspected. Source of bleeding identified as\n\nManagement:\n- Nasal packing: Anterior nasal packing applied.\n- Cauterization: Chemical cauterization performed with silver nitrate.\n- Topical medications: Applied Afrin spray to nasal mucosa.\n- Pressure: Nasal pressure applied for 10 minutes.\n\nFindings:\nEpistaxis controlled.\n\nComplications:\nNone.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

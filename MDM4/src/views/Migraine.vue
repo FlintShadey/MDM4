@@ -8,95 +8,54 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> cocktail </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
-      >
-        pain left
-      </v-btn>
       <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
-      >
-        pain right
-      </v-btn>
-            <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="
+          secondaryValue +=
+            '  Migraine with aura, not intractable, without status migrainosus; '
+        "
       >
-        Add Diagnosis #1
+        with aura
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="
+          secondaryValue +=
+            'Migraine without aura, not intractable, with status migrainosus; '
+        "
       >
-        Add Diagnosis #2
+        without aura
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="secondaryValue += 'Ophthalmoplegic migraine, not intractable; '"
       >
-        Add Diagnosis #3
+        Ophthalmoplegic
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
+        @click="secondaryValue += 'Cyclical vomiting, in migraine; '"
       >
-        Add Diagnosis #4
+        Cyclical vomiting
+      </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Nausea; '">
+        Nausea
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
+        @click="secondaryValue += 'visual disturbances; '"
       >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
+        visual disturbances
       </v-btn>
     </div>
 
@@ -139,15 +98,17 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "Headache",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue:
+        "The patient presents with symptoms of a headache.\n\nCurrently, there are no systemic symptoms such as fever, and there is no history of neoplasm.\n\nThere is no neurological deficit, and the onset of the headache was not sudden or thunderclap.\n\nThe patient has had headaches like this in the past, and there is no pattern change from prior headaches.\n\nThe headache does not seem to be positional and was not precipitated by sneezing, coughing, or exercise, ruling out a hemorrhage.\n\nOn physical exam, there is no papilledema, and there is no painful eye with autonomic features.\n\nThe headache's onset was not post-traumatic, and the patient is immunocompetent.\n\nThere is no evidence of analgesic abuse, and no focal neurological symptoms are present. The neurological exam is benign.\n\nCurrently, the patient does not appear toxic or to be in extremis and is without acute neurological findings.\n\nThere appears to be almost no chance of intracranial pathology; there is no current indication for a CT scan as that carries a risk of causing harm in the future.\n\nThe patient is instructed to follow up with their primary care physician in the next 2-3 days if the headache has not resolved.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue:
+        "Patient was given an IV, with intravenous fluids, benadryl, toradol, and Reglan, and allowed to rest in a ER room, after some time there was a reduction in the symptoms of the headache.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

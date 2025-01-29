@@ -13,96 +13,71 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Bronchitis and pneumonitis due to chemicals, gases, fumes and vapors;  '"
+      >
+        pneumonitis
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Pulmonary edema due to chemicals, gases, fumes and vapors; '"
+      >
+        Pulmonary edema
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Upper respiratory inflammation due to chemicals, gases, fumes and vapors; '"
+      >
+        respiratory inflammation
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="
+          secondaryValue += 'Toxic effect of unspecified gases, fumes and vapors; '
+        "
+      >
+       Toxic effect
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Respiratory conditions due to smoke inhalation; '"
+      >
+        smoke
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'accidental; '"
+      >
+        accidental
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'intentional; '"
+      >
+        intentional
+      </v-btn>
 
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
-      >
-        pain left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
-      >
-        pain right
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
-      >
-        Add Diagnosis #1
-      </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += ', initial encounter; '"
       >
-        Add Diagnosis #2
+        initial
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
-      >
-        Add Diagnosis #3
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
-      >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += ', right; '"
-      >
-         right
-      </v-btn>
+      
     </div>
 
     <!-- SECONDARY TEXTAREA -->
-    <div class="mt-5">
-      <v-textarea v-model="secondaryValue" auto-grow outlined></v-textarea>
+    <div class="mt-5" >
+      <v-textarea v-model="secondaryValue" auto-grow outlined ></v-textarea>
 
       <div class="text-center">
         <v-btn @click="copyToClipboardSecond" color="yellow">
@@ -113,9 +88,7 @@
 
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
-      <v-btn @click="openExternalLink" color="yellow">
-        Open External Link + Show Modal
-      </v-btn>
+      <v-btn @click="openExternalLink" color="yellow">   </v-btn>
       <v-dialog v-model="dialog" max-width="80%">
         <v-card>
           <v-img :src="dialogImgUrl" height="800px" contain></v-img>
@@ -139,11 +112,12 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "InhalationInjury",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue:
+        "The patient presents with symptoms following inhalation.\n\nIrritant exposure, such as inhaling smoke, can cause temporary irritation to the airways.\n\nThis may be mimicked by allergic rhinitis triggered by inhaling allergens like pollen, dust, or pet dander.\n\nAsthma exacerbation might occur after inhaling irritants or allergens.\n\nForeign body aspiration could occur and presents with coughing or choking after the event; however, I do not believe this is the case currently.\n\nBased on the clinical examination, I think that irritant exposure or allergic reactions are considered the most likely cause of the inhalation symptoms.\n\nThe patient is considered safe for discharge and outpatient management, with follow-up with a primary care provider soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
@@ -198,7 +172,7 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://www.google.com", "_blank");
+      window.open("https://www.mdcalc.com/calc/10568/rule-nines", "_blank");
       this.dialogImgUrl = "@/assets/visionLoss.png";
       this.dialog = true;
     },

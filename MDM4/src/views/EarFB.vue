@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> FB removal procedure note </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -17,72 +17,51 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Pain in the left ear; '"
       >
         pain left
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Pain in the right ear; '"
       >
         pain right
       </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="secondaryValue += 'Foreign body in left ear, initial encounter; '"
       >
-        Add Diagnosis #1
+        Left FB
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Foreign body in right ear, initial encounter; '"
+      >
+        Right fb
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #2; '"
+        @click="secondaryValue += 'Superficial foreign body of ear, initial encounter; '"
       >
-        Add Diagnosis #2
+        Superficial FB
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #3; '"
+        @click="secondaryValue += 'Laceration with foreign body of ear, initial encounter'"
       >
-        Add Diagnosis #3
+       Laceration with FB
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #4; '"
+        @click="secondaryValue += 'Puncture wound with foreign body of ear, initial encounter;  '"
       >
-        Add Diagnosis #4
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #5; '"
-      >
-        Add Diagnosis #5
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
+        Puncture with FB
       </v-btn>
                   <v-btn
         color="#72728a"
@@ -139,15 +118,15 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "EarFB",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "This is the default MDM text. Modify as needed.",
+      primaryValue: "The patient presents with ear pain.\n\nOtitis media could cause ear pain, but it is often accompanied by fever and bulging of the tympanic membrane, which are not present.\n\nOtitis externa might present with ear pain and tenderness when pulling on the earlobe or tragus, along with possible discharge. These findings are not reported here.\n\nImpacted cerumen can lead to ear discomfort or hearing loss, but I believe there is something else.\n\nEar foreign body can cause sudden ear pain, possible irritation, or muffled hearing. The patient’s symptoms align well with this diagnosis.\n\nThe patient is safe for discharge and outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "Procedure Note\n\nPerformed by: J. Flint Smith, MD\n\nProcedure: Removal of Ear Foreign Body\n\nIndications: Patient presents with a foreign body lodged in the ear canal.\nExamination: Thoroughly examined the ear canal with otoscope.\nPreparation: Instilled 2-3 drops of lidocaine into the ear canal for local anesthesia.\n\nIrrigation: Gently irrigated the ear canal with normal saline and small amounts of hydrogen peroxide using a syringe.\n\nForeign Body Removal: The foreign body was successfully removed with irrigation and [alligator forceps].\n\nEar Canal Inspection: The ear canal was inspected for any residual debris.\n\nFindings:  The foreign body was successfully removed. There is mild erythema of the ear canal, with no signs of infection.\n\nComplications: None.\n\nPost-Procedure Care:  Patient was instructed on post-procedure care.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
