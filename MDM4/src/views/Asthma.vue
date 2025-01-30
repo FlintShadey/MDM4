@@ -13,42 +13,74 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
-      >
-        Streptococcal
-      </v-btn>
-      <v-btn
+              <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += 'Unspecified asthma with (acute) exacerbation; '"
       >
-       pharyngitis
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
-      >
-       pain
+        asthma
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Severe persistent asthma, uncomplicated; '"
       >
-        tonsillitis
+        Severe
       </v-btn>
-          <v-btn
+         <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="secondaryValue += ' Cough variant asthma; '"
       >
-        fever
+        Cough variant asthma
       </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Cough; '">
+        Cough
+      </v-btn>
+          <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Shortness of breath; '">
+        Shortness of breath
+      </v-btn>
+            
+          <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Wheezing; '">
+       Wheezing
+      </v-btn>
+                <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Acute bronchospasm; '">
+       bronchospasm
+      </v-btn>
+              <v-btn
+        color="#dd42f5"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            '  Unspecified asthma with (acute) exacerbation; Cough; Shortness of breath; Wheezing; Acute bronchospasm; '
+        "
+      >
+        everything asthma
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'headache; '"
+      >
+        headache
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Sneezing; '"
+      >
+        Sneezing
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Fever, unspecified; '"
+      >
+        Fever
+      </v-btn>
+   
+   
       <v-btn
         color="#72728a"
         class="ma-2"
@@ -56,13 +88,7 @@
       >
         fatigue
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
+
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -104,15 +130,17 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "Asthma",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "The patient presents with acute difficulty breathing.\n\nThe patient did not exhibit symptoms that typically point to pneumonia.\n\nThe patient also did not show discomfort while lying flat or waking up at night short of breath, which would usually indicate heart failure.\n\nThere was no evidence of the patient suddenly choking, so I do not think this is aspiration of a foreign body.\n\nThere wasn't any swelling in the legs to suggest deep vein thrombosis, which could lead to a pulmonary embolism.\n\nThe patient's heart sounds were clear, without any jugular vein distention or low blood pressure, ruling out cardiac tamponade.\n\nThere were no complaints of chest pain, excessive sweating, or heart palpitations. This makes acute coronary syndrome less likely based on their physical examination and medical history.\n\nAnother positive aspect of the patient's presentation is the absence of altered mental status, silent breathing, abdominal breathing, or any signs that might indicate impending respiratory failure.\n\nFurthermore, the patient has never been intubated or hospitalized due to severe asthma.\n\nGiven these findings, I will treat the patient for bronchospasm and ensure they are safe for discharge and outpatient management.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue:
+        "The patient presents with acute difficulty breathing.\n\nThe patient did not exhibit symptoms that typically point to pneumonia.\n\nThere was no evidence of the patient suddenly choking, so I do not think this is aspiration of a foreign body.\n\nAnother positive aspect of the patient's presentation is the absence of altered mental status, silent breathing, abdominal breathing, or any signs that might indicate impending respiratory failure.\n\nThe patient is euvolemic and does not appear toxic.\n\nFurthermore, the patient has never been intubated or hospitalized due to severe asthma.\n\nGiven these findings, I will treat the patient for bronchospasm and ensure they are safe for discharge and outpatient management. Guardian is instructed to follow up with the pediatrician in the next few days.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

@@ -1,17 +1,23 @@
-<!-- filepath: /Users/flint/Library/Mobile Documents/com~apple~CloudDocs/Developer Cloud/MDM4/MDM4/src/views/NotFound.vue -->
 <template>
-  <div>
-    <h1>404 - Page Not Found because flint is HAWT</h1>
-    <router-link to="/">Go Home</router-link>
-  </div>
+  <v-container fluid fill-height>
+    <v-row align="center" justify="center">
+      <v-col cols="6" class="text-center">
+        <h1>404 - Page Not Found</h1>
+        
+        <img src="../assets/chicken.png" alt="Chicken" />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
+import Chicken from "../assets/chicken.png";
+
 export default {
   name: "NotFound",
 };
 </script>
 
 <style scoped>
-/* Add your styles here */
+/* Optional: Add any additional styling if needed */
 </style>

@@ -13,42 +13,64 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
-      >
-        Streptococcal
-      </v-btn>
-      <v-btn
+              <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += 'Acute upper respiratory infection; '"
       >
-       pharyngitis
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
-      >
-       pain
+        URI
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Nasal congestion; '"
       >
-        tonsillitis
+        congestion
       </v-btn>
-          <v-btn
+         <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="secondaryValue += 'Muscle pain; '"
       >
-        fever
+        Muscle pain
       </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Cough; '">
+        Cough
+      </v-btn>
+              <v-btn
+        color="#dd42f5"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            'NASAL CONGESTION - [R09.81] , OTHER FATIGUE- [R53.83], ACUTE UPPER RESPIRATORY INFECTION UNSPECIFIED  - [J06.9], COUGH - [R05], PAIN IN THROAT - [R07.0], MYALGIA, UNSPECIFIED SITE - (M79.10), CONTACT WITH AND (SUSPECTED) EXPOSURE TO OTHER VIRAL COMMUNICABLE DISEASES INCLUDING COVID-19 - [Z20.828]; '
+        "
+      >
+        everything URI
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'headache; '"
+      >
+        headache
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Sneezing; '"
+      >
+        Sneezing
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Fever, unspecified; '"
+      >
+        Fever
+      </v-btn>
+   
+   
       <v-btn
         color="#72728a"
         class="ma-2"
@@ -56,13 +78,7 @@
       >
         fatigue
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
+
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -104,15 +120,17 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "URI",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "Patient presents with cough and congestion.\n\nAllergic Rhinitis can cause similar symptoms but is usually associated with itching, sneezing, and clear nasal discharge, which are not emphasized in this case.\n\nPneumonia might present with cough and congestion, but it is usually associated with fever, difficulty breathing, and abnormal lung sounds, which are absent in this presentation.\n\nSinusitis can cause congestion and cough, but it is often accompanied by facial pain and pressure, which do not appear to be present in this case.\n\nURI is a common viral illness causing cough and nasal congestion, the patient’s symptoms align well with this diagnosis.\n\nBased on the clinical presentation, URI is considered the most likely diagnosis.\n\nThe patient is safe for discharge and outpatient management. Follow-up is advised if symptoms worsen.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue:
+        "Patient presents with cough and congestion.\n\nAllergic Rhinitis can cause similar symptoms but is usually associated with itching, sneezing, and clear nasal discharge, which are not emphasized in this case.\n\nPneumonia might present with cough and congestion, but it is usually associated with fever, difficulty breathing, and abnormal lung sounds, which are absent in this presentation.\n\nSinusitis can cause congestion and cough, but it is often accompanied by facial pain and pressure, which do not appear to be present in this case.\n\nURI is a common viral illness causing cough and nasal congestion, the patient’s symptoms align well with this diagnosis.\n\nBased on the clinical presentation, URI is considered the most likely diagnosis.\n\nPatient is not toxic and is euvolemic.\n\nThe patient is safe for discharge and outpatient management. Follow-up with the pediatrician is advised if symptoms worsen.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

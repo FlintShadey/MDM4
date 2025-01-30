@@ -13,42 +13,61 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
-      >
-        Streptococcal
-      </v-btn>
-      <v-btn
+              <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += 'Acute bronchitis; '"
       >
-       pharyngitis
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
-      >
-       pain
+        bronchitis
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Cough; '"
       >
-        tonsillitis
+        Cough
       </v-btn>
-          <v-btn
+         <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="secondaryValue += 'Acute Dyspnea; '"
       >
-        fever
+        Dyspnea
       </v-btn>
+        <v-btn
+        color="#dd42f5"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            'Acute Bronchitis; Cough; Acute Dyspnea; Contact With And (Suspected) Exposure To Other Viral Communicable Diseases Including Covid-19; '
+        "
+      >
+        everything bronchitis
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Wheezing; '"
+      >
+        Wheezing
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Sneezing; '"
+      >
+        Sneezing
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Fever, unspecified; '"
+      >
+        Fever
+      </v-btn>
+   
+   
       <v-btn
         color="#72728a"
         class="ma-2"
@@ -56,13 +75,7 @@
       >
         fatigue
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
+
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -104,15 +117,17 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "Bronchitis",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "Patient presents with a cough.\n\nPneumonia could cause a productive cough, but it is typically associated with hypoxia and shortness of breath which are not noted in this case.\n\nAsthma can present with a cough, especially when triggered by environmental factors, but it is often associated with wheezing and shortness of breath, which are not emphasized here.\n\nAllergic Rhinitis can cause a cough due to post-nasal drip, but this is usually accompanied by sneezing, itching, and watery eyes, which are not the primary symptoms.\n\nBronchitis is commonly caused by a respiratory infection. The patient's symptoms align well with this diagnosis.\n\nBased on the clinical presentation, bronchitis is considered the most likely diagnosis.\n\nThe patient is safe for discharge and outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue:
+        "Patient presents with a cough.\n\nPneumonia could cause a productive cough, but it is typically associated with hypoxia and shortness of breath which are not noted in this case.\n\nAsthma can present with a cough, especially when triggered by environmental factors, but it is often associated with wheezing and shortness of breath, which are not emphasized here.\n\nAllergic Rhinitis can cause a cough due to post-nasal drip, but this is usually accompanied by sneezing, itching, and watery eyes, which are not the primary symptoms.\n\nBronchitis is commonly caused by a respiratory infection. The patient's symptoms align well with this diagnosis.\n\nBased on the clinical presentation, bronchitis is considered the most likely diagnosis.\n\nPatient is not toxic and is euvolemic.\n\nThe patient is safe for discharge and outpatient management. Follow-up with the pediatrician is advised if symptoms worsen.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

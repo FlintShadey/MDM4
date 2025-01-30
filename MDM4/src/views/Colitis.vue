@@ -13,55 +13,85 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ' Acute Colitis without complications'"
+      >
+        Colitis
+      </v-btn>
+        <v-btn
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += 'Acute colitis with complications; '" >
+            with Complications
+        </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ' Lower abdominal pain '"
+      >
+        lower
+      </v-btn>
 
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
+        @click="secondaryValue += 'Right lower quadrant pain; '"
       >
-        Streptococcal
+        rlq
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Left lower quadrant pain; '"
+      >
+        llq
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Periumbilical pain; '"
+      >
+        Periumbilical
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Generalized abdominal pain; '"
+      >
+        Generalized
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Right upper quadrant pain; '"
+      >
+        ruq
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Left upper quadrant pain; '"
+      >
+        luq
+      </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Nausea; '">
+        Nausea
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Nausea with vomiting, unspecified; '"
+      >
+        vomiting
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += 'Abdominal distension; '"
       >
-       pharyngitis
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
-      >
-       pain
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
-      >
-        tonsillitis
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
+        distension
       </v-btn>
     </div>
 
@@ -104,15 +134,16 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "Colitis",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "The patient presents with abdominal pain.\n\nGastroenteritis can cause abdominal pain and diarrhea but is also usually associated with nausea and vomiting, so I believe this is a bit different.\n\nIrritable bowel syndrome can cause recurrent abdominal pain and changes in bowel habits, but it usually lacks the inflammatory component seen in colitis. This remains a possibility.\n\nDiverticulitis can cause localized pain, especially in the lower left quadrant, along with fever and changes in bowel movements. The absence of localized tenderness and systemic signs leans away from this diagnosis.\n\nThe presence of diffuse abdominal cramping and diarrhea supports the diagnosis of colitis.\n\nThe patient is currently not toxic or septic.\n\nThe patient is currently safe for discharge and outpatient management and is encouraged to seek follow-up with their primary care physician soon..",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

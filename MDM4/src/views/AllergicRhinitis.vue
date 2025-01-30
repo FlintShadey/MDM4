@@ -13,42 +13,65 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
-      >
-        Streptococcal
-      </v-btn>
-      <v-btn
+              <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += 'Seasonal allergic rhinitis; '"
       >
-       pharyngitis
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
-      >
-       pain
+        rhinitis
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Nasal congestion; '"
       >
-        tonsillitis
+        congestion
       </v-btn>
-          <v-btn
+         <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="secondaryValue += 'Allergic rhinitis, unspecified; '"
       >
-        fever
+        Allergic
       </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Headache; '">
+        Headache
+      </v-btn>
+           <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Sneezing; '"
+      >
+        Sneezing
+      </v-btn>
+              <v-btn
+        color="#dd42f5"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            'seasonal allergic rhinitis; Nasal congestion; Headache; Sneezing;  '
+        "
+      >
+        everything Rhinitis
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Mouth breathing; '"
+      >
+        Mouth breathing
+      </v-btn>
+
+ 
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Fever, unspecified; '"
+      >
+        Fever
+      </v-btn>
+   
+   
       <v-btn
         color="#72728a"
         class="ma-2"
@@ -56,13 +79,7 @@
       >
         fatigue
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
+
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -104,15 +121,17 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "AllergicRhinitis",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "The patient presents with cough and congestion, likely due to allergic rhinitis from seasonal allergies.\n\nAsthma, which can be exacerbated by allergies, is considered; however, the absence of wheezing, chest tightness, or difficulty breathing during this visit suggests asthma is not the diagnosis.\n\nUpper respiratory infection can cause similar symptoms to allergic rhinitis but usually includes a low-grade fever, so I don't think this is a URI.\n\nThe absence of severe facial pain or prolonged symptom duration suggests that sinusitis is not present.\n\nThe lack of heartburn, chest pain, or reflux symptoms makes GERD an unlikely cause of the cough.\n\nBased on the clinical examination and the presence of symptoms like nasal congestion, allergic rhinitis is considered the most likely diagnosis.\n\nThe patient is considered safe for discharge and outpatient management.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue:
+            "The patient presents with cough and congestion, likely due to allergic rhinitis from seasonal allergies.\n\nAsthma, which can be exacerbated by allergies, is considered; however, the absence of wheezing, chest tightness, or difficulty breathing during this visit suggests asthma is not the diagnosis.\n\nUpper respiratory infection can cause similar symptoms to allergic rhinitis but usually includes a low-grade fever, so I don't think this is a URI.\n\nThe absence of severe facial pain or prolonged symptom duration suggests that sinusitis is not present\n\nBased on the clinical examination and the presence of symptoms like nasal congestion, allergic rhinitis is considered the most likely diagnosis.\n\nThe patient is not toxic or ill appering.\n\nThe patient is considered safe for discharge and outpatient management and follow up with pediatrician.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

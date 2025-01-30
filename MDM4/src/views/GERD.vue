@@ -8,45 +8,107 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> no alt text </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
+        @click="secondaryValue += 'Gastro-esophageal reflux disease with esophagitis'"
       >
-        Streptococcal
+        gerd with esophagitis
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Gastro-esophageal reflux disease without esophagitis; '"
+      >
+         gerd without esophagitis
+
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Gastro-esophageal reflux disease with esophagitis, without bleeding; '"
+      >
+        without bleeding
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Gastro-esophageal reflux disease with esophagitis, with bleeding;  '"
+      >
+        with bleeding
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Generalized abdominal pain; '"
+      >
+        Generalized
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Right upper quadrant pain; '"
+      >
+        ruq
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Left upper quadrant pain; '"
+      >
+        luq
+      </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Nausea; '">
+        Nausea
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Nausea with vomiting, unspecified; '"
+      >
+        vomiting
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Dehydration; '"
+      >
+        Dehydration
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += 'Dysphagia, unspecified; '"
       >
-       pharyngitis
+        Dysphagia
       </v-btn>
-            <v-btn
-        color="#72728a"
+     
+      <v-btn
+        color="#dd42f5"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
+        @click="
+          secondaryValue +=
+            '     Gastro-esophageal reflux disease with esophagitis, without bleeding; Generalized abdominal pain; Nausea;   '
+        "
       >
-       pain
+        everything gerd
       </v-btn>
+
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Diarrhea, unspecified '"
       >
-        tonsillitis
+        Diarrhea
       </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
+
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Fever; '">
         fever
       </v-btn>
       <v-btn
@@ -55,13 +117,6 @@
         @click="secondaryValue += 'fatigue; '"
       >
         fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
       </v-btn>
     </div>
 
@@ -104,15 +159,16 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "GERD",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "The patient presents with acute epigastric abdominal pain.\n\nI don't think this is peptic ulcer disease because the pain does not seem to improve with eating.\n\nThe pain does not have the characteristic radiation to the back, as seen in acute pancreatitis.\n\nThe pain is not necessarily focused in the right upper quadrant with a Murphy's sign, so I do not believe that this is acute cholecystitis.\n\nThe absence of chest pain, shortness of breath, sweating, or a history of cardiac risk factors makes this less likely.\n\nBased on the clinical presentation, GERD is considered the most likely diagnosis.\n\nThe patient does not appear septic or toxic.\n\nThe patient is tolerating oral liquids.\n\nThe patient is safe for discharge and outpatient management and is encouraged to follow up with their primary care physician soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue: "no alt text",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

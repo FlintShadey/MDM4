@@ -13,56 +13,63 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
+              <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Dyspnea, unspecified; '"
+      >
+        Dyspnea
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Orthopnea; '"
+      >
+        Orthopnea
+      </v-btn>
+         <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Shortness of breath; '"
+      >
+        Shortness of breath
+      </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Acute respiratory distress; '">
+        Acute respiratory distress
+      </v-btn>
+ 
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Stridor; '"
+      >
+        Stridor
+      </v-btn>
 
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
-      >
-        Streptococcal
-      </v-btn>
       <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
-      >
-       pharyngitis
-      </v-btn>
-            <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
+        @click="secondaryValue += 'Hyperventilation; '"
       >
-       pain
+        Hyperventilation
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Mouth breathing; '"
       >
-        tonsillitis
+        Mouth breathing
       </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
-      >
-        fever
-      </v-btn>
+   
+   
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
+        @click="secondaryValue += 'Tachypnea, not elsewhere classified; '"
       >
-        fatigue
+        Tachypnea
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
+
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -104,15 +111,17 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "Dyspnea",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "The patient came to the ER due to shortness of breath.\n\nOne immediate concern is pulmonary embolism, which can be life-threatening if not addressed quickly. However, the patient's symptoms don't align closely with this condition.\n\nAnother potential cause could be an acute exacerbation of chronic obstructive pulmonary disease, which might result in respiratory failure.\n\nPneumonia is also a possibility, as it can lead to respiratory failure or sepsis. Yet, the patient lacks symptoms like fever, productive cough, chest pain, and abnormal lung sounds.\n\nCongestive heart failure was considered in the differential diagnosis since it can induce pulmonary edema and respiratory distress. However, the patient isn't showing signs of fluid retention.\n\nI considered an asthma exacerbation, which can culminate in respiratory failure, but the patient isn't exhibiting typical symptoms such as wheezing, cough, or chest tightness.\n\nThe patient is not septic.\n\nGiven the current assessment, the patient is safe for discharge and outpatient care and is advised to follow up within the next few days.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue:
+        "The patient came to the ER due to shortness of breath.\n\nPneumonia is also a possibility, as it can lead to respiratory failure or sepsis. Yet, the patient lacks symptoms like fever, productive cough, chest pain, and abnormal lung sounds.\n\nI considered an asthma exacerbation, which can culminate in respiratory failure, but the patient isn't exhibiting typical symptoms such as wheezing, cough, or chest tightness.\n\nThe patient is not septic and not toxic appearing.\n\nGiven the current assessment, the patient is safe for discharge and outpatient care and is advised to follow up with pediatrician within the next few days.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

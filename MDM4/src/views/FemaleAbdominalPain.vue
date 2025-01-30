@@ -17,51 +17,80 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
+        @click="secondaryValue += 'Pelvic and perineal pain; '"
       >
-        Streptococcal
+       pelvic
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += ' Lower abdominal pain '"
       >
-       pharyngitis
+        lower
       </v-btn>
-            <v-btn
+ 
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
+        @click="secondaryValue += 'Right lower quadrant pain; '"
       >
-       pain
+        rlq
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Left lower quadrant pain; '"
       >
-        tonsillitis
+        llq
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Periumbilical pain; '"
+      >
+        Periumbilical
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Generalized abdominal pain; '"
+      >
+       Generalized
       </v-btn>
           <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="secondaryValue += 'Right upper quadrant pain; '"
       >
-        fever
+        ruq
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
+        @click="secondaryValue += 'Left upper quadrant pain; '"
       >
-        fatigue
+        luq
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
+        @click="secondaryValue += 'Nausea; '"
       >
-        Lymphadenopathy
+        Nausea
+      </v-btn>
+                  <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Nausea with vomiting, unspecified; '"
+      >
+         vomiting
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Abdominal distension; '"
+      >
+         distension
       </v-btn>
     </div>
 
@@ -104,15 +133,15 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "FemaleAbdominalPain",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "The patient presented with abdominal pain.\n\nOne immediate concern is the possibility of an ectopic pregnancy, which can cause the fallopian tube to rupture, leading to significant bleeding and severe complications. I will ensure this is not the case.\n\nThe patient does not show tenderness in the right lower quadrant, so I do not believe this to be appendicitis.\n\nPelvic inflammatory disease can lead to chronic pelvic pain, infertility, an ectopic pregnancy, or the formation of an abscess. However, the patient does not have any vaginal discharge, so I do not believe this to be PID.\n\nThis does not seem to be a hepatobiliary condition such as cholelithiasis or cholecystitis. There is no presence of Murphy's sign, and no symptoms of fever or sepsis.\n\nBased on the patient's symptoms, there do not appear to be any cardiac-related issues.\n\nShe appears stable, with normal vital signs, and is not in a septic or toxic state.\n\nShe can tolerate oral fluids.\n\nUpon thorough evaluation, the patient is deemed suitable for discharge and outpatient care. She is to follow up with her primary care physician for further evaluation.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue: "The patient presented with abdominal pain.\n\nThe patient does not show tenderness in the right lower quadrant, and there are no peritoneal signs, so I do not believe this to be appendicitis.\n\nShe appears stable, with normal vital signs, and is not in a septic or toxic state.\n\nShe can tolerate oral fluids. The patient is euvolemic and does not appear toxic.\n\nThe patient is safe for discharge and outpatient management. The guardian is instructed to follow up with the pediatrician in the next few days.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

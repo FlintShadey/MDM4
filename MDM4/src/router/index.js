@@ -101,6 +101,44 @@ import PreseptalCellulitis from "../views/PreseptalCellulitis.vue";
 import ColdSore from "../views/ColdSore.vue";
 import Mono from "../views/Mono.vue";
 import TMJ from "../views/TMJ.vue";
+import URI from "../views/URI.vue";
+import Sinusitis from "../views/Sinusitis.vue";
+import Bronchitis from "../views/Bronchitis.vue";
+import Flu from "../views/Flu.vue";
+import Covid from "../views/Covid.vue";
+import Cough from "../views/Cough.vue";
+import AllergicRhinitis from "../views/AllergicRhinitis.vue";
+import Dyspnea from "../views/Dyspnea.vue";
+import Asthma from "../views/Asthma.vue";
+import COPD from "../views/COPD.vue";
+import Pneumonia from "../views/Pneumonia.vue";
+import Hiccups from "../views/Hiccups.vue";
+import ChestPain from "../views/ChestPain.vue";
+import ChestPainAdmission from "../views/ChestPainAdmission.vue";
+import Pleurisy from "../views/Pleurisy.vue";
+import Palpitations from "../views/Palpitations.vue";
+import Bradycardia from "../views/Bradycardia.vue";
+import FemaleAbdominalPain from "../views/FemaleAbdominalPain.vue";
+import MaleAbdominalPain from "../views/MaleAbdominalPain.vue";
+import Constipation from "../views/Constipation.vue";
+import Diveritculitis from "../views/Diveritculitis.vue";
+import BiliaryColic from "../views/BiliaryColic.vue";
+import KidneyStone from "../views/KidneyStone.vue";
+import Pyelonephritis from "../views/Pyelonephritis.vue";
+import Colitis from "../views/Colitis.vue";
+import AGE from "../views/AGE.vue";
+import Diarrhea from "../views/Diarrhea.vue";
+import Gastritis from "../views/Gastritis.vue";
+import GERD from "../views/GERD.vue";
+import Hyperemesisgravidarum from "../views/Hyperemesisgravidarum.vue";
+import Hematochezia from "../views/Hematochezia.vue";
+import PeriAnal from "../views/PeriAnal.vue";
+import RectalFissure from "../views/RectalFissure.vue";
+import Hemorrhoid from "../views/Hemorrhoid.vue";
+import UTI from "../views/UTI.vue";
+import FemaleSTD from "../views/FemaleSTD.vue";
+import Dysmenorrhea from "../views/Dysmenorrhea.vue";
+
 
 import NotFound from "../views/NotFound.vue";
 
@@ -238,6 +276,43 @@ const routes = [
   { path: "/coldsore", name: "ColdSore", component: ColdSore },
   { path: "/mono", name: "Mono", component: Mono },
   { path: "/tmj", name: "TMJ", component: TMJ },
+  { path: "/uri", name: "URI", component: URI },
+  { path: "/sinusitis", name: "Sinusitis", component: Sinusitis },
+  { path: "/bronchitis", name: "Bronchitis", component: Bronchitis },
+  { path: "/flu", name: "Flu", component: Flu },
+  { path: "/covid", name: "Covid", component: Covid },
+  { path: "/cough", name: "Cough", component: Cough },
+  { path: "/allergicrhinitis", name: "AllergicRhinitis", component: AllergicRhinitis },
+  { path: "/dyspnea", name: "Dyspnea", component: Dyspnea },
+  { path: "/asthma", name: "Asthma", component: Asthma },
+  { path: "/copd", name: "COPD", component: COPD },
+  { path: "/Pneumonia", name: "Pneumonia", component: Pneumonia }, 
+  { path: "/hiccups", name: "Hiccups", component: Hiccups },
+  { path: "/chestpain", name: "ChestPain", component: ChestPain },
+  { path: "/chestpainadmission", name: "ChestPainAdmission", component: ChestPainAdmission },
+  { path: "/pleurisy", name: "Pleurisy", component: Pleurisy },
+  { path: "/palpitations", name: "Palpitations", component: Palpitations },
+  { path: "/bradycardia", name: "Bradycardia", component: Bradycardia },
+  { path: "/femaleabdominalpain", name: "FemaleAbdominalPain", component: FemaleAbdominalPain },
+  { path: "/maleabdominalpain", name: "MaleAbdominalPain", component: MaleAbdominalPain },
+  { path: "/constipation", name: "Constipation", component: Constipation },
+  { path: "/diverticulitis", name: "Diveritculitis", component: Diveritculitis },
+  { path: "/biliarycolic", name: "BiliaryColic", component: BiliaryColic },
+  { path: "/kidneystone", name: "KidneyStone", component: KidneyStone },
+  { path: "/pyelonephritis", name: "Pyelonephritis", component: Pyelonephritis },
+  { path: "/colitis", name: "Colitis", component: Colitis },
+  { path: "/age", name: "AGE", component: AGE },
+  { path: "/diarrhea", name: "Diarrhea", component: Diarrhea },
+  { path: "/gastritis", name: "Gastritis", component: Gastritis },
+  { path: "/gerd", name: "GERD", component: GERD },
+  { path: "/hyperemesisgravidarum", name: "Hyperemesisgravidarum", component: Hyperemesisgravidarum },
+  { path: "/hematochezia", name: "Hematochezia", component: Hematochezia },
+  { path: "/perianal", name: "PeriAnal", component: PeriAnal },
+  { path: "/rectalfissure", name: "RectalFissure", component: RectalFissure },
+  { path: "/hemorrhoid", name: "Hemorrhoid", component: Hemorrhoid },
+  { path: "/uti", name: "UTI", component: UTI },
+  { path: "/femalestd", name: "FemaleSTD", component: FemaleSTD },
+  { path : "/dysmenorrhea", name: "Dysmenorrhea", component: Dysmenorrhea },
 
 
 

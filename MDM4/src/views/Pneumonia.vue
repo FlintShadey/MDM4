@@ -13,55 +13,93 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
-      >
-        Streptococcal
-      </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="
+          secondaryValue += 'Pneumonia, unspecified organism '
+        "
       >
-       pharyngitis
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
-      >
-       pain
+        Pneumonia
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Unspecified bacterial pneumonia; '"
       >
-        tonsillitis
+        bacterial
       </v-btn>
-          <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="secondaryValue += ' Lobar pneumonia, unspecified organism '"
       >
-        fever
+       Lobar
       </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Cough; '">
+        Cough
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Shortness of breath; '"
+      >
+        Shortness of breath
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Wheezing; '"
+      >
+        Wheezing
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Acute bronchospasm; '"
+      >
+        bronchospasm
+      </v-btn>
+      <v-btn
+        color="#dd42f5"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            'Unspecified bacterial pneumonia; Cough; Shortness of breath; '
+        "
+      >
+        everything pneumonia
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Hypoxemia; '"
+      >
+        Hypoxemia
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Sneezing; '"
+      >
+        Sneezing
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Fever, unspecified; '"
+      >
+        Fever
+      </v-btn>
+
       <v-btn
         color="#72728a"
         class="ma-2"
         @click="secondaryValue += 'fatigue; '"
       >
         fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
       </v-btn>
     </div>
 
@@ -79,7 +117,7 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link + Show Modal
+        Curb 65
       </v-btn>
       <v-dialog v-model="dialog" max-width="80%">
         <v-card>
@@ -104,15 +142,17 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "Pneumonia",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "The patient presented with difficulty breathing.\n\nA pulmonary embolism seems unlikely in this patient.\n\nCongestive heart failure was also considered but deemed improbable because there are no signs of swelling in the legs and ankles or rapid weight gain from fluid retention.\n\nThis is not presenting like a typical asthma exacerbation.\n\nAdditionally, pneumothorax doesn't appear to be the cause, as there were no signs of sudden sharp chest pain or absent breath sounds on one side of the chest.\n\nThe patient appears to be in good health with no signs of air hunger. They do not appear to be septic or toxic.\n\nThey are expected to improve with treatment.\n\nThe patient is safe for discharge and outpatient management with close follow-up with their primary care physician.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue:
+        "The patient presented with difficulty breathing. \n\nThe patient is not in severe respiratory distress. \n\nThis is not presenting like a typical asthma exacerbation. \n\nAdditionally, pneumothorax doesn't appear to be the cause, as there were no signs of sudden sharp chest pain or absent breath sounds on one side of the chest. \n\nThe patient appears to be in good health with no signs of air hunger. \n\nThey are expected to improve with treatment. The patient is euvolemic and does not appear toxic.\n\nThe patient is safe for discharge and outpatient management. Guardian is instructed to follow up with the pediatrician in the next few days.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
@@ -163,7 +203,7 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://www.google.com", "_blank");
+      window.open("https://www.mdcalc.com/calc/324/curb-65-score-pneumonia-severity", "_blank");
       this.dialogImgUrl = "@/assets/visionLoss.png";
       this.dialog = true;
     },

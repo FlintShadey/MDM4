@@ -13,42 +13,65 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
-      >
-        Streptococcal
-      </v-btn>
-      <v-btn
+              <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += 'Ncov (Covid-19) Acute Respiratory Disease; '"
       >
-       pharyngitis
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
-      >
-       pain
+        Covid
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Nasal congestion; '"
       >
-        tonsillitis
+        congestion
       </v-btn>
-          <v-btn
+
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Cough; '">
+        Cough
+      </v-btn>
+              <v-btn
+        color="#dd42f5"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            'Contact With And (Suspected) Exposure To Other Viral Communicable Diseases Including Covid-19; Ncov (Covid-19) Acute Respiratory Disease; Encounter For Screening For Other Covid-19;  Cough; Nasal Congestion; '
+        "
+      >
+        everything Covid
+      </v-btn>
+               <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="secondaryValue += 'Myalgia; '"
       >
-        fever
+        Myalgia
       </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'headache; '"
+      >
+        headache
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Sneezing; '"
+      >
+        Sneezing
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Fever, unspecified; '"
+      >
+        Fever
+      </v-btn>
+   
+   
       <v-btn
         color="#72728a"
         class="ma-2"
@@ -56,13 +79,7 @@
       >
         fatigue
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
-      </v-btn>
+
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -104,15 +121,17 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "Covid",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "The patient presents with cough and congestion.\n\nInfluenza could cause cough and congestion, but it is often accompanied by high fever, body aches, and significant fatigue. These symptoms are not present here.\n\nAllergic rhinitis might lead to congestion and a cough due to post-nasal drip, but it typically includes itching, sneezing, or watery eyes, which is not the case.\n\nAcute bronchitis can present with cough and sometimes congestion, but it frequently includes chest discomfort or more prominent mucus production. This seems to be different.\n\nCOVID-19 commonly presents with cough and congestion; the patient’s symptoms align well with this diagnosis.\n\nThe patient is not septic.\n\nThe patient is safe for discharge and outpatient management. Follow-up is advised if symptoms worsen or fail to improve.\n\nThe patient was provided with guidelines on preventive measures and returning to work, based on current CDC recommendations.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue:
+        "The patient presents with cough and congestion.\n\nInfluenza could cause cough and congestion, but it is often accompanied by high fever, body aches, and significant fatigue. These symptoms are not present here.\n\nAllergic Rhinitis might lead to congestion and a cough due to post-nasal drip, but it typically includes itching, sneezing, or watery eyes, which is not the case.\n\nAcute Bronchitis can present with cough and sometimes congestion, but it frequently includes chest discomfort or more prominent mucus production. This seems to be different.\n\nCOVID-19 commonly presents with cough and congestion; the patient’s symptoms align well with this diagnosis.\n\nPatient is not septic, nor toxic.\n\nThe patient is safe for discharge and outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.\n\nThe patient was provided with guidelines on preventive measures and returning to school, based on current CDC recommendations.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

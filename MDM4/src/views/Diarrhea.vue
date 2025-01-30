@@ -13,40 +13,120 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
+        @click="secondaryValue += ' Lower abdominal pain '"
       >
-        Streptococcal
+        lower
       </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Right lower quadrant pain; '"
+      >
+        rlq
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Left lower quadrant pain; '"
+      >
+        llq
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Periumbilical pain; '"
+      >
+        Periumbilical
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Generalized abdominal pain; '"
+      >
+        Generalized
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Right upper quadrant pain; '"
+      >
+        ruq
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Left upper quadrant pain; '"
+      >
+        luq
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Diarrhea, unspecified '"
+      >
+        Diarrhea
+      </v-btn>
+
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += 'Abdominal distension; '"
       >
-       pharyngitis
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
-      >
-       pain
+        distension
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="
+          secondaryValue +=
+            'Infectious gastroenteritis and colitis, unspecified; '
+        "
       >
-        tonsillitis
+        Infectious AGE
       </v-btn>
-          <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="
+          secondaryValue +=
+            'Non-infective gastroenteritis and colitis, unspecified; '
+        "
       >
+        Noninfective AGE
+      </v-btn>
+      <v-btn
+        color="#dd42f5"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            '    Generalized abdominal pain; Diarrhea, unspecified Non-infective gastroenteritis and colitis, unspecified;  '
+        "
+      >
+        everything diarrhea
+      </v-btn>
+
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Nausea; '">
+        Nausea
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Nausea with vomiting, unspecified; '"
+      >
+        vomiting
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Dehydration; '"
+      >
+        Dehydration
+      </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Fever; '">
         fever
       </v-btn>
       <v-btn
@@ -55,13 +135,6 @@
         @click="secondaryValue += 'fatigue; '"
       >
         fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
       </v-btn>
     </div>
 
@@ -104,15 +177,17 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "Diarrhea",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "The patient presents with diarrhea.\n\nBowel ischemia was considered but deemed unlikely since the patient did not experience sudden severe abdominal pain or bloody stools, which are typical of this condition.\n\nPancreatitis was also assessed. Even though the patient presented with diarrhea, they did not describe the characteristic abdominal pain commonly associated with pancreatitis.\n\nAppendicitis was another possibility, but the patient's symptoms did not align with the usual signs associated with this condition.\n\nOther potential emergent issues like small bowel obstruction, coronary syndrome, and other acute abdominal conditions were explored but were determined to be inconsistent with the patient's presentation.\n\nThe patient is not septic or toxic.\n\nThe patient is safe for discharge and outpatient management and is encouraged to follow up with their primary care physician in the next few days.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue:
+        "The patient presents with diarrhea.\n\nThe patient does not have any peritoneal signs, and there is no acute abdomen.\n\nAppendicitis was another possibility, but the patient's symptoms did not align with the usual signs associated with this condition.\n\nThe patient does not seem to be having severe constipation that could result in this condition.\n\nThe patient is euvolemic and does not appear toxic.\n\nThe patient is safe for discharge and outpatient management. The guardian is instructed to follow up with the pediatrician in the next few days.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

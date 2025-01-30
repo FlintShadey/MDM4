@@ -17,51 +17,75 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
+        @click="secondaryValue += 'Chest pain, unspecified; '"
       >
-        Streptococcal
-      </v-btn>
-      <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
-      >
-       pharyngitis
-      </v-btn>
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
-      >
-       pain
+        unspecified
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Chest pain on breathing; '"
       >
-        tonsillitis
+        on breathing
+      </v-btn>
+ 
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Precordial Pain; '"
+      >
+        Precordial
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Shortness of breath; '"
+      >
+        Shortness of breath
+      </v-btn>
+      <v-btn
+        color="#dd42f5"
+        class="ma-2"
+        @click="secondaryValue += 'Unstable angina ; '"
+      >
+        Unstable angina 
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Acute Pericarditis; '"
+      >
+         Acute Pericarditis
       </v-btn>
           <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="secondaryValue += 'Costochondritis; '"
       >
-        fever
+        Costochondritis
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
+        @click="secondaryValue += 'Panic Attack with Chest Pain; '"
       >
-        fatigue
+        Panic Attack with Chest Pain
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
+        @click="secondaryValue += 'Esophageal Spasm; '"
       >
-        Lymphadenopathy
+        Esophageal Spasm
+      </v-btn>
+ 
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Musculoskeletal Chest Pain; '"
+      >
+         Musculoskeletal 
+
       </v-btn>
     </div>
 
@@ -79,7 +103,7 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link + Show Modal
+        Heart score
       </v-btn>
       <v-dialog v-model="dialog" max-width="80%">
         <v-card>
@@ -104,15 +128,15 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "ChestPain",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "Patient presents with chest pain.\n\nInitial concern would be for myocardial infarction which can lead to heart failure, or even death. However, the patient does not have electrocardiogram changes consistent with AMI.\n\nAlso in the differential diagnosis would be pulmonary embolism, however I do not believe that the patient has a PE as there is no hypoxia or sign of DVTs.\n\nI do not believe that this represents an aortic dissection because the patient is not complaining about severe tearing or ripping chest pain that radiates to the back.\n\nClinical exam does not support this condition being due to pneumothorax which can cause severe difficulty breathing and potentially lead to a complete collapse of the lung.\n\nAdditionally, gastroesophageal reflux disease must be considered because it can lead to complications like esophageal ulcers or stricture, but this does not seem to be GERD in nature.\n\nHEART Score: risk of major acute cardiac event is exceedingly low.\n\nCurrently the patient is safe and at almost no risk of ACS, pneumothorax, bacterial pneumonia, pulmonary embolism, tamponade, aortic dissection or other emergent problems as a cause for this presentation.\n\nPatient is safe for discharge and outpatient management and is instructed to follow up with cardiology for further evaluation.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
@@ -163,7 +187,7 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://www.google.com", "_blank");
+      window.open("https://www.mdcalc.com/calc/3975/heart-pathway-early-discharge-acute-chest-pain", "_blank");
       this.dialogImgUrl = "@/assets/visionLoss.png";
       this.dialog = true;
     },

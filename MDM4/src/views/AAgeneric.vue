@@ -28,12 +28,14 @@
       >
         pain right
       </v-btn>
-            <v-btn
-        color="#72728a"
+      <v-btn
+     color="#dd42f5"
         class="ma-2"
-        @click="secondaryValue += 'Sample text Diagnosis #1; '"
+        @click="
+          secondaryValue +=
+            'everything '  "
       >
-        Add Diagnosis #1
+        everything
       </v-btn>
       <v-btn
         color="#72728a"

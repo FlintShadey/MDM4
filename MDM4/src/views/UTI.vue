@@ -13,55 +13,89 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
+        @click="
+          secondaryValue += 'Urinary tract infection, site not specified; '
+        "
       >
-        Streptococcal
+        uti
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += 'Acute cystitis with hematuria; '"
       >
-       pharyngitis
+        cystitis with hematuria
       </v-btn>
-            <v-btn
+
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
+        @click="secondaryValue += 'Acute pyelonephritis; '"
       >
-       pain
+        pyelonephritis
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Nonspecific urethritis; '"
       >
-        tonsillitis
+        Add Diagnosis #3
       </v-btn>
-          <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="secondaryValue += 'Gross hematuria; '"
+      >
+        hematuria
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Dysuria; '"
+      >
+        Dysuria
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Frequency of micturition; '"
+      >
+        Frequency
+      </v-btn>
+      <v-btn
+        color="#dd42f5"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            '  Urinary tract infection, site not specified; Dysuria; Frequency of micturition;  '
+        "
+      >
+        everything UTI
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Nausea; '"
+      >
+        nausea
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Nausea with vomiting; '"
+      >
+        vomiting
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Fever, unspecified; '"
       >
         fever
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
-      >
-        fatigue
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
-      >
-        Lymphadenopathy
       </v-btn>
     </div>
 
@@ -104,15 +138,17 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "UTI",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "The patient presents with dysuria.\n\nShe has been confirmed not to be pregnant.\n\nSexually transmitted infections can cause dysuria, but the absence of discharge or other genital symptoms makes this less likely.\n\nKidney stones might cause dysuria, but they are often associated with severe flank pain, hematuria, or colicky pain, which are not present here.\n\nUrinary tract infection is the most common cause of dysuria, often accompanied by urgency, frequency, or suprapubic discomfort. The patient’s symptoms align well with this diagnosis.\n\nBased on the clinical presentation, a urinary tract infection is considered the most likely diagnosis. The patient appears to be non-toxic, not septic, and is currently euvolemic.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue:
+        "The patient presents with dysuria.\n\nUrinary tract infection is the most common cause of dysuria. The patient’s symptoms align well with this diagnosis.\n\nBased on the clinical presentation, a urinary tract infection is considered the most likely diagnosis.\n\nThe patient is euvolemic and does not appear toxic.\n\nThe patient is safe for discharge and outpatient management. The guardian is instructed to follow up with the pediatrician in the next few days.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

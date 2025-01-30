@@ -17,51 +17,80 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Streptococcal pharyngitis; '"
+        @click="secondaryValue += 'Epigastric pain; '"
       >
-        Streptococcal
+       Epigastric pain
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Acute pharyngitis; '"
+        @click="secondaryValue += ' Lower abdominal pain '"
       >
-       pharyngitis
+        lower
       </v-btn>
-            <v-btn
+ 
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the throat; '"
+        @click="secondaryValue += 'Right lower quadrant pain; '"
       >
-       pain
+        rlq
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute tonsillitis, unspecified; '"
+        @click="secondaryValue += 'Left lower quadrant pain; '"
       >
-        tonsillitis
+        llq
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Periumbilical pain; '"
+      >
+        Periumbilical
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Generalized abdominal pain; '"
+      >
+       Generalized
       </v-btn>
           <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="secondaryValue += 'Right upper quadrant pain; '"
       >
-        fever
+        ruq
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
+        @click="secondaryValue += 'Left upper quadrant pain; '"
       >
-        fatigue
+        luq
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
+        @click="secondaryValue += 'Nausea; '"
       >
-        Lymphadenopathy
+        Nausea
+      </v-btn>
+                  <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Nausea with vomiting, unspecified; '"
+      >
+         vomiting
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Abdominal distension; '"
+      >
+         distension
       </v-btn>
     </div>
 
@@ -104,15 +133,15 @@
 
 <script>
 export default {
-  name: "SoreThroat",
+  name: "MaleAbdominalPain",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion. The absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "One of the first considerations would be appendicitis, which could cause a ruptured appendix leading to peritonitis and sepsis. The patient does not have rebound tenderness, localized pain in the right lower quadrant, or a positive psoas or obturator sign.\n\nI am also concerned about kidney stones, which can cause renal obstruction, leading to severe pain, urinary tract infection, or kidney damage.\n\nAnother consideration would be a hemorrhagic ulcer, which could cause significant blood loss leading to anemia or hemorrhagic shock; however, he does not have hematemesis, melena, hematochezia, or hypovolemia.\n\nHe could have diverticulitis, which could result in the formation of abscesses, bowel perforation, or fistula formation.\n\nFinally, there could be concern for testicular torsion, including testicular ischemia leading to testicular necrosis and infertility, but the patient does not have sudden, severe testicular pain or swelling.\n\nThe patient does not have a presentation suggestive of a heart attack.\n\nThe patient does not appear septic or toxic.\n\nHe is tolerating oral liquids.\n\nThe patient is safe for outpatient management and is instructed to follow up with their primary care physician soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a sore throat.\n\nMononucleosis can cause a sore throat, but it is often associated with fatigue, swollen lymph nodes, and fever, making it less likely in the absence of these symptoms.\n\nViral pharyngitis is the most common cause of sore throat, often accompanied by mild fever and cold-like symptoms, such as cough or congestion.\n\nThe absence of other signs of bacterial infection supports this diagnosis.\n\nThere is currently no sign of a peritonsillar abscess as there is no uvula deviation, no muffled voice, no trismus, and no drooling.\n\nBased on the clinical presentation, pharyngitis is considered the most likely diagnosis.\n\nPatient is not septic or toxic.\n\nPatient euvolemic and safe for discharge.\n\nThe patient is safe for outpatient management. Follow-up with pediatrician is advised if symptoms worsen or fail to improve.",
+      alternateValue: "The patient presented with abdominal pain.\n\nThe patient does not show tenderness in the right lower quadrant, and there are no peritoneal signs, so I do not believe this to be appendicitis.\n\nHe appears stable, with normal vital signs, and is not in a septic or toxic state.\n\nHe can tolerate oral fluids. The patient is euvolemic and does not appear toxic.\n\nThe patient is safe for discharge and outpatient management. The guardian is instructed to follow up with the pediatrician in the next few days.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
