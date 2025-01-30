@@ -1233,9 +1233,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr>
+    <hr />
     <v-row>
-<img src="../assets/heart.png" alt="heart" height="32px" class="mt-3" />
+      <img src="../assets/heart.png" alt="heart" height="32px" class="mt-3" />
       <v-col>
         <v-btn
           color="primary"
@@ -1288,306 +1288,324 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr>
-<v-row>
-  <img src="../assets/abdomen.png" alt="abdomen" class = "mt-3" height="32px"/>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/femaleabdominalpain')"
-    >
-      ♀ Gen Abd pain
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/maleabdominalpain')"
-    >
-      ♂ Gen Abd pain
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/constipation')"
-    >
-      constipation
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/diverticulitis')"
-    >
-      diverticulitis
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/biliarycolic')"
-    >
-      Biliary Colic
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/kidneystone')"
-    >
-      Kidney Stone
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/pyelonephritis')"
-    >
-     Pyelonephritis
-    </v-btn>
-  </v-col>
-  <v-col>
+    <hr />
+    <v-row>
+      <img
+        src="../assets/abdomen.png"
+        alt="abdomen"
+        class="mt-3"
+        height="32px"
+      />
+      <v-col>
         <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/colitis')"
-    >
-     colitis
-    </v-btn>
-  </v-col>
-</v-row>
-<hr>
-<v-row>
-  <img src="../assets/vomit.png" alt="vomit" class = "mt-3" height="32px"/>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/age')"
-    >
-      age
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/diarrhea')"
-    >
-      diarrhea
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/gastritis')"
-    >
-      gastritis
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/gerd')"
-    >
-      gerd
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/hyperemesisgravidarum')"
-    >
-      hyperemesis gravidarum
-    </v-btn>
-  </v-col>
-</v-row>
-<hr>
-<v-row>
-  <img src="../assets/butt.png" alt="butt" class = "mt-3" height="32px"/>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/pilonidalcyst')"
-    >
-      pilonidal cyst
-    </v-btn>
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/femaleabdominalpain')"
+        >
+          ♀ Gen Abd pain
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/maleabdominalpain')"
+        >
+          ♂ Gen Abd pain
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/constipation')"
+        >
+          constipation
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/diverticulitis')"
+        >
+          diverticulitis
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/biliarycolic')"
+        >
+          Biliary Colic
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/kidneystone')"
+        >
+          Kidney Stone
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/pyelonephritis')"
+        >
+          Pyelonephritis
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/colitis')"
+        >
+          colitis
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img src="../assets/vomit.png" alt="vomit" class="mt-3" height="32px" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/age')"
+        >
+          age
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/diarrhea')"
+        >
+          diarrhea
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/gastritis')"
+        >
+          gastritis
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/gerd')"
+        >
+          gerd
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/hyperemesisgravidarum')"
+        >
+          hyperemesis gravidarum
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img src="../assets/butt.png" alt="butt" class="mt-3" height="32px" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/pilonidalcyst')"
+        >
+          pilonidal cyst
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/hematochezia')"
+        >
+          hematochezia
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/perianal')"
+        >
+          peri-anal
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/rectalfissure')"
+        >
+          rectal fissure
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/hemorrhoid')"
+        >
+          Hemorrhoid
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img src="../assets/uterus.png" alt="uterus" class="mt-3" height="32px" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/uti')"
+        >
+          uti
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/femalestd')"
+        >
+          STD ♀
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/dysmenorrhea')"
+        >
+          Dysmenorrhea
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/threatmiscarriage')"
+        >
+          threat misc
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/ovariancyst')"
+        >
+          Ovar Cyst
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/bartholins')"
+        >
+          bartholins
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/herpes')"
+        >
+          Herpes
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/pregnancypain')"
+        >
+          pregnancy pain
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/vaginitis')"
+        >
+          Vaginitis
+        </v-btn>
+      </v-col>
 
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/hematochezia')"
-    >
-      hematochezia
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/perianal')"
-    >
-      peri-anal
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/rectalfissure')"
-    >
-      rectal fissure
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/hemorrhoid')"
-    >
-      Hemorrhoid
-    </v-btn>
-  </v-col>
-</v-row>
-<hr>
-<v-row>
-<img src="../assets/uterus.png" alt="uterus" class = "mt-3" height="32px"/>
- <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/uti')"
-    >
-      uti
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/femalestd')"
-    >
-     STD ♀
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/dysmenorrhea')"
-    >
-      Dysmenorrhea
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/threatmiscarriage')"
-    >
-      threat misc
-    </v-btn>
-  </v-col>
- <v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/ovariancyst')"
-    >
-      Ovar Cyst 
-    </v-btn>
-  </v-col>
-<v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/bartholins')"
-    >
-      bartholins
-    </v-btn>
-  </v-col>
-<v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/herpes')"
-    >
-      Herpes
-    </v-btn>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/notectopicpregnancy')"
+        >
+          not EP
+        </v-btn>
+      </v-col>
+    </v-row>
+    <hr />
+    <v-row>
+      <img src="../assets/eggplant.png" alt="eggplant" height="32px" class="mt-3" />
+    <v-col>
+      <v-btn
+        color="primary"
+        size="small"
+        rounded="xl"
+        @click="openDialog('/malestd')"
+      >
+        STD ♂
+      </v-btn>
 
-  </v-col>
-<v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/pregnancypain')"
-    >
-      pregnancy pain
-    </v-btn>
-  </v-col>
-<v-col>   
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/vaginitis')"
-    >
-      Vaginitis
-    </v-btn>
-  </v-col>
-
-<v-col>
-    <v-btn
-      color="primary"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/notectopicpregnancy')"
-    >
-      not EP    </v-btn>
-  </v-col>
-
-
-</v-row>
+    </v-col>
+    
+    </v-row>
   </v-container>
 </template>
 
@@ -1734,6 +1752,14 @@ export default {
         "/uti",
         "/femalestd",
         "/dysmenorrhea",
+        "/threatmiscarriage",
+        "/ovariancyst",
+        "/bartholins",
+        "/herpes",
+        "/pregnancypain",
+        "/vaginitis",
+        "/notectopicpregnancy",
+        "/malestd",
       ],
     };
   },

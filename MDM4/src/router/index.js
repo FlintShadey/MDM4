@@ -138,6 +138,14 @@ import Hemorrhoid from "../views/Hemorrhoid.vue";
 import UTI from "../views/UTI.vue";
 import FemaleSTD from "../views/FemaleSTD.vue";
 import Dysmenorrhea from "../views/Dysmenorrhea.vue";
+import ThreatMiscarriage from "../views/ThreatMiscarriage.vue";
+import OvarianCyst from "../views/OvarianCyst.vue";
+import Bartholins from "../views/Bartholins.vue";
+import Herpes from "../views/Herpes.vue";
+import PregnancyPain from "../views/PregnancyPain.vue";
+import Vaginitis from "../views/Vaginitis.vue";
+import NotEctopicPregnancy from "../views/NotEctopicPregnancy.vue";
+import MaleSTD from "../views/MaleSTD.vue";
 
 
 import NotFound from "../views/NotFound.vue";
@@ -312,7 +320,15 @@ const routes = [
   { path: "/hemorrhoid", name: "Hemorrhoid", component: Hemorrhoid },
   { path: "/uti", name: "UTI", component: UTI },
   { path: "/femalestd", name: "FemaleSTD", component: FemaleSTD },
-  { path : "/dysmenorrhea", name: "Dysmenorrhea", component: Dysmenorrhea },
+  { path: "/dysmenorrhea", name: "Dysmenorrhea", component: Dysmenorrhea },
+  { path: "/threatmiscarriage", name: "ThreatMiscarriage", component: ThreatMiscarriage },
+  { path: "/ovariancyst", name: "OvarianCyst", component: OvarianCyst },
+  { path: "/bartholins", name: "Bartholins", component: Bartholins },
+  { path: "/herpes", name: "Herpes", component: Herpes },
+  { path: "/pregnancypain", name: "PregnancyPain", component: PregnancyPain },
+  { path: "/vaginitis", name: "Vaginitis", component: Vaginitis },
+  { path: "/notectopicpregnancy", name: "NotEctopicPregnancy", component: NotEctopicPregnancy },
+  { path: "/malestd", name: "MaleSTD", component: MaleSTD },
 
 
 
