@@ -146,6 +146,42 @@ import PregnancyPain from "../views/PregnancyPain.vue";
 import Vaginitis from "../views/Vaginitis.vue";
 import NotEctopicPregnancy from "../views/NotEctopicPregnancy.vue";
 import MaleSTD from "../views/MaleSTD.vue";
+import Epididymitis from "../views/Epididymitis.vue";
+import Balanitis from "../views/Balanitis.vue";
+import NLTeste from "../views/NLTeste.vue";
+import UrinaryRetention from "../views/UrinaryRetention.vue";
+import Phimosis from "../views/Phimosis.vue";
+import DVT from "../views/DVT.vue";
+import LegEdema from "../views/LegEdema.vue";
+import Neuropathy from "../views/Neuropathy.vue";
+import Cellulitis from "../views/Cellulitis.vue";
+import Abscess from "../views/Abscess.vue";
+import ContactDermatitis from "../views/ContactDermatitis.vue";
+import Urticaria from "../views/Urticaria.vue";
+import Zoster from "../views/Zoster.vue";
+import Tinea from "../views/Tinea.vue";
+import ViralRash from "../views/ViralRash.vue";
+import Scabies from "../views/Scabies.vue";
+import Candidiasis from "../views/Candidiasis.vue";
+import Maculopapularrash from "../views/Maculopapularrash.vue";
+import LymphAdenopathy from "../views/LymphAdenopathy.vue";
+import HidradenitisSuppurativa from "../views/HidradenitisSuppurativa.vue";
+import BellsPalsy from "../views/BellsPalsy.vue";
+import Paresthesia from "../views/Paresthesia.vue";
+import TIA from "../views/TIA.vue";
+import Vertigo from "../views/Vertigo.vue";
+import Presyncope from "../views/Presyncope.vue";
+import Seizure from "../views/Seizure.vue";
+import Anxiety from "../views/Anxiety.vue";
+import Safe from "../views/Safe.vue";
+import AccidentalIngestion from "../views/AccidentalIngestion.vue";
+import Alcohol from "../views/Alcohol.vue";
+import AllergicReaction from "../views/AllergicReaction.vue";
+import MedRefill from "../views/MedRefill.vue";
+import Fever from "../views/Fever.vue";
+import Hyperglycemia from "../views/Hyperglycemia.vue";
+import Dehydration from "../views/Dehydration.vue";
+import SickleCell from "../views/SickleCell.vue";
 
 
 import NotFound from "../views/NotFound.vue";
@@ -329,8 +365,42 @@ const routes = [
   { path: "/vaginitis", name: "Vaginitis", component: Vaginitis },
   { path: "/notectopicpregnancy", name: "NotEctopicPregnancy", component: NotEctopicPregnancy },
   { path: "/malestd", name: "MaleSTD", component: MaleSTD },
-
-
+  { path: "/epididymitis", name: "Epididymitis", component: Epididymitis },
+  { path: "/balanitis", name: "Balanitis", component: Balanitis },
+  { path: "/nlteste", name: "NLTeste", component: NLTeste },
+  { path: "/urinaryretention", name: "UrinaryRetention", component: UrinaryRetention },
+  { path: "/phimosis", name: "Phimosis", component: Phimosis },
+  { path: "/dvt", name: "DVT", component: DVT },
+  { path: "/legedema", name: "LegEdema", component: LegEdema },
+  { path: "/neuropathy", name: "Neuropathy", component: Neuropathy },
+  { path: "/cellulitis", name: "Cellulitis", component: Cellulitis },
+  { path: "/abscess", name: "Abscess", component: Abscess },
+  { path: "/contactdermatitis", name: "ContactDermatitis", component: ContactDermatitis },
+  { path: "/urticaria", name: "Urticaria", component: Urticaria },
+  { path: "/zoster", name: "Zoster", component: Zoster },
+  { path: "/tinea", name: "Tinea", component: Tinea },
+  { path: "/viralrash", name: "ViralRash", component: ViralRash },
+  { path: "/scabies", name: "Scabies", component: Scabies }, 
+  { path: "/candidiasis", name: "Candidiasis", component: Candidiasis },
+  { path: "/maculopapularrash", name: "Maculopapularrash", component: Maculopapularrash },
+  { path: "/lymphadenopathy", name: "LymphAdenopathy", component: LymphAdenopathy },
+  { path: "/hidradenitissuppurativa", name: "HidradenitisSuppurativa", component: HidradenitisSuppurativa },
+  { path: "/bellspalsy", name: "BellsPalsy", component: BellsPalsy },
+  { path: "/paresthesia", name: "Paresthesia", component: Paresthesia },
+  { path: "/tia", name: "TIA", component: TIA },
+  { path: "/vertigo", name: "Vertigo", component: Vertigo },
+  { path: "/presyncope", name: "Presyncope", component: Presyncope },
+  { path: "/seizure", name: "Seizure", component: Seizure },
+  { path: "/anxiety", name: "Anxiety", component: Anxiety },
+  { path: "/safe", name: "Safe", component: Safe },
+  { path: "/accidentalingestion", name: "AccidentalIngestion", component: AccidentalIngestion },
+  { path: "/alcohol", name: "Alcohol", component: Alcohol },
+  { path: "/allergicreaction", name: "AllergicReaction", component: AllergicReaction },
+  { path: "/medrefill", name: "MedRefill", component: MedRefill },
+  { path: "/fever", name: "Fever", component: Fever },
+  { path: "/hyperglycemia", name: "Hyperglycemia", component: Hyperglycemia } ,
+  { path: "/dehydration", name: "Dehydration", component: Dehydration },
+  { path: "/sicklecell", name: "SickleCell", component: SickleCell },
 
 
   {

@@ -8,71 +8,51 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> herpes </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
 
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
-      >
-        Nonspecific urethritis
-
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Gonococcal infection of lower genitourinary tract, unspecified; '"
-      >
-       Gonococcal
-      </v-btn>
 
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Chlamydial infection of lower genitourinary tract, unspecified; '"
+        @click="secondaryValue += ' Epilepsy, unspecified, not intractable, without status epilepticus; '"
       >
-        Chlamydia
+        Seizure
+      </v-btn>
+  
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Other seizures; '"
+      >
+     Other seizures
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
+        @click="secondaryValue += 'Unspecified convulsions; '"
       >
-        Dysuria
+        Unspecified convulsions
+
+      </v-btn>
+         
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Absence epileptic syndrome, not intractable; '"
+      >
+        Absence 
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Urethral discharge, unspecified; '"
-      >
-       Urethral discharge
+        @click="secondaryValue += 'Other generalized epilepsy and epileptic syndrome, intractable with status epilepticus; '"> 
+       status epilepticus
+        
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Acute prostatitis; '"
-      >
-       prostatitis
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of penis; '"
-      >
-        herpes penis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of other male genital organs; '"
-      >
-        herpes testicle
-      </v-btn>
-      
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -114,15 +94,15 @@
 
 <script>
 export default {
-  name: "MaleSTD",
+  name: "Seizure",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient is a male presenting with dysuria.\n\nUrinary tract infection could cause dysuria, but it is often accompanied by increased frequency, urgency, or suprapubic pain, which are not present.\n\nProstatitis might cause dysuria and pelvic pain, sometimes with fever or difficulty urinating, none of which are reported here.\n\nKidney stones can lead to dysuria if they irritate the lower urinary tract, but they are typically associated with severe, colicky flank pain and hematuria, which is not the case here.\n\nThe patient’s symptoms align well with STD urethritis, which is frequently caused by sexually transmitted infections such as gonorrhea or chlamydia.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "The patient presents with a loss of consciousness, likely due to a seizure.\n\nSyncope typically presents with a brief loss of consciousness without postictal confusion or tonic-clonic activity, making this less likely.\n\nCardiac arrhythmias could lead to sudden loss of consciousness, but the absence of chest pain, palpitations, or abnormal vital signs lowers suspicion for a primary cardiac cause.\n\nTransient ischemic attack or stroke may cause neurological deficits, but isolated loss of consciousness is uncommon without other focal findings.\n\nPsychogenic nonepileptic seizures can mimic seizures but often lack postictal confusion.\n\nThe presence of convulsive movements, postictal confusion supports a diagnosis of a seizure.\n\nThe patient is safe for outpatient management and is advised to follow up with their primary care physician for further evaluation if symptoms persist or worsen.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a male genital rash.\n\nSyphilis may cause a painless ulcer rather than a painful rash or vesicles, making this less likely.\n\nChancroid leads to painful ulcers, but they typically have ragged borders and may produce a foul discharge, which is not the case here.\n\nTinea Cruris can cause an itchy rash in the groin area, but it generally does not present with the painful vesicles or ulcers characteristic of herpes.\n\nContact Dermatitis might present with itching and redness, typically linked to an identifiable irritant, but it rarely involves vesicles or painful sores on the genitals.\n\nThe patient’s rash aligns well with Herpes, which presents with painful, fluid-filled vesicles or ulcers on the genitals.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

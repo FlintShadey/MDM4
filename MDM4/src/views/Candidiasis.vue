@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> herpes </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -17,62 +17,41 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
+        @click="secondaryValue += 'Candidiasis, unspecified; '"
       >
-        Nonspecific urethritis
+        Candidiasis
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Candidal stomatitis; '"
+      >
+       Candidal stomatitis 
+      </v-btn>
 
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Candidiasis of skin and nail; '"
+      >
+      skin and nail
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Gonococcal infection of lower genitourinary tract, unspecified; '"
+        @click="secondaryValue += ' Local infection of skin and subcutaneous tissue, unspecified; '"
       >
-       Gonococcal
+       Local infection
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Rash and other nonspecific skin eruption; '"
+      >
+        Rash
       </v-btn>
 
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Chlamydial infection of lower genitourinary tract, unspecified; '"
-      >
-        Chlamydia
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
-      >
-        Dysuria
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Urethral discharge, unspecified; '"
-      >
-       Urethral discharge
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Acute prostatitis; '"
-      >
-       prostatitis
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of penis; '"
-      >
-        herpes penis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of other male genital organs; '"
-      >
-        herpes testicle
-      </v-btn>
-      
+         
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -114,15 +93,15 @@
 
 <script>
 export default {
-  name: "MaleSTD",
+  name: "Candidiasis",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient is a male presenting with dysuria.\n\nUrinary tract infection could cause dysuria, but it is often accompanied by increased frequency, urgency, or suprapubic pain, which are not present.\n\nProstatitis might cause dysuria and pelvic pain, sometimes with fever or difficulty urinating, none of which are reported here.\n\nKidney stones can lead to dysuria if they irritate the lower urinary tract, but they are typically associated with severe, colicky flank pain and hematuria, which is not the case here.\n\nThe patient’s symptoms align well with STD urethritis, which is frequently caused by sexually transmitted infections such as gonorrhea or chlamydia.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "The patient presents with skin redness.\n\nContact dermatitis might cause a localized rash due to exposure to an irritant or allergen, which does not appear to be the case here.\n\nTinea infection can present with a ring-shaped or scaly rash, often itchy, but this does not align with the pattern described.\n\nIntertrigo could lead to skin redness in warm, moist areas but typically has a different distribution and does not respond well to antifungal treatments alone.\n\nThe patient’s presentation aligns well with candidiasis, which often presents with red, sometimes moist patches in skin folds or areas prone to friction.\n\nThe patient is not septic or toxic.\n\nThe patient is safe for discharge and follow-up with a primary care physician very soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a male genital rash.\n\nSyphilis may cause a painless ulcer rather than a painful rash or vesicles, making this less likely.\n\nChancroid leads to painful ulcers, but they typically have ragged borders and may produce a foul discharge, which is not the case here.\n\nTinea Cruris can cause an itchy rash in the groin area, but it generally does not present with the painful vesicles or ulcers characteristic of herpes.\n\nContact Dermatitis might present with itching and redness, typically linked to an identifiable irritant, but it rarely involves vesicles or painful sores on the genitals.\n\nThe patient’s rash aligns well with Herpes, which presents with painful, fluid-filled vesicles or ulcers on the genitals.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      alternateValue: "The patient presents with skin redness.\n\nContact dermatitis might cause a localized rash due to exposure to an irritant or allergen, which does not appear to be the case here.\n\nTinea infection can present with a ring-shaped or scaly rash, often itchy, but this does not align with the pattern described.\n\nIntertrigo could lead to skin redness in warm, moist areas but typically has a different distribution and does not respond well to antifungal treatments alone.\n\nThe patient’s presentation aligns well with candidiasis, which often presents with red, sometimes moist patches in skin folds or areas prone to friction.\n\nThe patient is not septic or toxic.\n\nThe patient is safe for discharge and follow-up with the pediatrician very soon.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

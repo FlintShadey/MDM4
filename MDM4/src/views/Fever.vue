@@ -8,71 +8,38 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> herpes </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
 
-            <v-btn
+       
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
-      >
-        Nonspecific urethritis
-
+        @click="secondaryValue += 'Fever, unspecified; '"
+      >      Fever
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Gonococcal infection of lower genitourinary tract, unspecified; '"
-      >
-       Gonococcal
-      </v-btn>
-
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Chlamydial infection of lower genitourinary tract, unspecified; '"
-      >
-        Chlamydia
+        @click="secondaryValue += 'Drug-induced fever; '"
+      >      Drug-induced fever
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
-      >
-        Dysuria
+        @click="secondaryValue += 'Postvaccination fever; '"
+      >      Postvaccination 
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Urethral discharge, unspecified; '"
-      >
-       Urethral discharge
+        @click="secondaryValue += ' Sepsis, unspecified organism; '"
+      >      Sepsis
       </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Acute prostatitis; '"
-      >
-       prostatitis
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of penis; '"
-      >
-        herpes penis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of other male genital organs; '"
-      >
-        herpes testicle
-      </v-btn>
-      
+        
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -114,15 +81,15 @@
 
 <script>
 export default {
-  name: "MaleSTD",
+  name: "Fever",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient is a male presenting with dysuria.\n\nUrinary tract infection could cause dysuria, but it is often accompanied by increased frequency, urgency, or suprapubic pain, which are not present.\n\nProstatitis might cause dysuria and pelvic pain, sometimes with fever or difficulty urinating, none of which are reported here.\n\nKidney stones can lead to dysuria if they irritate the lower urinary tract, but they are typically associated with severe, colicky flank pain and hematuria, which is not the case here.\n\nThe patient’s symptoms align well with STD urethritis, which is frequently caused by sexually transmitted infections such as gonorrhea or chlamydia.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "The patient presents with a fever.\n\nAlthough this could be caused by an infectious disease such as tuberculosis, endocarditis, or a deep-seated abscess, I do not believe this is the case because there are no localized symptoms.\n\nThis does not seem to be a non-infectious inflammatory disease such as lupus, rheumatoid arthritis, or vasculitis.\n\nI do not believe this is from a malignancy such as lymphoma or leukemia, as there has been no significant weight loss, night sweats, or lymphadenopathy.\n\nA drug fever or thyroid toxicosis also seems unlikely.\n\nBased on my clinical examination, this appears to be a fever of unknown origin. The patient is not septic or toxic. I believe that the diagnosis might become more evident in the next few days.\n\nThe patient is to follow up with a primary care physician very soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a male genital rash.\n\nSyphilis may cause a painless ulcer rather than a painful rash or vesicles, making this less likely.\n\nChancroid leads to painful ulcers, but they typically have ragged borders and may produce a foul discharge, which is not the case here.\n\nTinea Cruris can cause an itchy rash in the groin area, but it generally does not present with the painful vesicles or ulcers characteristic of herpes.\n\nContact Dermatitis might present with itching and redness, typically linked to an identifiable irritant, but it rarely involves vesicles or painful sores on the genitals.\n\nThe patient’s rash aligns well with Herpes, which presents with painful, fluid-filled vesicles or ulcers on the genitals.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

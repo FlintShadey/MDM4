@@ -28,38 +28,34 @@
       >
         pain right
       </v-btn>
+ 
       <v-btn
-     color="#dd42f5"
+        color="#72728a"
         class="ma-2"
-        @click="
-          secondaryValue +=
-            'everything '  "
+        @click="secondaryValue += 'Cellulitis, unspecified; '"
       >
-        everything
+        Cellulitis, unspecified
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'DIAGNOSIS; '"
-      >      DIagnosis
+        @click="secondaryValue += 'Cellulitis of head; '"
+      >
+        head
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'DIAGNOSIS; '"
-      >      DIagnosis
+        @click="secondaryValue += 'Cellulitis of face; '"
+      >
+       face
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'DIAGNOSIS; '"
-      >      DIagnosis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'DIAGNOSIS; '"
-      >      DIagnosis
+        @click="secondaryValue += 'Cellulitis of neck; '"
+      >
+       neck
       </v-btn>
           <v-btn
         color="#72728a"
@@ -85,16 +81,16 @@
                   <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ', left; '"
+        @click="secondaryValue += 'Cellulitis of the left _______; '"
       >
-         left
+         type the body part left
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += ', right; '"
+        @click="secondaryValue += 'Cellulitis of the right _______; '"
       >
-         right
+        type the body part right
       </v-btn>
     </div>
 
@@ -137,15 +133,15 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "Cellulitis",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "MDMDMDMDMDMDMMDMDMDM",
+      primaryValue: "Patient presents with skin redness.\n\nContact Dermatitis could cause redness, but it is typically associated with itching and exposure to an irritant or allergen, which is not the case.\n\nErythema Multiforme can cause skin redness, but it is usually associated with a target-like appearance of lesions and systemic symptoms, which are not present in this case.\n\nCellulitis is a bacterial skin infection characterized by redness, warmth, swelling, and tenderness in the affected area. The patient’s symptoms align well with this diagnosis, particularly if redness is spreading or there are systemic symptoms like fever.\n\nClinically, this is not Necrotizing Fasciitis, Abscess, Osteomyelitis, Myositis, or another emergent problem as a cause for this presentation.\n\nCurrently, there is no abscess.\n\nThis appears to be cellulitis at this time. There is no abscess to incise or drain.\n\nNo evidence of serious bacterial illness.\n\nAt present, the patient shows no signs of altered mental status. There is no evidence of tachycardia, tachypnea, or hypotension. The skin does not display any mottling or indications of poor perfusion. Clinically, there seem to be no signs of sepsis.\n\nVital signs are within normal limits. Low risk for treatment failure based on history.\n\nPatient is safe for discharge and outpatient management with close follow-up with the primary care physician.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "Patient presents with skin redness.\n\nContact Dermatitis could cause redness, but it is typically associated with itching and exposure to an irritant or allergen, which is not the case.\n\nErythema Multiforme can cause skin redness, but it is usually associated with a target-like appearance of lesions and systemic symptoms, which are not present in this case.\n\nCellulitis is a bacterial skin infection characterized by redness, warmth, swelling, and tenderness in the affected area. The patient’s symptoms align well with this diagnosis, particularly if redness is spreading or there are systemic symptoms like fever.\n\nClinically, this is not Necrotizing Fasciitis, Abscess, Osteomyelitis, Myositis, or another emergent problem as a cause for this presentation.\n\nCurrently, there is no abscess.\n\nThis appears to be cellulitis at this time. There is no abscess to incise or drain.\n\nNo evidence of serious bacterial illness.\n\nAt present, the patient shows no signs of altered mental status. There is no evidence of tachycardia, tachypnea, or hypotension. The skin does not display any mottling or indications of poor perfusion. Clinically, there seem to be no signs of sepsis.\n\nVital signs are within normal limits. Low risk for treatment failure based on history.\n\nThe patient is euvolemic and does not appear toxic.\n\nThe patient is safe for discharge and outpatient management. Guardian is instructed to follow up with the pediatrician in the next few days.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

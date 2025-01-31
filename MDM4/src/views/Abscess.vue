@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> herpes </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> I&D Procedure note </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -17,62 +17,81 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
+        @click="secondaryValue += 'Pain in the left _____; '"
       >
-        Nonspecific urethritis
-
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in the right _____; '"
+      >
+        pain right
+      </v-btn>
+ 
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Cutaneous abscess, unspecified; '"
+      >
+        abscess, unspecified
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Gonococcal infection of lower genitourinary tract, unspecified; '"
+        @click="secondaryValue += 'Cutaneous abscess of head; '"
       >
-       Gonococcal
-      </v-btn>
-
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Chlamydial infection of lower genitourinary tract, unspecified; '"
-      >
-        Chlamydia
+        head
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
+        @click="secondaryValue += 'Cutaneous abscess of face; '"
       >
-        Dysuria
+       face
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Urethral discharge, unspecified; '"
+        @click="secondaryValue += 'Cutaneous abscess of neck; '"
       >
-       Urethral discharge
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Acute prostatitis; '"
-      >
-       prostatitis
+       neck
       </v-btn>
           <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of penis; '"
+        @click="secondaryValue += 'fever; '"
       >
-        herpes penis
+        fever
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of other male genital organs; '"
+        @click="secondaryValue += 'fatigue; '"
       >
-        herpes testicle
+        fatigue
       </v-btn>
-      
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Lymphadenopathy; '"
+      >
+        Lymphadenopathy
+      </v-btn>
+                  <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Cutaneous Abscess of the left _______; '"
+      >
+         type the body part left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ' Cutaneous Abscess of the right _______; '"
+      >
+        type the body part right
+      </v-btn>
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -114,15 +133,15 @@
 
 <script>
 export default {
-  name: "MaleSTD",
+  name: "Abscess",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient is a male presenting with dysuria.\n\nUrinary tract infection could cause dysuria, but it is often accompanied by increased frequency, urgency, or suprapubic pain, which are not present.\n\nProstatitis might cause dysuria and pelvic pain, sometimes with fever or difficulty urinating, none of which are reported here.\n\nKidney stones can lead to dysuria if they irritate the lower urinary tract, but they are typically associated with severe, colicky flank pain and hematuria, which is not the case here.\n\nThe patient’s symptoms align well with STD urethritis, which is frequently caused by sexually transmitted infections such as gonorrhea or chlamydia.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "Patient presents with a localized skin abscess.\n\nI do not believe that this represents a deep tissue infection, such as necrotizing fasciitis, because the infection appears to be localized to the superficial layers of the skin without signs of deeper or more aggressive infection.\n\nClinical exam does not support this condition being due to a foreign body reaction, which could cause localized inflammation and pus formation, as the patient does not report any recent injuries or introduction of foreign material into the skin.\n\nThe patient does not have a fever.\n\nThey deny any recent IV drug use.\n\nThere is no crepitus noted.\n\nCurrently, there is no evidence of necrotizing fasciitis, pyomyositis, osteomyelitis, or other emergent problems as a cause for this presentation.\n\nPatient is not septic or ill appearing.\n\nThe patient does not currently require IV antibiotics or admission.\n\nThe patient is safe for outpatient management and is advised to follow up with primary care or dermatology for further evaluation and management.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a male genital rash.\n\nSyphilis may cause a painless ulcer rather than a painful rash or vesicles, making this less likely.\n\nChancroid leads to painful ulcers, but they typically have ragged borders and may produce a foul discharge, which is not the case here.\n\nTinea Cruris can cause an itchy rash in the groin area, but it generally does not present with the painful vesicles or ulcers characteristic of herpes.\n\nContact Dermatitis might present with itching and redness, typically linked to an identifiable irritant, but it rarely involves vesicles or painful sores on the genitals.\n\nThe patient’s rash aligns well with Herpes, which presents with painful, fluid-filled vesicles or ulcers on the genitals.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      alternateValue: "Procedure Note: Incision and Drainage of Abscess\n\nPerformed by me, J Flint Smith MD\n\nIndication: The patient presented with pain, swelling, and erythema, consistent with an abscess.\n\nPhysical examination revealed a fluctuant, tender mass with a possible drainage point at the natal cleft.\n\nPre-Procedure Assessment: Verbal consent was obtained. The risks, benefits, and potential complications (bleeding, infection, recurrence, scarring) were explained to the patient.\n\nThe area was prepped with a Betadine solution and draped in a sterile manner. Local infiltration with 1% lidocaine with epinephrine was administered around the area of fluctuance. The patient tolerated the local anesthetic injections without complication.\n\nA small, linear incision was made over the most fluctuant or pointing area using a No. 11 blade scalpel.\n\nThick, purulent material was expressed. The cavity was gently probed and broken up to ensure complete evacuation of loculations. The abscess cavity was copiously irrigated with normal saline to remove any debris or residual purulent material.\n\nA small ribbon of gauze was packed into the wound to allow continued drainage.\n\nMinimal bleeding was noted and controlled with direct pressure.\n\nEstimated blood loss was minimal.\n\nThe area was dressed with a non-adherent dressing.\n\nThe patient tolerated the procedure well, and there were no immediate complications.\n\nNo neurovascular compromise was noted, and no damage to surrounding tissues was observed.\n\nThe patient was instructed on proper wound care and follow-up instructions.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

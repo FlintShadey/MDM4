@@ -8,71 +8,52 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> herpes </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> no text </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
 
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += ' Generalized anxiety disorder; '"
+      >
+       Generalized anxiety disorder
+      </v-btn>
+  
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Panic disorder; '"
+      >
+     Panic disorder
+      </v-btn>
+
+         
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Social anxiety disorder, unspecified; '"
+      >
+        Social 
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Adjustment disorder with anxiety; '"> 
+        anxiety in response to identifiable stressor
+        
+      </v-btn>
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
+        @click="secondaryValue += ' Acute stress reaction; '"
       >
-        Nonspecific urethritis
-
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Gonococcal infection of lower genitourinary tract, unspecified; '"
-      >
-       Gonococcal
+         Acute stress 
       </v-btn>
 
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Chlamydial infection of lower genitourinary tract, unspecified; '"
-      >
-        Chlamydia
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
-      >
-        Dysuria
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Urethral discharge, unspecified; '"
-      >
-       Urethral discharge
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Acute prostatitis; '"
-      >
-       prostatitis
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of penis; '"
-      >
-        herpes penis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of other male genital organs; '"
-      >
-        herpes testicle
-      </v-btn>
-      
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -114,15 +95,15 @@
 
 <script>
 export default {
-  name: "MaleSTD",
+  name: "Anxiety",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient is a male presenting with dysuria.\n\nUrinary tract infection could cause dysuria, but it is often accompanied by increased frequency, urgency, or suprapubic pain, which are not present.\n\nProstatitis might cause dysuria and pelvic pain, sometimes with fever or difficulty urinating, none of which are reported here.\n\nKidney stones can lead to dysuria if they irritate the lower urinary tract, but they are typically associated with severe, colicky flank pain and hematuria, which is not the case here.\n\nThe patient’s symptoms align well with STD urethritis, which is frequently caused by sexually transmitted infections such as gonorrhea or chlamydia.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "The patient presents with a sensation of fear and worry, likely due to anxiety.\n\nPanic attacks can cause sudden episodes of intense fear, often accompanied by palpitations, sweating, dizziness, or shortness of breath, which may be present in this case.\n\nThis could be generalized anxiety disorder involves persistent, excessive worry about various aspects of life and may present with restlessness, muscle tension, or difficulty concentrating.\n\nDepression can sometimes present with anxiety symptoms, but the absence of persistent low mood, loss of interest, or changes in sleep and appetite makes primary depression less likely.\n\nCardiac or metabolic causes of anxiety-like symptoms, such as arrhythmias or hyperthyroidism, but no such signs are present.\n\nThe patient’s symptoms align well with anxiety, which can manifest with both psychological and physical symptoms.\n\nThe patient is safe for outpatient management and is advised to follow up with their primary care physician or a mental health provider for further evaluation and support.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a male genital rash.\n\nSyphilis may cause a painless ulcer rather than a painful rash or vesicles, making this less likely.\n\nChancroid leads to painful ulcers, but they typically have ragged borders and may produce a foul discharge, which is not the case here.\n\nTinea Cruris can cause an itchy rash in the groin area, but it generally does not present with the painful vesicles or ulcers characteristic of herpes.\n\nContact Dermatitis might present with itching and redness, typically linked to an identifiable irritant, but it rarely involves vesicles or painful sores on the genitals.\n\nThe patient’s rash aligns well with Herpes, which presents with painful, fluid-filled vesicles or ulcers on the genitals.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

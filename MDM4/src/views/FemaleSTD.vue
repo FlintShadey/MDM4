@@ -55,9 +55,9 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
+        @click="secondaryValue += 'Pruritus vulvae; '"
       >
-        Lymphadenopathy
+        Pruritus
       </v-btn>
         <v-btn
             color="#72728a"

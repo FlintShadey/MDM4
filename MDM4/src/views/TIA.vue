@@ -8,71 +8,55 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> herpes </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
-      >
-        Nonspecific urethritis
-
-      </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Gonococcal infection of lower genitourinary tract, unspecified; '"
+        @click="secondaryValue += 'Transient cerebral ischemic attack, unspecified; '"
       >
-       Gonococcal
+        TIA
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Vertebro-basilar artery syndrome; '"
+      >
+       Dizziness, double vision, difficulty swallowing
       </v-btn>
 
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Chlamydial infection of lower genitourinary tract, unspecified; '"
+        @click="secondaryValue += 'Multiple and bilateral precerebral artery syndromes; '"
       >
-        Chlamydia
+        Confusion, balance problems, headache
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
+        @click="secondaryValue += 'Amaurosis fugax; '"
       >
-        Dysuria
+       curtain falling one eye
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Urethral discharge, unspecified; '"
+        @click="secondaryValue += 'Transient global amnesia; '"
       >
-       Urethral discharge
+        Sudden memory loss, disorientation
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute prostatitis; '"
+        @click="secondaryValue += ' Cerebral ischemia; '"
       >
-       prostatitis
+        Fatigue, weakness, cognitive impairment
       </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of penis; '"
-      >
-        herpes penis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of other male genital organs; '"
-      >
-        herpes testicle
-      </v-btn>
-      
+     
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -89,7 +73,7 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link + Show Modal
+        TIA Score
       </v-btn>
       <v-dialog v-model="dialog" max-width="80%">
         <v-card>
@@ -114,15 +98,15 @@
 
 <script>
 export default {
-  name: "MaleSTD",
+  name: "TIA",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient is a male presenting with dysuria.\n\nUrinary tract infection could cause dysuria, but it is often accompanied by increased frequency, urgency, or suprapubic pain, which are not present.\n\nProstatitis might cause dysuria and pelvic pain, sometimes with fever or difficulty urinating, none of which are reported here.\n\nKidney stones can lead to dysuria if they irritate the lower urinary tract, but they are typically associated with severe, colicky flank pain and hematuria, which is not the case here.\n\nThe patient’s symptoms align well with STD urethritis, which is frequently caused by sexually transmitted infections such as gonorrhea or chlamydia.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "The patient presents with a resolved neurological deficit, likely due to a transient ischemic attack.\n\nStroke remains a consideration in cases of neurological deficits; however, the complete resolution of symptoms within a short duration without residual impairment makes TIA more likely.\n\nSeizure with postictal weakness could present with transient neurological deficits, but the patient does not have a history of seizures or accompanying postictal confusion.\n\nMigraine with aura can cause transient neurological symptoms, but the absence of headache or visual disturbances makes this diagnosis less likely.\n\nPeripheral nerve compression or radiculopathy may lead to sensory or motor deficits, but these conditions typically present with persistent or positional symptoms rather than transient resolution.\n\nGiven the transient nature of the neurological deficit, TIA is considered the most likely diagnosis. \n\nThe patient is safe for outpatient management but requires urgent follow-up with neurology or their primary care physician.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a male genital rash.\n\nSyphilis may cause a painless ulcer rather than a painful rash or vesicles, making this less likely.\n\nChancroid leads to painful ulcers, but they typically have ragged borders and may produce a foul discharge, which is not the case here.\n\nTinea Cruris can cause an itchy rash in the groin area, but it generally does not present with the painful vesicles or ulcers characteristic of herpes.\n\nContact Dermatitis might present with itching and redness, typically linked to an identifiable irritant, but it rarely involves vesicles or painful sores on the genitals.\n\nThe patient’s rash aligns well with Herpes, which presents with painful, fluid-filled vesicles or ulcers on the genitals.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      alternateValue: "Pediatric MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
@@ -173,7 +157,7 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://www.google.com", "_blank");
+      window.open("https://www.mdcalc.com/calc/357/abcd2-score-tia", "_blank");
       this.dialogImgUrl = "@/assets/visionLoss.png";
       this.dialog = true;
     },

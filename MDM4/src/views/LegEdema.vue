@@ -8,71 +8,117 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> herpes </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Xarelto </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
-      >
-        Nonspecific urethritis
-
-      </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Gonococcal infection of lower genitourinary tract, unspecified; '"
+        @click="secondaryValue += 'Pain in the left leg; '"
       >
-       Gonococcal
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in the right leg; '"
+      >
+        pain right
       </v-btn>
 
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Chlamydial infection of lower genitourinary tract, unspecified; '"
+        @click="
+          secondaryValue +=
+            ' Localized swelling, mass and lump, unspecified lower limb; '
+        "
       >
-        Chlamydia
+        swelling
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
+        @click="
+          secondaryValue +=
+            'Acute embolism and thrombosis of unspecified deep veins of unspecified lower extremity; '
+        "
       >
-        Dysuria
+        thrombosis
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Urethral discharge, unspecified; '"
+        @click="
+          secondaryValue +=
+            ' Acute embolism and thrombosis of unspecified deep veins of left proximal lower extremity; '
+        "
       >
-       Urethral discharge
+        left proximal
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="
+          secondaryValue +=
+            'Acute embolism and thrombosis of unspecified deep veins of right proximallower extremity; '
+        "
+      >
+        right proximal
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute prostatitis; '"
+        @click="
+          secondaryValue +=
+            'Acute embolism and thrombosis of unspecified deep veins of left distal lower extremity; '
+        "
       >
-       prostatitis
+        left distal
       </v-btn>
-          <v-btn
-        color="#72728a"
+      <v-btn
+        color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of penis; '"
+        @click="
+          secondaryValue +=
+            'Acute embolism and thrombosis of unspecified deep veins of right distal lower extremity; '
+        "
       >
-        herpes penis
+        right distal
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of other male genital organs; '"
+        @click="secondaryValue += 'Lymphadenopathy; '"
       >
-        herpes testicle
+        Lymphadenopathy
       </v-btn>
-      
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Lymphedema; '"
+      >
+        Lymphedema
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Localized edema; '"
+      >
+        Localized edema
+      </v-btn>
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += ', left; '">
+        left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ', right; '"
+      >
+        right
+      </v-btn>
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -89,7 +135,7 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link + Show Modal
+        wells criteria dvt
       </v-btn>
       <v-dialog v-model="dialog" max-width="80%">
         <v-card>
@@ -114,15 +160,17 @@
 
 <script>
 export default {
-  name: "MaleSTD",
+  name: "DVT",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient is a male presenting with dysuria.\n\nUrinary tract infection could cause dysuria, but it is often accompanied by increased frequency, urgency, or suprapubic pain, which are not present.\n\nProstatitis might cause dysuria and pelvic pain, sometimes with fever or difficulty urinating, none of which are reported here.\n\nKidney stones can lead to dysuria if they irritate the lower urinary tract, but they are typically associated with severe, colicky flank pain and hematuria, which is not the case here.\n\nThe patient’s symptoms align well with STD urethritis, which is frequently caused by sexually transmitted infections such as gonorrhea or chlamydia.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue:
+        "Patient presents with leg edema.\n\nI don't think this is a result of heart failure because it does not seem to be associated with shortness of breath and orthopnea.\n\nChronic venous insufficiency is a possibility; however, I don't see varicose veins or skin changes such as stasis dermatitis.\n\nAlthough there is concern for a deep venous thrombosis, it does not appear to have the particular unilateral leg edema, pain, and redness associated with a blood clot in a deep vein, so I don't think this is the diagnosis.\n\nAlthough this could be lymphedema, this does not appear to be from impaired lymphatic drainage.\n\nThe lack of symptoms like jaundice and ascites suggest that this is not the result of liver disease.\n\nThe patient is not septic and not toxic. The patient is safe for discharge and outpatient management with their primary care physician soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a male genital rash.\n\nSyphilis may cause a painless ulcer rather than a painful rash or vesicles, making this less likely.\n\nChancroid leads to painful ulcers, but they typically have ragged borders and may produce a foul discharge, which is not the case here.\n\nTinea Cruris can cause an itchy rash in the groin area, but it generally does not present with the painful vesicles or ulcers characteristic of herpes.\n\nContact Dermatitis might present with itching and redness, typically linked to an identifiable irritant, but it rarely involves vesicles or painful sores on the genitals.\n\nThe patient’s rash aligns well with Herpes, which presents with painful, fluid-filled vesicles or ulcers on the genitals.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      alternateValue:
+        "The patient is currently ambulatory and in stable condition.\n\nThe vital signs are normal.\n\nThere is a low risk of bleeding in the patient.\n\nPatient does not have a history of renal insufficiency.\n\nPatient is able to receive and take anticoagulant therapy.\n\nPatient will follow up with primary care physician within the next few days.\n\n**Rivaroxaban (Xarelto):**\n15 mg twice daily with food for three weeks; then 20 mg once daily with food.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
@@ -173,7 +221,10 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://www.google.com", "_blank");
+      window.open(
+        "https://www.mdcalc.com/calc/362/wells-criteria-dvt",
+        "_blank"
+      );
       this.dialogImgUrl = "@/assets/visionLoss.png";
       this.dialog = true;
     },

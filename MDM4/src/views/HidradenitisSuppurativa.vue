@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> herpes </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> I & D Procedure </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -17,62 +17,68 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
+        @click="secondaryValue += 'Cutaneous abscess of left axilla;  '"
       >
-        Nonspecific urethritis
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += ' Cutaneous abscess of right axilla; '"
+      >
+        axilla right
+      </v-btn>
+ 
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Hidradenitis suppurativa; '"
+      >
+        Hidradenitis suppurativa
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Scar conditions and fibrosis of skin; '"
+      >
+        Scar
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Other  local infections of skin and subcutaneous tissue; '"
+      >
+       local infections
+      </v-btn>
 
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Gonococcal infection of lower genitourinary tract, unspecified; '"
-      >
-       Gonococcal
-      </v-btn>
-
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Chlamydial infection of lower genitourinary tract, unspecified; '"
-      >
-        Chlamydia
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
-      >
-        Dysuria
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Urethral discharge, unspecified; '"
-      >
-       Urethral discharge
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Acute prostatitis; '"
-      >
-       prostatitis
-      </v-btn>
           <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of penis; '"
+        @click="secondaryValue += 'fever; '"
       >
-        herpes penis
+        fever
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of other male genital organs; '"
+        @click="secondaryValue += 'Lymphadenopathy; '"
       >
-        herpes testicle
+        Lymphadenopathy
       </v-btn>
-      
+                  <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Cellulitis of the left axilla; '"
+      >
+         cellulitis left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Cellulitis of the right axilla; '"
+      >
+        cellulitis right
+      </v-btn>
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -114,15 +120,15 @@
 
 <script>
 export default {
-  name: "MaleSTD",
+  name: "HidradenitisSuppurativa",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient is a male presenting with dysuria.\n\nUrinary tract infection could cause dysuria, but it is often accompanied by increased frequency, urgency, or suprapubic pain, which are not present.\n\nProstatitis might cause dysuria and pelvic pain, sometimes with fever or difficulty urinating, none of which are reported here.\n\nKidney stones can lead to dysuria if they irritate the lower urinary tract, but they are typically associated with severe, colicky flank pain and hematuria, which is not the case here.\n\nThe patient’s symptoms align well with STD urethritis, which is frequently caused by sexually transmitted infections such as gonorrhea or chlamydia.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "The patient presents with a tender, inflamed area, likely due to hidradenitis suppurativa.\n\nAbscess might cause a localized collection of pus with tenderness and often fever or more prominent redness, which is not reported here.\n\nCellulitis could present with swelling and tenderness, but it typically involves diffuse redness and warmth extending beyond one localized area.\n\nMuscle strain or contusion might lead to localized swelling, but it usually follows identifiable trauma and does not commonly present with recurrent inflammatory nodules.\n\nThe patient’s presentation aligns well with hidradenitis suppurativa, which is characterized by recurrent, tender nodules or abscess-like lesions in intertriginous areas due to follicular occlusion and chronic inflammation.\n\nThe patient is not septic or toxic.\n\nThe patient is safe for discharge and follow-up with a primary care physician or dermatologist for further evaluation and management.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a male genital rash.\n\nSyphilis may cause a painless ulcer rather than a painful rash or vesicles, making this less likely.\n\nChancroid leads to painful ulcers, but they typically have ragged borders and may produce a foul discharge, which is not the case here.\n\nTinea Cruris can cause an itchy rash in the groin area, but it generally does not present with the painful vesicles or ulcers characteristic of herpes.\n\nContact Dermatitis might present with itching and redness, typically linked to an identifiable irritant, but it rarely involves vesicles or painful sores on the genitals.\n\nThe patient’s rash aligns well with Herpes, which presents with painful, fluid-filled vesicles or ulcers on the genitals.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      alternateValue: "Procedure Note: Incision and Drainage of Hidradenitis Suppurativa\n\nPerformed by me, J Flint Smith MD\n\nIndication: The patient presented with pain, swelling, and erythema, consistent with hidradenitis suppurativa.\n\nPhysical examination revealed a fluctuant, tender mass with a possible drainage point at the natal cleft.\n\nPre-Procedure Assessment: Verbal consent was obtained. The risks, benefits, and potential complications (bleeding, infection, recurrence, scarring) were explained to the patient.\n\nThe area was prepped with a Betadine solution and draped in a sterile manner. Local infiltration with 1% lidocaine with epinephrine was administered around the area of fluctuance. The patient tolerated the local anesthetic injections without complication.\n\nA small, linear incision was made over the most fluctuant or pointing area using a No. 11 blade scalpel.\n\nThick, purulent material was expressed. The cavity was gently probed and broken up to ensure complete evacuation of loculations. The abscess cavity was copiously irrigated with normal saline to remove any debris or residual purulent material.\n\nA small ribbon of gauze was packed into the wound to allow continued drainage.\n\nMinimal bleeding was noted and controlled with direct pressure.\n\nEstimated blood loss was minimal.\n\nThe area was dressed with a non-adherent dressing.\n\nThe patient tolerated the procedure well, and there were no immediate complications.\n\nNo neurovascular compromise was noted, and no damage to surrounding tissues was observed.\n\nThe patient was instructed on proper wound care and follow-up instructions.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

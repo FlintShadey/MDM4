@@ -42,6 +42,13 @@
       >
         tonsillitis
       </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Enteroviral vesicular pharyngitis; '"
+      >
+        herpangina pharyngitis
+      </v-btn>
           <v-btn
         color="#72728a"
         class="ma-2"

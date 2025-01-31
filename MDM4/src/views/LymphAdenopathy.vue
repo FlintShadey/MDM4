@@ -8,71 +8,59 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> herpes </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
-      >
-        Nonspecific urethritis
-
-      </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Gonococcal infection of lower genitourinary tract, unspecified; '"
+        @click="secondaryValue += 'Pain in the left _____; '"
       >
-       Gonococcal
+        pain left
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Pain in the right _____; '"
+      >
+        pain right
       </v-btn>
 
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Chlamydial infection of lower genitourinary tract, unspecified; '"
+        @click="secondaryValue += 'Localized enlarged lymph nodes; '"
       >
-        Chlamydia
+        Localized
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
+        @click="secondaryValue += 'Generalized enlarged lymph nodes; '"
       >
-        Dysuria
+        Generalized
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Urethral discharge, unspecified; '"
+        @click="secondaryValue += 'Rash and other nonspecific skin eruption; '"
       >
-       Urethral discharge
+        Rash
+      </v-btn>
+
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'fever; '">
+        fever
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Acute prostatitis; '"
+        @click="secondaryValue += 'fatigue; '"
       >
-       prostatitis
+        fatigue
       </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of penis; '"
-      >
-        herpes penis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of other male genital organs; '"
-      >
-        herpes testicle
-      </v-btn>
-      
+     
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -114,15 +102,15 @@
 
 <script>
 export default {
-  name: "MaleSTD",
+  name: "GenericTemplate",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient is a male presenting with dysuria.\n\nUrinary tract infection could cause dysuria, but it is often accompanied by increased frequency, urgency, or suprapubic pain, which are not present.\n\nProstatitis might cause dysuria and pelvic pain, sometimes with fever or difficulty urinating, none of which are reported here.\n\nKidney stones can lead to dysuria if they irritate the lower urinary tract, but they are typically associated with severe, colicky flank pain and hematuria, which is not the case here.\n\nThe patient’s symptoms align well with STD urethritis, which is frequently caused by sexually transmitted infections such as gonorrhea or chlamydia.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "The patient presents with a swollen, tender area.\n\nAbscess might cause a localized collection of pus with tenderness and often fever or more prominent redness, which is not reported here.\n\nCellulitis could present with swelling and tenderness, but it typically involves diffuse redness and warmth extending beyond one lymph node region.\n\nMuscle strain or contusion might lead to localized swelling, but it usually follows identifiable trauma and does not commonly present with discrete tenderness in an area suggestive of lymph node involvement.\n\nThe patient’s presentation aligns well with lymphadenopathy, which can present as a swollen, tender lymph node often related to infection or inflammation in the drainage area.\n\nThe patient is not septic or toxic.\n\nThe patient is safe for discharge and follow-up with a primary care physician very soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a male genital rash.\n\nSyphilis may cause a painless ulcer rather than a painful rash or vesicles, making this less likely.\n\nChancroid leads to painful ulcers, but they typically have ragged borders and may produce a foul discharge, which is not the case here.\n\nTinea Cruris can cause an itchy rash in the groin area, but it generally does not present with the painful vesicles or ulcers characteristic of herpes.\n\nContact Dermatitis might present with itching and redness, typically linked to an identifiable irritant, but it rarely involves vesicles or painful sores on the genitals.\n\nThe patient’s rash aligns well with Herpes, which presents with painful, fluid-filled vesicles or ulcers on the genitals.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      alternateValue: "The patient presents with a swollen, tender area.\n\nAbscess might cause a localized collection of pus with tenderness and often fever or more prominent redness, which is not reported here.\n\nCellulitis could present with swelling and tenderness, but it typically involves diffuse redness and warmth extending beyond one lymph node region.\n\nMuscle strain or contusion might lead to localized swelling, but it usually follows identifiable trauma and does not commonly present with discrete tenderness in an area suggestive of lymph node involvement.\n\nThe patient’s presentation aligns well with lymphadenopathy, which can present as a swollen, tender lymph node often related to infection or inflammation in the drainage area.\n\nThe patient is not septic or toxic.\n\nThe patient is safe for discharge and follow-up with the pediatrician very soon.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

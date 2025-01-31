@@ -10,6 +10,9 @@
   >
     <v-list>
       <v-list-item>
+        <v-list-item-title >Search</v-list-item-title>
+      </v-list-item>
+      <v-list-item>
         <v-list-item-title>Calculations</v-list-item-title>
       </v-list-item>
       <v-list-item>

@@ -5,7 +5,7 @@
       <img
         src="../assets/ImageHeadInjury.png"
         alt="Head Injury"
-        height="32px"
+        height="26px"
         class="mt-2"
       />
 
@@ -65,10 +65,10 @@
       </v-col>
     </v-row>
 
-    <hr />
+    <v-divider></v-divider>
 
     <v-row class="small-vertical">
-      <img src="../assets/eye.png" alt="eye" height="32px" class="mt-3" />
+      <img src="../assets/eye.png" alt="eye" height="26px" class="mt-3" />
       <v-col>
         <v-btn
           color="primary"
@@ -150,11 +150,11 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
       <img
         class="mt-3"
-        height="32px"
+        height="26px"
         src="../assets/faceInjury.png"
         alt="faceInjury"
       />
@@ -189,11 +189,11 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
       <img
         class="mt-3"
-        height="32px"
+        height="26px"
         src="../assets/neckUpperBack.png"
         alt="Neck & Upper Back"
       />
@@ -243,11 +243,11 @@
         >
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
       <img
         class="mt-3"
-        height="32px"
+        height="26px"
         src="../assets/shoulder.png"
         alt="Shoulder"
       />
@@ -328,7 +328,7 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
       <img class="mt-3" src="../assets/arm.png" alt="arm" />
       <v-col>
@@ -382,11 +382,11 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
       <img
         class="mt-3"
-        height=" 32px"
+        height=" 26px"
         src="../assets/ChestWall.png"
         alt="chestwall"
       />
@@ -401,9 +401,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img class="mt-3" height="32px" src="../assets/back.png" alt="" />
+      <img class="mt-3" height="26px" src="../assets/back.png" alt="" />
       <v-col>
         <v-btn
           color="primary"
@@ -439,15 +439,25 @@
           color="primary"
           size="small"
           rounded="xl"
+          @click="openDialog('/sciatica')"
+        >
+          sciatica
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
           @click="openDialog('/pilonidalcyst')"
         >
           pilonidal cyst
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img class="mt-3" height="32px" src="../assets/hand.png" alt="hand" />
+      <img class="mt-3" height="26px" src="../assets/hand.png" alt="hand" />
       <v-col>
         <v-btn
           color="primary"
@@ -539,9 +549,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img class="mt-3" height="32px" src="../assets/hip.png" alt="" />
+      <img class="mt-3" height="26px" src="../assets/hip.png" alt="" />
       <v-col>
         <v-btn
           color="primary"
@@ -573,9 +583,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img class="mt-3" height="32px" src="../assets/knee.png" alt="" />
+      <img class="mt-3" height="26px" src="../assets/knee.png" alt="" />
       <v-col>
         <v-btn
           color="primary"
@@ -627,9 +637,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img class="mt-3" height="32px" src="../assets/ankle.png" alt="" />
+      <img class="mt-3" height="26px" src="../assets/ankle.png" alt="" />
       <v-col>
         <v-btn
           color="primary"
@@ -671,9 +681,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img class="mt-3" height="32px" src="../assets/foot.png" alt="" />
+      <img class="mt-3" height="26px" src="../assets/foot.png" alt="" />
       <v-col>
         <v-btn
           color="primary"
@@ -775,9 +785,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img class="mt-3" height="32px" src="../assets/car.png" alt="mvc" />
+      <img class="mt-3" height="26px" src="../assets/car.png" alt="mvc" />
       <v-col>
         <v-btn
           color="primary"
@@ -849,9 +859,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/fire.png" alt="fire" height="32px" class="mt-3" />
+      <img src="../assets/fire.png" alt="fire" height="26px" class="mt-3" />
       <v-col>
         <v-btn
           color="primary"
@@ -873,9 +883,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/bite.png" alt="bite" height="32px" class="mt-3" />
+      <img src="../assets/bite.png" alt="bite" height="26px" class="mt-3" />
       <v-col>
         <v-btn
           color="primary"
@@ -899,7 +909,7 @@
     </v-row>
     <hr style="border-top: 5px solid white" />
     <v-row>
-      <img src="../assets/head.png" alt="head" height="32px" class="mt-3" />
+      <img src="../assets/head.png" alt="head" height="26px" class="mt-3" />
 
       <v-col>
         <v-btn
@@ -942,9 +952,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/ear.png" alt="ear" height="32px" class="mt-3" />
+      <img src="../assets/ear.png" alt="ear" height="26px" class="mt-3" />
       <v-col>
         <v-btn
           color="primary"
@@ -996,9 +1006,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/nose.png" alt="nose" height="32px" class="mt-3" />
+      <img src="../assets/nose.png" alt="nose" height="26px" class="mt-3" />
       <v-col>
         <v-btn
           color="primary"
@@ -1020,9 +1030,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/mouth.png" alt="mouth" height="32px" class="mt-3" />
+      <img src="../assets/mouth.png" alt="mouth" height="26px" class="mt-3" />
       <v-col>
         <v-btn
           color="primary"
@@ -1104,9 +1114,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/virus.png" alt="virus" height="32px" class="mt-3" />
+      <img src="../assets/virus.png" alt="virus" height="26px" class="mt-3" />
       <v-col>
         <v-btn
           color="primary"
@@ -1178,9 +1188,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/lung.png" alt="lung" height="32px" class="mt-3" />
+      <img src="../assets/lung.png" alt="lung" height="26px" class="mt-3" />
       <v-col>
         <v-btn
           color="primary"
@@ -1233,9 +1243,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/heart.png" alt="heart" height="32px" class="mt-3" />
+      <img src="../assets/heart.png" alt="heart" height="26px" class="mt-3" />
       <v-col>
         <v-btn
           color="primary"
@@ -1288,13 +1298,13 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
       <img
         src="../assets/abdomen.png"
         alt="abdomen"
         class="mt-3"
-        height="32px"
+        height="26px"
       />
       <v-col>
         <v-btn
@@ -1377,9 +1387,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/vomit.png" alt="vomit" class="mt-3" height="32px" />
+      <img src="../assets/vomit.png" alt="vomit" class="mt-3" height="26px" />
       <v-col>
         <v-btn
           color="primary"
@@ -1431,9 +1441,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/butt.png" alt="butt" class="mt-3" height="32px" />
+      <img src="../assets/butt.png" alt="butt" class="mt-3" height="26px" />
       <v-col>
         <v-btn
           color="primary"
@@ -1485,9 +1495,9 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/uterus.png" alt="uterus" class="mt-3" height="32px" />
+      <img src="../assets/uterus.png" alt="uterus" class="mt-3" height="26px" />
       <v-col>
         <v-btn
           color="primary"
@@ -1590,21 +1600,441 @@
         </v-btn>
       </v-col>
     </v-row>
-    <hr />
+    <v-divider></v-divider>
     <v-row>
-      <img src="../assets/eggplant.png" alt="eggplant" height="32px" class="mt-3" />
-    <v-col>
-      <v-btn
-        color="primary"
-        size="small"
-        rounded="xl"
-        @click="openDialog('/malestd')"
-      >
-        STD ♂
-      </v-btn>
+      <img
+        src="../assets/eggplant.png"
+        alt="eggplant"
+        height="26px"
+        class="mt-3"
+      />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/malestd')"
+        >
+          STD ♂
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/kidneystone')"
+        >
+          kidney stone
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/epididymitis')"
+        >
+          epididymitis
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/balanitis')"
+        >
+          Balanitis
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/nlteste')"
+        >
+          nl testicle
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/urinaryretention')"
+        >
+          Urinary Retention
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/phimosis')"
+          >Phimosis
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-divider></v-divider>
+    <v-row>
+      <img src="../assets/leg.png" alt="leg" height="26px" class="mt-3" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/dvt')"
+        >
+          DVT
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/legedema')"
+        >
+          Leg edema
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/neuropathy')"
+        >
+          Neuropathy
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/sciatica')"
+        >
+          sciatica
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-divider></v-divider>
+    <v-row>
+      <img src="../assets/skin.png" alt="skin" height="26px" class="mt-3" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/cellulitis')"
+        >
+          cellulitis
+        </v-btn>
+        <v-col> </v-col>
+      </v-col>
 
-    </v-col>
-    
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/abscess')"
+        >
+          Abscess
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/contactdermatitis')"
+        >
+          contact derm
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/urticaria')"
+        >
+          Urticaria
+        </v-btn>
+      </v-col>
+
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/zoster')"
+        >
+          zoster
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/tinea')"
+        >
+          tinea
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/scabies')"
+        >
+          scabies
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/candidiasis')"
+        >
+          candidiasis
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/viralrash')"
+        >
+          viral
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/maculopapularrash')"
+        >
+          mac/pap
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/lymphadenopathy')"
+        >
+          LN
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/hidradenitissuppurativa')"
+        >
+          hidradenitis supp
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-divider></v-divider>
+    <v-row>
+      <img src="../assets/brain.png" alt="  neuro" height="26px" class="mt-3" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/bellspalsy')"
+        >
+          Bell's Palsy
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/paresthesia')"
+        >
+          Paresthesia
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/tia')"
+        >
+          TIA
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/vertigo')"
+        >
+          Vertigo
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/presyncope')"
+        >
+          Presyncope
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/seizure')"
+        >
+          Seizure
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-divider></v-divider>
+    <v-row>
+      <img
+        src="../assets/psi.png"
+        alt="  psychiatry"
+        height="26px"
+        class="mt-3"
+      />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/anxiety')"
+        >
+          Anxiety
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/safe')"
+        >
+          Safe
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/accidentalingestion')"
+        >
+          Accidental Ingestion
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/alcohol')"
+        >
+          ETOH
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-divider></v-divider>
+    <v-row>
+      <img src="../assets/gen.png" alt="general" height="26px" class="mt-3" />
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/allergicreaction')"
+        >
+          Allergic Reaction
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/hypertension')"
+        >
+          Hypertension
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/medrefill')"
+        >
+          Med Refill
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/fever')"
+        >
+          Fever
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/hyperglycemia')"
+        >
+          Hyperglycemia
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/dehydration')"
+        >
+          Dehydration
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn
+          color="primary"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/sicklecell')"
+        >
+          Sickle Cell
+        </v-btn>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -1760,6 +2190,42 @@ export default {
         "/vaginitis",
         "/notectopicpregnancy",
         "/malestd",
+        "/epididymitis",
+        "/balanitis",
+        "/nlteste",
+        "/urinaryretention",
+        "/phimosis",
+        "/dvt",
+        "/legedema",
+        "/neuropathy",
+        "/cellulitis",
+        "/abscess",
+        "/contactdermatitis",
+        "/urticaria",
+        "/zoster",
+        "/tinea",
+        "/scabies",
+        "/viralrash",
+        "/maculopapularrash",
+        "/lymphadenopathy",
+        "/hidradenitissuppurativa",
+        "/bellspalsy",
+        "/paresthesia",
+        "/tia",
+        "/vertigo",
+        "/presyncope",
+        "/seizure",
+        "/anxiety",
+        "/safe",
+        "/accidentalingestion",
+        "/alcohol",
+        "/allergicreaction",
+        "/hypertension",
+        "/medrefill",
+        "/fever",
+        "/hyperglycemia",
+        "/dehydration",
+        "/sicklecell",
       ],
     };
   },

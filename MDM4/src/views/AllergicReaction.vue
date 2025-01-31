@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> herpes </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -17,62 +17,69 @@
             <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
+        @click="secondaryValue += 'Allergy, unspecified, initial encounter; '"
       >
-        Nonspecific urethritis
-
+        Allergy
+      </v-btn>
+      
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Allergic urticaria; '"
+      >
+        Allergic urticaria
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Gonococcal infection of lower genitourinary tract, unspecified; '"
+        @click="secondaryValue += ' Anaphylactic reaction due to unspecified food, initial encounter; '"
       >
-       Gonococcal
-      </v-btn>
-
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Chlamydial infection of lower genitourinary tract, unspecified; '"
-      >
-        Chlamydia
+        food
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
+        @click="secondaryValue += 'Angioedema, initial encounter; '"
       >
-        Dysuria
+        Add Diagnosis #4
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Urethral discharge, unspecified; '"
+        @click="secondaryValue += 'Anaphylaxis due to tree nuts or seeds, initial encounter; '"
       >
-       Urethral discharge
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Acute prostatitis; '"
-      >
-       prostatitis
+        nuts or seeds
       </v-btn>
           <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of penis; '"
+        @click="secondaryValue += 'Intrinsic (allergic) eczema; '"
       >
-        herpes penis
+        eczema
       </v-btn>
-      <v-btn
+   
+        <v-btn
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += 'Anaphylactic reaction to insect stings, initial encounter; '"
+            >
+            insect stings
+        </v-btn>
+        <v-btn
+            color="#72728a"
+            class="ma-2"
+            @click="secondaryValue += 'Anaphylactic reaction to drugs, initial encounter; '"
+            >
+            drugs
+        </v-btn>
+           <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Herpesviral infection of other male genital organs; '"
+        @click="secondaryValue += 'Anaphylactic shock, unspecified, initial encounter; '"
       >
-        herpes testicle
+        Anaphylactic shock
       </v-btn>
-      
+
     </div>
 
     <!-- SECONDARY TEXTAREA -->
@@ -114,15 +121,15 @@
 
 <script>
 export default {
-  name: "MaleSTD",
+  name: "AllergicReaction",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient is a male presenting with dysuria.\n\nUrinary tract infection could cause dysuria, but it is often accompanied by increased frequency, urgency, or suprapubic pain, which are not present.\n\nProstatitis might cause dysuria and pelvic pain, sometimes with fever or difficulty urinating, none of which are reported here.\n\nKidney stones can lead to dysuria if they irritate the lower urinary tract, but they are typically associated with severe, colicky flank pain and hematuria, which is not the case here.\n\nThe patient’s symptoms align well with STD urethritis, which is frequently caused by sexually transmitted infections such as gonorrhea or chlamydia.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      primaryValue: "Patient presents with symptoms suggestive of an allergic reaction.\n\nThis could be anaphylaxis, but the absence of respiratory distress, hypotension, or severe systemic symptoms suggests a less severe allergic reaction.\n\nThis does not appear to be angioedema because there is no airway compromise.\n\nI don't think that this is an asthma exacerbation because there is no significant wheezing on exam.\n\nBased on the clinical examination and the absence of severe systemic symptoms such as significant respiratory distress, hypotension, or anaphylaxis, conditions like anaphylaxis and acute asthma exacerbation seem unlikely.\n\nPatient is breathing well with normal vital signs.\n\nThe patient is safe for discharge and outpatient management with their primary care doctor.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "The patient presents with a male genital rash.\n\nSyphilis may cause a painless ulcer rather than a painful rash or vesicles, making this less likely.\n\nChancroid leads to painful ulcers, but they typically have ragged borders and may produce a foul discharge, which is not the case here.\n\nTinea Cruris can cause an itchy rash in the groin area, but it generally does not present with the painful vesicles or ulcers characteristic of herpes.\n\nContact Dermatitis might present with itching and redness, typically linked to an identifiable irritant, but it rarely involves vesicles or painful sores on the genitals.\n\nThe patient’s rash aligns well with Herpes, which presents with painful, fluid-filled vesicles or ulcers on the genitals.\n\nThe patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.",
+      alternateValue: "Patient presents with symptoms suggestive of an allergic reaction.\n\nThis could be anaphylaxis, but the absence of respiratory distress, hypotension, or severe systemic symptoms suggests a less severe allergic reaction.\n\nThis does not appear to be angioedema because there is no airway compromise.\n\nI don't think that this is an asthma exacerbation because there is no significant wheezing on exam.\n\nBased on the clinical examination and the absence of severe systemic symptoms such as significant respiratory distress, hypotension, or anaphylaxis, conditions like anaphylaxis and acute asthma exacerbation seem unlikely.\n\nPatient is breathing well with normal vital signs.\n\nThe patient is safe for discharge and outpatient management with their pediatrician.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
