@@ -34,7 +34,7 @@
       >
         Muscle pain
       </v-btn>
-      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += 'Cough; '">
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += ' acute Cough; '">
         Cough
       </v-btn>
               <v-btn
@@ -77,6 +77,13 @@
         @click="secondaryValue += 'fatigue; '"
       >
         fatigue
+      </v-btn>
+            <v-btn
+        color="#37aeb3"
+        class="ma-2"
+        @click="secondaryValue += '  Acute upper respiratory infection; Nasal congestion; Acute Cough; Acuute viral illness, CONTACT WITH AND (SUSPECTED) EXPOSURE TO OTHER VIRAL COMMUNICABLE DISEASES INCLUDING COVID-19 - [Z20.828]; '"
+      >
+        Pedi URI everything
       </v-btn>
 
     </div>

@@ -39,7 +39,7 @@ export default {
       }
       this.timeoutId = setTimeout(() => {
         this.$router.push('/');
-      }, 990000);
+      }, 180000);
       // change back to 180000
     },
     setupInactivityListener() {

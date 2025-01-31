@@ -27,6 +27,9 @@
       <v-list-item>
         <v-list-item-title>CB Randomizer</v-list-item-title>
       </v-list-item>
+          <v-list-item>
+        <v-list-item-title>Calendar</v-list-item-title>
+      </v-list-item>
       <v-list-item>
         <v-list-item-title>image / light that shows internet status</v-list-item-title>
       </v-list-item>
