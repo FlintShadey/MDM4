@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> DEntal Injury </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -126,7 +126,7 @@ export default {
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "The patient presents with a dental injury.\n\nTooth contusion could cause discomfort or minor mobility, but it typically involves only the soft tissues or the periodontal ligament without significant structural damage to the tooth.\n\nGingival abrasion might cause localized pain and bleeding, but it does not typically involve the tooth structure itself.\n\nI dont believe that this is alveolar fracture which could cause more extensive injury to the jawbone.\n\nThe patient’s presentation aligns well with a fractured tooth.\n\nThe patient is otherwise free from serious injury.\n\nThe patient is safe for discharge and follow up with a dentist very soon.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
