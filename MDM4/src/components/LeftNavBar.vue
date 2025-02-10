@@ -7,22 +7,234 @@
     :image="backgroundImage"
   >
     <v-list dense>
-   
-
-      <v-list-item
-        v-for="button in buttons"
-        :key="button.label"
-        class="px-2 mx-4"
-      >
+      <!-- Single buttons -->
+      <v-list-item class="px-2 mx-4">
         <v-btn
           block
-          :color="button.color"
-         
-            :class="{'my-3 pa-8': button.label === 'HOME'}"
-            :prepend-icon="button.label === 'HOME' ? 'mdi-home' : ''"
-          @click="handleButtonClick(button)"
+          color="yellow"
+          class="my-3 pa-8"
+          prepend-icon="mdi-home"
+          @click="handleButtonClick({label: 'HOME', route: '/'})"
         >
-          {{ button.label }}
+          HOME
+        </v-btn>
+      </v-list-item>
+
+      <v-list-item class="px-2 mx-4">
+        <v-btn
+          block
+          height ="64px"
+          size="x-large"
+          class="my-2 pa-6"
+          color="#2196F3"
+          @click="handleButtonClick({label: 'Adult', copyKey: 'adultText'})"
+        >
+          Adult
+        </v-btn>
+      </v-list-item>
+
+      <!-- New row of three numbered buttons -->
+      <v-list-item class="d-flex px-2 mx-7" style="min-height: 30px">
+        <v-btn
+          class="me-1 flex-grow-1"
+          color="#9FA8DA"
+          size="x-small"
+          @click="handleButtonClick({label: '1', copyKey: 'work1Text'})"
+        >
+          1
+        </v-btn>
+        <v-btn
+          class="mx-1 flex-grow-1"
+          color="#7986CB"
+          size="x-small"
+          @click="handleButtonClick({label: '2', copyKey: 'work2Text'})"
+        >
+          2
+        </v-btn>
+        <v-btn
+          class="ms-1 flex-grow-1"
+          color="#5C6BC0"
+          size="x-small"
+          @click="handleButtonClick({label: '3', copyKey: 'work3Text'})"
+        >
+          3
+        </v-btn>
+      </v-list-item>
+
+      <!-- Paired buttons -->
+      <v-list-item class="d-flex px-2 mx-4">
+        <v-btn
+          class="me-1 flex-grow-1"
+          color="#E1BEE7"
+          dense
+          small
+          @click="handleButtonClick({label: 'Mom', copyKey: 'momText'})"
+        >
+          Mom
+        </v-btn>
+        <v-btn
+          class="ms-1 flex-grow-1"
+          color="#CE93D8"
+          dense
+          small
+          @click="handleButtonClick({label: 'Dad', copyKey: 'dadText'})"
+        >
+          Dad
+        </v-btn>
+      </v-list-item>
+
+      <v-list-item class="d-flex px-2 mx-4">
+        <v-btn
+          class="me-1 flex-grow-1"
+          color="#BA68C8"
+          dense
+          size="x-small"
+          @click="handleButtonClick({label: 'Parents', copyKey: 'parentsText'})"
+        >
+          Parent
+        </v-btn>
+        <v-btn
+          class="ms-1 flex-grow-1"
+          color="#AB47BC"
+          dense
+          size="x-small"
+          @click="handleButtonClick({label: 'Guardian', copyKey: 'guardianText'})"
+        >
+          Guardian
+        </v-btn>
+      </v-list-item>
+
+      <v-list-item class="d-flex px-2 mx-2">
+        <v-btn
+          class="me-1 flex-grow-1"
+          color="#E57373"
+          dense
+          small
+          @click="handleButtonClick({label: 'URI', copyKey: 'uriText'})"
+        >
+          URI
+        </v-btn>
+        <v-btn
+          class="ms-1 flex-grow-1"
+          color="#EF5350"
+          dense
+          small
+          @click="handleButtonClick({label: 'Dx:URI', copyKey: 'dxUriText'})"
+        >
+          Dx:URI
+        </v-btn>
+      </v-list-item>
+
+      <v-list-item class="d-flex px-2 mx-5">
+        <v-btn
+          class="me-1 flex-grow-1"
+          color="#F06292"
+          dense
+          size="x-small"
+          @click="handleButtonClick({label: 'Sinus', copyKey: 'sinusText'})"
+        >
+          Sinus
+        </v-btn>
+        <v-btn
+          class="ms-1 flex-grow-1"
+          color="#EC407A"
+          dense
+          size="x-small"
+          @click="handleButtonClick({label: 'Dx:Sinus', copyKey: 'dxSinusText'})"
+        >
+          Dx:Sinus
+        </v-btn>
+      </v-list-item>
+
+      <v-list-item class="d-flex px-2 mx-2">
+        <v-btn
+          class="me-1 flex-grow-1"
+          color="#9575CD"
+          dense
+          size="x-small"
+          @click="handleButtonClick({label: 'Bronchitis', copyKey: 'bronchitisText'})"
+        >
+          Bronch
+        </v-btn>
+        <v-btn
+          class="ms-1 flex-grow-1"
+          color="#7E57C2"
+          dense
+          size="x-small"
+          @click="handleButtonClick({label: 'Dx:Bronchitis', copyKey: 'dxBronchitisText'})"
+        >
+          Dx:Bronch
+        </v-btn>
+      </v-list-item>
+
+      <v-list-item class="d-flex px-2 mx-7">
+        <v-btn
+          class="me-1 flex-grow-1"
+          color="#7986CB"
+          dense
+          size="x-small"
+          @click="handleButtonClick({label: 'Flu', copyKey: 'fluText'})"
+        >
+          Flu
+        </v-btn>
+        <v-btn
+          class="ms-1 flex-grow-1"
+          color="#5C6BC0"
+          dense
+          size="x-small"
+          @click="handleButtonClick({label: 'Dx:Flu', copyKey: 'dxFluText'})"
+        >
+          Dx:Flu
+        </v-btn>
+      </v-list-item>
+
+      <v-list-item class="d-flex px-2 mx-1">
+        <v-btn
+          class="me-1 flex-grow-1"
+          color="#4FC3F7"
+          dense
+          size="x-small"
+          @click="handleButtonClick({label: 'Pharyngitis', copyKey: 'pharyngitisText'})"
+        >
+          Pharyng
+        </v-btn>
+        <v-btn
+          class="ms-1 flex-grow-1"
+          color="#29B6F6"
+          dense
+          size="x-small"
+          @click="handleButtonClick({label: 'Dx:Pharyngitis', copyKey: 'dxPharyngitisText'})"
+        >
+          Dx:Pharyng
+        </v-btn>
+      </v-list-item>
+
+      <v-list-item class="px-2 mx-4">
+        <v-btn
+          block
+          color="#18FFFF"
+          @click="handleButtonClick({label: 'Splint Check', copyKey: 'splintCheckText'})"
+        >
+          Splint Check
+        </v-btn>
+      </v-list-item>
+
+      <v-list-item class="d-flex px-2 mx-2">
+        <v-btn
+          class="me-1 flex-grow-1"
+          color="#00E5FF"
+          dense
+          @click="handleButtonClick({label: 'EKG', copyKey: 'ekgText'})"
+        >
+          EKG
+        </v-btn>
+        <v-btn
+          class="ms-1 flex-grow-1"
+          color="#00B8D4"
+          dense
+          @click="handleButtonClick({label: 'Aware', copyKey: 'awareText'})"
+        >
+          Aware
         </v-btn>
       </v-list-item>
     </v-list>
@@ -30,6 +242,8 @@
 </template>
 
 <script>
+import { generateWorkExcuse } from '@/utils/dateUtils';
+
 export default {
   name: "LeftNavBar",
   data() {
@@ -122,12 +336,25 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       ekgText: "EKG Interpretation was performed and documented.",
       awareText: "Patient has been made aware of the ______________  abnormality, they have been instructed and understand the need to follow up with their physician. ",
 
+      work1Text() {
+        return generateWorkExcuse(1);
+      },
+      work2Text() {
+        return generateWorkExcuse(2);
+      },
+      work3Text() {
+        return generateWorkExcuse(3);
+      },
+
       /* -----------
          Buttons
       ------------*/
       buttons: [
         { label: "HOME", color: "yellow", route: "/", class: "mx-5" },
         { label: "Adult", copyKey: "adultText", color: "#2196F3" },
+        { label: "1", copyKey: "work1Text", color: "#FF9800" },
+        { label: "2", copyKey: "work2Text", color: "#FB8C00" },
+        { label: "3", copyKey: "work3Text", color: "#F57C00" },
         { label: "Mom", copyKey: "momText", color: "#E1BEE7" }, 
         { label: "Dad", copyKey: "dadText", color: "#CE93D8" },
         { label: "Parents", copyKey: "parentsText", color: "#BA68C8" },
@@ -165,8 +392,11 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         // Or to navigate via router:
         this.$router.push(button.route);
       } else if (button.copyKey) {
-        // Copy the text from data
-        const textToCopy = this[button.copyKey];
+        // For work excuse buttons, we need to call the function
+        const textToCopy = button.copyKey.includes('work') 
+          ? this[button.copyKey]() 
+          : this[button.copyKey];
+          
         if (textToCopy) {
           this.copyText(textToCopy);
         }
@@ -175,13 +405,9 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
   },
 };
 </script>
-<!-- 
-**Notes/Considerations**:
 
-1. The `"HOME / Refresh"` button is treated as a special case with a `route: "/"`. You can decide whether it actually navigates to `"/"` using `this.$router.push("/")`, or simply calls `window.location.reload()`. Just adjust that logic in `handleButtonClick(button)`.
-
-2. For each of the other buttons, if they have a `copyKey`, the associated text is looked up in the component’s data fields, and then copied to clipboard.
-
-3. You can customize the color schemes, sizing, or button arrangement to your preference. If you want icons, you can use `<v-icon>` inside your `<v-btn>` or specify `prepend-icon`, etc.
-
-This setup consolidates your copy texts in one place and automatically wires up the buttons in your navigation drawer. -->
+<style scoped>
+.v-btn.v-btn--density-default {
+  height: 32px !important;
+}
+</style>

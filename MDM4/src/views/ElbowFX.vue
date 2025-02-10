@@ -37,7 +37,7 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Contusion of elbow '"
+        @click="secondaryValue += 'Contusion of elbow; '"
       >
         Contusion
       </v-btn>

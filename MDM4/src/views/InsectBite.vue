@@ -8,18 +8,12 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> no anaphylaxis </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'acute pain due to trauma;  '"
-      >
-        Trauma Pain
-      </v-btn>
+ 
       <v-btn
         color="#72728a"
         class="ma-2"
@@ -59,7 +53,7 @@
         class="ma-2"
         @click="
           secondaryValue +=
-            'Insect bite (nonvenomous) of unspecified parts of thorax, initial encounter; '
+            'Insect bite (nonvenomous) of _______, initial encounter; '
         "
       >
         bite
@@ -88,7 +82,7 @@
         class="ma-2"
         @click="secondaryValue += 'Urticaria due to insect bites; '"
       >
-        Insect bites
+        urticaria from bites
       </v-btn>
     </div>
 
@@ -145,7 +139,7 @@ export default {
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "The patient does not have symptoms of anaphylaxis, as there is no:\n\n- Difficulty breathing or swallowing\n- Swelling of the face, lips, tongue, or throat\n- Hives\n- Dizziness or lightheadedness\n- Chest pain or abdominal pain with vomiting\n- Rash or skin flushing\n- Hoarse voice or difficulty talking\n- Wheezing or coughing",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

@@ -82,7 +82,7 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link + Show Modal
+        pill Identifier
       </v-btn>
       <v-dialog v-model="dialog" max-width="80%">
         <v-card>
@@ -166,7 +166,7 @@ export default {
      * Opens a new browser tab to an external URL.
      */
     openExternalLink() {
-      window.open("https://www.google.com", "_blank");
+      window.open("https://www.drugs.com/imprints.php", "_blank");
       this.dialogImgUrl = "@/assets/visionLoss.png";
       this.dialog = true;
     },

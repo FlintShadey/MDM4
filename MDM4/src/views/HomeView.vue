@@ -568,7 +568,7 @@
       rounded="xl"
       @click="openDialog('/thumbsprain')"
     >
-      Thumb Sprain
+      Thumb Sp
     </v-btn>
   </v-col>
   <v-col>
@@ -590,9 +590,21 @@
       rounded="xl"
       @click="openDialog('/fingeramputation')"
     >
-      Finger amputation
+      Finger amp
     </v-btn>
   </v-col>
+  <v-col>
+    <v-btn
+      :ref="'finger fx'"
+      :color="getButtonColor('FingerSprain')"
+      size="small"
+      rounded="xl"
+      @click="openDialog('/fingersprain')"
+    >
+      finger Sp
+    </v-btn>
+  </v-col>
+
   <v-col>
     <v-btn
       :ref="'finger fx'"
@@ -634,7 +646,7 @@
       rounded="xl"
       @click="openDialog('/nailavulsion')"
     >
-      Nail Avulsion
+      Nail Avuls
     </v-btn>
   </v-col>
   <v-col>
@@ -824,28 +836,7 @@
       foot puncture
     </v-btn>
   </v-col>
-  <v-col>
-    <v-btn
-      :ref="'FB NO removal'"
-      color="warning"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/fbnoremoval')"
-    >
-      FB NO removal
-    </v-btn>
-  </v-col>
-  <v-col>
-    <v-btn
-      :ref="'FB + removal'"
-      color="warning"
-      size="small"
-      rounded="xl"
-      @click="openDialog('/fbremoval')"
-    >
-      FB + removal
-    </v-btn>
-  </v-col>
+
   <v-col>
     <v-btn
       :ref="'foot pain'"
@@ -1015,6 +1006,7 @@
 
 <v-row>
   <img src="../assets/fire.png" alt="fire" height="26px" class="mt-3" />
+
   <v-col>
     <v-btn
       :ref="'burn'"
@@ -1026,6 +1018,7 @@
       burn
     </v-btn>
   </v-col>
+
   <v-col>
     <v-btn
       :ref="'inhalation injury'"
@@ -1035,6 +1028,28 @@
       @click="openDialog('/inhalationinjury')"
     >
       inhalation injury
+    </v-btn>
+  </v-col>
+  <v-col>
+    <v-btn
+      :ref="'FB NO removal'"
+      color="warning"
+      size="small"
+      rounded="xl"
+      @click="openDialog('/fbnoremoval')"
+    >
+      FB NO removal
+    </v-btn>
+  </v-col>
+  <v-col>
+    <v-btn
+      :ref="'FB + removal'"
+      color="warning"
+      size="small"
+      rounded="xl"
+      @click="openDialog('/fbremoval')"
+    >
+      FB + removal
     </v-btn>
   </v-col>
 </v-row>
@@ -1772,7 +1787,18 @@
       rounded="xl"
       @click="openDialog('/dysmenorrhea')"
     >
-      Dysmenorrhea
+      Dysmeno
+    </v-btn>
+  </v-col>
+  <v-col>
+    <v-btn
+      :ref="'Pregnancy'"
+      :color="getButtonColor('Menorrhagia')"
+      size="small"
+      rounded="xl"
+      @click="openDialog('/menorrhagia')"
+    >
+    menorrhagia
     </v-btn>
   </v-col>
   <v-col>
@@ -2079,7 +2105,7 @@
       rounded="xl"
       @click="openDialog('/candidiasis')"
     >
-      candidiasis
+      candida
     </v-btn>
   </v-col>
   <v-col>
@@ -2123,7 +2149,7 @@
       rounded="xl"
       @click="openDialog('/hidradenitissuppurativa')"
     >
-      hidradenitis supp
+      hidra supp
     </v-btn>
   </v-col>
 </v-row>
@@ -2448,6 +2474,7 @@ export default {
         "/thumbsprain",
         "/kanavel",
         "/fingeramputation",
+        "/fingersprain",
         "/fingerfx",
         "/boxerfx",
         "/nailavulsion",
@@ -2540,6 +2567,7 @@ export default {
         "/uti",
         "/femalestd",
         "/dysmenorrhea",
+        "/menorrhagia",
         "/threatmiscarriage",
         "/ovariancyst",
         "/bartholins",

@@ -46,6 +46,7 @@ import Paronychia from "../views/Paronychia.vue";
 import ThumbSprain from "../views/ThumbSprain.vue";
 import Kanaval from "../views/Kanaval.vue";
 import FingerAmputaion from "../views/FingerAmputaion.vue";
+import FingerSprain from "../views/FingerSprain.vue";
 import FingerFX from "../views/FingerFX.vue";
 import BoxerFX from "../views/BoxerFX.vue";
 import NailAvulsion from "../views/NailAvulsion.vue";
@@ -138,6 +139,7 @@ import Hemorrhoid from "../views/Hemorrhoid.vue";
 import UTI from "../views/UTI.vue";
 import FemaleSTD from "../views/FemaleSTD.vue";
 import Dysmenorrhea from "../views/Dysmenorrhea.vue";
+import Menorrhagia from "../views/Menorrhagia.vue";
 import ThreatMiscarriage from "../views/ThreatMiscarriage.vue";
 import OvarianCyst from "../views/OvarianCyst.vue";
 import Bartholins from "../views/Bartholins.vue";
@@ -259,12 +261,13 @@ const routes = [
   { path: "/backpain", name: "BackPain", component: BackPain },
   { path: "/thoracicbackpain", name: "ThoracicBackPain", component: ThoracicBackPain },
   { path: "/backinjury", name: "BackInjury", component: BackInjury },
-
   { path: "/pilonidalcyst", name: "PilonidalCyst", component: PilonidalCyst },
   { path: "/paronychia", name: "Paronychia", component: Paronychia },
   { path: "/thumbsprain", name: "ThumbSprain", component: ThumbSprain },
   { path: "/kanaval", name: "Kanaval", component: Kanaval },
   { path: "/fingeramputation", name: "FingerAmputation", component: FingerAmputaion },
+  { path: "/fingersprain", name: "FingerSprain", component: FingerSprain },
+
   { path: "/fingerfx", name: "FingerFX", component: FingerFX },
   { path: "/boxerfx", name: "BoxerFX", component: BoxerFX },
   { path: "/nailavulsion", name: "NailAvulsion", component: NailAvulsion },
@@ -357,6 +360,7 @@ const routes = [
   { path: "/uti", name: "UTI", component: UTI },
   { path: "/femalestd", name: "FemaleSTD", component: FemaleSTD },
   { path: "/dysmenorrhea", name: "Dysmenorrhea", component: Dysmenorrhea },
+  { path: "/menorrhagia", name: "Menorrhagia", component: Menorrhagia },
   { path: "/threatmiscarriage", name: "ThreatMiscarriage", component: ThreatMiscarriage },
   { path: "/ovariancyst", name: "OvarianCyst", component: OvarianCyst },
   { path: "/bartholins", name: "Bartholins", component: Bartholins },

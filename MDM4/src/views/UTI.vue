@@ -23,35 +23,6 @@
         uti
       </v-btn>
       <v-btn
-        color="#665251"
-        class="ma-2"
-        @click="secondaryValue += 'Acute cystitis with hematuria; '"
-      >
-        cystitis with hematuria
-      </v-btn>
-
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Acute pyelonephritis; '"
-      >
-        pyelonephritis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Nonspecific urethritis; '"
-      >
-        Add Diagnosis #3
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'Gross hematuria; '"
-      >
-        hematuria
-      </v-btn>
-      <v-btn
         color="#72728a"
         class="ma-2"
         @click="secondaryValue += 'Dysuria; '"
@@ -79,12 +50,43 @@
       <v-btn
         color="#72728a"
         class="ma-2"
+        @click="secondaryValue += 'Acute cystitis with hematuria; '"
+      >
+        cystitis with hematuria
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Acute pyelonephritis; '"
+      >
+        pyelonephritis
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Nonspecific urethritis; '"
+      >
+      Nonspecific urethritis
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Gross hematuria; '"
+      >
+        hematuria
+      </v-btn>
+
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
         @click="secondaryValue += ' Nausea; '"
       >
         nausea
       </v-btn>
       <v-btn
-        color="#665251"
+        color="#72728a"
         class="ma-2"
         @click="secondaryValue += 'Nausea with vomiting; '"
       >

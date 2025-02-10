@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> angioedema </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -41,7 +41,7 @@
         class="ma-2"
         @click="secondaryValue += 'Angioedema, initial encounter; '"
       >
-        Add Diagnosis #4
+      Angioedema
       </v-btn>
       <v-btn
         color="#72728a"
@@ -129,8 +129,7 @@ export default {
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Patient presents with symptoms suggestive of an allergic reaction.\n\nThis could be anaphylaxis, but the absence of respiratory distress, hypotension, or severe systemic symptoms suggests a less severe allergic reaction.\n\nThis does not appear to be angioedema because there is no airway compromise.\n\nI don't think that this is an asthma exacerbation because there is no significant wheezing on exam.\n\nBased on the clinical examination and the absence of severe systemic symptoms such as significant respiratory distress, hypotension, or anaphylaxis, conditions like anaphylaxis and acute asthma exacerbation seem unlikely.\n\nPatient is breathing well with normal vital signs.\n\nThe patient is safe for discharge and outpatient management with their pediatrician.",
-      // Snackbar controls
+      alternateValue: "The patient presents with swelling.\n\nCellulitis could cause swelling but typically includes redness, warmth, and possibly fever, which are not present.\n\nTrauma might lead to swelling, but the patient does not report a recent injury.\n\nHereditary causes of swelling are possible, though these are less common and often have a chronic or recurrent pattern, which is not described by the patient.\n\nThe patient’s presentation aligns well with angioedema, which often presents as sudden, painless swelling and may be associated with allergic or idiopathic factors.\n\nThe patient does not have any sign of anaphylaxis or mucosal membrane involvement.\n\nThe patient is safe for discharge and should follow up with a primary care physician very soon.",      // Snackbar controls
       snackbar: false,
       snackbarText: "",
       snackbarColor: "success",
