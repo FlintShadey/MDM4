@@ -12,7 +12,7 @@
         <v-btn
           block
           color="yellow"
-          class="my-3 pa-8"
+          class="my-1 pa-5"
           prepend-icon="mdi-home"
           @click="handleButtonClick({label: 'HOME', route: '/'})"
         >
@@ -23,9 +23,9 @@
       <v-list-item class="px-2 mx-4">
         <v-btn
           block
-          height ="64px"
+          
           size="x-large"
-          class="my-2 pa-6"
+          class="my-1 pa-2"
           color="#2196F3"
           @click="handleButtonClick({label: 'Adult', copyKey: 'adultText'})"
         >
@@ -103,7 +103,7 @@
           Guardian
         </v-btn>
       </v-list-item>
-
+<hr>
       <v-list-item class="d-flex px-2 mx-2">
         <v-btn
           class="me-1 flex-grow-1"
@@ -208,7 +208,7 @@
           Dx:Pharyng
         </v-btn>
       </v-list-item>
-
+<hr>
       <v-list-item class="px-2 mx-4">
         <v-btn
           block
