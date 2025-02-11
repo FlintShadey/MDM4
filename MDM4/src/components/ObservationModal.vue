@@ -16,7 +16,15 @@
         <v-list>
           <v-list-item v-for="(text, index) in observationTexts" :key="index">
             <div class="d-flex align-center w-100">
-              <div class="flex-grow-1 me-4">{{ text }}</div>
+              <div 
+                class="flex-grow-1 me-4"
+                :class="{
+                  'text-success': index === 6,
+                  'text-error': index === 7
+                }"
+              >
+                {{ text }}
+              </div>
               <v-btn 
                 color="primary" 
                 variant="outlined" 
@@ -76,5 +84,15 @@ export default {
 <style scoped>
 .v-list-item {
   padding: 12px 16px;
+}
+
+.text-success {
+  color: #4CAF50 !important;
+  font-weight: bold;
+}
+
+.text-error {
+  color: #FF5252 !important;
+  font-weight: bold;
 }
 </style>
