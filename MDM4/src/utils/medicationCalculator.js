@@ -1,133 +1,333 @@
 // Medication calculator utility functions
 
 export function calculateCoughSyrup(weight) {
-  if (weight <= 15) return "probably too young";
-  if (weight <= 20) return "5 ml PO q 6 hours PRN -- Guaifenesin 100 mg / 5 ml";
-  if (weight <= 30) return "10 ml PO q 6 hours PRN -- Guaifenesin 100 mg / 5 ml";
-  if (weight <= 40) return "3ml PO q 6 hours PRN -- Promethazine DM 6.25mg/15mg/5ml";
-  if (weight <= 50) return "4 ml PO TID for 10 days -- Promethazine DM 6.25mg/15mg/5ml";
-  return "5 ml PO TID for 10 days -- Promethazine DM 6.25mg/15mg/5ml";
+  const doses = {
+    dosage: "",
+    details: "-- Guaifenesin 100 mg / 5 ml"
+  };
+  
+  if (weight <= 15) {
+    doses.dosage = "probably too young";
+    doses.details = "";
+  } else if (weight <= 20) {
+    doses.dosage = "5 ml PO q 6 hours PRN";
+  } else if (weight <= 30) {
+    doses.dosage = "10 ml PO q 6 hours PRN";
+  } else if (weight <= 40) {
+    doses.dosage = "3ml PO q 6 hours PRN";
+    doses.details = "-- Promethazine DM 6.25mg/15mg/5ml";
+  } else if (weight <= 50) {
+    doses.dosage = "4 ml PO TID for 10 days";
+    doses.details = "-- Promethazine DM 6.25mg/15mg/5ml";
+  } else {
+    doses.dosage = "5 ml PO TID for 10 days";
+    doses.details = "-- Promethazine DM 6.25mg/15mg/5ml";
+  }
+  return doses;
 }
 
 export function calculateIbuprofen(weight) {
-  if (weight >= 5 && weight <= 7) return "2.5 ml PO q6h PRN : Ibuprofen 100mg / 5ml";
-  if (weight >= 8 && weight <= 10) return "4 ml PO q6h PRN : Ibuprofen 100mg / 5ml";
-  if (weight >= 11 && weight <= 15) return "5 ml PO q6h PRN : Ibuprofen 100mg / 5ml";
-  if (weight >= 16 && weight <= 21) return "7.5 ml PO q6h PRN : Ibuprofen 100mg / 5ml";
-  if (weight >= 22 && weight <= 26) return "10 ml PO q6h PRN : Ibuprofen 100mg / 5ml";
-  if (weight >= 27 && weight <= 32) return "12.5 ml PO q6h PRN : Ibuprofen 100mg / 5ml";
-  if (weight >= 33 && weight <= 43) return "15 ml PO q6h PRN : Ibuprofen 100mg / 5ml";
-  if (weight >= 44) return "400mg PO q6h PRN : Ibuprofen 200mg tabs";
-  return "Please enter a valid weight.";
+  const doses = {
+    dosage: "Please enter a valid weight.",
+    details: ""
+  };
+
+  if (weight >= 5 && weight <= 7) {
+    doses.dosage = "2.5 ml PO q6h PRN";
+    doses.details = "-- Ibuprofen 100mg / 5ml";
+  } else if (weight >= 8 && weight <= 10) {
+    doses.dosage = "4 ml PO q6h PRN";
+    doses.details = "-- Ibuprofen 100mg / 5ml";
+  } else if (weight >= 11 && weight <= 15) {
+    doses.dosage = "5 ml PO q6h PRN";
+    doses.details = "-- Ibuprofen 100mg / 5ml";
+  } else if (weight >= 16 && weight <= 21) {
+    doses.dosage = "7.5 ml PO q6h PRN";
+    doses.details = "-- Ibuprofen 100mg / 5ml";
+  } else if (weight >= 22 && weight <= 26) {
+    doses.dosage = "10 ml PO q6h PRN";
+    doses.details = "-- Ibuprofen 100mg / 5ml";
+  } else if (weight >= 27 && weight <= 32) {
+    doses.dosage = "12.5 ml PO q6h PRN";
+    doses.details = "-- Ibuprofen 100mg / 5ml";
+  } else if (weight >= 33 && weight <= 43) {
+    doses.dosage = "15 ml PO q6h PRN";
+    doses.details = "-- Ibuprofen 100mg / 5ml";
+  } else if (weight >= 44) {
+    doses.dosage = "400mg PO q6h PRN";
+    doses.details = "-- Ibuprofen 200mg tabs";
+  }
+  return doses;
 }
 
 export function calculateTylenol(weight) {
-  if (weight >= 5 && weight <= 7) return "2.5 ml PO q4h PRN : Tylenol 160mg / 5ml";
-  if (weight >= 8 && weight <= 9) return "4 ml PO q4h PRN : Tylenol 160mg / 5ml";
-  if (weight >= 10 && weight <= 11) return "5 ml PO q4h PRN : Tylenol 160mg / 5ml";
-  if (weight >= 12 && weight <= 13) return "6 ml PO q4h PRN : Tylenol 160mg / 5ml";
-  if (weight >= 14 && weight <= 15) return "8 ml PO q4h PRN : Tylenol 160mg / 5ml";
-  if (weight >= 16 && weight <= 19) return "9 ml PO q4h PRN : Tylenol 160mg / 5ml";
-  if (weight >= 20 && weight <= 25) return "12 ml PO q4h PRN : Tylenol 160mg / 5ml";
-  if (weight >= 25 && weight <= 30) return "14 ml PO q4h PRN : Tylenol 160mg / 5ml";
-  if (weight >= 30 && weight <= 35) return "15 ml PO q4h PRN : Tylenol 160mg / 5ml";
-  if (weight >= 36) return "500mg PO q4h PRN : Adult dose";
-  return "Please enter a valid weight.";
+  const doses = {
+    dosage: "Please enter a valid weight.",
+    details: ""
+  };
+
+  if (weight >= 5 && weight <= 7) {
+    doses.dosage = "2.5 ml PO q4h PRN";
+    doses.details = "-- Tylenol 160mg / 5ml";
+  } else if (weight >= 8 && weight <= 9) {
+    doses.dosage = "4 ml PO q4h PRN";
+    doses.details = "-- Tylenol 160mg / 5ml";
+  } else if (weight >= 10 && weight <= 11) {
+    doses.dosage = "5 ml PO q4h PRN";
+    doses.details = "-- Tylenol 160mg / 5ml";
+  } else if (weight >= 12 && weight <= 13) {
+    doses.dosage = "6 ml PO q4h PRN";
+    doses.details = "-- Tylenol 160mg / 5ml";
+  } else if (weight >= 14 && weight <= 15) {
+    doses.dosage = "8 ml PO q4h PRN";
+    doses.details = "-- Tylenol 160mg / 5ml";
+  } else if (weight >= 16 && weight <= 19) {
+    doses.dosage = "9 ml PO q4h PRN";
+    doses.details = "-- Tylenol 160mg / 5ml";
+  } else if (weight >= 20 && weight <= 25) {
+    doses.dosage = "12 ml PO q4h PRN";
+    doses.details = "-- Tylenol 160mg / 5ml";
+  } else if (weight >= 25 && weight <= 30) {
+    doses.dosage = "14 ml PO q4h PRN";
+    doses.details = "-- Tylenol 160mg / 5ml";
+  } else if (weight >= 30 && weight <= 35) {
+    doses.dosage = "15 ml PO q4h PRN";
+    doses.details = "-- Tylenol 160mg / 5ml";
+  } else if (weight >= 36) {
+    doses.dosage = "500mg PO q4h PRN";
+    doses.details = "-- Adult dose";
+  }
+  return doses;
 }
 
 export function calculatePrednisolone(weight) {
-  if (weight >= 5 && weight <= 10) return `${weight} ml PO QD for 5 days -- Prednisolone 5mg/5ml`;
-  if (weight >= 11 && weight <= 15) return "5ml PO QD for 5 days -- Prednisolone 15mg/5ml";
-  if (weight >= 16 && weight <= 19) return "6 ml PO QD for 5 days -- Prednisolone 15mg/5ml";
-  if (weight >= 20 && weight <= 25) return "8ml PO QD for 5 days -- Prednisolone 15mg/5ml";
-  if (weight >= 26 && weight <= 30) return "10ml PO QD for 5 days -- Prednisolone 15mg/5ml";
-  if (weight >= 31 && weight <= 40) return "13ml PO QD for 5 days -- Prednisolone 15mg/5ml";
-  if (weight >= 41 && weight <= 49) return "10ml PO QD for 5 days -- Prednisolone 15mg/5ml";
-  if (weight >= 50) return "Adult Dose: 50 mg PO x 5 days";
-  return "Please enter a valid weight.";
+  const doses = {
+    dosage: "Please enter a valid weight.",
+    details: ""
+  };
+
+  if (weight >= 5 && weight <= 10) {
+    doses.dosage = `${weight} ml PO QD for 5 days`;
+    doses.details = "-- Prednisolone 5mg/5ml";
+  } else if (weight >= 11 && weight <= 15) {
+    doses.dosage = "5ml PO QD for 5 days";
+    doses.details = "-- Prednisolone 15mg/5ml";
+  } else if (weight >= 16 && weight <= 19) {
+    doses.dosage = "6 ml PO QD for 5 days";
+    doses.details = "-- Prednisolone 15mg/5ml";
+  } else if (weight >= 20 && weight <= 25) {
+    doses.dosage = "8ml PO QD for 5 days";
+    doses.details = "-- Prednisolone 15mg/5ml";
+  } else if (weight >= 26 && weight <= 30) {
+    doses.dosage = "10ml PO QD for 5 days";
+    doses.details = "-- Prednisolone 15mg/5ml";
+  } else if (weight >= 31 && weight <= 40) {
+    doses.dosage = "13ml PO QD for 5 days";
+    doses.details = "-- Prednisolone 15mg/5ml";
+  } else if (weight >= 41 && weight <= 49) {
+    doses.dosage = "15ml PO QD for 5 days";
+    doses.details = "-- Prednisolone 15mg/5ml";
+  } else if (weight >= 50) {
+    doses.dosage = "Adult Dose: 50 mg PO x 5 days";
+    doses.details = "";
+  }
+  return doses;
 }
 
 export function calculateAmoxicillin(weight) {
-  if (weight >= 5 && weight <= 7) return "3 ml PO TID for 10 days -- Amoxicillin 125mg/5ml";
-  if (weight >= 8 && weight <= 14) return "5 ml PO TID for 10 days -- Amoxicillin 200mg/5ml";
-  if (weight >= 15 && weight <= 19) return "5 ml PO TID for 10 days -- Amoxicillin 250mg/5ml";
-  if (weight >= 20 && weight <= 29) return "5 ml PO TID for 10 days -- Amoxicillin 400mg/5ml";
-  if (weight >= 30 && weight <= 34) return "6 ml PO TID for 10 days -- Amoxicillin 400mg/5ml";
-  if (weight >= 35 && weight <= 44) return "7 ml PO TID for 10 days -- Amoxicillin 400mg/5ml";
-  if (weight >= 45 && weight <= 49) return "8 ml PO TID for 10 days -- Amoxicillin 400mg/5ml";
-  if (weight >= 50) return "Adult Dose: 500mg PO TID for 10 days";
-  return "Please enter a valid weight.";
+  const doses = {
+    dosage: "Please enter a valid weight.",
+    details: ""
+  };
+
+  if (weight >= 5 && weight <= 7) {
+    doses.dosage = "3 ml PO TID for 10 days";
+    doses.details = "-- Amoxicillin 125mg/5ml";
+  } else if (weight >= 8 && weight <= 14) {
+    doses.dosage = "5 ml PO TID for 10 days";
+    doses.details = "-- Amoxicillin 200mg/5ml";
+  } else if (weight >= 15 && weight <= 19) {
+    doses.dosage = "5 ml PO TID for 10 days";
+    doses.details = "-- Amoxicillin 250mg/5ml";
+  } else if (weight >= 20 && weight <= 29) {
+    doses.dosage = "5 ml PO TID for 10 days";
+    doses.details = "-- Amoxicillin 400mg/5ml";
+  } else if (weight >= 30 && weight <= 34) {
+    doses.dosage = "6 ml PO TID for 10 days";
+    doses.details = "-- Amoxicillin 400mg/5ml";
+  } else if (weight >= 35 && weight <= 44) {
+    doses.dosage = "7 ml PO TID for 10 days";
+    doses.details = "-- Amoxicillin 400mg/5ml";
+  } else if (weight >= 45 && weight <= 49) {
+    doses.dosage = "8 ml PO TID for 10 days";
+    doses.details = "-- Amoxicillin 400mg/5ml";
+  } else if (weight >= 50) {
+    doses.dosage = "Adult Dose: 500mg PO TID for 10 days";
+    doses.details = "";
+  }
+  return doses;
 }
 
 export function calculateAzithromycin(weight) {
-  if (weight === 3) return "1.5ml PO on day 1 then 0.8ml PO day 2-5 --Azithromycin 100mg/5ml";
-  if (weight === 4) return "2ml PO on day 1 then 1ml PO day 2-5 -- Azithromycin 100mg/5ml";
-  if (weight === 5) return "2.5ml PO on day 1 then 1.3ml PO day 2-5 -- Azithromycin 100mg/5ml";
-  // ... continue with the rest of the specific cases
-  if (weight >= 21 && weight <= 22) return "5.5 ml PO on day 1 then 2.8 ml PO days 2-5 -- Azithromycin 200mg/5ml";
-  if (weight >= 23 && weight <= 24) return "6 ml PO on day 1 then 3 ml PO days 2-5 -- Azithromycin 200mg/5ml";
-  if (weight >= 25 && weight <= 28) return "6.5 ml PO on day 1 then 3.3 ml PO days 2-5 -- Azithromycin 200mg/5ml";
-  if (weight >= 29 && weight <= 32) return "7 ml PO on day 1 then 3.5 ml PO days 2-5 -- Azithromycin 200mg/5ml";
-  if (weight >= 33 && weight <= 36) return "8 ml PO on day 1 then 4 ml PO days 2-5 -- Azithromycin 200mg/5ml";
-  if (weight >= 37 && weight <= 40) return "10 ml PO on day 1 then 5 ml PO days 2-5 -- Azithromycin 200mg/5ml";
-  if (weight >= 41 && weight <= 44) return "11 ml PO on day 1 then 5.5 ml PO days 2-5 -- Azithromycin 200mg/5ml";
-  if (weight >= 45 && weight <= 49) return "12 ml PO on day 1 then 6 ml PO days 2-5 -- Azithromycin 200mg/5ml";
-  if (weight >= 50) return "Adult Dose: Day 1: 500 mg PO for one dose then Days 2 to 5: 250 mg PO once daily";
-  return "Please enter a valid weight.";
+  const doses = {
+    dosage: "Please enter a valid weight.",
+    details: ""
+  };
+
+  if (weight === 3) {
+    doses.dosage = "1.5ml PO on day 1 then 0.8ml PO day 2-5";
+    doses.details = "-- Azithromycin 100mg/5ml";
+  } else if (weight === 4) {
+    doses.dosage = "2ml PO on day 1 then 1ml PO day 2-5";
+    doses.details = "-- Azithromycin 100mg/5ml";
+  } else if (weight === 5) {
+    doses.dosage = "2.5ml PO on day 1 then 1.3ml PO day 2-5";
+    doses.details = "-- Azithromycin 100mg/5ml";
+  } else if (weight >= 21 && weight <= 22) {
+    doses.dosage = "5.5 ml PO on day 1 then 2.8 ml PO days 2-5";
+    doses.details = "-- Azithromycin 200mg/5ml";
+  } else if (weight >= 23 && weight <= 24) {
+    doses.dosage = "6 ml PO on day 1 then 3 ml PO days 2-5";
+    doses.details = "-- Azithromycin 200mg/5ml";
+  } else if (weight >= 25 && weight <= 28) {
+    doses.dosage = "6.5 ml PO on day 1 then 3.3 ml PO days 2-5";
+    doses.details = "-- Azithromycin 200mg/5ml";
+  } else if (weight >= 29 && weight <= 32) {
+    doses.dosage = "7 ml PO on day 1 then 3.5 ml PO days 2-5";
+    doses.details = "-- Azithromycin 200mg/5ml";
+  } else if (weight >= 33 && weight <= 36) {
+    doses.dosage = "8 ml PO on day 1 then 4 ml PO days 2-5";
+    doses.details = "-- Azithromycin 200mg/5ml";
+  } else if (weight >= 37 && weight <= 40) {
+    doses.dosage = "10 ml PO on day 1 then 5 ml PO days 2-5";
+    doses.details = "-- Azithromycin 200mg/5ml";
+  } else if (weight >= 41 && weight <= 44) {
+    doses.dosage = "11 ml PO on day 1 then 5.5 ml PO days 2-5";
+    doses.details = "-- Azithromycin 200mg/5ml";
+  } else if (weight >= 45 && weight <= 49) {
+    doses.dosage = "12 ml PO on day 1 then 6 ml PO days 2-5";
+    doses.details = "-- Azithromycin 200mg/5ml";
+  } else if (weight >= 50) {
+    doses.dosage = "Adult Dose: Day 1: 500 mg PO for one dose then Days 2 to 5: 250 mg PO once daily";
+    doses.details = "";
+  }
+  return doses;
 }
 
 export function calculateBactrim(weight) {
-  if (weight >= 4 && weight <= 5) return "3 ml PO BID for 10 days -- Bactrim suspension";
-  if (weight >= 6 && weight <= 7) return "4 ml PO BID for 10 days -- Bactrim suspension";
-  if (weight >= 8 && weight <= 10) return "5 ml PO BID for 10 days -- Bactrim suspension";
-  if (weight === 11) return "6 ml PO BID for 10 days -- Bactrim suspension";
-  if (weight >= 12 && weight <= 15) return "8 ml PO BID for 10 days -- Bactrim suspension";
-  if (weight >= 16 && weight <= 49) return "10 ml PO BID for 10 days -- Bactrim suspension";
-  if (weight >= 50) return "Adult Dose: 1 DS tab PO BID for 10 days";
-  return "Please enter a valid weight.";
+  const doses = {
+    dosage: "Please enter a valid weight.",
+    details: ""
+  };
+
+  if (weight >= 4 && weight <= 5) {
+    doses.dosage = "3 ml PO BID for 10 days";
+    doses.details = "-- Bactrim suspension";
+  } else if (weight >= 6 && weight <= 7) {
+    doses.dosage = "4 ml PO BID for 10 days";
+    doses.details = "-- Bactrim suspension";
+  } else if (weight >= 8 && weight <= 10) {
+    doses.dosage = "5 ml PO BID for 10 days";
+    doses.details = "-- Bactrim suspension";
+  } else if (weight === 11) {
+    doses.dosage = "6 ml PO BID for 10 days";
+    doses.details = "-- Bactrim suspension";
+  } else if (weight >= 12 && weight <= 15) {
+    doses.dosage = "8 ml PO BID for 10 days";
+    doses.details = "-- Bactrim suspension";
+  } else if (weight >= 16 && weight <= 49) {
+    doses.dosage = "10 ml PO BID for 10 days";
+    doses.details = "-- Bactrim suspension";
+  } else if (weight >= 50) {
+    doses.dosage = "Adult Dose: 1 DS tab PO BID for 10 days";
+    doses.details = "";
+  }
+  return doses;
 }
 
 export function calculateKeflex(weight) {
-  if (weight >= 5 && weight <= 7) return "3 ml PO TID for 10 days -- cephalexin 125mg/5ml";
-  if (weight >= 8 && weight <= 10) return "4 ml PO TID for 10 days -- cephalexin 125mg/5ml";
-  if (weight >= 11 && weight <= 13) return "5 ml PO TID for 10 days -- cephalexin 125mg/5ml";
-  if (weight >= 14 && weight <= 19) return "8 ml PO TID for 10 days -- cephalexin 250mg/5ml";
-  if (weight >= 20 && weight <= 34) return "7 ml PO TID for 10 days -- cephalexin 250mg/5ml";
-  if (weight >= 35 && weight <= 39) return "8 ml PO TID for 10 days -- cephalexin 250mg/5ml";
-  if (weight >= 40 && weight <= 44) return "9 ml PO TID for 10 days -- cephalexin 250mg/5ml";
-  if (weight >= 45 && weight <= 49) return "10 ml PO TID for 10 days -- cephalexin 250mg/5ml";
-  if (weight >= 50) return "Adult Dose: 500mg PO TID for 10 days";
-  return "Please enter a valid weight.";
+  const doses = {
+    dosage: "Please enter a valid weight.",
+    details: ""
+  };
+
+  if (weight >= 5 && weight <= 7) {
+    doses.dosage = "3 ml PO TID for 10 days";
+    doses.details = "-- cephalexin 125mg/5ml";
+  } else if (weight >= 8 && weight <= 10) {
+    doses.dosage = "4 ml PO TID for 10 days";
+    doses.details = "-- cephalexin 125mg/5ml";
+  } else if (weight >= 11 && weight <= 13) {
+    doses.dosage = "5 ml PO TID for 10 days";
+    doses.details = "-- cephalexin 125mg/5ml";
+  } else if (weight >= 14 && weight <= 19) {
+    doses.dosage = "8 ml PO TID for 10 days";
+    doses.details = "-- cephalexin 250mg/5ml";
+  } else if (weight >= 20 && weight <= 34) {
+    doses.dosage = "7 ml PO TID for 10 days";
+    doses.details = "-- cephalexin 250mg/5ml";
+  } else if (weight >= 35 && weight <= 39) {
+    doses.dosage = "8 ml PO TID for 10 days";
+    doses.details = "-- cephalexin 250mg/5ml";
+  } else if (weight >= 40 && weight <= 44) {
+    doses.dosage = "9 ml PO TID for 10 days";
+    doses.details = "-- cephalexin 250mg/5ml";
+  } else if (weight >= 45 && weight <= 49) {
+    doses.dosage = "10 ml PO TID for 10 days";
+    doses.details = "-- cephalexin 250mg/5ml";
+  } else if (weight >= 50) {
+    doses.dosage = "Adult Dose: 500mg PO TID for 10 days";
+    doses.details = "";
+  }
+  return doses;
 }
 
 export function calculateOmnicef(weight) {
-  if (weight > 42) return "Omnicef 300mg twice a day";
+  const doses = {
+    dosage: "Please enter a valid weight.",
+    details: ""
+  };
+  
+  if (weight > 42) {
+    doses.dosage = "Omnicef 300mg twice a day";
+    doses.details = "";
+    return doses;
+  }
   
   let dose;
-  let dosageText;
+  let concentration;
   
   if (weight > 35) {
     dose = Math.round(weight * 7 * 5 / 250);
-    dosageText = "250mg/5ml";
+    concentration = "250mg/5ml";
   } else {
     dose = Math.round(weight * 7 * 5 / 125);
-    dosageText = "125mg/5ml";
+    concentration = "125mg/5ml";
   }
   
-  return `The omnicef dose is: ${dose} ml PO BID of ${dosageText}`;
+  doses.dosage = `${dose} ml PO BID for 10 days`;
+  doses.details = `-- Omnicef ${concentration}`;
+  return doses;
 }
 
 export function calculateTamiflu(weight) {
+  const doses = {
+    dosage: "Please enter a valid weight.",
+    details: "-- Tamiflu 6 mg/ml"
+  };
+  
   if (weight <= 15) {
     const dose = Math.round(weight * 3 * 1 / 6);
-    return `The Tamiflu dose is: ${dose} ml of 6mg/ml BID for 10 days`;
+    doses.dosage = `${dose} ml BID for 5 days`;
+  } else if (weight > 15 && weight <= 23) {
+    doses.dosage = "5 ml PO BID for 5 days";
+  } else if (weight >= 24 && weight <= 40) {
+    doses.dosage = "10 ml PO BID for 5 days";
+  } else if (weight > 40) {
+    doses.dosage = "12.5 ml PO BID for 5 days";
   }
   
-  if (weight > 15 && weight <= 23) return "5 ml PO BID for 5 days -- Tamiflu 6 mg/ml";
-  if (weight >= 24 && weight <= 40) return "10 ml PO BID for 5 days -- Tamiflu 6 mg/ml";
-  if (weight > 40) return "12.5 ml PO BID for 5 days -- Tamiflu 6 mg/ml";
-  
-  return "Please enter a valid weight.";
+  return doses;
 }
 
 export function calculateFever(weight) {
@@ -144,8 +344,13 @@ export function calculateFever(weight) {
 
 // Calculate all medications at once
 export function calculateAllMedications(weight) {
-  return {
-    fever: calculateFever(weight),
+  const fever = calculateFever(weight); // Keep fever calculation as is
+  const results = {
+    fever,
+  };
+
+  // Add other medications
+  const medications = {
     coughSyrup: calculateCoughSyrup(weight),
     ibuprofen: calculateIbuprofen(weight),
     tylenol: calculateTylenol(weight),
@@ -157,4 +362,15 @@ export function calculateAllMedications(weight) {
     omnicef: calculateOmnicef(weight),
     tamiflu: calculateTamiflu(weight)
   };
+
+  // Format each medication result
+  Object.entries(medications).forEach(([key, value]) => {
+    if (typeof value === 'object' && value.dosage) {
+      results[key] = value.dosage + ' ' + value.details;
+    } else {
+      results[key] = value;
+    }
+  });
+
+  return results;
 }

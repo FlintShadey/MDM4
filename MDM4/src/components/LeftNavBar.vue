@@ -80,74 +80,6 @@
         </v-row>
       </v-list-item>
 
-      <!-- Calculator Section -->
-      <v-divider class="mb-2"></v-divider>
-      
-      <!-- Weight Calculator -->
-      <v-text-field
-        v-model="weight"
-        label="Weight in kg"
-        type="number"
-        density="compact"
-        class="mb-2"
-        variant="outlined"
-        clearable
-        hide-details
-        append-icon="mdi-keyboard-return"
-        @click:append="calculateMedications"
-        @keyup.enter="calculateMedications"
-      ></v-text-field>
-
-      <!-- Sedation Calculator -->
-      <v-text-field
-        v-model="sedationWeight"
-        label="Conscious Sedation wt in kg"
-        type="number"
-        density="compact"
-        class="mb-2"
-        variant="outlined"
-        clearable
-        hide-details
-        append-icon="mdi-keyboard-return"
-        @click:append="calculateSedation"
-        @keyup.enter="calculateSedation"
-      ></v-text-field>
-
-      <!-- Tools Section -->
-      <v-btn 
-        block 
-        color="#4f6bb0"
-        class="mb-2"
-        height="40"
-        @click="copyRandomCallText"
-      >
-        CB Randomizer
-      </v-btn>
-
-      <!-- Observation Section -->
-      <div class="d-flex align-center mb-2">
-        <v-btn
-          color="#3f4f99"
-          class="flex-grow-1 me-2"
-          height="40"
-          @click="openObservation"
-        >
-          Observation
-        </v-btn>
-        <v-progress-circular
-          v-if="timerActive"
-          :model-value="timerPercentage"
-          :rotate="360"
-          :size="40"
-          :width="4"
-          color="#c9b30c"
-        >
-          {{ formattedTime }}
-        </v-progress-circular>
-      </div>
-
-      <v-divider class="mb-2"></v-divider>
-
       <!-- Family Buttons Section -->
       <div class="button-grid mb-2">
         <v-row dense>
@@ -245,7 +177,7 @@
         Splint Check
       </v-btn>
 
-      <div class="d-flex">
+      <div class="d-flex mb-4">
         <v-btn
           class="flex-grow-1 me-1"
           color="#00E5FF"
@@ -262,6 +194,72 @@
         >
           Aware
         </v-btn>
+      </div>
+
+      <v-divider class="mb-4"></v-divider>
+
+      <!-- Calculator Section -->
+      <!-- Weight Calculator -->
+      <v-text-field
+        v-model="weight"
+        label="Weight in kg"
+        type="number"
+        density="compact"
+        class="mb-2"
+        variant="outlined"
+        clearable
+        hide-details
+        append-icon="mdi-keyboard-return"
+        @click:append="calculateMedications"
+        @keyup.enter="calculateMedications"
+      ></v-text-field>
+
+      <!-- Sedation Calculator -->
+      <v-text-field
+        v-model="sedationWeight"
+        label="Conscious Sedation wt in kg"
+        type="number"
+        density="compact"
+        class="mb-2"
+        variant="outlined"
+        clearable
+        hide-details
+        append-icon="mdi-keyboard-return"
+        @click:append="calculateSedation"
+        @keyup.enter="calculateSedation"
+      ></v-text-field>
+
+      <!-- Tools Section -->
+      <v-btn 
+        block 
+        color="#4f6bb0"
+        class="mb-2"
+        height="40"
+        @click="copyRandomCallText"
+      >
+        CB Randomizer
+      </v-btn>
+
+      <!-- Observation Section -->
+      <div class="d-flex align-center mb-2">
+        <v-btn
+          color="#3f4f99"
+          class="flex-grow-1 me-2"
+          height="40"
+          @click="openObservation"
+        >
+          Observation
+        </v-btn>
+        <v-progress-circular
+          v-if="timerActive"
+          :model-value="timerPercentage"
+          :rotate="360"
+          :size="40"
+          :width="4"
+          color="#c9b30c"
+        >
+          {{ formattedTime }}
+        </v-progress-circular>
       </div>
     </v-list>
 
@@ -292,7 +290,7 @@
                   variant="outlined"
                   size="small"
                   class="ms-3"
-                  @click="copyText(dose)"
+                  @click="copyMedicationDose(med, dose)"
                 >
                   COPY
                 </v-btn>
@@ -571,6 +569,17 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         .catch(err => {
           console.error('Failed to copy text:', err);
         });
+    },
+    copyMedicationDose(med, dose) {
+      // For fever calculation, copy the whole text
+      if (med === 'fever') {
+        this.copyText(dose);
+        return;
+      }
+      
+      // For other medications, only copy the part before the '--'
+      const dosagePart = dose.split('--')[0].trim();
+      this.copyText(dosagePart);
     },
   },
   computed: {
