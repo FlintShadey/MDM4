@@ -3,16 +3,17 @@
     app
     color="#912737"
     class="rounded"
-    width="200"
+    width="250"
     :image="backgroundImage"
   >
-    <v-list dense>
-      <!-- Single buttons -->
-      <v-list-item class="px-2 mx-4">
+    <v-list dense class="pa-4">
+      <!-- HOME Button -->
+      <v-list-item>
         <v-btn
           block
           color="yellow"
-          class="my-1 pa-5"
+          class="mb-3"
+          height="64"
           prepend-icon="mdi-home"
           @click="handleButtonClick({label: 'HOME', route: '/'})"
         >
@@ -20,232 +21,335 @@
         </v-btn>
       </v-list-item>
 
-      <v-list-item class="px-2 mx-4">
+      <!-- Adult Button -->
+      <v-list-item>
         <v-btn
           block
-          
-          size="x-large"
-          class="my-1 pa-2"
           color="#2196F3"
+          class="mb-2"
+          height="48"
           @click="handleButtonClick({label: 'Adult', copyKey: 'adultText'})"
         >
           Adult
         </v-btn>
       </v-list-item>
 
-      <!-- New row of three numbered buttons -->
-      <v-list-item class="d-flex px-2 mx-7" style="min-height: 30px">
-        <v-btn
-          class="me-1 flex-grow-1"
-          color="#9FA8DA"
-          size="x-small"
-          @click="handleButtonClick({label: '1', copyKey: 'work1Text'})"
-        >
-          1
-        </v-btn>
-        <v-btn
-          class="mx-1 flex-grow-1"
-          color="#7986CB"
-          size="x-small"
-          @click="handleButtonClick({label: '2', copyKey: 'work2Text'})"
-        >
-          2
-        </v-btn>
-        <v-btn
-          class="ms-1 flex-grow-1"
-          color="#5C6BC0"
-          size="x-small"
-          @click="handleButtonClick({label: '3', copyKey: 'work3Text'})"
-        >
-          3
-        </v-btn>
+      <!-- Work Numbers Row -->
+      <v-list-item class="d-flex pa-0 mb-2">
+        <v-row no-gutters>
+          <v-col cols="3" class="pr-1">
+            <v-btn
+              block
+              color="#9FA8DA"
+              height="36"
+              @click="handleButtonClick({label: '1', copyKey: 'work1Text'})"
+            >
+              1
+            </v-btn>
+          </v-col>
+          <v-col cols="3" class="px-1">
+            <v-btn
+              block
+              color="#7986CB"
+              height="36"
+              @click="handleButtonClick({label: '2', copyKey: 'work2Text'})"
+            >
+              2
+            </v-btn>
+          </v-col>
+          <v-col cols="3" class="px-1">
+            <v-btn
+              block
+              color="#5C6BC0"
+              height="36"
+              @click="handleButtonClick({label: '3', copyKey: 'work3Text'})"
+            >
+              3
+            </v-btn>
+          </v-col>
+          <v-col cols="3" class="pl-1">
+            <v-btn
+              block
+              color="#3F51B5"
+              height="36"
+              @click="handleButtonClick({label: '4', copyKey: 'work4Text'})"
+            >
+              4
+            </v-btn>
+          </v-col>
+        </v-row>
       </v-list-item>
 
-      <!-- Paired buttons -->
-      <v-list-item class="d-flex px-2 mx-4">
-        <v-btn
-          class="me-1 flex-grow-1"
-          color="#E1BEE7"
-          dense
-          small
-          @click="handleButtonClick({label: 'Mom', copyKey: 'momText'})"
-        >
-          Mom
-        </v-btn>
-        <v-btn
-          class="ms-1 flex-grow-1"
-          color="#CE93D8"
-          dense
-          small
-          @click="handleButtonClick({label: 'Dad', copyKey: 'dadText'})"
-        >
-          Dad
-        </v-btn>
-      </v-list-item>
+      <!-- Calculator Section -->
+      <v-divider class="mb-2"></v-divider>
+      
+      <!-- Weight Calculator -->
+      <v-text-field
+        v-model="weight"
+        label="Weight in kg"
+        type="number"
+        density="compact"
+        class="mb-2"
+        variant="outlined"
+        clearable
+        hide-details
+        append-icon="mdi-keyboard-return"
+        @click:append="calculateMedications"
+        @keyup.enter="calculateMedications"
+      ></v-text-field>
 
-      <v-list-item class="d-flex px-2 mx-4">
-        <v-btn
-          class="me-1 flex-grow-1"
-          color="#BA68C8"
-          dense
-          size="x-small"
-          @click="handleButtonClick({label: 'Parents', copyKey: 'parentsText'})"
-        >
-          Parent
-        </v-btn>
-        <v-btn
-          class="ms-1 flex-grow-1"
-          color="#AB47BC"
-          dense
-          size="x-small"
-          @click="handleButtonClick({label: 'Guardian', copyKey: 'guardianText'})"
-        >
-          Guardian
-        </v-btn>
-      </v-list-item>
-<hr>
-      <v-list-item class="d-flex px-2 mx-2">
-        <v-btn
-          class="me-1 flex-grow-1"
-          color="#E57373"
-          dense
-          small
-          @click="handleButtonClick({label: 'URI', copyKey: 'uriText'})"
-        >
-          URI
-        </v-btn>
-        <v-btn
-          class="ms-1 flex-grow-1"
-          color="#EF5350"
-          dense
-          small
-          @click="handleButtonClick({label: 'Dx:URI', copyKey: 'dxUriText'})"
-        >
-          Dx:URI
-        </v-btn>
-      </v-list-item>
+      <!-- Sedation Calculator -->
+      <v-text-field
+        v-model="sedationWeight"
+        label="Conscious Sedation wt in kg"
+        type="number"
+        density="compact"
+        class="mb-2"
+        variant="outlined"
+        clearable
+        hide-details
+        append-icon="mdi-keyboard-return"
+        @click:append="calculateSedation"
+        @keyup.enter="calculateSedation"
+      ></v-text-field>
 
-      <v-list-item class="d-flex px-2 mx-5">
-        <v-btn
-          class="me-1 flex-grow-1"
-          color="#F06292"
-          dense
-          size="x-small"
-          @click="handleButtonClick({label: 'Sinus', copyKey: 'sinusText'})"
-        >
-          Sinus
-        </v-btn>
-        <v-btn
-          class="ms-1 flex-grow-1"
-          color="#EC407A"
-          dense
-          size="x-small"
-          @click="handleButtonClick({label: 'Dx:Sinus', copyKey: 'dxSinusText'})"
-        >
-          Dx:Sinus
-        </v-btn>
-      </v-list-item>
+      <!-- Tools Section -->
+      <v-btn 
+        block 
+        color="#4f6bb0"
+        class="mb-2"
+        height="40"
+        @click="copyRandomCallText"
+      >
+        CB Randomizer
+      </v-btn>
 
-      <v-list-item class="d-flex px-2 mx-2">
+      <!-- Observation Section -->
+      <div class="d-flex align-center mb-2">
         <v-btn
-          class="me-1 flex-grow-1"
-          color="#9575CD"
-          dense
-          size="x-small"
-          @click="handleButtonClick({label: 'Bronchitis', copyKey: 'bronchitisText'})"
+          color="#3f4f99"
+          class="flex-grow-1 me-2"
+          height="40"
+          @click="openObservation"
         >
-          Bronch
+          Observation
         </v-btn>
-        <v-btn
-          class="ms-1 flex-grow-1"
-          color="#7E57C2"
-          dense
-          size="x-small"
-          @click="handleButtonClick({label: 'Dx:Bronchitis', copyKey: 'dxBronchitisText'})"
+        <v-progress-circular
+          v-if="timerActive"
+          :model-value="timerPercentage"
+          :rotate="360"
+          :size="40"
+          :width="4"
+          color="#c9b30c"
         >
-          Dx:Bronch
-        </v-btn>
-      </v-list-item>
+          {{ formattedTime }}
+        </v-progress-circular>
+      </div>
 
-      <v-list-item class="d-flex px-2 mx-7">
-        <v-btn
-          class="me-1 flex-grow-1"
-          color="#7986CB"
-          dense
-          size="x-small"
-          @click="handleButtonClick({label: 'Flu', copyKey: 'fluText'})"
-        >
-          Flu
-        </v-btn>
-        <v-btn
-          class="ms-1 flex-grow-1"
-          color="#5C6BC0"
-          dense
-          size="x-small"
-          @click="handleButtonClick({label: 'Dx:Flu', copyKey: 'dxFluText'})"
-        >
-          Dx:Flu
-        </v-btn>
-      </v-list-item>
+      <v-divider class="mb-2"></v-divider>
 
-      <v-list-item class="d-flex px-2 mx-1">
-        <v-btn
-          class="me-1 flex-grow-1"
-          color="#4FC3F7"
-          dense
-          size="x-small"
-          @click="handleButtonClick({label: 'Pharyngitis', copyKey: 'pharyngitisText'})"
-        >
-          Pharyng
-        </v-btn>
-        <v-btn
-          class="ms-1 flex-grow-1"
-          color="#29B6F6"
-          dense
-          size="x-small"
-          @click="handleButtonClick({label: 'Dx:Pharyngitis', copyKey: 'dxPharyngitisText'})"
-        >
-          Dx:Pharyng
-        </v-btn>
-      </v-list-item>
-<hr>
-      <v-list-item class="px-2 mx-4">
-        <v-btn
-          block
-          color="#18FFFF"
-          @click="handleButtonClick({label: 'Splint Check', copyKey: 'splintCheckText'})"
-        >
-          Splint Check
-        </v-btn>
-      </v-list-item>
+      <!-- Family Buttons Section -->
+      <div class="button-grid mb-2">
+        <v-row dense>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#E1BEE7" height="36" @click="handleButtonClick({label: 'Mom', copyKey: 'momText'})">
+              Mom
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#CE93D8" height="36" @click="handleButtonClick({label: 'Dad', copyKey: 'dadText'})">
+              Dad
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#BA68C8" height="36" @click="handleButtonClick({label: 'Parents', copyKey: 'parentsText'})">
+              Parents
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#AB47BC" height="36" @click="handleButtonClick({label: 'Guardian', copyKey: 'guardianText'})">
+              Guardian
+            </v-btn>
+          </v-col>
+        </v-row>
+      </div>
 
-      <v-list-item class="d-flex px-2 mx-2">
+      <v-divider class="mb-2"></v-divider>
+
+      <!-- Diagnosis Buttons Section -->
+      <div class="button-grid mb-2">
+        <v-row dense>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#E57373" height="36" @click="handleButtonClick({label: 'URI', copyKey: 'uriText'})">
+              URI
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#EF5350" height="36" @click="handleButtonClick({label: 'Dx:URI', copyKey: 'dxUriText'})">
+              Dx:URI
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#F06292" height="36" @click="handleButtonClick({label: 'Sinus', copyKey: 'sinusText'})">
+              Sinus
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#EC407A" height="36" @click="handleButtonClick({label: 'Dx:Sinus', copyKey: 'dxSinusText'})">
+              Dx:Sinus
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#9575CD" height="36" @click="handleButtonClick({label: 'Bronchitis', copyKey: 'bronchitisText'})">
+              Bronch
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#7E57C2" height="36" @click="handleButtonClick({label: 'Dx:Bronchitis', copyKey: 'dxBronchitisText'})">
+              Dx:Bronch
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#7986CB" height="36" @click="handleButtonClick({label: 'Flu', copyKey: 'fluText'})">
+              Flu
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#5C6BC0" height="36" @click="handleButtonClick({label: 'Dx:Flu', copyKey: 'dxFluText'})">
+              Dx:Flu
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#4FC3F7" height="36" @click="handleButtonClick({label: 'Pharyngitis', copyKey: 'pharyngitisText'})">
+              Pharyng
+            </v-btn>
+          </v-col>
+          <v-col cols="6" class="pa-1">
+            <v-btn block color="#29B6F6" height="36" @click="handleButtonClick({label: 'Dx:Pharyngitis', copyKey: 'dxPharyngitisText'})">
+              Dx:Pharyng
+            </v-btn>
+          </v-col>
+        </v-row>
+      </div>
+
+      <v-divider class="mb-2"></v-divider>
+
+      <!-- Bottom Buttons -->
+      <v-btn
+        block
+        color="#18FFFF"
+        class="mb-2"
+        height="40"
+        @click="handleButtonClick({label: 'Splint Check', copyKey: 'splintCheckText'})"
+      >
+        Splint Check
+      </v-btn>
+
+      <div class="d-flex">
         <v-btn
-          class="me-1 flex-grow-1"
+          class="flex-grow-1 me-1"
           color="#00E5FF"
-          dense
+          height="40"
           @click="handleButtonClick({label: 'EKG', copyKey: 'ekgText'})"
         >
           EKG
         </v-btn>
         <v-btn
-          class="ms-1 flex-grow-1"
+          class="flex-grow-1 ms-1"
           color="#00B8D4"
-          dense
+          height="40"
           @click="handleButtonClick({label: 'Aware', copyKey: 'awareText'})"
         >
           Aware
         </v-btn>
-      </v-list-item>
+      </div>
     </v-list>
+
+    <!-- Medication Calculator Modal -->
+    <v-dialog v-model="showMedicationModal" max-width="600">
+      <v-card>
+        <v-card-title class="text-h5">
+          Medication Doses for {{ weight }}kg
+          <v-spacer></v-spacer>
+          <v-btn icon @click="showMedicationModal = false">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-card-title>
+        <v-card-text>
+          <v-list>
+            <v-list-item v-for="(dose, med) in medicationDoses" :key="med">
+              <div class="d-flex align-center w-100">
+                <div class="flex-grow-1">
+                  <v-list-item-title class="text-capitalize font-weight-bold">
+                    {{ med }}:
+                  </v-list-item-title>
+                  <v-list-item-subtitle class="mt-1">
+                    {{ dose }}
+                  </v-list-item-subtitle>
+                </div>
+                <v-btn
+                  color="primary"
+                  variant="outlined"
+                  size="small"
+                  class="ms-3"
+                  @click="copyText(dose)"
+                >
+                  COPY
+                </v-btn>
+              </div>
+              <v-divider class="my-2" v-if="med !== Object.keys(medicationDoses).slice(-1)[0]"></v-divider>
+            </v-list-item>
+          </v-list>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
+
+    <!-- Conscious Sedation Modal -->
+    <v-dialog v-model="showSedationModal" max-width="600">
+      <v-card>
+        <v-card-title class="text-h4 font-weight-bold">
+          Conscious Sedation Medicines
+          <v-spacer></v-spacer>
+          <v-btn icon @click="showSedationModal = false">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-card-title>
+        <v-card-subtitle>For {{ sedationWeight }}kg patient</v-card-subtitle>
+        <v-card-text>
+          <v-list>
+            <v-list-item v-for="(dose, med) in sedationDoses" :key="med">
+              <v-list-item-title class="text-capitalize font-weight-bold">
+                {{ med }}:
+              </v-list-item-title>
+              <v-list-item-subtitle class="mt-1">
+                {{ dose }}
+              </v-list-item-subtitle>
+            </v-list-item>
+          </v-list>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
+
+    <!-- Observation Modal -->
+    <ObservationModal 
+      v-model="showObservationModal"
+    />
   </v-navigation-drawer>
 </template>
 
 <script>
 import { generateWorkExcuse } from '@/utils/dateUtils';
+import { calculateAllMedications } from "@/utils/medicationCalculator";
+import { calculateAllSedationMedications } from "@/utils/consciousSedationCalculator";
+import { OBSERVATION_TIME, formatTime } from "@/utils/observationUtils";
+import { getRandomCallText } from "@/utils/callDocUtils";
+import ObservationModal from './ObservationModal.vue';
 
 export default {
   name: "LeftNavBar",
+  components: {
+    ObservationModal
+  },
   data() {
     return {
       /* ----------------
@@ -345,6 +449,9 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       work3Text() {
         return generateWorkExcuse(3);
       },
+      work4Text() {
+        return generateWorkExcuse(4);
+      },
 
       /* -----------
          Buttons
@@ -355,6 +462,7 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         { label: "1", copyKey: "work1Text", color: "#FF9800" },
         { label: "2", copyKey: "work2Text", color: "#FB8C00" },
         { label: "3", copyKey: "work3Text", color: "#F57C00" },
+        { label: "4", copyKey: "work4Text", color: "#3F51B5" },
         { label: "Mom", copyKey: "momText", color: "#E1BEE7" }, 
         { label: "Dad", copyKey: "dadText", color: "#CE93D8" },
         { label: "Parents", copyKey: "parentsText", color: "#BA68C8" },
@@ -374,6 +482,17 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         { label: "Aware", copyKey: "awareText", color: "#00B8D4" },
       ],
       backgroundImage: new URL('@/assets/RedNavBarBackground.png', import.meta.url).href,
+      weight: "",
+      sedationWeight: "",
+      showMedicationModal: false,
+      showSedationModal: false,
+      medicationDoses: {},
+      sedationDoses: {},
+      showObservationModal: false,
+      observationTimer: OBSERVATION_TIME,
+      timerInterval: null,
+      timerPercentage: 0,
+      timerActive: false,
     };
   },
   methods: {
@@ -402,12 +521,96 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         }
       }
     },
+    calculateMedications() {
+      const weightNum = parseFloat(this.weight);
+      if (!weightNum || weightNum <= 0) {
+        alert("Please enter a valid weight");
+        return;
+      }
+      this.medicationDoses = calculateAllMedications(weightNum);
+      this.showMedicationModal = true;
+    },
+    calculateSedation() {
+      const weightNum = parseFloat(this.sedationWeight);
+      if (!weightNum || weightNum <= 0) {
+        alert("Please enter a valid weight");
+        return;
+      }
+      this.sedationDoses = calculateAllSedationMedications(weightNum);
+      this.showSedationModal = true;
+    },
+    openObservation() {
+      this.showObservationModal = true;
+      this.timerActive = true;
+      this.startTimer();
+    },
+    startTimer() {
+      if (this.timerInterval) {
+        clearInterval(this.timerInterval);
+      }
+      
+      this.observationTimer = OBSERVATION_TIME;
+      this.timerPercentage = 0;
+      
+      this.timerInterval = setInterval(() => {
+        if (this.observationTimer > 0) {
+          this.observationTimer--;
+          this.timerPercentage = ((OBSERVATION_TIME - this.observationTimer) / OBSERVATION_TIME) * 100;
+        } else {
+          clearInterval(this.timerInterval);
+          this.timerActive = false;
+        }
+      }, 1000);
+    },
+    copyRandomCallText() {
+      const text = getRandomCallText();
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          console.log('Call documentation text copied successfully');
+        })
+        .catch(err => {
+          console.error('Failed to copy text:', err);
+        });
+    },
   },
+  computed: {
+    formattedTime() {
+      return formatTime(this.observationTimer);
+    }
+  },
+  beforeUnmount() {
+    if (this.timerInterval) {
+      clearInterval(this.timerInterval);
+    }
+  }
 };
 </script>
 
 <style scoped>
 .v-btn.v-btn--density-default {
   height: 32px !important;
+}
+.v-list-item-subtitle {
+  white-space: normal;
+  height: auto;
+}
+
+.v-list-item {
+  padding: 4px;
+}
+
+.v-divider {
+  margin: 8px 0;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.button-grid .v-btn {
+  text-transform: none;
+}
+
+.v-text-field :deep(.v-field__input) {
+  min-height: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 </style>
