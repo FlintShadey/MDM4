@@ -261,6 +261,27 @@
           {{ formattedTime }}
         </v-progress-circular>
       </div>
+
+      <!-- Last divider and counter section -->
+      <v-divider class="mb-4"></v-divider>
+
+      <!-- Patient Counter -->
+      <div class="d-flex align-center mb-2">
+        <v-btn
+          color="#398c29"
+          class="flex-grow-1 me-2"
+          height="40"
+          @click="incrementPatientCount"
+        >
+          Patient Count
+        </v-btn>
+        <div 
+          class="text-h6 font-weight-bold"
+          style="color: #4CAF50;"
+        >
+          {{ patientCount }}
+        </div>
+      </div>
     </v-list>
 
     <!-- Medication Calculator Modal -->
@@ -342,6 +363,7 @@ import { calculateAllSedationMedications } from "@/utils/consciousSedationCalcul
 import { OBSERVATION_TIME, formatTime } from "@/utils/observationUtils";
 import { getRandomCallText } from "@/utils/callDocUtils";
 import ObservationModal from './ObservationModal.vue';
+import { getTodayCount, incrementTodayCount, cleanupOldCounts } from "@/utils/counterUtils";
 
 export default {
   name: "LeftNavBar",
@@ -491,6 +513,7 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       timerInterval: null,
       timerPercentage: 0,
       timerActive: false,
+      patientCount: 0,
     };
   },
   methods: {
@@ -581,6 +604,41 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       const dosagePart = dose.split('--')[0].trim();
       this.copyText(dosagePart);
     },
+    incrementPatientCount() {
+      this.patientCount = incrementTodayCount();
+    },
+  },
+  mounted() {
+    // Initialize count from storage
+    this.patientCount = getTodayCount();
+    
+    // Clean up old counts
+    cleanupOldCounts();
+    
+    // Set up midnight reset check
+    const checkMidnight = () => {
+      const now = new Date();
+      const night = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate() + 1, // tomorrow
+        0, // midnight
+        0, // 0 minutes
+        0 // 0 seconds
+      );
+      const msTillMidnight = night.getTime() - now.getTime();
+      
+      // Schedule reset for midnight
+      setTimeout(() => {
+        this.patientCount = 0;
+        cleanupOldCounts();
+        // Set up next day's check
+        checkMidnight();
+      }, msTillMidnight);
+    };
+    
+    // Start the midnight check cycle
+    checkMidnight();
   },
   computed: {
     formattedTime() {

@@ -13,10 +13,6 @@ if the laptop gives a zsh error (mac uses zsh by default) it is becuase Node.js 
 if it wont commit and the branches diverge One-time, just for this pull: git pull --no-rebase origin main 
 
 
-if it wont commit and the branches diverge
-One-time, just for this pull:
-git pull --no-rebase origin main
-
 
 add a resposive ?image grren red light? that shows the internet connection to blue drawer
 
