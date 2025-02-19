@@ -285,7 +285,7 @@
     </v-list>
 
     <!-- Medication Calculator Modal -->
-    <v-dialog v-model="showMedicationModal" max-width="600">
+    <v-dialog v-model="showMedicationModal" max-width="1300">
       <v-card>
         <v-card-title class="text-h5">
           Medication Doses for {{ weight }}kg
