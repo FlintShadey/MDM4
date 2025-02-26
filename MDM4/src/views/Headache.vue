@@ -36,6 +36,13 @@
       >
         Tension-type 
       </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'MIGRAINE WITHOUT AURA, NOT INTRACTABLE, WITHOUT STATUS MIGRAINOSUS; '"
+      >
+        Migraine
+      </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
