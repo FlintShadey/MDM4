@@ -22,6 +22,14 @@
         Nonspecific urethritis
 
       </v-btn>
+                  <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'CONTACT WITH AND (SUSPECTED) EXPOSURE TO INFECTIONS WITH A PREDOMINANTLY SEXUAL MODE OF TRANSMISSION; '"
+      >
+        STD Contact
+
+      </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"

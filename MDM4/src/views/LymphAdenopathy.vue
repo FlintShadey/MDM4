@@ -110,7 +110,7 @@ export default {
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "I do not believe that this is lymphoma because ymphoma would typically present with more systemic symptoms such as persistent fatigue, unexplained weight loss, or night sweats, which the patient doeds not have.\n\nThe patient is safe for discharge and follow-up with a primary care physician very soon.",
+      alternateValue: "I do not believe that this is lymphoma because lymphoma would typically present with more systemic symptoms such as persistent fatigue, unexplained weight loss, or night sweats, which the patient doeds not have.\n\nThe patient is safe for discharge and follow-up with a primary care physician very soon.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

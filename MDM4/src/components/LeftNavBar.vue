@@ -3,7 +3,7 @@
     app
     color="#912737"
     class="rounded"
-    width="250"
+    width="200"
     :image="backgroundImage"
   >
     <v-list dense class="pa-4">
@@ -15,7 +15,7 @@
           class="mb-3"
           height="64"
           prepend-icon="mdi-home"
-          @click="handleButtonClick({label: 'HOME', route: '/'})"
+          @click="handleButtonClick({ label: 'HOME', route: '/' })"
         >
           HOME
         </v-btn>
@@ -28,7 +28,7 @@
           color="#2196F3"
           class="mb-2"
           height="48"
-          @click="handleButtonClick({label: 'Adult', copyKey: 'adultText'})"
+          @click="handleButtonClick({ label: 'Adult', copyKey: 'adultText' })"
         >
           Adult
         </v-btn>
@@ -42,7 +42,7 @@
               block
               color="#9FA8DA"
               height="36"
-              @click="handleButtonClick({label: '1', copyKey: 'work1Text'})"
+              @click="handleButtonClick({ label: '1', copyKey: 'work1Text' })"
             >
               1
             </v-btn>
@@ -52,7 +52,7 @@
               block
               color="#7986CB"
               height="36"
-              @click="handleButtonClick({label: '2', copyKey: 'work2Text'})"
+              @click="handleButtonClick({ label: '2', copyKey: 'work2Text' })"
             >
               2
             </v-btn>
@@ -62,7 +62,7 @@
               block
               color="#5C6BC0"
               height="36"
-              @click="handleButtonClick({label: '3', copyKey: 'work3Text'})"
+              @click="handleButtonClick({ label: '3', copyKey: 'work3Text' })"
             >
               3
             </v-btn>
@@ -72,7 +72,7 @@
               block
               color="#3F51B5"
               height="36"
-              @click="handleButtonClick({label: '4', copyKey: 'work4Text'})"
+              @click="handleButtonClick({ label: '4', copyKey: 'work4Text' })"
             >
               4
             </v-btn>
@@ -84,22 +84,49 @@
       <div class="button-grid mb-2">
         <v-row dense>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#E1BEE7" height="36" @click="handleButtonClick({label: 'Mom', copyKey: 'momText'})">
+            <v-btn
+              block
+              color="#E1BEE7"
+              height="36"
+              @click="handleButtonClick({ label: 'Mom', copyKey: 'momText' })"
+            >
               Mom
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#CE93D8" height="36" @click="handleButtonClick({label: 'Dad', copyKey: 'dadText'})">
+            <v-btn
+              block
+              color="#CE93D8"
+              height="36"
+              @click="handleButtonClick({ label: 'Dad', copyKey: 'dadText' })"
+            >
               Dad
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#BA68C8" height="36" @click="handleButtonClick({label: 'Parents', copyKey: 'parentsText'})">
+            <v-btn
+              block
+              color="#BA68C8"
+              height="36"
+              @click="
+                handleButtonClick({ label: 'Parents', copyKey: 'parentsText' })
+              "
+            >
               Parents
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#AB47BC" height="36" @click="handleButtonClick({label: 'Guardian', copyKey: 'guardianText'})">
+            <v-btn
+              block
+              color="#AB47BC"
+              height="36"
+              @click="
+                handleButtonClick({
+                  label: 'Guardian',
+                  copyKey: 'guardianText',
+                })
+              "
+            >
               Guardian
             </v-btn>
           </v-col>
@@ -112,52 +139,130 @@
       <div class="button-grid mb-2">
         <v-row dense>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#E57373" height="36" @click="handleButtonClick({label: 'URI', copyKey: 'uriText'})">
+            <v-btn
+              block
+              color="#E57373"
+              height="36"
+              @click="handleButtonClick({ label: 'URI', copyKey: 'uriText' })"
+            >
               URI
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#EF5350" height="36" @click="handleButtonClick({label: 'Dx:URI', copyKey: 'dxUriText'})">
+            <v-btn
+              block
+              color="#EF5350"
+              height="36"
+              @click="
+                handleButtonClick({ label: 'Dx:URI', copyKey: 'dxUriText' })
+              "
+            >
               Dx:URI
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#F06292" height="36" @click="handleButtonClick({label: 'Sinus', copyKey: 'sinusText'})">
+            <v-btn
+              block
+              color="#F06292"
+              height="36"
+              @click="
+                handleButtonClick({ label: 'Sinus', copyKey: 'sinusText' })
+              "
+            >
               Sinus
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#EC407A" height="36" @click="handleButtonClick({label: 'Dx:Sinus', copyKey: 'dxSinusText'})">
+            <v-btn
+              block
+              color="#EC407A"
+              height="36"
+              @click="
+                handleButtonClick({ label: 'Dx:Sinus', copyKey: 'dxSinusText' })
+              "
+            >
               Dx:Sinus
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#9575CD" height="36" @click="handleButtonClick({label: 'Bronchitis', copyKey: 'bronchitisText'})">
+            <v-btn
+              block
+              color="#9575CD"
+              height="36"
+              @click="
+                handleButtonClick({
+                  label: 'Bronchitis',
+                  copyKey: 'bronchitisText',
+                })
+              "
+            >
               Bronch
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#7E57C2" height="36" @click="handleButtonClick({label: 'Dx:Bronchitis', copyKey: 'dxBronchitisText'})">
+            <v-btn
+              block
+              color="#7E57C2"
+              height="36"
+              @click="
+                handleButtonClick({
+                  label: 'Dx:Bronchitis',
+                  copyKey: 'dxBronchitisText',
+                })
+              "
+            >
               Dx:Bronch
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#7986CB" height="36" @click="handleButtonClick({label: 'Flu', copyKey: 'fluText'})">
+            <v-btn
+              block
+              color="#7986CB"
+              height="36"
+              @click="handleButtonClick({ label: 'Flu', copyKey: 'fluText' })"
+            >
               Flu
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#5C6BC0" height="36" @click="handleButtonClick({label: 'Dx:Flu', copyKey: 'dxFluText'})">
+            <v-btn
+              block
+              color="#5C6BC0"
+              height="36"
+              @click="
+                handleButtonClick({ label: 'Dx:Flu', copyKey: 'dxFluText' })
+              "
+            >
               Dx:Flu
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#4FC3F7" height="36" @click="handleButtonClick({label: 'Pharyngitis', copyKey: 'pharyngitisText'})">
+            <v-btn
+              block
+              color="#4FC3F7"
+              height="36"
+              @click="
+                handleButtonClick({
+                  label: 'Pharyngitis',
+                  copyKey: 'pharyngitisText',
+                })
+              "
+            >
               Pharyng
             </v-btn>
           </v-col>
           <v-col cols="6" class="pa-1">
-            <v-btn block color="#29B6F6" height="36" @click="handleButtonClick({label: 'Dx:Pharyngitis', copyKey: 'dxPharyngitisText'})">
+            <v-btn
+              block
+              color="#29B6F6"
+              height="36"
+              @click="
+                handleButtonClick({
+                  label: 'Dx:Pharyngitis',
+                  copyKey: 'dxPharyngitisText',
+                })
+              "
+            >
               Dx:Pharyng
             </v-btn>
           </v-col>
@@ -172,7 +277,12 @@
         color="#18FFFF"
         class="mb-2"
         height="40"
-        @click="handleButtonClick({label: 'Splint Check', copyKey: 'splintCheckText'})"
+        @click="
+          handleButtonClick({
+            label: 'Splint Check',
+            copyKey: 'splintCheckText',
+          })
+        "
       >
         Splint Check
       </v-btn>
@@ -182,7 +292,7 @@
           class="flex-grow-1 me-1"
           color="#00E5FF"
           height="40"
-          @click="handleButtonClick({label: 'EKG', copyKey: 'ekgText'})"
+          @click="handleButtonClick({ label: 'EKG', copyKey: 'ekgText' })"
         >
           EKG
         </v-btn>
@@ -190,7 +300,7 @@
           class="flex-grow-1 ms-1"
           color="#00B8D4"
           height="40"
-          @click="handleButtonClick({label: 'Aware', copyKey: 'awareText'})"
+          @click="handleButtonClick({ label: 'Aware', copyKey: 'awareText' })"
         >
           Aware
         </v-btn>
@@ -230,8 +340,8 @@
       ></v-text-field>
 
       <!-- Tools Section -->
-      <v-btn 
-        block 
+      <v-btn
+        block
         color="#4f6bb0"
         class="mb-2"
         height="40"
@@ -264,24 +374,6 @@
 
       <!-- Last divider and counter section -->
       <v-divider class="mb-4"></v-divider>
-
-      <!-- Patient Counter -->
-      <div class="d-flex align-center mb-2">
-        <v-btn
-          color="#398c29"
-          class="flex-grow-1 me-2"
-          height="40"
-          @click="incrementPatientCount"
-        >
-          Patient Count
-        </v-btn>
-        <div 
-          class="text-h6 font-weight-bold"
-          style="color: #4CAF50;"
-        >
-          {{ patientCount }}
-        </div>
-      </div>
     </v-list>
 
     <!-- Medication Calculator Modal -->
@@ -316,7 +408,10 @@
                   COPY
                 </v-btn>
               </div>
-              <v-divider class="my-2" v-if="med !== Object.keys(medicationDoses).slice(-1)[0]"></v-divider>
+              <v-divider
+                class="my-2"
+                v-if="med !== Object.keys(medicationDoses).slice(-1)[0]"
+              ></v-divider>
             </v-list-item>
           </v-list>
         </v-card-text>
@@ -350,25 +445,22 @@
     </v-dialog>
 
     <!-- Observation Modal -->
-    <ObservationModal 
-      v-model="showObservationModal"
-    />
+    <ObservationModal v-model="showObservationModal" />
   </v-navigation-drawer>
 </template>
 
 <script>
-import { generateWorkExcuse } from '@/utils/dateUtils';
+import { generateWorkExcuse } from "@/utils/dateUtils";
 import { calculateAllMedications } from "@/utils/medicationCalculator";
 import { calculateAllSedationMedications } from "@/utils/consciousSedationCalculator";
 import { OBSERVATION_TIME, formatTime } from "@/utils/observationUtils";
 import { getRandomCallText } from "@/utils/callDocUtils";
-import ObservationModal from './ObservationModal.vue';
-import { getTodayCount, incrementTodayCount, cleanupOldCounts } from "@/utils/counterUtils";
+import ObservationModal from "./ObservationModal.vue";
 
 export default {
   name: "LeftNavBar",
   components: {
-    ObservationModal
+    ObservationModal,
   },
   data() {
     return {
@@ -458,7 +550,8 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       splintCheckText:
         "After applying the splint, I checked the patients neurovascular status. The patient displayed normal sensory and motor functions, along with detectable pulses and appropriate capillary refill. There was no need to adjust the splint as it was not exerting pressure on any nerve or blood vessel. The patient received guidance on splint care and was informed about when to seek further medical care.",
       ekgText: "EKG Interpretation was performed and documented.",
-      awareText: "Patient has been made aware of the ______________  abnormality, they have been instructed and understand the need to follow up with their physician. ",
+      awareText:
+        "Patient has been made aware of the ______________  abnormality, they have been instructed and understand the need to follow up with their physician. ",
 
       work1Text() {
         return generateWorkExcuse(1);
@@ -483,7 +576,7 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         { label: "2", copyKey: "work2Text", color: "#FB8C00" },
         { label: "3", copyKey: "work3Text", color: "#F57C00" },
         { label: "4", copyKey: "work4Text", color: "#3F51B5" },
-        { label: "Mom", copyKey: "momText", color: "#E1BEE7" }, 
+        { label: "Mom", copyKey: "momText", color: "#E1BEE7" },
         { label: "Dad", copyKey: "dadText", color: "#CE93D8" },
         { label: "Parents", copyKey: "parentsText", color: "#BA68C8" },
         { label: "Guardian", copyKey: "guardianText", color: "#AB47BC" },
@@ -492,16 +585,27 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         { label: "Sinus", copyKey: "sinusText", color: "#F06292" },
         { label: "Dx:Sinus", copyKey: "dxSinusText", color: "#EC407A" },
         { label: "Bronchitis", copyKey: "bronchitisText", color: "#9575CD" },
-        { label: "Dx:Bronchitis", copyKey: "dxBronchitisText", color: "#7E57C2" },
+        {
+          label: "Dx:Bronchitis",
+          copyKey: "dxBronchitisText",
+          color: "#7E57C2",
+        },
         { label: "Flu", copyKey: "fluText", color: "#7986CB" },
         { label: "Dx:Flu", copyKey: "dxFluText", color: "#5C6BC0" },
         { label: "Pharyngitis", copyKey: "pharyngitisText", color: "#4FC3F7" },
-        { label: "Dx:Pharyngitis", copyKey: "dxPharyngitisText", color: "#29B6F6" },
+        {
+          label: "Dx:Pharyngitis",
+          copyKey: "dxPharyngitisText",
+          color: "#29B6F6",
+        },
         { label: "Splint Check", copyKey: "splintCheckText", color: "#18FFFF" },
         { label: "EKG", copyKey: "ekgText", color: "#00E5FF" },
         { label: "Aware", copyKey: "awareText", color: "#00B8D4" },
       ],
-      backgroundImage: new URL('@/assets/RedNavBarBackground.png', import.meta.url).href,
+      backgroundImage: new URL(
+        "@/assets/RedNavBarBackground.png",
+        import.meta.url
+      ).href,
       weight: "",
       sedationWeight: "",
       showMedicationModal: false,
@@ -513,7 +617,6 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       timerInterval: null,
       timerPercentage: 0,
       timerActive: false,
-      patientCount: 0,
     };
   },
   methods: {
@@ -521,7 +624,7 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       navigator.clipboard
         .writeText(text)
         .then(() => console.log("Text copied to clipboard"))
-        .catch(err => console.error("Failed to copy text: ", err));
+        .catch((err) => console.error("Failed to copy text: ", err));
     },
     handleButtonClick(button) {
       // If there's a route, navigate. Otherwise, copy the text if copyKey is provided.
@@ -533,10 +636,10 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         this.$router.push(button.route);
       } else if (button.copyKey) {
         // For work excuse buttons, we need to call the function
-        const textToCopy = button.copyKey.includes('work') 
-          ? this[button.copyKey]() 
+        const textToCopy = button.copyKey.includes("work")
+          ? this[button.copyKey]()
           : this[button.copyKey];
-          
+
         if (textToCopy) {
           this.copyText(textToCopy);
         }
@@ -569,14 +672,16 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       if (this.timerInterval) {
         clearInterval(this.timerInterval);
       }
-      
+
       this.observationTimer = OBSERVATION_TIME;
       this.timerPercentage = 0;
-      
+
       this.timerInterval = setInterval(() => {
         if (this.observationTimer > 0) {
           this.observationTimer--;
-          this.timerPercentage = ((OBSERVATION_TIME - this.observationTimer) / OBSERVATION_TIME) * 100;
+          this.timerPercentage =
+            ((OBSERVATION_TIME - this.observationTimer) / OBSERVATION_TIME) *
+            100;
         } else {
           clearInterval(this.timerInterval);
           this.timerActive = false;
@@ -585,71 +690,40 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
     },
     copyRandomCallText() {
       const text = getRandomCallText();
-      navigator.clipboard.writeText(text)
+      navigator.clipboard
+        .writeText(text)
         .then(() => {
-          console.log('Call documentation text copied successfully');
+          console.log("Call documentation text copied successfully");
         })
-        .catch(err => {
-          console.error('Failed to copy text:', err);
+        .catch((err) => {
+          console.error("Failed to copy text:", err);
         });
     },
     copyMedicationDose(med, dose) {
       // For fever calculation, copy the whole text
-      if (med === 'fever') {
+      if (med === "fever") {
         this.copyText(dose);
         return;
       }
-      
+
       // For other medications, only copy the part before the '--'
-      const dosagePart = dose.split('--')[0].trim();
+      const dosagePart = dose.split("--")[0].trim();
       this.copyText(dosagePart);
-    },
-    incrementPatientCount() {
-      this.patientCount = incrementTodayCount();
     },
   },
   mounted() {
-    // Initialize count from storage
-    this.patientCount = getTodayCount();
-    
-    // Clean up old counts
-    cleanupOldCounts();
-    
-    // Set up midnight reset check
-    const checkMidnight = () => {
-      const now = new Date();
-      const night = new Date(
-        now.getFullYear(),
-        now.getMonth(),
-        now.getDate() + 1, // tomorrow
-        0, // midnight
-        0, // 0 minutes
-        0 // 0 seconds
-      );
-      const msTillMidnight = night.getTime() - now.getTime();
-      
-      // Schedule reset for midnight
-      setTimeout(() => {
-        this.patientCount = 0;
-        cleanupOldCounts();
-        // Set up next day's check
-        checkMidnight();
-      }, msTillMidnight);
-    };
-    
-    // Start the midnight check cycle
-    checkMidnight();
+    // Previously, cleanup and midnight check code has been removed.
   },
   computed: {
     formattedTime() {
       return formatTime(this.observationTimer);
-    }
+    },
   },
   beforeUnmount() {
     if (this.timerInterval) {
       clearInterval(this.timerInterval);
     }
-  }
+  },
 };
 </script>
 

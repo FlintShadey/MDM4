@@ -44,7 +44,7 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'intial encounter; '"
+        @click="secondaryValue += 'initial encounter; '"
       >
         initial
       </v-btn>
