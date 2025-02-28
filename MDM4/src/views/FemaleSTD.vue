@@ -28,6 +28,13 @@
       >
         Unspecified std
       </v-btn>
+            <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Contact with and exposure to infections with a predominantly sexual mode of transmission; '"
+      >
+        Exposure
+      </v-btn>
       <v-btn
      color="#dd42f5"
         class="ma-2"

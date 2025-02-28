@@ -50,6 +50,13 @@
       >
         Generalized
       </v-btn>
+            <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Epigastric abdominal pain; '"
+      >
+        Epigastric
+      </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"

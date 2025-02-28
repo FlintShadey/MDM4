@@ -27,6 +27,13 @@
       >
         Root caries
       </v-btn>
+            <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Toothache; '"
+      >
+        Toothache
+      </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
@@ -122,7 +129,7 @@ export default {
     return {
       // Main text (primary text area)
       primaryValue:
-        "The patient came in with dental pain accompanied by facial swelling.\n\nUpon examination, there's no evidence of tooth fracture, avulsion, or bleeding from the socket.\n\nConditions like retropharyngeal abscess, peritonsillar abscess, Ludwig's angina, or periapical abscess are not present. The patient doesn't appear septic or unwell.\n\nThis doesn't align with Ludwig's angina as there's no tenderness, brawny edema, or crepitus. The patient doesn't have symptoms like fever, chills, malaise, mouth pain, stiff neck, drooling, or difficulty swallowing. The patient isn't leaning forward and doesn't have a muffled voice. There's no trismus, difficulty breathing, stridor, or cyanosis. The floor of the oral cavity isn't raised and isn't tender when touched.\n\nThe patient is not immunocompromised, so they should do well with outpatient management.",
+        "The patient came in with dental pain accompanied by facial swelling.\n\nUpon examination, there's no evidence of tooth fracture, avulsion, or bleeding from the socket.\n\nConditions like retropharyngeal abscess, peritonsillar abscess, Ludwig's angina, or periapical abscess are not present. The patient doesn't appear septic or unwell.\n\nThis doesn't align with Ludwig's angina as there's no brawny edema, or crepitus. The patient doesn't have symptoms like fever, chills, malaise, stiff neck, drooling, or difficulty swallowing. The patient isn't leaning forward and doesn't have a muffled voice. There's no trismus, difficulty breathing, stridor, or cyanosis. The floor of the oral cavity isn't raised and isn't tender when touched.\n\nThe patient is not immunocompromised, so they should do well with outpatient management.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
