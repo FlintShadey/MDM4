@@ -109,6 +109,7 @@ import Flu from "../views/Flu.vue";
 import Covid from "../views/Covid.vue";
 import Cough from "../views/Cough.vue";
 import AllergicRhinitis from "../views/AllergicRhinitis.vue";
+import ViralSyndrome from "../views/ViralSyndrome.vue";
 import Dyspnea from "../views/Dyspnea.vue";
 import Asthma from "../views/Asthma.vue";
 import COPD from "../views/COPD.vue";
@@ -330,10 +331,11 @@ const routes = [
   { path: "/covid", name: "Covid", component: Covid },
   { path: "/cough", name: "Cough", component: Cough },
   { path: "/allergicrhinitis", name: "AllergicRhinitis", component: AllergicRhinitis },
+  { path: "/viralsyndrome", name: "ViralSyndrome", component: ViralSyndrome },
   { path: "/dyspnea", name: "Dyspnea", component: Dyspnea },
   { path: "/asthma", name: "Asthma", component: Asthma },
   { path: "/copd", name: "COPD", component: COPD },
-  { path: "/Pneumonia", name: "Pneumonia", component: Pneumonia }, 
+  { path: "/pneumonia", name: "Pneumonia", component: Pneumonia },
   { path: "/hiccups", name: "Hiccups", component: Hiccups },
   { path: "/chestpain", name: "ChestPain", component: ChestPain },
   { path: "/chestpainadmission", name: "ChestPainAdmission", component: ChestPainAdmission },
@@ -405,7 +407,6 @@ const routes = [
   { path: "/hyperglycemia", name: "Hyperglycemia", component: Hyperglycemia } ,
   { path: "/dehydration", name: "Dehydration", component: Dehydration },
   { path: "/sicklecell", name: "SickleCell", component: SickleCell },
-
 
   {
     path: "/:pathMatch(.*)*",

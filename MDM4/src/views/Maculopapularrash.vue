@@ -80,8 +80,11 @@
 
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
-      <v-btn @click="openExternalLink" color="yellow">
+      <v-btn @click="openExternalLink" color="yellow" class="mr-2">
         Rashes
+      </v-btn>
+      <v-btn @click="showDermDescription" color="yellow">
+        Derm Description
       </v-btn>
       <v-dialog v-model="dialog" max-width="60%">
         <v-card>
@@ -169,6 +172,11 @@ export default {
      */
     openExternalLink() {
       this.dialogImgUrl = adultrash; // Use the imported image
+      this.dialog = true;
+    },
+
+    showDermDescription() {
+      this.dialogImgUrl = new URL('@/assets/DermDescription.jpg', import.meta.url).href;
       this.dialog = true;
     },
 

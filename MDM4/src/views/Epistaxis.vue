@@ -22,7 +22,20 @@
       >
         Epistaxis
       </v-btn>
-      
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Essential (primary) hypertension; '"
+      >
+        HTN Essential
+      </v-btn>
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Hypertensive urgency; '"
+      >
+        HTN Urgency
+      </v-btn>
       <v-btn color="#72728a" class="ma-2" @click="secondaryValue += ', left nare; '">
         left 
       </v-btn>

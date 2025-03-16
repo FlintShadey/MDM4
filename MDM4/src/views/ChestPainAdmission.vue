@@ -103,8 +103,13 @@
 
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
-      <v-btn @click="openExternalLink" color="yellow">
+      <v-btn @click="openExternalLink" color="yellow" class="mr-2">
         Heart score
+      </v-btn>
+      <v-btn @click="showEKGMorphology" color="yellow">
+      
+        EKG Morphology  
+        <v-icon>mdi-heart-pulse</v-icon>
       </v-btn>
       <v-dialog v-model="dialog" max-width="80%">
         <v-card>
@@ -189,7 +194,10 @@ export default {
      */
     openExternalLink() {
       window.open("https://www.mdcalc.com/calc/3975/heart-pathway-early-discharge-acute-chest-pain", "_blank");
-      this.dialogImgUrl = "@/assets/visionLoss.png";
+    },
+
+    showEKGMorphology() {
+      this.dialogImgUrl = new URL('@/assets/EKGDescription.jpg', import.meta.url).href;
       this.dialog = true;
     },
 
