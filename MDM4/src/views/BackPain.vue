@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Chronic </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -125,7 +125,7 @@ export default {
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "The patient presents with back pain.\n\nSpinal infection, such as osteomyelitis or discitis, might lead to back pain with systemic symptoms like fever or malaise, which are not present.\n\nSciatica could cause radiating pain down the leg, often accompanied by numbness or tingling, which is not described.\n\nThe patient’s presentation aligns with acute on chronic back pain, characterized by recurring discomfort without acute injury or infection.\n\nThe patient is not septic or toxic and without new neurologic impairment.\n\nThe patient is safe for discharge and should follow up with a primary care physician very soon.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
