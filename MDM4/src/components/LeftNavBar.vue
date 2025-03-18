@@ -354,7 +354,7 @@
       <div class="d-flex align-center mb-2">
         <v-btn
           color="#3f4f99"
-          class="flex-grow-1 me-2"
+          class="flex-grow-1 me-12"
           height="40"
           @click="openObservation"
         >
