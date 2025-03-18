@@ -354,8 +354,8 @@
       <div class="d-flex align-center mb-2">
         <v-btn
           color="#3f4f99"
-          class="flex-grow-1 me-12"
           height="40"
+          width="120"
           @click="openObservation"
         >
           Observation
@@ -364,9 +364,10 @@
           v-if="timerActive"
           :model-value="timerPercentage"
           :rotate="360"
-          :size="40"
-          :width="4"
+          :size="36"
+          :width="3"
           color="#c9b30c"
+          class="ml-2"
         >
           {{ formattedTime }}
         </v-progress-circular>
@@ -664,17 +665,20 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       this.showSedationModal = true;
     },
     openObservation() {
-      this.showObservationModal = true;
-      this.timerActive = true;
+      this.timerActive = true;  // Set timer active first
       this.startTimer();
+      this.showObservationModal = true;
     },
     startTimer() {
+      // Clear any existing timer
       if (this.timerInterval) {
         clearInterval(this.timerInterval);
       }
 
+      // Reset timer state
       this.observationTimer = OBSERVATION_TIME;
       this.timerPercentage = 0;
+      this.timerActive = true;  // Ensure timer stays active
 
       this.timerInterval = setInterval(() => {
         if (this.observationTimer > 0) {
@@ -684,7 +688,7 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
             100;
         } else {
           clearInterval(this.timerInterval);
-          this.timerActive = false;
+          this.timerActive = false;  // Only deactivate when timer hits 0
         }
       }, 1000);
     },
@@ -722,6 +726,18 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
   beforeUnmount() {
     if (this.timerInterval) {
       clearInterval(this.timerInterval);
+    }
+  },
+  watch: {
+    showObservationModal(newVal) {
+      if (!newVal) {
+        // When modal is closed, don't stop the timer
+        // Only clear interval if we hit 0
+        if (this.observationTimer === 0 && this.timerInterval) {
+          clearInterval(this.timerInterval);
+          this.timerActive = false;
+        }
+      }
     }
   },
 };
