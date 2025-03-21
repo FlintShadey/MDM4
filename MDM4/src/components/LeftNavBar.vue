@@ -373,6 +373,18 @@
         </v-progress-circular>
       </div>
 
+      <!-- Google Drive Link Button -->
+      <div class="mb-2">
+        <v-btn
+          color="#4285F4"
+          height="40"
+          width="140"
+          @click="openDriveLink"
+        >
+          Google Drive
+        </v-btn>
+      </div>
+
       <!-- Last divider and counter section -->
       <v-divider class="mb-4"></v-divider>
     </v-list>
@@ -713,6 +725,9 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       // For other medications, only copy the part before the '--'
       const dosagePart = dose.split("--")[0].trim();
       this.copyText(dosagePart);
+    },
+    openDriveLink() {
+      window.open("https://drive.google.com/drive/folders/1bIVPzG5QtUlKerkZ214_CQxTkwQBvUEb?usp=drive_link", "_blank");
     },
   },
   mounted() {
