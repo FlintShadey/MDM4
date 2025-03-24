@@ -136,7 +136,7 @@ export default {
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "The patient presents with adolescent chest wall pain.\n\nCardiac causes, such as pericarditis or myocardial issues, might cause chest pain, but they typically present with shortness of breath, palpitations, or abnormal heart sounds, which are not here.\n\nPulmonary causes, such as pneumonia or pleurisy, could cause chest pain, but they usually involve fever, cough, or difficulty breathing, which are not present.\n\nGastrointestinal causes, like reflux or esophageal spasms, can lead to chest pain, but they are often associated with burning sensations, regurgitation, or meals, which does not appear to be the case.\n\nThe patient’s presentation aligns with musculoskeletal pain, possibly involving the chest wall muscles or costochondral junctions, and is commonly seen in adolescents.\n\nThe patient is not septic or toxic.\n\nThe patient is safe for discharge and should follow up with the pediatrician very soon.",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
