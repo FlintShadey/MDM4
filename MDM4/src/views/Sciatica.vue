@@ -52,9 +52,37 @@
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'SPRAIN OF LIGAMENTS OF LUMBAR SPINE, INITIAL ENCOUNTER ; '"
+        @click="secondaryValue += 'SPRAIN OF LIGAMENTS OF LUMBAR SPINE, INITIAL ENCOUNTER; '"
       >
           lumbar strain
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'LUMBAGO WITH SCIATICA, LEFT SIDE; '"
+      >
+      Lumbago with sciatica, LEFT  
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'LUMBAGO WITH SCIATICA, RIGHT SIDE; '"
+      >
+      Lumbago with sciatica, Right  
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'SCIATICA, LEFT SIDE; '"
+      >
+      SCIATICA, LEFT 
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'SCIATICA, RIGHT SIDE; '"
+      >
+      SCIATICA, RIGHT 
       </v-btn>
             <v-btn
         color="#f542ef"
