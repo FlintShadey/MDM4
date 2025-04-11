@@ -42,7 +42,7 @@
               block
               color="#9FA8DA"
               height="36"
-              @click="handleButtonClick({ label: '1', copyKey: 'work1Text' })"
+              @click="handleButtonClick({ label: 'W1', copyKey: 'work1Text' })"
             >
               1
             </v-btn>
@@ -52,7 +52,7 @@
               block
               color="#7986CB"
               height="36"
-              @click="handleButtonClick({ label: '2', copyKey: 'work2Text' })"
+              @click="handleButtonClick({ label: 'W2', copyKey: 'work2Text' })"
             >
               2
             </v-btn>
@@ -62,7 +62,7 @@
               block
               color="#5C6BC0"
               height="36"
-              @click="handleButtonClick({ label: '3', copyKey: 'work3Text' })"
+              @click="handleButtonClick({ label: 'W3', copyKey: 'work3Text' })"
             >
               3
             </v-btn>
@@ -72,9 +72,55 @@
               block
               color="#3F51B5"
               height="36"
-              @click="handleButtonClick({ label: '4', copyKey: 'work4Text' })"
+              @click="handleButtonClick({ label: 'W4', copyKey: 'work4Text' })"
             >
               4
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-list-item>
+
+      <!-- School Numbers Row -->
+      <v-list-item class="d-flex pa-0 mb-2">
+        <v-row no-gutters>
+          <v-col cols="3" class="pr-1">
+            <v-btn
+              block
+              color="#8D1D2C"
+              height="36"
+              @click="handleButtonClick({ label: 'S1', copyKey: 'school1Text' })"
+            >
+              S1
+            </v-btn>
+          </v-col>
+          <v-col cols="3" class="px-1">
+            <v-btn
+              block
+              color="#A52734"
+              height="36"
+              @click="handleButtonClick({ label: 'S2', copyKey: 'school2Text' })"
+            >
+              S2
+            </v-btn>
+          </v-col>
+          <v-col cols="3" class="px-1">
+            <v-btn
+              block
+              color="#BE2E3A"
+              height="36"
+              @click="handleButtonClick({ label: 'S3', copyKey: 'school3Text' })"
+            >
+              S3
+            </v-btn>
+          </v-col>
+          <v-col cols="3" class="pl-1">
+            <v-btn
+              block
+              color="#D73640"
+              height="36"
+              @click="handleButtonClick({ label: 'S4', copyKey: 'school4Text' })"
+            >
+              S4
             </v-btn>
           </v-col>
         </v-row>
@@ -463,7 +509,7 @@
 </template>
 
 <script>
-import { generateWorkExcuse } from "@/utils/dateUtils";
+import { generateWorkExcuse, generateSchoolExcuse } from "@/utils/dateUtils";
 import { calculateAllMedications } from "@/utils/medicationCalculator";
 import { calculateAllSedationMedications } from "@/utils/consciousSedationCalculator";
 import { OBSERVATION_TIME, formatTime } from "@/utils/observationUtils";
@@ -579,16 +625,33 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         return generateWorkExcuse(4);
       },
 
+      school1Text() {
+        return generateSchoolExcuse(1);
+      },
+      school2Text() {
+        return generateSchoolExcuse(2);
+      },
+      school3Text() {
+        return generateSchoolExcuse(3);
+      },
+      school4Text() {
+        return generateSchoolExcuse(4);
+      },
+
       /* -----------
          Buttons
       ------------*/
       buttons: [
         { label: "HOME", color: "yellow", route: "/", class: "mx-5" },
         { label: "Adult", copyKey: "adultText", color: "#2196F3" },
-        { label: "1", copyKey: "work1Text", color: "#FF9800" },
-        { label: "2", copyKey: "work2Text", color: "#FB8C00" },
-        { label: "3", copyKey: "work3Text", color: "#F57C00" },
-        { label: "4", copyKey: "work4Text", color: "#3F51B5" },
+        { label: "W1", copyKey: "work1Text", color: "#FF9800" },
+        { label: "W2", copyKey: "work2Text", color: "#FB8C00" },
+        { label: "W3", copyKey: "work3Text", color: "#F57C00" },
+        { label: "W4", copyKey: "work4Text", color: "#3F51B5" },
+        { label: "S1", copyKey: "school1Text", color: "#8D1D2C" },
+        { label: "S2", copyKey: "school2Text", color: "#A52734" },
+        { label: "S3", copyKey: "school3Text", color: "#BE2E3A" },
+        { label: "S4", copyKey: "school4Text", color: "#D73640" },
         { label: "Mom", copyKey: "momText", color: "#E1BEE7" },
         { label: "Dad", copyKey: "dadText", color: "#CE93D8" },
         { label: "Parents", copyKey: "parentsText", color: "#BA68C8" },
@@ -642,14 +705,10 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
     handleButtonClick(button) {
       // If there's a route, navigate. Otherwise, copy the text if copyKey is provided.
       if (button.route) {
-        // For example: refresh or navigate home
-        // If you specifically want a refresh, you could do:
-        // window.location.reload();
-        // Or to navigate via router:
         this.$router.push(button.route);
       } else if (button.copyKey) {
-        // For work excuse buttons, we need to call the function
-        const textToCopy = button.copyKey.includes("work")
+        // For work and school excuse buttons, we need to call the function
+        const textToCopy = button.copyKey.includes("work") || button.copyKey.includes("school")
           ? this[button.copyKey]()
           : this[button.copyKey];
 
