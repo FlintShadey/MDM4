@@ -184,6 +184,17 @@
           Subconjunctival Hemorrhage
         </v-btn>
       </v-col>
+      <v-col>
+        <v-btn
+          :ref="'Scleritis'"
+          :color="getButtonColor('Scleritis')"
+          size="small"
+          rounded="xl"
+          @click="openDialog('scleritis')"
+        >
+          Scleritis
+        </v-btn>
+      </v-col>
     </v-row>
 
     <v-divider></v-divider>

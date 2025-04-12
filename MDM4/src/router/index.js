@@ -16,6 +16,7 @@ import CornealUlcer from "../views/CornealUlcer.vue";
 import Blurry from "../views/Blurry.vue";
 import NotGlaucoma from "../views/NotGlaucoma.vue";
 import SubconjunctivalHemorrhage from "../views/SubconjunctivalHemorrhage.vue";
+import Scleritis from "../views/Scleritis.vue";
 import FacialInjury from "../views/FacialInjury.vue";
 import NasalInjury from "../views/NasalInjury.vue";
 import DentalInjury from "../views/DentalInjury.vue";
@@ -186,7 +187,6 @@ import Hyperglycemia from "../views/Hyperglycemia.vue";
 import Dehydration from "../views/Dehydration.vue";
 import SickleCell from "../views/SickleCell.vue";
 
-
 import NotFound from "../views/NotFound.vue";
 
 const routes = [
@@ -225,6 +225,7 @@ const routes = [
     name: "SubconjunctivalHemorrhage",
     component: SubconjunctivalHemorrhage,
   },
+  { path: "/scleritis", name: "Scleritis", component: Scleritis },
   {
     path: "/facialinjury",
     name: "FacialInjury",
