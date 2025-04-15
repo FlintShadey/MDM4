@@ -1904,7 +1904,9 @@
 </v-row>
 
 <v-divider></v-divider>
-
+    <!-- =========================
+          Male GU
+    ========================== -->
 <v-row>
   <img src="../assets/eggplant.png" alt="eggplant" height="26px" class="mt-3" />
   <v-col>
@@ -1960,6 +1962,17 @@
       @click="openDialog('/nlteste')"
     >
       nl testicle
+    </v-btn>
+  </v-col>
+  <v-col>
+    <v-btn
+      :ref="'Varicocele'"
+      :color="getButtonColor('Varicocele')"
+      size="small"
+      rounded="xl"
+      @click="openDialog('/varicocele')"
+    >
+      Varicocele
     </v-btn>
   </v-col>
   <v-col>
@@ -2637,6 +2650,7 @@ export default {
         "/hyperglycemia",
         "/dehydration",
         "/sicklecell",
+        "/varicocele",
       ],
     };
   },

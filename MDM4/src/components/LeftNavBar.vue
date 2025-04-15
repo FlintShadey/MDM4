@@ -126,6 +126,42 @@
         </v-row>
       </v-list-item>
 
+      <!-- Work / PE Restriction Buttons -->
+      <v-list-item class="d-flex pa-0 mb-2">
+        <v-row no-gutters>
+          <v-col cols="4" class="pr-1">
+            <v-btn
+              block
+              color="#F9A825"
+              height="36"
+              @click="handleButtonClick({ label: 'Lift', copyKey: 'liftText' })"
+            >
+              Lift
+            </v-btn>
+          </v-col>
+          <v-col cols="4" class="px-1">
+            <v-btn
+              block
+              color="#FB8C00"
+              height="36"
+              @click="handleButtonClick({ label: 'Ext', copyKey: 'extText' })"
+            >
+              Ext
+            </v-btn>
+          </v-col>
+          <v-col cols="4" class="pl-1">
+            <v-btn
+              block
+              color="#F57C00"
+              height="36"
+              @click="handleButtonClick({ label: 'PE', copyKey: 'peText' })"
+            >
+              PE
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-list-item>
+
       <!-- Family Buttons Section -->
       <div class="button-grid mb-2">
         <v-row dense>
@@ -509,7 +545,13 @@
 </template>
 
 <script>
-import { generateWorkExcuse, generateSchoolExcuse } from "@/utils/dateUtils";
+import { 
+  generateWorkExcuse, 
+  generateSchoolExcuse,
+  generateLiftRestriction,
+  generateExtremityRestriction,
+  generatePEExcuse
+} from "@/utils/dateUtils";
 import { calculateAllMedications } from "@/utils/medicationCalculator";
 import { calculateAllSedationMedications } from "@/utils/consciousSedationCalculator";
 import { OBSERVATION_TIME, formatTime } from "@/utils/observationUtils";
@@ -638,6 +680,16 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         return generateSchoolExcuse(4);
       },
 
+      liftText() {
+        return generateLiftRestriction();
+      },
+      extText() {
+        return generateExtremityRestriction();
+      },
+      peText() {
+        return generatePEExcuse();
+      },
+
       /* -----------
          Buttons
       ------------*/
@@ -652,6 +704,9 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
         { label: "S2", copyKey: "school2Text", color: "#A52734" },
         { label: "S3", copyKey: "school3Text", color: "#BE2E3A" },
         { label: "S4", copyKey: "school4Text", color: "#D73640" },
+        { label: "Lift", copyKey: "liftText", color: "#F9A825" },
+        { label: "Ext", copyKey: "extText", color: "#FB8C00" },
+        { label: "PE", copyKey: "peText", color: "#F57C00" },
         { label: "Mom", copyKey: "momText", color: "#E1BEE7" },
         { label: "Dad", copyKey: "dadText", color: "#CE93D8" },
         { label: "Parents", copyKey: "parentsText", color: "#BA68C8" },
@@ -707,9 +762,9 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
       if (button.route) {
         this.$router.push(button.route);
       } else if (button.copyKey) {
-        // For work and school excuse buttons, we need to call the function
-        const textToCopy = button.copyKey.includes("work") || button.copyKey.includes("school")
-          ? this[button.copyKey]()
+        // For work, school excuse buttons and the new restriction buttons, we need to call the function
+        const textToCopy = typeof this[button.copyKey] === 'function' 
+          ? this[button.copyKey]() 
           : this[button.copyKey];
 
         if (textToCopy) {

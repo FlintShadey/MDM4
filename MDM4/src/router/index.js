@@ -155,6 +155,7 @@ import Balanitis from "../views/Balanitis.vue";
 import NLTeste from "../views/NLTeste.vue";
 import UrinaryRetention from "../views/UrinaryRetention.vue";
 import Phimosis from "../views/Phimosis.vue";
+import Varicocele from "../views/Varicocele.vue";
 import DVT from "../views/DVT.vue";
 import LegEdema from "../views/LegEdema.vue";
 import Neuropathy from "../views/Neuropathy.vue";
@@ -165,7 +166,7 @@ import Urticaria from "../views/Urticaria.vue";
 import Zoster from "../views/Zoster.vue";
 import Tinea from "../views/Tinea.vue";
 import ViralRash from "../views/ViralRash.vue";
-import Scabies from "../views/Scabies.vue";
+import Scabies from "../views/Scabies.vue"; 
 import Candidiasis from "../views/Candidiasis.vue";
 import Maculopapularrash from "../views/Maculopapularrash.vue";
 import LymphAdenopathy from "../views/LymphAdenopathy.vue";
@@ -377,6 +378,7 @@ const routes = [
   { path: "/nlteste", name: "NLTeste", component: NLTeste },
   { path: "/urinaryretention", name: "UrinaryRetention", component: UrinaryRetention },
   { path: "/phimosis", name: "Phimosis", component: Phimosis },
+  { path: "/varicocele", name: "Varicocele", component: Varicocele },
   { path: "/dvt", name: "DVT", component: DVT },
   { path: "/legedema", name: "LegEdema", component: LegEdema },
   { path: "/neuropathy", name: "Neuropathy", component: Neuropathy },
