@@ -76,14 +76,31 @@
       </div>
     </div>
 
-    <!-- EXAMPLE LINK BUTTON -->
+    <!-- Laceration Note Modal -->
     <div class="mt-5">
-      <v-btn @click="openExternalLink" color="yellow">
-        Open External Link + Show Modal
+      <v-btn @click="noteDialog = true" color="yellow">
+        Laceration Note
       </v-btn>
-      <v-dialog v-model="dialog" max-width="80%">
+      <v-dialog v-model="noteDialog" max-width="800px">
         <v-card>
-          <v-img :src="dialogImgUrl" height="800px" contain></v-img>
+          <v-card-title>Laceration Note</v-card-title>
+          <v-card-text>
+            <v-textarea
+              v-model="lacerationNote"
+              auto-grow
+              outlined
+              rows="10"
+            ></v-textarea>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn text color="primary" @click="copyLacerationNote">
+              Copy Text
+            </v-btn>
+            <v-btn text color="primary" @click="noteDialog = false">
+              Close
+            </v-btn>
+          </v-card-actions>
         </v-card>
       </v-dialog>
     </div>
@@ -119,6 +136,22 @@ export default {
       snackbarColor: "success",
       dialog: false,
       dialogImgUrl: "",
+      // Modal for laceration note
+      noteDialog: false,
+      lacerationNote: `Procedure Performed by: me, J. Flint Smith, MD
+Procedure Performed: Laceration Repair of **********
+The area was prepped with saline and Betadine solution and draped in a sterile manner.
+Local anesthesia was administered using Lidocaine ***********.
+The laceration was repaired using ****** simple interrupted sutures with Ethilon.
+The wound was copiously irrigated with normal saline to ensure removal of any debris.
+Minimal bleeding was noted and controlled with direct pressure.
+No active bleeding was observed at the conclusion of the procedure.
+Estimated blood loss: Minimal.
+No neurovascular compromise was noted distal to the injury.
+No damage to surrounding tissues was identified.
+The wound was dressed with a non-adherent dressing.
+The patient tolerated the procedure well, and there were no immediate complications.
+Follow-up instructions were provided.`,
     };
   },
   methods: {
@@ -166,6 +199,20 @@ export default {
       window.open("https://www.google.com", "_blank");
       this.dialogImgUrl = "@/assets/visionLoss.png";
       this.dialog = true;
+    },
+    /**
+     * Copies the content of 'lacerationNote' to the clipboard.
+     */
+    copyLacerationNote() {
+      navigator.clipboard.writeText(this.lacerationNote).then(
+        () => {
+          this.showSnackbar("Laceration note copied to clipboard!", "success");
+        },
+        (err) => {
+          console.error("Failed to copy note: ", err);
+          this.showSnackbar("Failed to copy laceration note.", "error");
+        }
+      );
     },
 
     /**
