@@ -8,7 +8,7 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> DEntal Injury </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Dental Injury </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
@@ -99,7 +99,7 @@
     <!-- EXAMPLE LINK BUTTON -->
     <div class="mt-5">
       <v-btn @click="openExternalLink" color="yellow">
-        Open External Link + Show Modal
+       Dental Diagram
       </v-btn>
       <v-dialog v-model="dialog" max-width="80%">
         <v-card>
@@ -123,6 +123,7 @@
 </template>
 
 <script>
+import DentalDiagram from '@/assets/Dental_Diagram.png';
 export default {
   name: "Toothache",
   data() {
@@ -181,11 +182,10 @@ export default {
     },
 
     /**
-     * Opens a new browser tab to an external URL.
+     * Displays the dental diagram in a modal dialog.
      */
     openExternalLink() {
-      window.open("https://www.google.com", "_blank");
-      this.dialogImgUrl = "@/assets/visionLoss.png";
+      this.dialogImgUrl = DentalDiagram;
       this.dialog = true;
     },
 
