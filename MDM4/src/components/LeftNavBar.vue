@@ -3,10 +3,10 @@
     app
     color="#912737"
     class="rounded"
-    width="200"
+    width="180"
     :image="backgroundImage"
   >
-    <v-list dense class="pa-4">
+    <v-list dense class="px-3 py-4">
       <!-- HOME Button -->
       <v-list-item>
         <v-btn
@@ -369,24 +369,18 @@
         Splint Check
       </v-btn>
 
-      <div class="d-flex mb-4">
-        <v-btn
-          class="flex-grow-1 me-1"
-          color="#00E5FF"
-          height="40"
-          @click="handleButtonClick({ label: 'EKG', copyKey: 'ekgText' })"
-        >
-          EKG
-        </v-btn>
-        <v-btn
-          class="flex-grow-1 ms-1"
-          color="#00B8D4"
-          height="40"
-          @click="handleButtonClick({ label: 'Aware', copyKey: 'awareText' })"
-        >
-          Aware
-        </v-btn>
-      </div>
+      <v-row no-gutters class="mb-4">
+        <v-col cols="6" class="pe-1">
+          <v-btn block color="#00E5FF" height="40"
+            @click="handleButtonClick({ label: 'EKG', copyKey: 'ekgText' })"
+          >EKG</v-btn>
+        </v-col>
+        <v-col cols="6" class="ps-1">
+          <v-btn block color="#00B8D4" height="40"
+            @click="handleButtonClick({ label: 'Aware', copyKey: 'awareText' })"
+          >Aware</v-btn>
+        </v-col>
+      </v-row>
 
       <v-divider class="mb-4"></v-divider>
 
@@ -456,16 +450,15 @@
       </div>
 
       <!-- Google Drive Link Button -->
-      <div class="mb-2">
-        <v-btn
-          color="#4285F4"
-          height="40"
-          width="140"
-          @click="openDriveLink"
-        >
-          Google Drive
-        </v-btn>
-      </div>
+      <v-btn
+        block
+        color="#4285F4"
+        class="mb-3"
+        height="40"
+        @click="openDriveLink"
+      >
+        Google Drive
+      </v-btn>
 
       <!-- Last divider and counter section -->
       <v-divider class="mb-4"></v-divider>
