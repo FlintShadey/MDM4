@@ -894,6 +894,6 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
  }
  /* Reduce vertical spacing by ~5% */
  .mb-2 { margin-bottom: 7px !important; }
- .mb-3 { margin-bottom: 11px !important; }
- .mb-4 { margin-bottom: 15px !important; }
+ .mb-3 { margin-bottom: 8px !important; }
+ .mb-4 { margin-bottom: 10px !important; }
 </style>
