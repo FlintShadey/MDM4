@@ -35,7 +35,7 @@
       </v-list-item>
 
       <!-- Work Numbers Row -->
-      <v-list-item class="d-flex pa-0 mb-2">
+      <v-list-item class="d-flex pa-0 mb-1">
         <v-row no-gutters>
           <v-col cols="3" class="pr-1">
             <v-btn
@@ -81,7 +81,7 @@
       </v-list-item>
 
       <!-- School Numbers Row -->
-      <v-list-item class="d-flex pa-0 mb-2">
+      <v-list-item class="d-flex pa-0 ">
         <v-row no-gutters>
           <v-col cols="3" class="pr-1">
             <v-btn
