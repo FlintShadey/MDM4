@@ -352,6 +352,43 @@
       </div>
 
       <v-divider class="mb-2"></v-divider>
+      <!-- Imaging Exclusion Buttons -->
+      <!-- Imaging Exclusion Buttons (small, shades of blue, inline) -->
+      <v-row no-gutters class="mb-2">
+        <v-col cols="4" class="pr-1">
+          <v-btn
+            block
+            color="blue lighten-3"
+            height="32"
+            dense
+            @click="handleButtonClick({ label: 'Chest', copyKey: 'chestImgText' })"
+          >
+            Chest
+          </v-btn>
+        </v-col>
+        <v-col cols="4" class="px-1">
+          <v-btn
+            block
+            color="blue lighten-2"
+            height="32"
+            dense
+            @click="handleButtonClick({ label: 'Ext', copyKey: 'extImgText' })"
+          >
+            Ext
+          </v-btn>
+        </v-col>
+        <v-col cols="4" class="pl-1">
+          <v-btn
+            block
+            color="blue lighten-1"
+            height="32"
+            dense
+            @click="handleButtonClick({ label: 'Head', copyKey: 'headImgText' })"
+          >
+            Head
+          </v-btn>
+        </v-col>
+      </v-row>
 
       <!-- Bottom Buttons -->
       <v-btn
@@ -640,6 +677,10 @@ Based on the clinical presentation, viral pharyngitis is considered the most lik
 The patient is safe for outpatient management. Follow-up is advised if symptoms worsen or fail to improve.`,
       dxPharyngitisText:
         "PHARYNGITIS, UNSPECIFIED - [J02.9], SORE THROAT - [R07.0], ACUTE UPPER RESPIRATORY INFECTION, UNSPECIFIED - [J06.9], CONTACT WITH AND (SUSPECTED) EXPOSURE TO OTHER VIRAL COMMUNICABLE DISEASES INCLUDING COVID-19 - [Z20.828]",
+      // Imaging exclusion statements
+      chestImgText: "no sign pneumothorax such as lucency or absent lung markings, no widened mediastinum, nor fractures.",
+      extImgText:   "no evidence of fracture or dislocation with normal alignment, bones, and soft tissues.",
+      headImgText:  "no hyperdensity, midline shift, or mass effect.",
 
       splintCheckText:
         "After applying the splint, I checked the patients neurovascular status. The patient displayed normal sensory and motor functions, along with detectable pulses and appropriate capillary refill. There was no need to adjust the splint as it was not exerting pressure on any nerve or blood vessel. The patient received guidance on splint care and was informed about when to seek further medical care.",
