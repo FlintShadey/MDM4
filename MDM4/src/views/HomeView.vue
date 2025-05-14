@@ -1236,6 +1236,17 @@
       Epistaxis
     </v-btn>
   </v-col>
+  <v-col>
+    <v-btn
+      :ref="'Nose Injury'"
+      :color="getButtonColor('Nose Injury')"
+      size="small"
+      rounded="xl"
+      @click="openDialog('/noseinjury')"
+    >
+      Nose Injury
+    </v-btn>
+  </v-col>
 </v-row>
 
 <v-divider></v-divider>

@@ -95,6 +95,7 @@ import CerumenImpaction from "../views/CerumenImpaction.vue";
 import Perforation from "../views/Perforation.vue";
 import NoseFB from "../views/NoseFB.vue";
 import Epistaxis from "../views/Epistaxis.vue";
+import NoseInjury from "../views/NoseInjury.vue";
 import SoreThroat from "../views/SoreThroat.vue";
 import Toothache from "../views/Toothache.vue";
 import PharyngealScratch from "../views/PharyngealScratch.vue";
@@ -318,6 +319,7 @@ const routes = [
   { path: "/perforation", name: "Perforation", component: Perforation },
   { path: "/nosefb", name: "NoseFB", component: NoseFB },
   { path: "/epistaxis", name: "Epistaxis", component: Epistaxis },
+  { path: "/noseinjury", name: "NoseInjury", component: NoseInjury },
   { path: "/sorethroat", name: "SoreThroat", component: SoreThroat },
   { path: "/toothache", name: "Toothache", component: Toothache },
   { path: "/pharyngealscratch", name: "PharyngealScratch", component: PharyngealScratch },
