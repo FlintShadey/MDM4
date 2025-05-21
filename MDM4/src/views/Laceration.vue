@@ -139,10 +139,10 @@ export default {
       // Modal for laceration note
       noteDialog: false,
       lacerationNote: `Procedure Performed by: me, J. Flint Smith, MD
-Procedure Performed: Laceration Repair of **********
+Procedure Performed: Laceration Repair of ________ 
 The area was prepped with saline and Betadine solution and draped in a sterile manner.
-Local anesthesia was administered using Lidocaine ***********.
-The laceration was repaired using ****** simple interrupted sutures with Ethilon.
+Local anesthesia was administered using Lidocaine ________ .
+The laceration was repaired using ________ simple interrupted sutures with Ethilon.
 The wound was copiously irrigated with normal saline to ensure removal of any debris.
 Minimal bleeding was noted and controlled with direct pressure.
 No active bleeding was observed at the conclusion of the procedure.

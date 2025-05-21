@@ -51,7 +51,7 @@ export function generateExtremityRestriction(daysToAdd = 7) {
     const futureDate = add(new Date(), { days: daysToAdd });
     const formattedDate = format(futureDate, 'MM/dd/yyyy');
     
-    return `The patient may not use the affected extremity until ${formattedDate}`;
+    return `Limited usage of the affected extremity until ${formattedDate}`;
 }
 
 /**
