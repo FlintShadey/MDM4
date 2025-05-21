@@ -38,6 +38,7 @@ import WristFX from "../views/WristFX.vue";
 import WristSprain from "../views/WristSprain.vue";
 import Bursitis from "../views/Bursitis.vue";
 import Laceration from "../views/Laceration.vue";
+import SutureRemoval from "../views/SutureRemoval.vue";
 import ChestTrauma from "../views/ChestTrauma.vue";
 import BackPain from "../views/BackPain.vue";
 import ThoracicBackPain from "../views/ThoracicBackPain.vue";
@@ -261,6 +262,7 @@ const routes = [
   { path: "/wristsprain", name: "WristSprain", component: WristSprain },
   { path: "/bursitis", name: "Bursitis", component: Bursitis },
   { path: "/laceration", name: "Laceration", component: Laceration },
+  { path: "/suturremoval", name: "SutureRemoval", component: SutureRemoval },
   { path: "/chesttrauma", name: "ChestTrauma", component: ChestTrauma },
   { path: "/backpain", name: "BackPain", component: BackPain },
   { path: "/thoracicbackpain", name: "ThoracicBackPain", component: ThoracicBackPain },
@@ -304,6 +306,7 @@ const routes = [
   { path: "/packingremoved", name: "PackingRemoved", component: PackingRemoved },
   { path: "/postsurgicalwound", name: "PostSurgicalWound", component: PostSurgicalWound },
   { path: "/packingchange", name: "PackingChange", component: PackingChange },
+  { path: "/sutureremoval", name: "SutureRemoval", component: SutureRemoval },
   { path: "/burn", name: "Burn", component: Burn },
   { path: "/inhalationinjury", name: "InhalationInjury", component: InhalationInjury },
   { path: "/animalbite", name: "AnimalBite", component: AnimalBite },

@@ -1011,6 +1011,17 @@
       packing change
     </v-btn>
   </v-col>
+  <v-col>
+    <v-btn
+      :ref="'Suture Removal'"
+      color="warning"
+      size="small"
+      rounded="xl"
+      @click="openDialog('/sutureremoval')"
+    >
+      Suture Removal
+    </v-btn>
+  </v-col>
 </v-row>
 
 <v-divider></v-divider>
@@ -2554,6 +2565,7 @@ export default {
         "/packingremoved",
         "/postsurgicalwound",
         "/packingchange",
+        "/sutureremoval",
         "/burn",
         "/inhalationinjury",
         "/animalbite",
@@ -2569,6 +2581,7 @@ export default {
         "/perforation",
         "/nosefb",
         "/epistaxis",
+        "/noseinjury",
         "/sorethroat",
         "/toothache",
         "/pharyngealscratch",
