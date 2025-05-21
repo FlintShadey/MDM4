@@ -141,14 +141,13 @@ export default {
       lacerationNote: `Procedure Performed by: me, J. Flint Smith, MD
 Procedure Performed: Laceration Repair of ________ 
 The area was prepped with saline and Betadine solution and draped in a sterile manner.
-Local anesthesia was administered using Lidocaine ________ .
+Local anesthesia was administered using Lidocaine with________ epinephrine.
 The laceration was repaired using ________ simple interrupted sutures with Ethilon.
 The wound was copiously irrigated with normal saline to ensure removal of any debris.
 Minimal bleeding was noted and controlled with direct pressure.
 No active bleeding was observed at the conclusion of the procedure.
 Estimated blood loss: Minimal.
 No neurovascular compromise was noted distal to the injury.
-No damage to surrounding tissues was identified.
 The wound was dressed with a non-adherent dressing.
 The patient tolerated the procedure well, and there were no immediate complications.
 Follow-up instructions were provided.`,
