@@ -11,7 +11,7 @@
       <v-list-item>
         <v-btn
           block
-          color="yellow"
+          color="#FFC107"
           class="mb-3"
           height="64"
           prepend-icon="mdi-home"
@@ -40,7 +40,7 @@
           <v-col cols="3" class="pr-1">
             <v-btn
               block
-              color="#9FA8DA"
+              color="#3F51B5"
               height="36"
               @click="handleButtonClick({ label: 'W1', copyKey: 'work1Text' })"
             >
@@ -50,7 +50,7 @@
           <v-col cols="3" class="px-1">
             <v-btn
               block
-              color="#7986CB"
+              color="#3F51B5"
               height="36"
               @click="handleButtonClick({ label: 'W2', copyKey: 'work2Text' })"
             >
@@ -60,7 +60,7 @@
           <v-col cols="3" class="px-1">
             <v-btn
               block
-              color="#5C6BC0"
+              color="#3F51B5"
               height="36"
               @click="handleButtonClick({ label: 'W3', copyKey: 'work3Text' })"
             >
@@ -86,7 +86,7 @@
           <v-col cols="3" class="pr-1">
             <v-btn
               block
-              color="#8D1D2C"
+              color="#D32F2F"
               height="36"
               @click="handleButtonClick({ label: 'S1', copyKey: 'school1Text' })"
             >
@@ -96,7 +96,7 @@
           <v-col cols="3" class="px-1">
             <v-btn
               block
-              color="#A52734"
+              color="#D32F2F"
               height="36"
               @click="handleButtonClick({ label: 'S2', copyKey: 'school2Text' })"
             >
@@ -106,7 +106,7 @@
           <v-col cols="3" class="px-1">
             <v-btn
               block
-              color="#BE2E3A"
+              color="#D32F2F"
               height="36"
               @click="handleButtonClick({ label: 'S3', copyKey: 'school3Text' })"
             >
@@ -116,7 +116,7 @@
           <v-col cols="3" class="pl-1">
             <v-btn
               block
-              color="#D73640"
+              color="#D32F2F"
               height="36"
               @click="handleButtonClick({ label: 'S4', copyKey: 'school4Text' })"
             >
@@ -132,7 +132,7 @@
           <v-col cols="4" class="pr-1">
             <v-btn
               block
-              color="#F9A825"
+              color="#FF9800"
               height="36"
               @click="handleButtonClick({ label: 'Lift', copyKey: 'liftText' })"
             >
@@ -142,7 +142,7 @@
           <v-col cols="4" class="px-1">
             <v-btn
               block
-              color="#FB8C00"
+              color="#FF9800"
               height="36"
               @click="handleButtonClick({ label: 'Ext', copyKey: 'extText' })"
             >
@@ -152,7 +152,7 @@
           <v-col cols="4" class="pl-1">
             <v-btn
               block
-              color="#F57C00"
+              color="#FF9800"
               height="36"
               @click="handleButtonClick({ label: 'PE', copyKey: 'peText' })"
             >
@@ -168,7 +168,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#E1BEE7"
+              color="#9C27B0"
               height="36"
               @click="handleButtonClick({ label: 'Mom', copyKey: 'momText' })"
             >
@@ -178,7 +178,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#CE93D8"
+              color="#9C27B0"
               height="36"
               @click="handleButtonClick({ label: 'Dad', copyKey: 'dadText' })"
             >
@@ -188,7 +188,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#BA68C8"
+              color="#9C27B0"
               height="36"
               @click="
                 handleButtonClick({ label: 'Parents', copyKey: 'parentsText' })
@@ -200,7 +200,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#AB47BC"
+              color="#9C27B0"
               height="36"
               @click="
                 handleButtonClick({
@@ -223,7 +223,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#E57373"
+              color="#009688"
               height="36"
               @click="handleButtonClick({ label: 'URI', copyKey: 'uriText' })"
             >
@@ -233,7 +233,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#EF5350"
+              color="#009688"
               height="36"
               @click="
                 handleButtonClick({ label: 'Dx:URI', copyKey: 'dxUriText' })
@@ -245,7 +245,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#F06292"
+              color="#009688"
               height="36"
               @click="
                 handleButtonClick({ label: 'Sinus', copyKey: 'sinusText' })
@@ -257,7 +257,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#EC407A"
+              color="#009688"
               height="36"
               @click="
                 handleButtonClick({ label: 'Dx:Sinus', copyKey: 'dxSinusText' })
@@ -269,7 +269,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#9575CD"
+              color="#009688"
               height="36"
               @click="
                 handleButtonClick({
@@ -284,7 +284,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#7E57C2"
+              color="#009688"
               height="36"
               @click="
                 handleButtonClick({
@@ -299,7 +299,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#7986CB"
+              color="#009688"
               height="36"
               @click="handleButtonClick({ label: 'Flu', copyKey: 'fluText' })"
             >
@@ -309,7 +309,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#5C6BC0"
+              color="#009688"
               height="36"
               @click="
                 handleButtonClick({ label: 'Dx:Flu', copyKey: 'dxFluText' })
@@ -321,7 +321,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#4FC3F7"
+              color="#009688"
               height="36"
               @click="
                 handleButtonClick({
@@ -336,7 +336,7 @@
           <v-col cols="6" class="pa-1">
             <v-btn
               block
-              color="#29B6F6"
+              color="#009688"
               height="36"
               @click="
                 handleButtonClick({
@@ -358,7 +358,7 @@
         <v-col cols="4" class="pr-1">
           <v-btn
             block
-            color="blue lighten-3"
+            color="#3F51B5"
             height="32"
             dense
             @click="handleButtonClick({ label: 'Chest', copyKey: 'chestImgText' })"
@@ -369,7 +369,7 @@
         <v-col cols="4" class="px-1">
           <v-btn
             block
-            color="blue lighten-2"
+            color="#3F51B5"
             height="32"
             dense
             @click="handleButtonClick({ label: 'Ext', copyKey: 'extImgText' })"
@@ -380,7 +380,7 @@
         <v-col cols="4" class="pl-1">
           <v-btn
             block
-            color="blue lighten-1"
+            color="#3F51B5"
             height="32"
             dense
             @click="handleButtonClick({ label: 'Head', copyKey: 'headImgText' })"
@@ -391,29 +391,62 @@
       </v-row>
 
       <!-- Bottom Buttons -->
-      <v-btn
-        block
-        color="#18FFFF"
-        class="mb-2"
-        height="40"
-        @click="
-          handleButtonClick({
-            label: 'Splint Check',
-            copyKey: 'splintCheckText',
-          })
-        "
-      >
-        Splint Check
-      </v-btn>
+      <v-row no-gutters class="mb-2">
+        <v-col cols="4" class="pr-1">
+          <v-btn
+            block
+            color="#00BCD4"
+            height="40"
+            @click="
+              handleButtonClick({
+                label: 'SPLNT',
+                copyKey: 'splintCheckText',
+              })
+            "
+          >
+            SPLNT
+          </v-btn>
+        </v-col>
+        <v-col cols="4" class="px-1">
+          <v-btn
+            block
+            color="#00BCD4"
+            height="40"
+            @click="
+              handleButtonClick({
+                label: 'CT',
+                copyKey: 'ctText',
+              })
+            "
+          >
+            CT
+          </v-btn>
+        </v-col>
+        <v-col cols="4" class="pl-1">
+          <v-btn
+            block
+            color="#00BCD4"
+            height="40"
+            @click="
+              handleButtonClick({
+                label: 'FX',
+                copyKey: 'fxText',
+              })
+            "
+          >
+            FX
+          </v-btn>
+        </v-col>
+      </v-row>
 
       <v-row no-gutters class="mb-4">
         <v-col cols="6" class="pe-1">
-          <v-btn block color="#00E5FF" height="40"
+          <v-btn block color="#00BCD4" height="40"
             @click="handleButtonClick({ label: 'EKG', copyKey: 'ekgText' })"
           >EKG</v-btn>
         </v-col>
         <v-col cols="6" class="ps-1">
-          <v-btn block color="#00B8D4" height="40"
+          <v-btn block color="#00BCD4" height="40"
             @click="handleButtonClick({ label: 'Aware', copyKey: 'awareText' })"
           >Aware</v-btn>
         </v-col>
@@ -455,7 +488,7 @@
       <!-- Tools Section -->
       <v-btn
         block
-        color="#4f6bb0"
+        color="#607D8B"
         class="mb-2"
         height="40"
         @click="copyRandomCallText"
@@ -466,7 +499,7 @@
       <!-- Observation Section -->
       <div class="d-flex align-center mb-2">
         <v-btn
-          color="#3f4f99"
+          color="#607D8B"
           height="40"
           width="120"
           @click="openObservation"
@@ -489,7 +522,7 @@
       <!-- Google Drive Link Button -->
       <v-btn
         block
-        color="#4285F4"
+        color="#607D8B"
         class="mb-3"
         height="40"
         @click="openDriveLink"
@@ -684,6 +717,8 @@ The patient is safe for outpatient management. Follow-up is advised if symptoms 
 
       splintCheckText:
         "After applying the splint, I checked the patients neurovascular status. The patient displayed normal sensory and motor functions, along with detectable pulses and appropriate capillary refill. There was no need to adjust the splint as it was not exerting pressure on any nerve or blood vessel. The patient received guidance on splint care and was informed about when to seek further medical care.",
+      ctText: "Currently, I believe there is a concern for surgical emergency, hence, I will order a CT scan to rule out this life threatening condition",
+      fxText: "I have provided definitive fracture management for this fracture.",
       ekgText: "EKG Interpretation was performed and documented.",
       awareText:
         "Patient has been made aware of the ______________  abnormality, they have been instructed and understand the need to follow up with their physician. ",
