@@ -13,88 +13,103 @@
   
       <!-- Diagnosis BUTTONS TO APPEND TEXT -->
       <div class="mt-5">
-  
-              <v-btn
-          color="#72728a"
+        <v-btn
+          color="#009688"
           class="ma-2"
-          @click="secondaryValue += 'Pain in the left _____; '"
+          @click="secondaryValue += 'Excessive and frequent menstruation with regular cycle – classic menorrhagia with predictable timing and heavy flow; '"
         >
-          pain left
+          Heavy Regular
         </v-btn>
         <v-btn
-          color="#665251"
+          color="#009688"
           class="ma-2"
-          @click="secondaryValue += 'Pain in the right _____; '"
+          @click="secondaryValue += 'Excessive and frequent menstruation with irregular cycle – metrorrhagia or menometrorrhagia with unpredictable timing and volume; '"
         >
-          pain right
+          Heavy Irregular
         </v-btn>
         <v-btn
-       color="#dd42f5"
+          color="#009688"
           class="ma-2"
-          @click="
-            secondaryValue +=
-              'everything '  "
+          @click="secondaryValue += 'Excessive menstruation at puberty – heavy bleeding during the pubertal transition; '"
         >
-          everything
+          Pubertal Heavy
         </v-btn>
         <v-btn
-          color="#72728a"
+          color="#009688"
           class="ma-2"
-          @click="secondaryValue += 'DIAGNOSIS; '"
-        >      DIagnosis
-        </v-btn>
-        <v-btn
-          color="#72728a"
-          class="ma-2"
-          @click="secondaryValue += 'DIAGNOSIS; '"
-        >      DIagnosis
-        </v-btn>
-        <v-btn
-          color="#72728a"
-          class="ma-2"
-          @click="secondaryValue += 'DIAGNOSIS; '"
-        >      DIagnosis
-        </v-btn>
-        <v-btn
-          color="#72728a"
-          class="ma-2"
-          @click="secondaryValue += 'DIAGNOSIS; '"
-        >      DIagnosis
-        </v-btn>
-            <v-btn
-          color="#72728a"
-          class="ma-2"
-          @click="secondaryValue += 'fever; '"
+          @click="secondaryValue += 'Ovulation bleeding – mid-cycle spotting around ovulation; '"
         >
-          fever
+          Ovulation Spotting
         </v-btn>
         <v-btn
-          color="#72728a"
+          color="#009688"
           class="ma-2"
-          @click="secondaryValue += 'fatigue; '"
+          @click="secondaryValue += 'Excessive bleeding in the premenopausal period – heavy flow as women approach menopause; '"
         >
-          fatigue
+          Premenopausal Heavy
         </v-btn>
         <v-btn
-          color="#72728a"
+          color="#009688"
           class="ma-2"
-          @click="secondaryValue += 'Lymphadenopathy; '"
+          @click="secondaryValue += 'Other specified irregular menstruation – patterns of bleeding that do not fit the above categories; '"
         >
-          Lymphadenopathy
-        </v-btn>
-                    <v-btn
-          color="#72728a"
-          class="ma-2"
-          @click="secondaryValue += ', left; '"
-        >
-           left
+          Other Irregular
         </v-btn>
         <v-btn
-          color="#665251"
+          color="#009688"
           class="ma-2"
-          @click="secondaryValue += ', right; '"
+          @click="secondaryValue += 'Postcoital and contact bleeding – bleeding triggered by intercourse or exam contact; '"
         >
-           right
+          Postcoital
+        </v-btn>
+        <v-btn
+          color="#009688"
+          class="ma-2"
+          @click="secondaryValue += 'Pre-pubertal vaginal bleeding – bleeding in girls before the onset of menses; '"
+        >
+          Prepubertal
+        </v-btn>
+        <v-btn
+          color="#009688"
+          class="ma-2"
+          @click="secondaryValue += 'Other specified abnormal uterine and vaginal bleeding – includes intermenstrual bleeding, spotting, etc.; '"
+        >
+          Other Abnormal
+        </v-btn>
+        <v-btn
+          color="#009688"
+          class="ma-2"
+          @click="secondaryValue += 'Abnormal uterine and vaginal bleeding, unspecified – use when no further detail is documented; '"
+        >
+          Unspecified
+        </v-btn>
+        <v-btn
+          color="#FF9800"
+          class="ma-2"
+          @click="secondaryValue += 'Pelvic pain; '"
+        >
+          Pelvic Pain
+        </v-btn>
+        <v-btn
+          color="#FF9800"
+          class="ma-2"
+          @click="secondaryValue += 'Abdominal pain; '"
+        >
+          Abdominal Pain
+        </v-btn>
+        <v-btn
+          color="#FF9800"
+          class="ma-2"
+          @click="secondaryValue += 'Nausea; '"
+        >
+          Nausea
+        </v-btn>
+        <v-btn
+          color="#FF9800"
+          class="ma-2"
+          @click="secondaryValue += 'Dysuria; '"
+        >
+          Dysuria
         </v-btn>
       </div>
   
