@@ -132,7 +132,8 @@ export default {
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "This pediatric patient presents after a motor vehicle collision.\n\n Traumatic brain injury or intracranial hemorrhage could cause severe headache, repeated vomiting, loss of consciousness, seizure, focal neurologic deficits, or signs of basilar skull fracture; these findings are not present  on exam.\n\n Cervical spine injury could cause midline neck tenderness, neurologic deficits, paresthesias, or limited range of motion; these are not present\n\n Thoracic injury such as pneumothorax or pulmonary contusion could cause chest pain, dyspnea, hypoxia, asymmetric breath sounds, or chest wall crepitus; these are not present\n\n Intra-abdominal injury to solid organs or hollow viscera could cause abdominal pain, guarding, seat-belt sign, vomiting, hypotension, or tachycardia; these are not present\n\n Pelvic or long-bone fracture could cause deformity, focal bony tenderness, malrotation, or inability to bear weight; these findings are not present\n\n Compartment syndrome could cause severe pain out of proportion, pain with passive stretch, tense swelling, paresthesia, pallor, or diminished pulses; these features are not present\n\n Spinal cord injury without radiographic abnormality could cause limb weakness, numbness, or bowel or bladder dysfunction; neurologic deficits are not present\n\n Cardiac contusion could cause chest pain, palpitations, syncope, or persistent tachycardia; these symptoms and abnormal vital signs are not present.The patient’s presentation aligns well with musculoskeletal pain.\n\n The patient is safe for discharge and should follow up with their pediatrician very soon.",
+
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

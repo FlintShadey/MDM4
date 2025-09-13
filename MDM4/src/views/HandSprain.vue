@@ -1,4 +1,3 @@
-
 <template>
   <v-container fluid>
     <!-- PRIMARY TEXTAREA -->
@@ -14,88 +13,79 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-
-            <v-btn
-        color="#72728a"
+      <v-btn
+        color="#4CAF50"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left _____; '"
+        @click="secondaryValue += 'Hand sprain, right; '"
       >
-        pain left
+        hand sprain right
       </v-btn>
       <v-btn
-        color="#665251"
+        color="#4CAF50"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right _____; '"
+        @click="secondaryValue += 'Hand sprain, left; '"
       >
-        pain right
+        hand sprain left
       </v-btn>
       <v-btn
-     color="#dd42f5"
+        color="#4CAF50"
+        class="ma-2"
+        @click="secondaryValue += 'Hand sprain, unspecified; '"
+      >
+        hand sprain unspecified
+      </v-btn>
+      <v-btn
+        color="#2196F3"
+        class="ma-2"
+        @click="secondaryValue += 'Finger sprain, unspecified; '"
+      >
+        finger sprain unspecified
+      </v-btn>
+      <v-btn
+        color="#2196F3"
         class="ma-2"
         @click="
-          secondaryValue +=
-            'everything '  "
+          secondaryValue += 'Finger sprain (IP joint), unspecified finger; '
+        "
       >
-        everything
+        finger sprain (IP joint) unspecified finger
       </v-btn>
       <v-btn
-        color="#72728a"
+        color="#2196F3"
         class="ma-2"
-        @click="secondaryValue += 'DIAGNOSIS; '"
-      >      DIagnosis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'DIAGNOSIS; '"
-      >      DIagnosis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'DIAGNOSIS; '"
-      >      DIagnosis
-      </v-btn>
-      <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'DIAGNOSIS; '"
-      >      DIagnosis
-      </v-btn>
-          <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += 'fever; '"
+        @click="
+          secondaryValue += 'Finger sprain (MCP joint), unspecified finger; '
+        "
       >
-        fever
+        finger sprain (MCP joint) unspecified finger
       </v-btn>
       <v-btn
-        color="#72728a"
+        color="#FF9800"
         class="ma-2"
-        @click="secondaryValue += 'fatigue; '"
+        @click="secondaryValue += 'Hand pain, right; '"
       >
-        fatigue
+        hand pain right
       </v-btn>
       <v-btn
-        color="#72728a"
+        color="#FF9800"
         class="ma-2"
-        @click="secondaryValue += 'Lymphadenopathy; '"
+        @click="secondaryValue += 'Hand pain, left; '"
       >
-        Lymphadenopathy
-      </v-btn>
-                  <v-btn
-        color="#72728a"
-        class="ma-2"
-        @click="secondaryValue += ', left; '"
-      >
-         left
+        hand pain left
       </v-btn>
       <v-btn
-        color="#665251"
+        color="#FF9800"
         class="ma-2"
-        @click="secondaryValue += ', right; '"
+        @click="secondaryValue += 'Hand pain, unspecified; '"
       >
-         right
+        hand pain unspecified
+      </v-btn>
+      <v-btn
+        color="#F44336"
+        class="ma-2"
+        @click="secondaryValue += 'Traumatic pain; '"
+      >
+        traumatic pain
       </v-btn>
     </div>
 
@@ -138,15 +128,16 @@
 
 <script>
 export default {
-  name: "GenericTemplate",
+  name: "HandSprain",
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "MDMDMDMDMDMDMMDMDMDM",
+      primaryValue:
+        "The patient presents with a hand injury.\n Open fracture or dislocation could cause deformity, crepitus, exposed bone, or a mechanical block to motion; these findings are not present.\n Acute compartment syndrome could cause severe pain out of proportion to examination, pain with passive finger stretch, tense swelling, paresthesia, pallor, or diminished pulses; these features are not present.\n High-pressure injection injury could present with a small puncture wound, disproportionate pain, and rapidly progressive swelling after exposure to paint, grease, or air; this scenario is not present.\n Septic flexor tenosynovitis could cause fusiform swelling, the finger held in slight flexion, pain with passive extension, and tenderness along the flexor sheath; these signs are not present.\n Septic arthritis could cause fever, a hot swollen joint, effusion, and severe pain with passive motion; these features are not present.\n Tendon laceration or rupture could cause loss of active flexion or extension or an abnormal finger cascade; strength and function are intact.\n Neurovascular injury could cause numbness in median, ulnar, or radial distributions or delayed capillary refill; sensation and perfusion are intact.\n Closed fracture could cause focal bony tenderness, ecchymosis, crepitus, or pain with axial loading; these findings are not present.\nThe patient's presentation aligns well with a hand sprain.\n The patient is safe for discharge and should follow up with their health care provider or hand surgeon very soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue: "Pediatric MDM text not created",
+      alternateValue: "Pediatric hand injury MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",

@@ -8,141 +8,110 @@
     </div>
 
     <div class="text-end mt-3">
-      <v-btn color="#b85fb2" @click="setAlternateValue"> Metrorrhagia </v-btn>
+      <v-btn color="#b85fb2" @click="setAlternateValue"> Pediatric </v-btn>
     </div>
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
       <v-btn
-        color="#009688"
+        color="#FF5722"
+        class="ma-2"
+        @click="secondaryValue += 'Foreign body in esophagus; '"
+      >
+        foreign body in esophagus
+      </v-btn>
+      <v-btn
+        color="#FF5722"
+        class="ma-2"
+        @click="secondaryValue += 'Foreign body in stomach; '"
+      >
+        foreign body in stomach
+      </v-btn>
+      <v-btn
+        color="#FF5722"
+        class="ma-2"
+        @click="secondaryValue += 'Foreign body in small intestine; '"
+      >
+        foreign body in small intestine
+      </v-btn>
+      <v-btn
+        color="#FF5722"
+        class="ma-2"
+        @click="secondaryValue += 'Foreign body in colon; '"
+      >
+        foreign body in colon
+      </v-btn>
+      <v-btn
+        color="#FF5722"
+        class="ma-2"
+        @click="secondaryValue += 'Foreign body in rectum; '"
+      >
+        foreign body in rectum
+      </v-btn>
+      <v-btn
+        color="#FF5722"
+        class="ma-2"
+        @click="secondaryValue += 'Foreign body in anus and anal canal; '"
+      >
+        foreign body in anus and anal canal
+      </v-btn>
+      <v-btn
+        color="#FF5722"
         class="ma-2"
         @click="
-          secondaryValue +=
-            'Excessive and frequent menstruation with regular cycle – classic menorrhagia with predictable timing and heavy flow; '
+          secondaryValue += 'Foreign body in alimentary tract, unspecified; '
         "
       >
-        Heavy Regular
+        foreign body in alimentary tract unspecified
       </v-btn>
       <v-btn
-        color="#009688"
+        color="#E91E63"
         class="ma-2"
-        @click="
-          secondaryValue +=
-            'Excessive and frequent menstruation with irregular cycle – metrorrhagia or menometrorrhagia with unpredictable timing and volume; '
-        "
+        @click="secondaryValue += 'Food bolus impaction, esophagus; '"
       >
-        Heavy Irregular
+        food bolus impaction esophagus
       </v-btn>
       <v-btn
-        color="#009688"
+        color="#E91E63"
         class="ma-2"
-        @click="
-          secondaryValue +=
-            'Excessive menstruation at puberty – heavy bleeding during the pubertal transition; '
-        "
+        @click="secondaryValue += 'Esophageal obstruction; '"
       >
-        Pubertal Heavy
+        esophageal obstruction
       </v-btn>
       <v-btn
-        color="#009688"
+        color="#9C27B0"
         class="ma-2"
-        @click="
-          secondaryValue +=
-            'Ovulation bleeding – mid-cycle spotting around ovulation; '
-        "
+        @click="secondaryValue += 'Dysphagia; '"
       >
-        Ovulation Spotting
+        dysphagia
       </v-btn>
       <v-btn
-        color="#009688"
+        color="#3F51B5"
         class="ma-2"
-        @click="
-          secondaryValue +=
-            'Excessive bleeding in the premenopausal period – heavy flow as women approach menopause; '
-        "
+        @click="secondaryValue += 'Throat pain; '"
       >
-        Premenopausal Heavy
+        throat pain
       </v-btn>
       <v-btn
-        color="#009688"
+        color="#2196F3"
         class="ma-2"
-        @click="
-          secondaryValue +=
-            'Other specified irregular menstruation – patterns of bleeding that do not fit the above categories; '
-        "
+        @click="secondaryValue += 'Chest pain; '"
       >
-        Other Irregular
+        chest pain
       </v-btn>
       <v-btn
-        color="#009688"
-        class="ma-2"
-        @click="
-          secondaryValue +=
-            'Postcoital and contact bleeding – bleeding triggered by intercourse or exam contact; '
-        "
-      >
-        Postcoital
-      </v-btn>
-      <v-btn
-        color="#009688"
-        class="ma-2"
-        @click="
-          secondaryValue +=
-            'Pre-pubertal vaginal bleeding – bleeding in girls before the onset of menses; '
-        "
-      >
-        Prepubertal
-      </v-btn>
-      <v-btn
-        color="#009688"
-        class="ma-2"
-        @click="
-          secondaryValue +=
-            'Other specified abnormal uterine and vaginal bleeding – includes intermenstrual bleeding, spotting, etc.; '
-        "
-      >
-        Other Abnormal
-      </v-btn>
-      <v-btn
-        color="#009688"
-        class="ma-2"
-        @click="
-          secondaryValue +=
-            'Abnormal uterine and vaginal bleeding, unspecified – use when no further detail is documented; '
-        "
-      >
-        Unspecified
-      </v-btn>
-      <v-btn
-        color="#009688"
-        class="ma-2"
-        @click="secondaryValue += 'Metrorrhagia; '"
-      >
-        Metrorrhagia (intermittent timing)
-      </v-btn>
-      <v-btn
-        color="#FF9800"
-        class="ma-2"
-        @click="secondaryValue += 'Pelvic pain; '"
-      >
-        Pelvic Pain
-      </v-btn>
-      <v-btn
-        color="#FF9800"
+        color="#03A9F4"
         class="ma-2"
         @click="secondaryValue += 'Abdominal pain; '"
       >
-        Abdominal Pain
-      </v-btn>
-      <v-btn color="#FF9800" class="ma-2" @click="secondaryValue += 'Nausea; '">
-        Nausea
+        abdominal pain
       </v-btn>
       <v-btn
-        color="#FF9800"
+        color="#009688"
         class="ma-2"
-        @click="secondaryValue += 'Dysuria; '"
+        @click="secondaryValue += 'Traumatic pain; '"
       >
-        Dysuria
+        traumatic pain
       </v-btn>
     </div>
 
@@ -185,17 +154,16 @@
 
 <script>
 export default {
-  name: "Menorrhagia",
+  name: "SwallowedFB",
   data() {
     return {
       // Main text (primary text area)
       primaryValue:
-        "The patient presents with vaginal bleeding.\n\nPregnancy-related bleeding could present with abdominal pain, changes in fetal movement, or a positive pregnancy test, but this is not the case.\n\nUterine fibroids can cause heavy menstrual bleeding and pelvic pain.\n\nEndometrial polyps might lead to intermittent bleeding or spotting.\n\nThe patient’s presentation aligns well with menorrhagia, characterized by abnormally heavy or prolonged menstrual bleeding.\n\nThe patient is not septic or toxic.\n\nThe patient is safe for discharge and should follow up with a primary care physician very soon.",
+        "The patient presents with a swallowed foreign body.\n Airway aspiration could cause coughing, choking, stridor, wheeze, or hypoxia; these features are not present.\n Esophageal impaction could cause drooling, inability to handle secretions, odynophagia, or persistent chest/neck pain; these are not present.\n Button battery ingestion could cause rapid caustic injury; a history of battery ingestion, corrosive symptoms, and concerning object characteristics are not present.\n Multiple magnet ingestion could cause pressure necrosis and fistula formation; ingestion of magnets and significant abdominal pain are not present.\n Sharp or elongated objects could perforate; a history of a sharp/long object and signs of peritoneal irritation, hematemesis, melena, or severe chest/abdominal pain are not present.\n Bowel obstruction or perforation could cause persistent vomiting, abdominal distention, fever, or tachycardia; these findings are not present.\nThe patient's presentation aligns well with a swallowed foreign body that is safe in the intestinal tract.\n The patient is not septic or toxic.\n The patient is safe for discharge and should follow up with their health care provider very soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
-      alternateValue:
-        "The patient presents with abnormal vaginal bleeding.\n Threatened miscarriage could cause bleeding with cramping and a positive pregnancy test; these are not present.\n Ectopic pregnancy could present with unilateral pelvic pain, syncope, or hemodynamic instability; these are not present.\n Uterine fibroids can cause heavy or prolonged bleeding with pelvic pressure or an enlarged, irregular uterus; these are not present.\n Endometrial polyp may lead to intermenstrual spotting with findings on pelvic exam or imaging; these are not present.\n Pelvic inflammatory disease can cause fever, pelvic tenderness, and purulent discharge; these are not present.\n Coagulopathy or anticoagulant use may produce excessive bleeding with easy bruising or mucosal bleeding; these are not present.\nThe patient's presentation aligns well with metrorrhagia.\n The patient is not septic or toxic.\n The patient is safe for discharge and should follow up with her OB- GYN provider very soon.",
+      alternateValue: "Pediatric swallowed foreign body MDM text not created",
       // Snackbar controls
       snackbar: false,
       snackbarText: "",
