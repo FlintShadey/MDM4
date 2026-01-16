@@ -181,6 +181,7 @@ import TIA from "../views/TIA.vue";
 import Vertigo from "../views/Vertigo.vue";
 import Presyncope from "../views/Presyncope.vue";
 import Seizure from "../views/Seizure.vue";
+import Syncope from "../views/Syncope.vue";
 import Anxiety from "../views/Anxiety.vue";
 import Safe from "../views/Safe.vue";
 import AccidentalIngestion from "../views/AccidentalIngestion.vue";
@@ -537,6 +538,7 @@ const routes = [
   { path: "/vertigo", name: "Vertigo", component: Vertigo },
   { path: "/presyncope", name: "Presyncope", component: Presyncope },
   { path: "/seizure", name: "Seizure", component: Seizure },
+  { path: "/syncope", name: "Syncope", component: Syncope },
   { path: "/anxiety", name: "Anxiety", component: Anxiety },
   { path: "/safe", name: "Safe", component: Safe },
   {

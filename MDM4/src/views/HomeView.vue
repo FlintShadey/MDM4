@@ -2316,6 +2316,17 @@
           Seizure
         </v-btn>
       </v-col>
+      <v-col>
+        <v-btn
+          :ref="'Syncope'"
+          :color="getButtonColor('Syncope')"
+          size="small"
+          rounded="xl"
+          @click="openDialog('/syncope')"
+        >
+          Syncope
+        </v-btn>
+      </v-col>
     </v-row>
 
     <v-divider></v-divider>
