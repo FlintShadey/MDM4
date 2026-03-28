@@ -1,5 +1,6 @@
 # MDM4
 
+ls && node -v && npm -v && npm install
 
 commit changes
 npm run deploy

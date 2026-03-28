@@ -13,63 +13,138 @@
 
     <!-- Diagnosis BUTTONS TO APPEND TEXT -->
     <div class="mt-5">
-           <v-btn
+      <!-- Calculus -->
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the left flank; '"
+        @click="secondaryValue += 'N20.0 Calculus of kidney; '"
       >
-        pain left
+        N20.0 Calculus of kidney
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Pain in the right flank; '"
+        @click="secondaryValue += 'N20.1 Calculus of ureter; '"
       >
-        pain right
+        N20.1 Calculus of ureter
       </v-btn>
-            <v-btn
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Calculus of kidney; '"
+        @click="
+          secondaryValue += 'N20.2 Calculus of kidney with calculus of ureter; '
+        "
       >
-       kidney
+        N20.2 Calculus kidney + ureter
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
-        @click="secondaryValue += 'Calculus of ureter; '"
+        @click="secondaryValue += 'N21.0 Calculus in bladder; '"
       >
-        pain right
+        N21.0 Calculus in bladder
       </v-btn>
 
+      <!-- Obstruction -->
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Gross hematuria; '"
+        @click="
+          secondaryValue +=
+            'N13.2 Hydronephrosis with renal and ureteral calculous obstruction; '
+        "
       >
-        Gross hematuria
+        N13.2 Hydronephrosis
+      </v-btn>
+
+      <!-- Renal Colic / Pain -->
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'N23 Unspecified renal colic; '"
+      >
+        N23 Renal colic
       </v-btn>
       <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += 'Hydronephrosis with renal and ureteral calculous obstruction; '"
+        @click="secondaryValue += 'R10.9 Abdominal pain, unspecified; '"
       >
-        Hydronephrosis
+        R10.9 Abdominal pain
       </v-btn>
-   
-                  <v-btn
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'Right sided flank pain; '"
+      >
+        Right flank pain
+      </v-btn>
+      <v-btn
         color="#72728a"
         class="ma-2"
-        @click="secondaryValue += ', left; '"
+        @click="secondaryValue += 'Left sided flank pain; '"
       >
-         left
+        Left flank pain
+      </v-btn>
+
+      <!-- Hematuria -->
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'R31.9 Hematuria, unspecified; '"
+      >
+        R31.9 Hematuria
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'R31.0 Gross hematuria; '"
+      >
+        R31.0 Gross hematuria
+      </v-btn>
+
+      <!-- GI Symptoms -->
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'R11.2 Nausea with vomiting, unspecified; '"
+      >
+        R11.2 Nausea w/ vomiting
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'R11.0 Nausea alone; '"
+      >
+        R11.0 Nausea
+      </v-btn>
+
+      <!-- Urine Findings -->
+      <v-btn
+        color="#665251"
+        class="ma-2"
+        @click="secondaryValue += 'R82.998 Other abnormal findings in urine; '"
+      >
+        R82.998 Abnormal urine findings
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'R82.1 Myoglobinuria; '"
+      >
+        R82.1 Myoglobinuria
+      </v-btn>
+
+      <!-- Laterality modifiers -->
+      <v-btn color="#72728a" class="ma-2" @click="secondaryValue += ', left; '">
+        left
       </v-btn>
       <v-btn
         color="#665251"
         class="ma-2"
         @click="secondaryValue += ', right; '"
       >
-         right
+        right
       </v-btn>
     </div>
 
@@ -116,7 +191,8 @@ export default {
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "The patient presents with flank pain.\n\nCurrently, there is no sign of infection, so I do not believe this to be pyelonephritis.\n\nI do not believe this is an aortic aneurysm because both femoral pulses are equal bilaterally.\n\nThis does not seem to be intestinal obstruction because the patient does not have grossly abnormal bowel habits.\n\nThis does not seem to be cholecystitis because the patient does not have right upper quadrant abdominal tenderness or a fever.\n\nThere is no rash indicative of herpes zoster.\n\nThe patient does not appear to be seeking unnecessary narcotics.\n\nCurrently, this pain seems to be the result of ureterolithiasis.\n\nThe patient is tolerating fluids well.\n\nThe patient is safe for discharge and outpatient management and is advised to follow up with their physician in the next few days.",
+      primaryValue:
+        "The patient presents with flank pain.\n\nCurrently, there is no sign of infection, so I do not believe this to be pyelonephritis.\n\nI do not believe this is an aortic aneurysm because both femoral pulses are equal bilaterally.\n\nThis does not seem to be intestinal obstruction because the patient does not have grossly abnormal bowel habits.\n\nThis does not seem to be cholecystitis because the patient does not have right upper quadrant abdominal tenderness or a fever.\n\nThere is no rash indicative of herpes zoster.\n\nThe patient does not appear to be seeking unnecessary narcotics.\n\nCurrently, this pain seems to be the result of ureterolithiasis.\n\nThe patient is tolerating fluids well.\n\nThe patient is safe for discharge and outpatient management and is advised to follow up with their physician in the next few days.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
@@ -141,7 +217,7 @@ export default {
         (err) => {
           console.error("Failed to copy text: ", err);
           this.showSnackbar("Failed to copy MDM text.", "error");
-        }
+        },
       );
     },
 
@@ -156,7 +232,7 @@ export default {
         (err) => {
           console.error("Failed to copy text: ", err);
           this.showSnackbar("Failed to copy diagnosis text.", "error");
-        }
+        },
       );
     },
 
