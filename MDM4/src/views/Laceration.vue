@@ -141,7 +141,7 @@ export default {
       lacerationNote: `Procedure Performed by: me, J. Flint Smith, MD
 Procedure Performed: Laceration Repair of ________ 
 The area was prepped with saline and Betadine solution and draped in a sterile manner.
-Local anesthesia was administered using Lidocaine with________ epinephrine.
+Local anesthesia was administered using Lidocaine with ________ epinephrine.
 The laceration was repaired using ________ simple interrupted sutures with Ethilon.
 The wound was copiously irrigated with normal saline to ensure removal of any debris.
 Minimal bleeding was noted and controlled with direct pressure.

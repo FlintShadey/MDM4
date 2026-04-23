@@ -32,7 +32,7 @@
         class="ma-2"
         @click="secondaryValue += 'headache; '"
       >
-       headache
+        headache
       </v-btn>
       <v-btn
         color="#72728a"
@@ -48,34 +48,36 @@
       >
         Myalgia
       </v-btn>
-  
-        <v-btn
-            color="#72728a"
-            class="ma-2"
-            @click="secondaryValue += 'Radiculopathy, Cervical Region; '"
-        >   Cervical Radiculopathy 
-        </v-btn>
 
-        <v-btn
-            color="#72728a"
-            class="ma-2"
-            @click="secondaryValue += 'Radiculopathy, Cervical Region; '"
-        >   Cervical Radiculopathy 
-        </v-btn>
-        <v-btn
-        
-            color="#72728a"
-            class="ma-2"
-            @click="secondaryValue += 'Cervical Disc Disorder; '"
-        >
-            Cervical Disc Disorder
-        </v-btn>
-        <v-btn
-            color="#72728a"
-            class="ma-2"
-            @click="secondaryValue += 'Cervical Disc Degeneration; '">Cervical Disc Degeneration
-        </v-btn>
-        </div>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Radiculopathy, Cervical Region; '"
+      >
+        Cervical Radiculopathy
+      </v-btn>
+
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Radiculopathy, Cervical Region; '"
+      >
+        Cervical Radiculopathy
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Cervical Disc Disorder; '"
+      >
+        Cervical Disc Disorder
+      </v-btn>
+      <v-btn
+        color="#72728a"
+        class="ma-2"
+        @click="secondaryValue += 'Cervical Disc Degeneration; '"
+        >Cervical Disc Degeneration
+      </v-btn>
+    </div>
 
     <!-- SECONDARY TEXTAREA -->
     <div class="mt-5">
@@ -120,7 +122,8 @@ export default {
   data() {
     return {
       // Main text (primary text area)
-      primaryValue: "A patient comes in with neck pain but shows no signs of serious problems like a broken neck, nerve compression, meningitis, or spinal cord compression. \n\nThey have localized muscle tenderness without any warning signs like fever, major trauma, or neurological issues, suggesting a muscular strain is the most likely cause.\n\nOutpatient management with rest, pain relief, and possibly physical therapy is recommended, along with follow-up if symptoms do not improve or new issues arise.",
+      primaryValue:
+        "The patient presents with neck pain.\nCervical artery dissection could cause sudden unilateral neck pain or headache with focal neurologic deficits, Horner syndrome, or stroke symptoms; neurologic deficits, Horner syndrome, and stroke symptoms are not present.\nMeningitis could cause fever, severe headache, neck stiffness, photophobia, and altered mental status; fever, severe headache, meningismus, and altered mental status are not present.\nSpinal epidural abscess could cause severe neck or back pain with fever, risk factors, and progressive neurologic deficits; fever, risk factors, and neurologic deficits are not present.\nCervical spine fracture or instability could cause midline bony tenderness, deformity, neurologic deficits, or significant trauma mechanism; significant trauma, midline tenderness, and neurologic deficits are not present.\n\nThe patient's presentation aligns well with muscular spasm.\nThe patient is not septic or toxic.\nThe patient is safe for discharge and should follow up with primary care very soon.",
       // Secondary text (for appended Diagnosiss or alternative content)
       secondaryValue: "  ",
       // An alternate text for demonstration
@@ -145,7 +148,7 @@ export default {
         (err) => {
           console.error("Failed to copy text: ", err);
           this.showSnackbar("Failed to copy MDM text.", "error");
-        }
+        },
       );
     },
 
@@ -160,7 +163,7 @@ export default {
         (err) => {
           console.error("Failed to copy text: ", err);
           this.showSnackbar("Failed to copy diagnosis text.", "error");
-        }
+        },
       );
     },
 
